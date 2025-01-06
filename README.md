@@ -4,3 +4,4 @@
 - Sveltekit
 - Vite
 - Tailwind
+  - Typography plug-in
