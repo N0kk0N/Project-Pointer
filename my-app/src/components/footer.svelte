@@ -127,8 +127,12 @@
             </div>
         </div>
 
-        <div class="bg-red-500">
-            <p>Vak 2</p>
+        <div class="bg-red-500 pt-12 flex flex-col">
+            <h3>Ga snel naar</h3>
+            <a href="https://pointer.kro-ncrv.nl/deel-jouw-ervaring">Deel jouw ervaring</a>
+            <a href="https://pointer.kro-ncrv.nl/duik-in-de-data?filter=all">Duik in de data</a>
+            <a href="https://pointer.kro-ncrv.nl/deze-onderwerpen-vinden-wij-belangrijk">Onze thema's</a>
+            <a href="https://pointer.kro-ncrv.nl/over-ons">Over ons</a>
         </div>
 
         <div class="bg-pink-500">
