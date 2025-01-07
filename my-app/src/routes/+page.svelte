@@ -1,4 +1,5 @@
 <script>
+    import Related from "../components/related.svelte"
     import Banner from "../components/banner.svelte";
     import Header from "../components/header.svelte";
     import Intro from "../components/intro.svelte";
@@ -11,3 +12,4 @@
 <Header />
 <Banner />
 <Intro />
+<Related />
