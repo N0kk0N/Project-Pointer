@@ -1,20 +1,20 @@
-<div class="flex items-center bg-blue-500 h-20">
+<div class="flex items-center justify-between bg-blue-500 h-20 shadow-lg">
     <div class="flex items-center">
         <a href="#/">
             <img
                 src="/images/pointerLogo.png"
                 alt="Pointer logo"
-                class="w-40 h-auto"
+                class="w-40 h-auto ml-2"
             />
         </a>
     </div>
 
-    <div class="flex items-center">
+    <div class="flex items-center justify-between gap-4">
         <a href="#/">
             <img
                 src="/images/kroLogo.png"
                 alt="KRO NCRV Logo"
-                class="w-24 h-auto"
+                class="w-32 h-auto"
             />
         </a>
 
@@ -60,7 +60,7 @@
             />
         </a>
 
-        <button class="flex items-center justify-center p-2 bg-transparent border-none" aria-label="Hamburgermenu">
+        <button class="flex items-center justify-center p-2 mr-2 bg-transparent border-none" aria-label="Hamburgermenu">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="w-8 h-auto" fill="none" stroke="currentColor" stroke-width="4">
                 <rect x="3" y="5" width="18" height="2" stroke="none" fill="currentColor"/>
                 <rect x="3" y="11" width="18" height="2" stroke="none" fill="currentColor"/>
