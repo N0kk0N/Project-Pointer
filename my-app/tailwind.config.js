@@ -5,7 +5,11 @@ export default {
   content: ['./src/**/*.{html,js,svelte,ts}'],
 
   theme: {
-    extend: {}
+    extend: {
+      maxWidth: {
+        'relatedMax': '80rem', // Add a custom class for max width
+      },
+    }
   },
 
   plugins: [typography]
