@@ -20,10 +20,11 @@
                         id="Facebook--Streamline-Iconoir"
                         height="24"
                         width="24"
+                        class="fill-current stroke-current text-black hover:text-[#4D00FF] hover:stroke-[#4D00FF] transition-all duration-200 ease-in-out"
                     >
                         <path
                             d="M11.2604375 0.6628125h-2.051125c-0.9066875000000001 0 -1.77625 0.36012500000000003 -2.4173125 1.00125 -0.6411250000000001 0.6411250000000001 -1.0013125 1.5106875 -1.0013125 2.4173125v2.0511874999999997H3.7395625v2.7348749999999997h2.051125v5.4697499999999994h2.7348749999999997v-5.4697499999999994h2.0511874999999997l0.6836875 -2.7348749999999997h-2.7348749999999997V4.0813749999999995c0 -0.18131250000000002 0.0720625 -0.35525 0.20025 -0.48343749999999996 0.12825 -0.12825 0.3021875 -0.20025 0.4835 -0.20025h2.051125V0.6628125Z"
-                            stroke="#000000"
+                            stroke="currentColor"
                             stroke-linecap="round"
                             stroke-linejoin="round"
                             stroke-width="1"
@@ -42,7 +43,7 @@
                         height="24"
                         viewBox="0 0 24 24"
                         fill="currentColor"
-                        class="icon icon-tabler icons-tabler-filled icon-tabler-brand-instagram"
+                        class="icon icon-tabler icons-tabler-filled icon-tabler-brand-instagram fill-current stroke-current text-black hover:text-[#4D00FF] hover:stroke-[#4D00FF] transition-all duration-200 ease-in-out"
                     >
                         <path stroke="none" d="M0 0h24v24H0z" fill="none" />
                         <path
@@ -55,7 +56,7 @@
                     href="#/"
                     target="_blank"
                     aria-label="Link naar onze Threads."
-                    class="bg-black"
+                    class="bg-black hover:bg-[#4D00FF] transition-all duration-200"
                 >
                     <svg
                         xmlns="http://www.w3.org/2000/svg"
@@ -80,6 +81,7 @@
                     href="#/"
                     target="_blank"
                     aria-label="Link naar onze LinkedIn."
+                    class="fill-current text-black hover:text-[#4D00FF] transition-all duration-200"
                 >
                     <svg
                         role="img"
@@ -92,8 +94,7 @@
                         <title>LinkedIn</title>
                         <path
                             d="M20.447 20.452h-3.554v-5.569c0 -1.328 -0.027 -3.037 -1.852 -3.037 -1.853 0 -2.136 1.445 -2.136 2.939v5.667H9.351V9h3.414v1.561h0.046c0.477 -0.9 1.637 -1.85 3.37 -1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0 -2.063 -0.926 -2.063 -2.065 0 -1.138 0.92 -2.063 2.063 -2.063 1.14 0 2.064 0.925 2.064 2.063 0 1.139 -0.925 2.065 -2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C0.792 0 0 0.774 0 1.729v20.542C0 23.227 0.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 0.774 23.2 0 22.222 0h0.003z"
-                            fill="#000000"
-                            stroke-width="1"
+                            fill="currentColor"
                         ></path>
                     </svg>
                 </a>
