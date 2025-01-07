@@ -9,7 +9,7 @@
             </div>
             <div class="flex items-center gap-5 pt-10">
                 <a
-                    href="#/"
+                    href="https://www.facebook.com/pointerkro"
                     target="_blank"
                     aria-label="Link naar onze Facebook."
                 >
@@ -33,7 +33,7 @@
                 </a>
 
                 <a
-                    href="#/"
+                    href="https://www.instagram.com/pointer.kroncrv/#"
                     target="_blank"
                     aria-label="Link naar onze Instagram."
                 >
@@ -53,7 +53,7 @@
                 </a>
 
                 <a
-                    href="#/"
+                    href="https://www.threads.net/@pointer.kroncrv"
                     target="_blank"
                     aria-label="Link naar onze Threads."
                     class="bg-black hover:bg-[#4D00FF] transition-all duration-200"
@@ -78,7 +78,7 @@
                 </a>
 
                 <a
-                    href="#/"
+                    href="https://www.linkedin.com/company/pointer-kro-ncrv/"
                     target="_blank"
                     aria-label="Link naar onze LinkedIn."
                     class="fill-current text-black hover:text-[#4D00FF] transition-all duration-200"
@@ -99,7 +99,12 @@
                     </svg>
                 </a>
 
-                <a href="#/" target="_blank" aria-label="Stuur ons een mail.">
+                <a
+                    href="https://pointer.kro-ncrv.nl/nieuwsbrief"
+                    target="_blank"
+                    aria-label="Stuur ons een mail."
+                    class="text-black hover:text-[#4D00FF] transition-all duration-200"
+                >
                     <svg
                         xmlns="http://www.w3.org/2000/svg"
                         width="24"
