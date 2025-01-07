@@ -2,5 +2,10 @@
     import Header from "../components/header.svelte";
     import Intro from "../components/intro.svelte";
 </script>
+
+<svelte:head>
+    <title>Luchtvervuiling in Nederland</title>
+</svelte:head>
+
 <Header />
 <Intro />

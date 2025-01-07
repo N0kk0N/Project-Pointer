@@ -1,6 +1,6 @@
 <div class="flex items-center justify-between bg-white h-20 shadow-lg">
     <div class="flex items-center">
-        <a href="#/">
+        <a href="https://pointer.kro-ncrv.nl/">
             <img
                 src="/images/pointerLogo.png"
                 alt="Pointer logo"
@@ -10,7 +10,7 @@
     </div>
     
     <div class="flex items-center justify-between gap-4">
-        <a href="#/" class="hidden md:flex">
+        <a href="https://kro-ncrv.nl/" target="_blank" class="hidden md:flex">
             <img
                 src="/images/kroLogo.png"
                 alt="KRO NCRV Logo"
@@ -19,7 +19,7 @@
         </a>
 
         <a
-            href="#/"
+            href="https://pointer.kro-ncrv.nl/deel-jouw-ervaring"
             class=" hidden md:flex flex items-center bg-[#DEFF9C] rounded-full pt-2 pb-2 pr-4 pl-4 hover:bg-black hover:text-white transition-all duration-200"
         >
             Deel jouw ervaring
@@ -44,7 +44,7 @@
             </svg>
         </a>
 
-        <a href="#/">
+        <a href="https://npo.nl/start" target="_blank">
             <img
             src="/images/npoLogo.png"
             alt="NPO Logo"
