@@ -1,20 +1,60 @@
-<div class="flex items-center justify-between bg-white h-20 shadow-lg">
+<script>
+    import { onMount } from "svelte";
+
+    let scrolled = false;
+
+    onMount(() => {
+        // Add scroll event listener when the component mounts
+        const handleScroll = () => {
+            if (window.scrollY > 0) {
+                // Log when the page is scrolled away from the top
+                if (!scrolled) {
+                    console.log("The page has scrolled down!");
+                    document.getElementById("kroncrv").classList.replace("w-32", "w-16");
+                    document.getElementById("kroncrv").classList.replace("opacity-100", "opacity-0");
+                    document.getElementById("pointer").classList.replace("w-40", "w-32");
+                    scrolled = true;
+                }
+            } else {
+                // Log when the page is at the top
+                if (scrolled) {
+                    console.log("The page is back at the top!");
+                    document.getElementById("kroncrv").classList.replace("w-16", "w-32");
+                    document.getElementById("kroncrv").classList.replace("opacity-0", "opacity-100");
+                    document.getElementById("pointer").classList.replace("w-32", "w-40");
+                    scrolled = false;
+                }
+            }
+        };
+
+        window.addEventListener("scroll", handleScroll);
+
+        // Cleanup the event listener when the component is destroyed
+        return () => {
+            window.removeEventListener("scroll", handleScroll);
+        };
+    });
+</script>
+
+<div class="flex items-center justify-between bg-white h-20 shadow-lg sticky top-0">
     <div class="flex items-center">
         <a href="https://pointer.kro-ncrv.nl/">
             <img
+                id="pointer"
                 src="/images/pointerLogo.png"
                 alt="Pointer logo"
-                class="w-32 sm:w-40 h-auto ml-2"
+                class="w-40 h-auto ml-2 transition-all duration-300 ease-in-out"
             />
         </a>
     </div>
     
     <div class="flex items-center justify-between gap-4">
-        <a href="https://kro-ncrv.nl/" target="_blank" class="hidden md:flex">
+        <a href="https://kro-ncrv.nl/" target="_blank" class="hidden md:flex w-32 justify-center">
             <img
+                id="kroncrv"
                 src="/images/kroLogo.png"
                 alt="KRO NCRV Logo"
-                class="w-32 h-auto"
+                class="w-32 h-auto opacity-100 transition-all duration-300 ease-in-out"
             />
         </a>
 
