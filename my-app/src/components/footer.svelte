@@ -135,12 +135,23 @@
             <a href="https://pointer.kro-ncrv.nl/over-ons">Over ons</a>
         </div>
 
-        <div class="bg-pink-500">
-            <p>Vak 3</p>
+        <div class="bg-pink-500 pt-12 flex flex-col">
+            <h3>Info</h3>
+            <a href="https://kro-ncrv.nl/algemene-voorwaarden" target="_blank">Algemene vooorwaarden</a>
+            <a href="https://cookies.kro-ncrv.nl/sites/KRO-NCRV/kro-ncrv.nl/settings.html" target="_blank">Cookiestatement</a>
+            <a href="https://kro-ncrv.nl/privacy" target="_blank">Privacy</a>
+            <a href="https://kro-ncrv.nl/werken-bij" target="_blank">Vacatures</a>
         </div>
     </div>
 
     <div>
-        <!-- HIER KOMT HET KRO LOGO -->
+        <a href="https://kro-ncrv.nl/" target="_blank">
+            <img
+                id="kroncrv"
+                src="/images/kroLogo.png"
+                alt="KRO NCRV Logo"
+                class="w-32 h-auto opacity-100 transition-all duration-300 ease-in-out"
+            />
+        </a>
     </div>
 </div>
