@@ -9,13 +9,17 @@
         </a>
     </div>
 
-    <div>
+    <div class="flex">
         <a href="#/">
             <img
                 src="/images/kroLogo.png"
                 alt="KRO NCRV Logo"
                 class="w-24 h-auto"
             />
+        </a>
+
+        <a href="#/" class="flex">Deel jouw ervaring
+            <img src="/images/right-arrow.png" alt="" class="w-24 h-auto">
         </a>
     </div>
 </div>
