@@ -1,16 +1,16 @@
-<div class="flex items-center justify-between bg-blue-500 h-20 shadow-lg">
+<div class="flex items-center justify-between bg-white h-20 shadow-lg">
     <div class="flex items-center">
         <a href="#/">
             <img
                 src="/images/pointerLogo.png"
                 alt="Pointer logo"
-                class="w-40 h-auto ml-2"
+                class="w-32 sm:w-40 h-auto ml-2"
             />
         </a>
     </div>
-
+    
     <div class="flex items-center justify-between gap-4">
-        <a href="#/">
+        <a href="#/" class="hidden md:flex">
             <img
                 src="/images/kroLogo.png"
                 alt="KRO NCRV Logo"
@@ -20,7 +20,7 @@
 
         <a
             href="#/"
-            class="flex items-center bg-[#DEFF9C] rounded-full pt-2 pb-2 pr-4 pl-4 hover:bg-black hover:text-white transition-all duration-200"
+            class=" hidden md:flex flex items-center bg-[#DEFF9C] rounded-full pt-2 pb-2 pr-4 pl-4 hover:bg-black hover:text-white transition-all duration-200"
         >
             Deel jouw ervaring
             <svg
