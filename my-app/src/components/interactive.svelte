@@ -54,7 +54,7 @@
 
 <style>
   #map {
-    height: 500px; /* Pas de hoogte van de kaart aan */
+    height: 600px; /* Pas de hoogte van de kaart aan */
   }
 </style>
 
