@@ -12,7 +12,7 @@
       map = L.map('map').setView([52.1326, 5.2913], 7);
 
       L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}', {
-        attribution: 'Tiles © Esri — Source: Esri, DeLorme, NAVTEQ, USGS, Intermap, iPC, NRCAN, Esri Japan, METI, Esri China (Hong Kong), Esri (Thailand), TomTom, 2012',
+        // attribution: 'Tiles © Esri — Source: Esri, DeLorme, NAVTEQ, USGS, Intermap, iPC, NRCAN, Esri Japan, METI, Esri China (Hong Kong), Esri (Thailand), TomTom, 2012',
         maxZoom: 18,
       }).addTo(map);
 
@@ -58,14 +58,12 @@
   }
 </style>
 
-<div class="relative w-full h-full">
-  <!-- Map -->
-  <div id="map" class="w-full h-full"></div>
+<div class="relative w-full h-testHeight">
 
   <!-- Button Container -->
   <div class="flex justify-center mt-4">
     <button
-      class="inline-flex gap-2 items-center rounded-full text-xl bg-[#DEFF9C] px-6 py-4"
+      class="inline-flex gap-2 items-center rounded-full text-xl bg-[#DEFF9C] px-6 py-4 z-20 absolute bottom-0 left-1/2 transform -translate-x-1/2 translate-y-1/2"
     >
       Start interactive
       <svg
@@ -86,5 +84,7 @@
         <path d="M13 6l6 6" />
       </svg>
     </button>
+      <!-- Map -->
+  <div id="map" class="w-full h-full absolute z-10"></div>
   </div>
 </div>

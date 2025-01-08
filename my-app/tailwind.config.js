@@ -11,6 +11,7 @@ export default {
       },
       height: {
         'interactiveHeight': '32em',
+        'testHeight': '600px',
       }
     }
   },
