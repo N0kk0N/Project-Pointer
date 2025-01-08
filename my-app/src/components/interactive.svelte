@@ -2,52 +2,54 @@
   import { onMount } from 'svelte';
   import 'leaflet/dist/leaflet.css';
 
+  let map;
+  let isZoomKeyPressed = false;
+
   onMount(async () => {
-    // Controleer of we in de browseromgeving zitten
     if (typeof window !== 'undefined') {
-      // Dynamisch importeren van Leaflet
       const L = await import('leaflet');
 
-      // Initialiseer de kaart
-      const map = L.map('map', {
-        scrollWheelZoom: false // Schakel standaard scroll zoom uit
-      }).setView([52.1326, 5.2913], 7); // Coördinaten van Nederland
+      map = L.map('map').setView([52.1326, 5.2913], 7);
 
-      // Voeg een kaartlaag toe
-      L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-        attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+      L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}', {
+        attribution: 'Tiles © Esri — Source: Esri, DeLorme, NAVTEQ, USGS, Intermap, iPC, NRCAN, Esri Japan, METI, Esri China (Hong Kong), Esri (Thailand), TomTom, 2012',
+        maxZoom: 18,
       }).addTo(map);
 
-      // Voeg een marker toe voor Amsterdam
-      L.marker([52.3676, 4.9041]).addTo(map)
-        .bindPopup('Amsterdam')
-        .openPopup();
+      // Disable scroll zoom by default
+      map.scrollWheelZoom.disable();
 
-      // Functie om scroll zoom in te schakelen wanneer de command-toets is ingedrukt
-      const enableScrollZoom = (e) => {
-        if (e.metaKey) {
-          map.scrollWheelZoom.enable();
-        }
-      };
-
-      // Functie om scroll zoom uit te schakelen wanneer de command-toets wordt losgelaten
-      const disableScrollZoom = (e) => {
-        if (!e.metaKey) {
-          map.scrollWheelZoom.disable();
-        }
-      };
-
-      // Event listeners voor toets indrukken en loslaten
-      window.addEventListener('keydown', enableScrollZoom);
-      window.addEventListener('keyup', disableScrollZoom);
-
-      // Opruimen van event listeners bij demontage van de component
-      return () => {
-        window.removeEventListener('keydown', enableScrollZoom);
-        window.removeEventListener('keyup', disableScrollZoom);
-      };
+      // Listen for keydown and keyup events
+      window.addEventListener('keydown', handleKeyDown);
+      window.addEventListener('keyup', handleKeyUp);
+      map.on('mouseover', handleMouseOver);
+      map.on('mouseout', handleMouseOut);
     }
   });
+
+  function handleKeyDown(event) {
+    if (event.key === 'Control' || event.key === 'Meta') {
+      isZoomKeyPressed = true;
+      map.scrollWheelZoom.enable();
+    }
+  }
+
+  function handleKeyUp(event) {
+    if (event.key === 'Control' || event.key === 'Meta') {
+      isZoomKeyPressed = false;
+      map.scrollWheelZoom.disable();
+    }
+  }
+
+  function handleMouseOver() {
+    if (isZoomKeyPressed) {
+      map.scrollWheelZoom.enable();
+    }
+  }
+
+  function handleMouseOut() {
+    map.scrollWheelZoom.disable();
+  }
 </script>
 
 <style>
