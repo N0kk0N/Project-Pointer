@@ -1,13 +1,15 @@
-<div class="bg-[#f7f2ee] h-80">
-    <div class="flex justify-between">
-        <div class="pt-10 pl-28">
+<div class="bg-[#f7f2ee] h-auto">
+    <div class="flex flex-col lg:flex-row lg:justify-between">
+        <!-- Section: Ons onderzoek -->
+        <div class="pt-10 px-5 lg:pl-28 lg:w-1/2">
             <div>
-                <h2 class="text-6xl">
+                <h2 class="text-4xl lg:text-6xl">
                     Ons onderzoek<br />
                     begint bij jou
                 </h2>
             </div>
-            <div class="flex items-center gap-5 pt-10">
+            <!-- Social Icons -->
+            <div class="flex gap-5 pt-8 lg:pt-10">
                 <a
                     href="https://www.facebook.com/pointerkro"
                     target="_blank"
@@ -17,7 +19,6 @@
                         viewBox="-0.5 -0.5 16 16"
                         fill="black"
                         xmlns="http://www.w3.org/2000/svg"
-                        id="Facebook--Streamline-Iconoir"
                         height="24"
                         width="24"
                         class="fill-current stroke-current text-black hover:text-[#4D00FF] hover:stroke-[#4D00FF] transition-all duration-200 ease-in-out"
@@ -31,7 +32,6 @@
                         ></path>
                     </svg>
                 </a>
-
                 <a
                     href="https://www.instagram.com/pointer.kroncrv/#"
                     target="_blank"
@@ -127,27 +127,77 @@
             </div>
         </div>
 
-        <div class="flex gap-2 ml-auto pr-28">
-            <div class="pt-12 flex flex-col">
-                <h3>Ga snel naar</h3>
-                <a href="https://pointer.kro-ncrv.nl/deel-jouw-ervaring">Deel jouw ervaring</a>
-                <a href="https://pointer.kro-ncrv.nl/duik-in-de-data?filter=all">Duik in de data</a>
-                <a href="https://pointer.kro-ncrv.nl/deze-onderwerpen-vinden-wij-belangrijk">Onze thema's</a>
-                <a href="https://pointer.kro-ncrv.nl/over-ons">Over ons</a>
+        <!-- Section: Ga snel naar en Info -->
+        <div class="flex flex-col lg:flex-row gap-10 px-5 lg:gap-32 lg:ml-auto lg:pr-64">
+            <!-- Ga snel naar -->
+            <div class="pt-8 lg:pt-12 flex flex-col">
+                <h3 class="text-sm font-semibold text-gray-700">
+                    Ga snel naar
+                </h3>
+                <a
+                    href="https://pointer.kro-ncrv.nl/deel-jouw-ervaring"
+                    class="text-lg font-medium text-black-600 hover:underline mt-3"
+                >
+                    Deel jouw ervaring
+                </a>
+                <a
+                    href="https://pointer.kro-ncrv.nl/duik-in-de-data?filter=all"
+                    class="text-lg font-medium text-black-600 hover:underline mt-3"
+                >
+                    Duik in de data
+                </a>
+                <a
+                    href="https://pointer.kro-ncrv.nl/deze-onderwerpen-vinden-wij-belangrijk"
+                    class="text-lg font-medium text-black-600 hover:underline mt-3"
+                >
+                    Onze thema's
+                </a>
+                <a
+                    href="https://pointer.kro-ncrv.nl/over-ons"
+                    class="text-lg font-medium text-black-600 hover:underline mt-3"
+                >
+                    Over ons
+                </a>
             </div>
-    
-            <div class="pt-12 flex flex-col">
-                <h3>Info</h3>
-                <a href="https://kro-ncrv.nl/algemene-voorwaarden" target="_blank">Algemene voorwaarden</a>
-                <a href="https://cookies.kro-ncrv.nl/sites/KRO-NCRV/kro-ncrv.nl/settings.html" target="_blank">Cookiestatement</a>
-                <a href="https://kro-ncrv.nl/privacy" target="_blank">Privacy</a>
-                <a href="https://kro-ncrv.nl/werken-bij" target="_blank">Vacatures</a>
+
+            <!-- Info -->
+            <div class="pt-8 lg:pt-12 flex flex-col">
+                <h3 class="text-sm font-semibold text-gray-700">Info</h3>
+                <a
+                    href="https://kro-ncrv.nl/algemene-voorwaarden"
+                    target="_blank"
+                    class="text-lg font-medium text-black hover:underline mt-3"
+                >
+                    Algemene voorwaarden
+                </a>
+                <a
+                    href="https://cookies.kro-ncrv.nl/sites/KRO-NCRV/kro-ncrv.nl/settings.html"
+                    target="_blank"
+                    class="text-lg font-medium text-black hover:underline mt-3"
+                >
+                    Cookiestatement
+                </a>
+                <a
+                    href="https://kro-ncrv.nl/privacy"
+                    target="_blank"
+                    class="text-lg font-medium text-black hover:underline mt-3"
+                >
+                    Privacy
+                </a>
+                <a
+                    href="https://kro-ncrv.nl/werken-bij"
+                    target="_blank"
+                    class="text-lg font-medium text-black hover:underline mt-3"
+                >
+                    Vacatures
+                </a>
             </div>
         </div>
     </div>
 
-    <div class="flex justify-end">
-        <a href="https://kro-ncrv.nl/" target="_blank" class="pr-8">
+    <!-- Logo -->
+    <div class="flex justify-center lg:justify-end pt-8 pb-8 pr-16">
+        <a href="https://kro-ncrv.nl/" target="_blank" class="w-28 h-auto">
             <img
                 id="kroncrv"
                 src="/images/kroLogo.png"
