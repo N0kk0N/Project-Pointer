@@ -9,12 +9,19 @@
     if (typeof window !== 'undefined') {
       const L = await import('leaflet');
 
-      map = L.map('map').setView([52.1326, 5.2913], 7);
+      map = L.map('map', {
+        attributionControl: false // Verwijder de standaard attributie
+      }).setView([52.1326, 5.2913], 7);
 
       L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}', {
         attribution: 'Tiles © Esri — Source: Esri, DeLorme, NAVTEQ, USGS, Intermap, iPC, NRCAN, Esri Japan, METI, Esri China (Hong Kong), Esri (Thailand), TomTom, 2012',
         maxZoom: 18,
       }).addTo(map);
+
+      // Voeg de aangepaste attributie toe rechtsboven
+      L.control.attribution({
+        position: 'topright'
+      }).addAttribution('Tiles © Esri — Source: Esri, DeLorme, NAVTEQ, USGS, Intermap, iPC, NRCAN, Esri Japan, METI, Esri China (Hong Kong), Esri (Thailand), TomTom, 2012').addTo(map);
 
       // Disable scroll zoom by default
       map.scrollWheelZoom.disable();
