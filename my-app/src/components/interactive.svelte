@@ -56,6 +56,14 @@
   #map {
     height: 600px; /* Pas de hoogte van de kaart aan */
   }
+
+  .button-container {
+    position: absolute;
+    bottom: -25px; /* Pas deze waarde aan om de knop te verschuiven */
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1000; /* Zorg ervoor dat de knop boven de kaart staat */
+  }
 </style>
 
 <div class="relative w-full h-full">
@@ -63,7 +71,7 @@
   <div id="map" class="w-full h-full"></div>
 
   <!-- Button Container -->
-  <div class="flex justify-center mt-4">
+  <div class="button-container">
     <button
       class="inline-flex gap-2 items-center rounded-full text-xl bg-[#DEFF9C] px-6 py-4"
     >
