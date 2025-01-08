@@ -1,9 +1,10 @@
 <script>
-    import Related from "../components/related.svelte"
-    import Banner from "../components/banner.svelte";
     import Header from "../components/header.svelte";
+    import Banner from "../components/banner.svelte";
     import Intro from "../components/intro.svelte";
     import Interactive from "../components/interactive.svelte";
+    import Related from "../components/related.svelte";
+    import Footer from "../components/footer.svelte";
 </script>
 
 <svelte:head>
@@ -15,3 +16,4 @@
 <Intro />
 <Interactive />
 <Related />
+<Footer/>
