@@ -9,6 +9,9 @@ export default {
       maxWidth: {
         'relatedMax': '80rem', // Add a custom class for max width
       },
+      height: {
+        'interactiveHeight': '32em',
+      }
     }
   },
 

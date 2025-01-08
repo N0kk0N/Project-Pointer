@@ -3,6 +3,7 @@
     import Banner from "../components/banner.svelte";
     import Header from "../components/header.svelte";
     import Intro from "../components/intro.svelte";
+    import Interactive from "../components/interactive.svelte";
 </script>
 
 <svelte:head>
@@ -12,4 +13,5 @@
 <Header />
 <Banner />
 <Intro />
+<Interactive />
 <Related />
