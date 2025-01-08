@@ -1,6 +1,6 @@
 <div class="bg-[#f7f2ee] h-80">
-    <div class="flex">
-        <div class="bg-blue-500 pt-10 pl-28">
+    <div class="flex justify-between">
+        <div class="pt-10 pl-28">
             <div>
                 <h2 class="text-6xl">
                     Ons onderzoek<br />
@@ -127,25 +127,27 @@
             </div>
         </div>
 
-        <div class="bg-red-500 pt-12 flex flex-col">
-            <h3>Ga snel naar</h3>
-            <a href="https://pointer.kro-ncrv.nl/deel-jouw-ervaring">Deel jouw ervaring</a>
-            <a href="https://pointer.kro-ncrv.nl/duik-in-de-data?filter=all">Duik in de data</a>
-            <a href="https://pointer.kro-ncrv.nl/deze-onderwerpen-vinden-wij-belangrijk">Onze thema's</a>
-            <a href="https://pointer.kro-ncrv.nl/over-ons">Over ons</a>
-        </div>
-
-        <div class="bg-pink-500 pt-12 flex flex-col">
-            <h3>Info</h3>
-            <a href="https://kro-ncrv.nl/algemene-voorwaarden" target="_blank">Algemene vooorwaarden</a>
-            <a href="https://cookies.kro-ncrv.nl/sites/KRO-NCRV/kro-ncrv.nl/settings.html" target="_blank">Cookiestatement</a>
-            <a href="https://kro-ncrv.nl/privacy" target="_blank">Privacy</a>
-            <a href="https://kro-ncrv.nl/werken-bij" target="_blank">Vacatures</a>
+        <div class="flex gap-2 ml-auto pr-28">
+            <div class="pt-12 flex flex-col">
+                <h3>Ga snel naar</h3>
+                <a href="https://pointer.kro-ncrv.nl/deel-jouw-ervaring">Deel jouw ervaring</a>
+                <a href="https://pointer.kro-ncrv.nl/duik-in-de-data?filter=all">Duik in de data</a>
+                <a href="https://pointer.kro-ncrv.nl/deze-onderwerpen-vinden-wij-belangrijk">Onze thema's</a>
+                <a href="https://pointer.kro-ncrv.nl/over-ons">Over ons</a>
+            </div>
+    
+            <div class="pt-12 flex flex-col">
+                <h3>Info</h3>
+                <a href="https://kro-ncrv.nl/algemene-voorwaarden" target="_blank">Algemene voorwaarden</a>
+                <a href="https://cookies.kro-ncrv.nl/sites/KRO-NCRV/kro-ncrv.nl/settings.html" target="_blank">Cookiestatement</a>
+                <a href="https://kro-ncrv.nl/privacy" target="_blank">Privacy</a>
+                <a href="https://kro-ncrv.nl/werken-bij" target="_blank">Vacatures</a>
+            </div>
         </div>
     </div>
 
-    <div>
-        <a href="https://kro-ncrv.nl/" target="_blank">
+    <div class="flex justify-end">
+        <a href="https://kro-ncrv.nl/" target="_blank" class="pr-8">
             <img
                 id="kroncrv"
                 src="/images/kroLogo.png"
