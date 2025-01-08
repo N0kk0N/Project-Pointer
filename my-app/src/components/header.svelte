@@ -36,7 +36,7 @@
     });
 </script>
 
-<div class="flex items-center justify-between bg-white h-20 shadow-lg sticky top-0">
+<div class="flex items-center justify-between bg-white h-20 shadow-lg sticky top-0 z-50">
     <div class="flex items-center">
         <a href="https://pointer.kro-ncrv.nl/">
             <img
