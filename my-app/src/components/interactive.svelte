@@ -4,6 +4,7 @@
 
   let map;
   let isZoomKeyPressed = false;
+  let satelliteLayer, grayLayer;
 
   onMount(async () => {
     if (typeof window !== 'undefined') {
@@ -13,15 +14,23 @@
         attributionControl: false // Verwijder de standaard attributie
       }).setView([52.1326, 5.2913], 7);
 
-      L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}', {
+      satelliteLayer = L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}', {
         attribution: 'Tiles © Esri — Source: Esri, DeLorme, NAVTEQ, USGS, Intermap, iPC, NRCAN, Esri Japan, METI, Esri China (Hong Kong), Esri (Thailand), TomTom, 2012',
         maxZoom: 18,
-      }).addTo(map);
+      });
+
+      grayLayer = L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png', {
+        attribution: '© OpenStreetMap contributors © CARTO',
+        maxZoom: 18,
+      });
 
       // Voeg de aangepaste attributie toe rechtsboven
       L.control.attribution({
         position: 'topright'
       }).addAttribution('Tiles © Esri — Source: Esri, DeLorme, NAVTEQ, USGS, Intermap, iPC, NRCAN, Esri Japan, METI, Esri China (Hong Kong), Esri (Thailand), TomTom, 2012').addTo(map);
+
+      // Voeg de satellietlaag toe
+      satelliteLayer.addTo(map);
 
       // Disable scroll zoom by default
       map.scrollWheelZoom.disable();
@@ -31,6 +40,7 @@
       window.addEventListener('keyup', handleKeyUp);
       map.on('mouseover', handleMouseOver);
       map.on('mouseout', handleMouseOut);
+      map.on('zoomend', handleZoomChange);
     }
   });
 
@@ -56,6 +66,20 @@
 
   function handleMouseOut() {
     map.scrollWheelZoom.disable();
+  }
+
+  function handleZoomChange() {
+    if (map.getZoom() >= 15) {
+      if (map.hasLayer(satelliteLayer)) {
+        map.removeLayer(satelliteLayer);
+        grayLayer.addTo(map);
+      }
+    } else {
+      if (map.hasLayer(grayLayer)) {
+        map.removeLayer(grayLayer);
+        satelliteLayer.addTo(map);
+      }
+    }
   }
 </script>
 
