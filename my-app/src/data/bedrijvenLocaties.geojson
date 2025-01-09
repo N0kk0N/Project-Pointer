@@ -1,0 +1,8605 @@
+{
+   "type": "FeatureCollection",
+   "features": [
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 4.59216,52.47656 ]
+    },
+    "properties": {
+    "bedrijf":"Tata Steel IJmuiden BV"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 4.29626,51.87221 ]
+    },
+    "properties": {
+    "bedrijf":"Esso Nederland BV (Raffinaderij Rotterdam)"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 4.33532,51.88014 ]
+    },
+    "properties": {
+    "bedrijf":"Shell Nederland Raffinaderij BV"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 4.76083,52.30833 ]
+    },
+    "properties": {
+    "bedrijf":"Vliegveld Luchthaven Schiphol"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 4.10780,51.94499 ]
+    },
+    "properties": {
+    "bedrijf":"BP Rotterdam Refinery"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 5.60056,51.23816 ]
+    },
+    "properties": {
+    "bedrijf":"Nyrstar Budel BV"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 6.85914,53.44777 ]
+    },
+    "properties": {
+    "bedrijf":"RWE Eemshaven Holding BV"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 3.72704,51.44562 ]
+    },
+    "properties": {
+    "bedrijf":"Zeeland Refinery N.V."
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 5.79632,50.98059 ]
+    },
+    "properties": {
+    "bedrijf":"Chemelot Site Permit BV"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 3.78247,51.34225 ]
+    },
+    "properties": {
+    "bedrijf":"Dow Benelux BV (Hoek)"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 4.02657,51.95907 ]
+    },
+    "properties": {
+    "bedrijf":"Uniper Centrale Maasvlakte"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 4.84388,51.70785 ]
+    },
+    "properties": {
+    "bedrijf":"RWE Generation NL B.V."
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 4.56211,51.68785 ]
+    },
+    "properties": {
+    "bedrijf":"Shell Nederland Chemie BV (Moerdijk)"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 3.85006,51.27764 ]
+    },
+    "properties": {
+    "bedrijf":"YARA Sluiskil BV"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 4.63213,52.47276 ]
+    },
+    "properties": {
+    "bedrijf":"Nuon Power Generation BV (Velsen)"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 6.04371,51.17062 ]
+    },
+    "properties": {
+    "bedrijf":"Rockwool B.V."
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 4.26431,51.89142 ]
+    },
+    "properties": {
+    "bedrijf":"Cabot BV"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 4.07205,51.94482 ]
+    },
+    "properties": {
+    "bedrijf":"Centrale Rotterdam"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 4.99483,51.61370 ]
+    },
+    "properties": {
+    "bedrijf":"Ardagh Glass Dongen BV"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 4.79289,52.39975 ]
+    },
+    "properties": {
+    "bedrijf":"Afval Energie Bedrijf (Amsterdam)"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 6.89665,53.11432 ]
+    },
+    "properties": {
+    "bedrijf":"Nedmag BV"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 4.27639,51.89704 ]
+    },
+    "properties": {
+    "bedrijf":"AVR NV (Rijnmond)"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 5.08588,51.88821 ]
+    },
+    "properties": {
+    "bedrijf":"O-I Manufacturing Netherlands BV (Leerdam)"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 4.58161,51.68326 ]
+    },
+    "properties": {
+    "bedrijf":"Attero BV (Moerdijk)"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 4.59658,51.67757 ]
+    },
+    "properties": {
+    "bedrijf":"Ardagh Glass Moerdijk"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 5.70422,50.85899 ]
+    },
+    "properties": {
+    "bedrijf":"O-I Manufacturing Netherlands BV (Maastricht)"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 6.88088,53.43662 ]
+    },
+    "properties": {
+    "bedrijf":"ENGIE Energie Nederland NV (Eemscentrale)"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 6.96541,53.29720 ]
+    },
+    "properties": {
+    "bedrijf":"ESD-SIC BV"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 4.16573,51.93494 ]
+    },
+    "properties": {
+    "bedrijf":"Gunvor Petroleum Europoort B.V."
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 4.60557,52.47489 ]
+    },
+    "properties": {
+    "bedrijf":"Nuon Power IJmond 1"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 5.53021,52.57722 ]
+    },
+    "properties": {
+    "bedrijf":"Maxima-centrale"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 4.76269,52.60978 ]
+    },
+    "properties": {
+    "bedrijf":"HVC (Alkmaar)"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 5.37417,51.45056 ]
+    },
+    "properties": {
+    "bedrijf":"Vliegveld Eindhoven"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 4.36752,51.88581 ]
+    },
+    "properties": {
+    "bedrijf":"Air Liquide Pergen VOF"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 3.69338,51.44882 ]
+    },
+    "properties": {
+    "bedrijf":"Sloe Centrale BV (Vlissingen)"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 6.85914,53.44777 ]
+    },
+    "properties": {
+    "bedrijf":"Nuon Power Projects 1 BV (Eemshaven)"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 6.78419,52.23426 ]
+    },
+    "properties": {
+    "bedrijf":"Twence BV Boeldershoek"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 3.80260,51.23582 ]
+    },
+    "properties": {
+    "bedrijf":"Cargill Benelux BV"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 4.09409,51.95838 ]
+    },
+    "properties": {
+    "bedrijf":"Enecogen VOF"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 5.07229,52.10303 ]
+    },
+    "properties": {
+    "bedrijf":"Eneco (Lage Weide)"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 5.02118,52.33886 ]
+    },
+    "properties": {
+    "bedrijf":"Nuon Power Generation BV (Diemen)"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 5.90717,51.15446 ]
+    },
+    "properties": {
+    "bedrijf":"RWE Generation NL B.V."
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 5.52306,52.45528 ]
+    },
+    "properties": {
+    "bedrijf":"Vliegveld Lelystad"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 6.51497,52.79126 ]
+    },
+    "properties": {
+    "bedrijf":"Attero Noord BV"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 4.24849,51.88280 ]
+    },
+    "properties": {
+    "bedrijf":"Climax Molybdenum BV"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 4.43444,51.95250 ]
+    },
+    "properties": {
+    "bedrijf":"Vliegveld Rotterdam-Airport"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 4.18355,51.92638 ]
+    },
+    "properties": {
+    "bedrijf":"Alco Energy Rotterdam"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 5.41769,51.86413 ]
+    },
+    "properties": {
+    "bedrijf":"Wienerberger Steenfabriek Zennewijnen"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 6.68020,53.17612 ]
+    },
+    "properties": {
+    "bedrijf":"Electric Glass Fiber NL BV"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 6.00036,51.97054 ]
+    },
+    "properties": {
+    "bedrijf":"AVR Afvalverwerking BV (Duiven)"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 4.12248,51.95597 ]
+    },
+    "properties": {
+    "bedrijf":"Archer Daniels Midland Europoort BV (ADM)"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 4.35179,51.89085 ]
+    },
+    "properties": {
+    "bedrijf":"Rijnmond Energie"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 4.25585,51.51059 ]
+    },
+    "properties": {
+    "bedrijf":"SABIC Innovative Plastics BV"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 6.95434,53.31883 ]
+    },
+    "properties": {
+    "bedrijf":"Delesto BV"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 4.36503,51.88395 ]
+    },
+    "properties": {
+    "bedrijf":"Shell Nederland Chemie BV (Pernis)"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 4.23825,51.88548 ]
+    },
+    "properties": {
+    "bedrijf":"Almatis BV"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 4.43437,51.61818 ]
+    },
+    "properties": {
+    "bedrijf":"Suiker Unie (Dinteloord)"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 4.60295,51.56606 ]
+    },
+    "properties": {
+    "bedrijf":"Saint Gobain Construction Products"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 4.84710,52.40531 ]
+    },
+    "properties": {
+    "bedrijf":"Nuon Power Generation BV (Hemweg)"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 6.57806,53.12056 ]
+    },
+    "properties": {
+    "bedrijf":"Vliegveld Luchthaven Eelde"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 4.33281,51.88865 ]
+    },
+    "properties": {
+    "bedrijf":"Recycling Kombinatie Bouw- en Sloopafval Rotterdam"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 4.04929,51.93814 ]
+    },
+    "properties": {
+    "bedrijf":"Europees Massagoed-Overslagbedrijf (Emo) B.V."
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 4.44361,51.54762 ]
+    },
+    "properties": {
+    "bedrijf":"SUEZ ReEnergy Roosendaal"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 4.58079,51.68490 ]
+    },
+    "properties": {
+    "bedrijf":"RWE Generation NL B.V."
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 5.76944,50.91250 ]
+    },
+    "properties": {
+    "bedrijf":"Vliegveld Luchthaven Maastricht"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 5.79452,51.84631 ]
+    },
+    "properties": {
+    "bedrijf":"ARN B.V."
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 6.79425,52.24674 ]
+    },
+    "properties": {
+    "bedrijf":"Nobian Chemicals BV (Hengelo)"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 6.98764,53.30973 ]
+    },
+    "properties": {
+    "bedrijf":"EEW Energy from Waste Delfzijl B.V."
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 6.04667,52.24139 ]
+    },
+    "properties": {
+    "bedrijf":"Vliegveld Teuge"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 5.69424,50.85772 ]
+    },
+    "properties": {
+    "bedrijf":"Sappi Maastricht BV"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 4.73767,51.81542 ]
+    },
+    "properties": {
+    "bedrijf":"HVC Afvalcentrale Dordrecht"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 4.86473,52.40161 ]
+    },
+    "properties": {
+    "bedrijf":"Bunge Netherlands BV (Soja)"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 4.34662,51.87605 ]
+    },
+    "properties": {
+    "bedrijf":"Hexion B.V."
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 6.98392,53.31022 ]
+    },
+    "properties": {
+    "bedrijf":"Eneco Bio Golden Raand"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 6.07310,51.86518 ]
+    },
+    "properties": {
+    "bedrijf":"Waalsteenfabriek De Bylandt BV"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 5.97185,51.33355 ]
+    },
+    "properties": {
+    "bedrijf":"Steenfabriek Engels Helden BV"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 4.68996,52.01449 ]
+    },
+    "properties": {
+    "bedrijf":"Gouda Refractories BV"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 5.44625,51.50485 ]
+    },
+    "properties": {
+    "bedrijf":"Rendac Son BV"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 5.42910,53.19046 ]
+    },
+    "properties": {
+    "bedrijf":"Reststoffen Energie Centrale (REC)"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 4.94024,52.38460 ]
+    },
+    "properties": {
+    "bedrijf":"Albemarle Catalysts Company B.V."
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 6.90699,52.77500 ]
+    },
+    "properties": {
+    "bedrijf":"Emmtec Services BV"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 4.59953,51.69383 ]
+    },
+    "properties": {
+    "bedrijf":"Afvalstoffen Terminal Moerdijk BV (ATM)"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 5.99168,53.18099 ]
+    },
+    "properties": {
+    "bedrijf":"Sonac Burgum BV"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 6.04211,51.87586 ]
+    },
+    "properties": {
+    "bedrijf":"Wienerberger Steenfabriek Kijfwaard West"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 5.72845,51.96997 ]
+    },
+    "properties": {
+    "bedrijf":"Parenco B.V."
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 5.60194,51.25639 ]
+    },
+    "properties": {
+    "bedrijf":"Vliegveld Budel"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 5.96305,51.85063 ]
+    },
+    "properties": {
+    "bedrijf":"Wienerberger Steenfabriek Erlecom"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 4.76970,52.41176 ]
+    },
+    "properties": {
+    "bedrijf":"Cargill BV (Multiseed)"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 6.00250,51.20616 ]
+    },
+    "properties": {
+    "bedrijf":"Smurfit Kappa Roermond Papier BV"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 5.99171,50.94095 ]
+    },
+    "properties": {
+    "bedrijf":"Wienerberger Steenfabriek Poriso"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 5.14722,52.19250 ]
+    },
+    "properties": {
+    "bedrijf":"Vliegveld Hilversum"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 6.99788,52.72846 ]
+    },
+    "properties": {
+    "bedrijf":"Cabot Norit Activated Carbon (Klazienaveen)"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 4.11389,51.96295 ]
+    },
+    "properties": {
+    "bedrijf":"Ertsoverslag Europoort"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 4.55250,51.55472 ]
+    },
+    "properties": {
+    "bedrijf":"Vliegveld Seppe"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 6.05477,52.09756 ]
+    },
+    "properties": {
+    "bedrijf":"Stora Enso De Hoop B.V."
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 6.69075,51.96189 ]
+    },
+    "properties": {
+    "bedrijf":"Steenfabriek De Vlijt BV"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 3.72917,51.51222 ]
+    },
+    "properties": {
+    "bedrijf":"Vliegveld Midden Zeeland"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 4.26948,51.89729 ]
+    },
+    "properties": {
+    "bedrijf":"Tronox Pigments (Holland) BV"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 5.14309,51.76888 ]
+    },
+    "properties": {
+    "bedrijf":"Steenfabriek De Rijswaard BV"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 4.58161,51.68614 ]
+    },
+    "properties": {
+    "bedrijf":"Biomassacentrale Moerdijk"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 6.20704,52.15816 ]
+    },
+    "properties": {
+    "bedrijf":"Aurubis Netherlands B.V."
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 4.25286,51.88203 ]
+    },
+    "properties": {
+    "bedrijf":"Lyondell Chemie Nederland BV"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 6.86825,52.98899 ]
+    },
+    "properties": {
+    "bedrijf":"Avebe u.a. (Gasselternijveen)"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 7.04573,52.92103 ]
+    },
+    "properties": {
+    "bedrijf":"Avebe u.a. (Ter Apelkanaal)"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 4.81815,52.46406 ]
+    },
+    "properties": {
+    "bedrijf":"Cargill BV - Cargill Cocoa (Aurora)"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 6.49511,53.21380 ]
+    },
+    "properties": {
+    "bedrijf":"Suiker Unie Vierverlaten"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 5.79083,52.38439 ]
+    },
+    "properties": {
+    "bedrijf":"Nestle Nederland BV (Nunspeet)"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 4.35214,51.88984 ]
+    },
+    "properties": {
+    "bedrijf":"Maasstroom Energie CV"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 4.25933,51.87895 ]
+    },
+    "properties": {
+    "bedrijf":"Air Products Nederland BV (Botlek)"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 6.14974,51.34111 ]
+    },
+    "properties": {
+    "bedrijf":"Wienerberger Dakpanfabriek Janssen-Dings"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 4.27166,51.88563 ]
+    },
+    "properties": {
+    "bedrijf":"EBS Terminal Laurenshaven"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 4.83361,53.11528 ]
+    },
+    "properties": {
+    "bedrijf":"Vliegveld Texel"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 6.85294,53.44467 ]
+    },
+    "properties": {
+    "bedrijf":"EemsEnergy Terminal B.V."
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 4.82138,52.41042 ]
+    },
+    "properties": {
+    "bedrijf":"OBA Bulkterminal Amsterdam"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 4.12410,51.95182 ]
+    },
+    "properties": {
+    "bedrijf":"EBS Terminal Europoort II"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 4.80837,52.47008 ]
+    },
+    "properties": {
+    "bedrijf":"Olam Cocoa BV"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 4.09800,51.96093 ]
+    },
+    "properties": {
+    "bedrijf":"Indorama Ventures Europe BV"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 6.30619,51.89898 ]
+    },
+    "properties": {
+    "bedrijf":"Steenfabriek De Nijverheid BV"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 4.29056,52.07592 ]
+    },
+    "properties": {
+    "bedrijf":"E.On Generations Den Haag"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 4.63641,52.46700 ]
+    },
+    "properties": {
+    "bedrijf":"Crown van Gelder N.V."
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 4.56110,51.95359 ]
+    },
+    "properties": {
+    "bedrijf":"Uniper Centrale RoCa"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 5.52509,51.61508 ]
+    },
+    "properties": {
+    "bedrijf":"FrieslandCampina Veghel (DMV International)"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 5.07916,52.10093 ]
+    },
+    "properties": {
+    "bedrijf":"Eneco Warmteproductie Utrecht B.V."
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 5.71403,50.76823 ]
+    },
+    "properties": {
+    "bedrijf":"Umicore Nederland BV"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 5.51777,51.43154 ]
+    },
+    "properties": {
+    "bedrijf":"DAF Trucks N.V."
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 5.71759,50.87992 ]
+    },
+    "properties": {
+    "bedrijf":"Johnson Matthey BV"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 3.79978,51.22119 ]
+    },
+    "properties": {
+    "bedrijf":"Rosier Nederland B.V."
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 6.51583,52.73083 ]
+    },
+    "properties": {
+    "bedrijf":"Vliegveld Hoogeveen"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 5.85219,51.75385 ]
+    },
+    "properties": {
+    "bedrijf":"BECC B.V."
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 6.06331,51.15683 ]
+    },
+    "properties": {
+    "bedrijf":"Nouryon Functional Chemicals BV"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 6.52827,52.11855 ]
+    },
+    "properties": {
+    "bedrijf":"FrieslandCampina Domo (Borculo)"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 4.21727,51.91027 ]
+    },
+    "properties": {
+    "bedrijf":"VPR Energy B.V."
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 4.25733,51.88463 ]
+    },
+    "properties": {
+    "bedrijf":"Eurogen CV"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 4.74067,51.81652 ]
+    },
+    "properties": {
+    "bedrijf":"DRSH Zuiveringsslib N.V."
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 4.49404,52.16398 ]
+    },
+    "properties": {
+    "bedrijf":"E.on Locatie Leiden"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 5.97019,51.85736 ]
+    },
+    "properties": {
+    "bedrijf":"Rodruza Steenfabriek de Zandberg"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 4.81185,52.46475 ]
+    },
+    "properties": {
+    "bedrijf":"Tate & Lyle Netherlands BV"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 5.70639,50.86158 ]
+    },
+    "properties": {
+    "bedrijf":"Vloertegelfabriek Koninklijke Mosa BV"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 4.25414,51.88905 ]
+    },
+    "properties": {
+    "bedrijf":"Enecal Energy VOF"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 6.75082,53.16249 ]
+    },
+    "properties": {
+    "bedrijf":"ESKA Graphic Board BV (Hoogezand)"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 4.27797,51.87111 ]
+    },
+    "properties": {
+    "bedrijf":"Botlek VCM Plant"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 4.82431,52.42257 ]
+    },
+    "properties": {
+    "bedrijf":"Cabot Norit Nederland B.V."
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 4.86337,52.40118 ]
+    },
+    "properties": {
+    "bedrijf":"Internationale Graanoverslag Maatschappij Amsterdam BV"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 4.01932,51.96785 ]
+    },
+    "properties": {
+    "bedrijf":"Lyondell Chemie Nederland B.V."
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 7.20295,53.18220 ]
+    },
+    "properties": {
+    "bedrijf":"Solidus Solutions (Bad Nieuweschans)"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 4.58016,51.68962 ]
+    },
+    "properties": {
+    "bedrijf":"Slibverwerking Noord-Brabant"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 4.25625,51.88525 ]
+    },
+    "properties": {
+    "bedrijf":"Air Liquide Nederland BV"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 6.83782,53.44140 ]
+    },
+    "properties": {
+    "bedrijf":"Theo Pouw Secundaire Bouwstoffen B.V."
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 4.33576,51.88986 ]
+    },
+    "properties": {
+    "bedrijf":"Arkema BV (Rotterdam)"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 6.05767,51.87410 ]
+    },
+    "properties": {
+    "bedrijf":"Wienerberger Steenfabriek Kijfwaard Oost"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 4.27863,51.87401 ]
+    },
+    "properties": {
+    "bedrijf":"Nobian Industrial Chemicals BV (Botlek)"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 5.01666,51.59261 ]
+    },
+    "properties": {
+    "bedrijf":"Agristo NV"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 3.70192,51.44589 ]
+    },
+    "properties": {
+    "bedrijf":"Ovet Vlissingen"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 5.96858,52.28523 ]
+    },
+    "properties": {
+    "bedrijf":"Vaassen Flexible Packaging"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 6.18325,52.24355 ]
+    },
+    "properties": {
+    "bedrijf":"Ardagh Metal Packaging Netherlands BV"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 6.48405,52.72737 ]
+    },
+    "properties": {
+    "bedrijf":"Ardagh Metal Packaging Netherlands BV"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 4.16461,51.82316 ]
+    },
+    "properties": {
+    "bedrijf":"Farm Frites BV"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 7.04749,53.13897 ]
+    },
+    "properties": {
+    "bedrijf":"PQ Silicas BV (Winschoten)"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 5.70350,51.44270 ]
+    },
+    "properties": {
+    "bedrijf":"CAN-PACK Netherlands B.V."
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 5.24059,52.30293 ]
+    },
+    "properties": {
+    "bedrijf":"BN International BV"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 6.52183,52.71368 ]
+    },
+    "properties": {
+    "bedrijf":"DOC Kaas (Zuivelpark)"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 6.13759,51.33751 ]
+    },
+    "properties": {
+    "bedrijf":"MGG Netherlands BV"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 5.67534,50.87835 ]
+    },
+    "properties": {
+    "bedrijf":"Steenfabriek Gebroeders Klinkers BV"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 5.81891,53.19822 ]
+    },
+    "properties": {
+    "bedrijf":"FrieslandCampina (Leeuwarden)"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 5.98454,51.91232 ]
+    },
+    "properties": {
+    "bedrijf":"B.V. Steenfabriek Huissenswaard"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 5.01196,51.59730 ]
+    },
+    "properties": {
+    "bedrijf":"FUJIFILM Manufacturing Europe BV"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 4.26066,51.88618 ]
+    },
+    "properties": {
+    "bedrijf":"Emerald Kalama Chemical Rotterdam BV"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 5.09081,51.83257 ]
+    },
+    "properties": {
+    "bedrijf":"Sonac Vuren BV"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 4.64045,51.80765 ]
+    },
+    "properties": {
+    "bedrijf":"Sime Darby Unimills B.V."
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 4.34557,52.01844 ]
+    },
+    "properties": {
+    "bedrijf":"DSM Delft Permit BV"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 4.26049,51.50649 ]
+    },
+    "properties": {
+    "bedrijf":"Cargill BV"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 6.98614,53.30291 ]
+    },
+    "properties": {
+    "bedrijf":"PPG Industries Chemicals BV"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 5.74445,51.96858 ]
+    },
+    "properties": {
+    "bedrijf":"Wienerberger Steenfabriek Heteren"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 6.76716,52.24789 ]
+    },
+    "properties": {
+    "bedrijf":"Galvano Hengelo BV"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 4.28742,51.87000 ]
+    },
+    "properties": {
+    "bedrijf":"Air Products Nederland BV (Pernis)"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 3.64383,51.49457 ]
+    },
+    "properties": {
+    "bedrijf":"Eastman Chemical Middelburg BV"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 5.55483,51.78227 ]
+    },
+    "properties": {
+    "bedrijf":"Aspen Oss B.V. (locatie De Geer)"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 4.95418,51.82810 ]
+    },
+    "properties": {
+    "bedrijf":"Promelca B.V. (Gorinchem)"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 5.68867,51.46358 ]
+    },
+    "properties": {
+    "bedrijf":"Ennatuurlijk BV (Helmond)"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 4.18480,51.92882 ]
+    },
+    "properties": {
+    "bedrijf":"ExxonMobil Chemical Holland BV (ROP van RPI)"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 4.31979,51.88038 ]
+    },
+    "properties": {
+    "bedrijf":"Odfjell Terminals (Rotterdam) BV"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 6.19082,52.06690 ]
+    },
+    "properties": {
+    "bedrijf":"Aviko BV"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 6.61701,52.36611 ]
+    },
+    "properties": {
+    "bedrijf":"Van Merksteijn International BV"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 5.83206,51.04244 ]
+    },
+    "properties": {
+    "bedrijf":"VDL Nedcar BV"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 4.74036,52.42304 ]
+    },
+    "properties": {
+    "bedrijf":"Afrikahaven Coal Terminal BV"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 5.68389,53.45278 ]
+    },
+    "properties": {
+    "bedrijf":"Vliegveld Ameland"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 5.34009,51.79393 ]
+    },
+    "properties": {
+    "bedrijf":"Rodruza Steenfabriek Rossum BV"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 4.72730,51.81815 ]
+    },
+    "properties": {
+    "bedrijf":"Chemours Netherlands BV"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 3.68967,51.45227 ]
+    },
+    "properties": {
+    "bedrijf":"ARKEMA Vlissingen BV"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 4.54072,52.13775 ]
+    },
+    "properties": {
+    "bedrijf":"Heineken Nederland BV (Zoeterwoude)"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 4.66006,51.85877 ]
+    },
+    "properties": {
+    "bedrijf":"FNSteel BV"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 6.25626,51.98433 ]
+    },
+    "properties": {
+    "bedrijf":"Nannoka Vulcanus Industries BV"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 4.81052,52.39743 ]
+    },
+    "properties": {
+    "bedrijf":"Simadan"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 6.01227,51.27200 ]
+    },
+    "properties": {
+    "bedrijf":"Kleiwarenfabriek Joosten Kessel BV"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 5.52619,52.54087 ]
+    },
+    "properties": {
+    "bedrijf":"McCain Foods Holland BV (Lelystad)"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 6.14046,51.33733 ]
+    },
+    "properties": {
+    "bedrijf":"Monier BV (Tegelen)"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 5.44562,51.50225 ]
+    },
+    "properties": {
+    "bedrijf":"A. Jansen B.V."
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 5.94013,51.96512 ]
+    },
+    "properties": {
+    "bedrijf":"Nouryon Functional Chemicals BV (CMC)"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 6.80613,53.16194 ]
+    },
+    "properties": {
+    "bedrijf":"ESKA Graphic Board BV (Sappemeer)"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 6.03852,50.87809 ]
+    },
+    "properties": {
+    "bedrijf":"E-max Remelt"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 7.04111,53.20806 ]
+    },
+    "properties": {
+    "bedrijf":"Vliegveld Oostwold"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 6.96468,53.31670 ]
+    },
+    "properties": {
+    "bedrijf":"Dynea"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 5.53213,51.76375 ]
+    },
+    "properties": {
+    "bedrijf":"Aspen Oss B.V. (locatie Moleneind)"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 5.47800,51.89197 ]
+    },
+    "properties": {
+    "bedrijf":"Wienerberger Steenfabriek Schipperswaard"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 6.15518,51.33731 ]
+    },
+    "properties": {
+    "bedrijf":"Wienerberger Dakpannenfabriek Narvik Tegelen"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 5.15146,51.69204 ]
+    },
+    "properties": {
+    "bedrijf":"Sapa Profiles NL BV (Drunen)"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 6.83713,52.65917 ]
+    },
+    "properties": {
+    "bedrijf":"KH Dairy Sourcing BV"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 6.77135,52.27896 ]
+    },
+    "properties": {
+    "bedrijf":"RWZI Hengelo"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 6.19530,52.16057 ]
+    },
+    "properties": {
+    "bedrijf":"GMB Slibverwerking Zutphen BV"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 4.87072,52.08528 ]
+    },
+    "properties": {
+    "bedrijf":"Monier BV (Woerden)"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 6.13166,52.00963 ]
+    },
+    "properties": {
+    "bedrijf":"Gieterij Doesburg BV"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 6.97859,53.31256 ]
+    },
+    "properties": {
+    "bedrijf":"Klesch Aluminium Delfzijl"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 6.52000,52.85556 ]
+    },
+    "properties": {
+    "bedrijf":"FrieslandCampina Domo (Beilen)"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 5.20718,51.73724 ]
+    },
+    "properties": {
+    "bedrijf":"BV Steenfabriek Hedikhuizen"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 3.70297,51.45870 ]
+    },
+    "properties": {
+    "bedrijf":"Zalco B.V."
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 6.98716,53.30743 ]
+    },
+    "properties": {
+    "bedrijf":"Zeolyst CV"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 5.18996,51.81840 ]
+    },
+    "properties": {
+    "bedrijf":"Wienerberger Steenfabriek Haaften"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 5.86133,51.15684 ]
+    },
+    "properties": {
+    "bedrijf":"Wienerberger Steenfabriek Thorn"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 5.99842,50.85346 ]
+    },
+    "properties": {
+    "bedrijf":"Everris International BV"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 5.91288,51.68840 ]
+    },
+    "properties": {
+    "bedrijf":"Steenfabriek Engels Oeffelt BV"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 5.18849,52.11815 ]
+    },
+    "properties": {
+    "bedrijf":"Stichting AL-terrein"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 4.28821,51.88189 ]
+    },
+    "properties": {
+    "bedrijf":"ExxonMobil Chemical Holland BV (RPP van RPI)"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 5.94187,51.96647 ]
+    },
+    "properties": {
+    "bedrijf":"Veolia Industriediensten BV"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 5.43424,51.91717 ]
+    },
+    "properties": {
+    "bedrijf":"GMB Slibverwerking Tiel BV"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 4.63660,51.62603 ]
+    },
+    "properties": {
+    "bedrijf":"Synbra Technology BV"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 6.85984,53.42495 ]
+    },
+    "properties": {
+    "bedrijf":"Green Box Computing B.V."
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 4.82683,52.39374 ]
+    },
+    "properties": {
+    "bedrijf":"Sonneborn Refined Products BV (Amsterdam)"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 6.77691,51.96711 ]
+    },
+    "properties": {
+    "bedrijf":"Sibelco Winterswijk"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 6.36076,52.49436 ]
+    },
+    "properties": {
+    "bedrijf":"Gasunie Vilsteren/Ommen"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 4.82265,52.40999 ]
+    },
+    "properties": {
+    "bedrijf":"Amsterdam Coal Processing (ACP Rietlanden)"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 5.34862,52.17421 ]
+    },
+    "properties": {
+    "bedrijf":"RWZI Amersfoort"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 5.05019,52.75977 ]
+    },
+    "properties": {
+    "bedrijf":"Gasunie (Wieringermeer)"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 5.91548,51.87677 ]
+    },
+    "properties": {
+    "bedrijf":"Wienerberger Steenfabriek Bemmel"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 3.95018,51.46002 ]
+    },
+    "properties": {
+    "bedrijf":"Seasun BV"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 3.83451,51.31339 ]
+    },
+    "properties": {
+    "bedrijf":"Ovet Terminal Massagoedhaven-Terneuzen"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 5.06821,51.60196 ]
+    },
+    "properties": {
+    "bedrijf":"RWZI Tilburg-Noord"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 6.67183,53.24830 ]
+    },
+    "properties": {
+    "bedrijf":"RWZI Garmerwolde"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 4.66859,52.47422 ]
+    },
+    "properties": {
+    "bedrijf":"RWZI Beverwijk"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 5.78530,50.94328 ]
+    },
+    "properties": {
+    "bedrijf":"Kleiwarenfabriek Façade Beek BV"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 5.41582,51.88337 ]
+    },
+    "properties": {
+    "bedrijf":"Niacet B.V."
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 5.67498,51.89105 ]
+    },
+    "properties": {
+    "bedrijf":"Wienerberger Dakpannenfabriek Narvik Deest"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 4.73749,51.81587 ]
+    },
+    "properties": {
+    "bedrijf":"Zavin C.V."
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 6.39046,53.16245 ]
+    },
+    "properties": {
+    "bedrijf":"Schur Flexible Benelux BV"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 4.70853,52.00491 ]
+    },
+    "properties": {
+    "bedrijf":"Croda"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 5.87513,52.74287 ]
+    },
+    "properties": {
+    "bedrijf":"Leo Hoogweg BV"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 5.79644,51.84849 ]
+    },
+    "properties": {
+    "bedrijf":"RWZI Weurt-Nijmegen"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 4.46468,51.89604 ]
+    },
+    "properties": {
+    "bedrijf":"RWZI Rotterdam-Dokhaven"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 4.78320,52.40754 ]
+    },
+    "properties": {
+    "bedrijf":"Graniet Import Benelux BV"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 4.70793,51.63017 ]
+    },
+    "properties": {
+    "bedrijf":"RWZI Nieuwveer"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 6.13978,51.56049 ]
+    },
+    "properties": {
+    "bedrijf":"Ecofuels BV"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 5.65156,51.24084 ]
+    },
+    "properties": {
+    "bedrijf":"Trespa International BV"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 5.97143,52.23869 ]
+    },
+    "properties": {
+    "bedrijf":"RWZI Apeldoorn"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 4.04280,51.96701 ]
+    },
+    "properties": {
+    "bedrijf":"Neste Oil Netherlands B.V."
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 5.65674,51.95101 ]
+    },
+    "properties": {
+    "bedrijf":"Wienerberger Steenfabriek de Wolfswaard"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 4.30061,51.88424 ]
+    },
+    "properties": {
+    "bedrijf":"Biopetrol Rotterdam BV"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 6.94496,53.31740 ]
+    },
+    "properties": {
+    "bedrijf":"Teijin Aramid BV"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 6.96720,52.71943 ]
+    },
+    "properties": {
+    "bedrijf":"Rademakers Gieterij BV"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 6.59806,53.30908 ]
+    },
+    "properties": {
+    "bedrijf":"FrieslandCampina Bedum"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 4.81012,52.48478 ]
+    },
+    "properties": {
+    "bedrijf":"Loders Croklaan B.V."
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 5.77996,52.94648 ]
+    },
+    "properties": {
+    "bedrijf":"Exploitatiemaatschappij Phoenix BV"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 4.76153,51.61007 ]
+    },
+    "properties": {
+    "bedrijf":"Synthos Breda B.V."
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 6.73808,52.65754 ]
+    },
+    "properties": {
+    "bedrijf":"Smurfit Kappa Solid Board Coevorden"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 4.85701,51.66645 ]
+    },
+    "properties": {
+    "bedrijf":"Staalstraal Brabant BV"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 6.07226,52.51708 ]
+    },
+    "properties": {
+    "bedrijf":"Abbott Laboratories B.V."
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 6.12833,53.11806 ]
+    },
+    "properties": {
+    "bedrijf":"Vliegveld Drachten"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 4.81169,52.44412 ]
+    },
+    "properties": {
+    "bedrijf":"Goglio North Europe BV"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 5.45568,52.97370 ]
+    },
+    "properties": {
+    "bedrijf":"FrieslandCampina Workum"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 6.89185,53.09897 ]
+    },
+    "properties": {
+    "bedrijf":"Stinoil Holding B.V."
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 5.27367,51.35811 ]
+    },
+    "properties": {
+    "bedrijf":"Diffutherm BV"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 5.95747,51.16667 ]
+    },
+    "properties": {
+    "bedrijf":"Solvay Chemie BV"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 4.29403,51.89168 ]
+    },
+    "properties": {
+    "bedrijf":"Keppel Verolme BV"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 4.37342,52.05680 ]
+    },
+    "properties": {
+    "bedrijf":"Eneco Solar, Bio & Hydro BV, WKC Ypenburg"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 5.05391,52.07471 ]
+    },
+    "properties": {
+    "bedrijf":"BASF Nederland BV Catalysts"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 5.62030,52.16536 ]
+    },
+    "properties": {
+    "bedrijf":"Vink Afvalverwerking BV"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 6.97565,53.30568 ]
+    },
+    "properties": {
+    "bedrijf":"RMD BV"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 4.61945,51.80617 ]
+    },
+    "properties": {
+    "bedrijf":"Ashland Industries Nederland B.V."
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 6.62616,52.56708 ]
+    },
+    "properties": {
+    "bedrijf":"Wavin Diensten BV"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 5.71310,50.76989 ]
+    },
+    "properties": {
+    "bedrijf":"PQ Silicas BV (Eijsden)"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 6.42640,52.16444 ]
+    },
+    "properties": {
+    "bedrijf":"FrieslandCampina Butter (Lochem)"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 4.98785,51.84350 ]
+    },
+    "properties": {
+    "bedrijf":"PURAC Biochem BV"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 6.98819,53.09125 ]
+    },
+    "properties": {
+    "bedrijf":"Steenindustrie Strating BV"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 6.06483,52.51310 ]
+    },
+    "properties": {
+    "bedrijf":"Scania Production Zwolle BV"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 4.24662,51.39942 ]
+    },
+    "properties": {
+    "bedrijf":"RWZI Bath"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 6.79014,52.24615 ]
+    },
+    "properties": {
+    "bedrijf":"Empyro B.V."
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 6.02605,51.62222 ]
+    },
+    "properties": {
+    "bedrijf":"Wienerberger Steenfabriek Nuance"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 4.79571,52.49664 ]
+    },
+    "properties": {
+    "bedrijf":"Cargill BV - Cargill Cocoa (Eenhoorn-Mol)"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 4.26728,51.50601 ]
+    },
+    "properties": {
+    "bedrijf":"Allnex Netherlands B.V."
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 4.78278,52.92250 ]
+    },
+    "properties": {
+    "bedrijf":"Vliegveld de Kooy"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 6.04934,52.50872 ]
+    },
+    "properties": {
+    "bedrijf":"RWZI Zwolle"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 4.37729,51.90366 ]
+    },
+    "properties": {
+    "bedrijf":"Damen Shiprepair Rotterdam"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 6.29290,51.96024 ]
+    },
+    "properties": {
+    "bedrijf":"Papierfabriek Doetinchem BV"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 5.70602,50.85724 ]
+    },
+    "properties": {
+    "bedrijf":"Koninklijke Mosa BV Wandtegelfabriek"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 5.85786,51.75156 ]
+    },
+    "properties": {
+    "bedrijf":"SCA Tissue Nederland BV"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 5.83359,51.06257 ]
+    },
+    "properties": {
+    "bedrijf":"RWZI Susteren"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 6.96656,53.31157 ]
+    },
+    "properties": {
+    "bedrijf":"FMC Chemicals Netherlands BV"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 5.55988,52.02921 ]
+    },
+    "properties": {
+    "bedrijf":"Dishman Netherlands B.V."
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 6.59765,52.07461 ]
+    },
+    "properties": {
+    "bedrijf":"Groot Zevert Vergisting"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 3.83663,51.30025 ]
+    },
+    "properties": {
+    "bedrijf":"ICL-IP Terneuzen BV"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 4.76691,52.48818 ]
+    },
+    "properties": {
+    "bedrijf":"Forbo Flooring BV"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 4.57398,51.66841 ]
+    },
+    "properties": {
+    "bedrijf":"Basell Benelux BV"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 6.00255,51.97245 ]
+    },
+    "properties": {
+    "bedrijf":"RWZI Nieuwgraaf"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 4.65611,51.86000 ]
+    },
+    "properties": {
+    "bedrijf":"Alblasserdam Yachtbuilding B.V. (Oceanco)"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 5.07054,52.00392 ]
+    },
+    "properties": {
+    "bedrijf":"RWZI Nieuwegein"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 4.54194,51.90856 ]
+    },
+    "properties": {
+    "bedrijf":"AWZI Kralingseveer"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 4.28321,51.88171 ]
+    },
+    "properties": {
+    "bedrijf":"Cargill B.V."
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 4.21959,51.90606 ]
+    },
+    "properties": {
+    "bedrijf":"Greif Nederland BV"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 4.96666,52.50120 ]
+    },
+    "properties": {
+    "bedrijf":"Stadsverwarming Purmerend HWC1"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 4.06742,51.94435 ]
+    },
+    "properties": {
+    "bedrijf":"Gasunie LNG"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 5.92606,52.54940 ]
+    },
+    "properties": {
+    "bedrijf":"Lyempf Kampen BV"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 6.52601,53.39455 ]
+    },
+    "properties": {
+    "bedrijf":"Rixona BV (Warffum)"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 6.95803,53.30959 ]
+    },
+    "properties": {
+    "bedrijf":"Dow Benelux BV (Delfzijl)"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 5.83394,52.45811 ]
+    },
+    "properties": {
+    "bedrijf":"RWZI Elburg"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 5.65565,51.47534 ]
+    },
+    "properties": {
+    "bedrijf":"Vlisco Helmond BV"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 5.68742,52.68685 ]
+    },
+    "properties": {
+    "bedrijf":"AWZI Tollebeek"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 4.86991,52.40750 ]
+    },
+    "properties": {
+    "bedrijf":"Havenbedrijf de Rietlanden BV"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 6.15814,51.38146 ]
+    },
+    "properties": {
+    "bedrijf":"RWZI Venlo"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 5.53496,51.76499 ]
+    },
+    "properties": {
+    "bedrijf":"Unilever Nederland BV"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 6.88136,52.73117 ]
+    },
+    "properties": {
+    "bedrijf":"RWZI Emmen"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 6.17409,52.69182 ]
+    },
+    "properties": {
+    "bedrijf":"FrieslandCampina Kievit (Meppel)"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 6.04296,52.13088 ]
+    },
+    "properties": {
+    "bedrijf":"Solidpack BV"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 5.51829,51.61293 ]
+    },
+    "properties": {
+    "bedrijf":"Mars Nederland BV"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 6.47084,52.36933 ]
+    },
+    "properties": {
+    "bedrijf":"Ten Cate Protect BV afd Protective Fabrics"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 4.45499,52.16720 ]
+    },
+    "properties": {
+    "bedrijf":"Janssen Biologics BV"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 5.55113,51.78266 ]
+    },
+    "properties": {
+    "bedrijf":"Unipol Holland BV"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 5.62116,52.04042 ]
+    },
+    "properties": {
+    "bedrijf":"RWZI Ede"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 5.43008,53.18983 ]
+    },
+    "properties": {
+    "bedrijf":"Damen Shiprepair Harlingen BV"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 4.66875,52.39656 ]
+    },
+    "properties": {
+    "bedrijf":"RWZI Haarlem-Waarderpolder"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 6.07295,50.89295 ]
+    },
+    "properties": {
+    "bedrijf":"Steenfabriek Nievelsteen BV"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 6.01940,50.85388 ]
+    },
+    "properties": {
+    "bedrijf":"Steenfabriek Linssen BV"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 5.67512,51.89012 ]
+    },
+    "properties": {
+    "bedrijf":"Steenfabriek Vogelensangh BV"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 5.87296,51.01524 ]
+    },
+    "properties": {
+    "bedrijf":"DIS BV"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 5.04768,51.58459 ]
+    },
+    "properties": {
+    "bedrijf":"Intern. Flav. & Fragranc. I.F.F. BV"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 4.24411,51.88989 ]
+    },
+    "properties": {
+    "bedrijf":"Ducor Petrochemicals B.V."
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 3.61452,51.44364 ]
+    },
+    "properties": {
+    "bedrijf":"RWZI Walcheren"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 4.32879,51.88553 ]
+    },
+    "properties": {
+    "bedrijf":"Olenex Edible Oils B.V."
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 5.85477,51.96727 ]
+    },
+    "properties": {
+    "bedrijf":"RWZI Arnhem-Zuid"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 6.05559,52.09665 ]
+    },
+    "properties": {
+    "bedrijf":"W A Sanders Papierfabriek Coldenhove BV"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 6.20235,52.24185 ]
+    },
+    "properties": {
+    "bedrijf":"BYK Netherlands B.V."
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 6.17122,52.24065 ]
+    },
+    "properties": {
+    "bedrijf":"Nouryon Functional Chemicals"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 5.36623,52.16515 ]
+    },
+    "properties": {
+    "bedrijf":"Drukkerij Zwart"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 5.54172,53.18228 ]
+    },
+    "properties": {
+    "bedrijf":"Huhtamaki Nederland BV"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 5.03445,52.30348 ]
+    },
+    "properties": {
+    "bedrijf":"Abbott Healthcare Products BV"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 5.98885,51.21930 ]
+    },
+    "properties": {
+    "bedrijf":"RWZI Roermond"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 5.63110,52.35778 ]
+    },
+    "properties": {
+    "bedrijf":"RWZI Harderwijk"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 4.02511,51.96842 ]
+    },
+    "properties": {
+    "bedrijf":"IOI - Loders Croklaan Oils B.V."
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 4.72339,51.81795 ]
+    },
+    "properties": {
+    "bedrijf":"Delrin Netherlands B.V."
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 5.51146,53.06118 ]
+    },
+    "properties": {
+    "bedrijf":"Hochwald Nederland BV"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 5.94052,50.90741 ]
+    },
+    "properties": {
+    "bedrijf":"Componenta BV (Hoensbroek)"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 6.06343,52.10389 ]
+    },
+    "properties": {
+    "bedrijf":"Mayr-Melnhof Eerbeek BV"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 6.03060,51.23277 ]
+    },
+    "properties": {
+    "bedrijf":"WEPA Nederland B.V."
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 6.86982,53.41165 ]
+    },
+    "properties": {
+    "bedrijf":"Gasunie (Spijk)"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 5.66150,51.78253 ]
+    },
+    "properties": {
+    "bedrijf":"Gasunie (Ravenstein)"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 5.43222,51.91727 ]
+    },
+    "properties": {
+    "bedrijf":"RWZI Tiel"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 5.88958,52.96970 ]
+    },
+    "properties": {
+    "bedrijf":"BASF Nederland B.V. (Nijehaske)"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 5.80817,51.84371 ]
+    },
+    "properties": {
+    "bedrijf":"Mead Johnson BV"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 6.97433,53.30398 ]
+    },
+    "properties": {
+    "bedrijf":"KBM Master Alloys BV (Delfzijl)"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 6.50766,53.21353 ]
+    },
+    "properties": {
+    "bedrijf":"Solidus Solutions Board B.V. (Hoogkerk)"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 6.12880,52.27119 ]
+    },
+    "properties": {
+    "bedrijf":"RWZI Deventer"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 6.32051,51.93269 ]
+    },
+    "properties": {
+    "bedrijf":"RWZI Etten"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 5.08566,52.25803 ]
+    },
+    "properties": {
+    "bedrijf":"RWZI Horstermeer"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 4.85123,51.67457 ]
+    },
+    "properties": {
+    "bedrijf":"RWZI Dongemond"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 3.67179,51.46140 ]
+    },
+    "properties": {
+    "bedrijf":"Damen Schelde Naval Shipbuilding B.V. en Scheldepoort B.V"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 5.26326,51.79810 ]
+    },
+    "properties": {
+    "bedrijf":"SACHEM Europe BV"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 4.61939,51.80917 ]
+    },
+    "properties": {
+    "bedrijf":"Alblasserdam Yachtbuilding Construction B.V."
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 3.57751,51.44558 ]
+    },
+    "properties": {
+    "bedrijf":"Scheepswerf K.S.G."
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 4.86146,51.70755 ]
+    },
+    "properties": {
+    "bedrijf":"Nederlof Scheepsbouw BV"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 4.25733,51.88463 ]
+    },
+    "properties": {
+    "bedrijf":"Wilmar Oleochemicals BV"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 5.82860,53.19504 ]
+    },
+    "properties": {
+    "bedrijf":"RWZI Leeuwarden"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 4.49505,52.04753 ]
+    },
+    "properties": {
+    "bedrijf":"NV Nutricia Zoetermeer"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 6.20050,53.23847 ]
+    },
+    "properties": {
+    "bedrijf":"FrieslandCampina Cheese (Gerkesklooster)"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 4.85824,52.43009 ]
+    },
+    "properties": {
+    "bedrijf":"RWZI Zaandam-Oost"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 6.25396,53.14060 ]
+    },
+    "properties": {
+    "bedrijf":"FrieslandCampina Cheese Marum"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 4.68886,51.81838 ]
+    },
+    "properties": {
+    "bedrijf":"Scheepswerf Hoebee"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 5.70448,50.88178 ]
+    },
+    "properties": {
+    "bedrijf":"PQ Silicas BV (Maastricht)"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 4.25563,51.88763 ]
+    },
+    "properties": {
+    "bedrijf":"Invista Nederland BV (Rozenburg)"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 4.87346,52.40545 ]
+    },
+    "properties": {
+    "bedrijf":"ICL Fertilizers Europe CV"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 6.17813,52.69449 ]
+    },
+    "properties": {
+    "bedrijf":"Scania Production Meppel BV"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 4.15303,51.96476 ]
+    },
+    "properties": {
+    "bedrijf":"DSM Resins BV"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 4.87436,52.55675 ]
+    },
+    "properties": {
+    "bedrijf":"CONO Kaasmakers (Middenbeemster)"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 6.86895,52.68968 ]
+    },
+    "properties": {
+    "bedrijf":"Aliancys Nederland B.V."
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 5.21568,52.38832 ]
+    },
+    "properties": {
+    "bedrijf":"Nuon WKC Almere"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 5.73656,51.26652 ]
+    },
+    "properties": {
+    "bedrijf":"RWZI Weert"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 6.81553,52.20671 ]
+    },
+    "properties": {
+    "bedrijf":"Grolsche Bierbrouwerij Nederland BV"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 5.70276,50.87230 ]
+    },
+    "properties": {
+    "bedrijf":"RWZI Maastricht-Limmel"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 4.62248,51.56735 ]
+    },
+    "properties": {
+    "bedrijf":"Schut Flexible Packaging"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 6.17860,52.24375 ]
+    },
+    "properties": {
+    "bedrijf":"Nefit Industrial BV"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 4.88954,52.31231 ]
+    },
+    "properties": {
+    "bedrijf":"RWZI Amstelveen"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 4.86933,51.70093 ]
+    },
+    "properties": {
+    "bedrijf":"Offshore Ruijtenberg BV"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 5.60185,51.51456 ]
+    },
+    "properties": {
+    "bedrijf":"Bavaria NV"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 6.47624,52.70831 ]
+    },
+    "properties": {
+    "bedrijf":"DOC Kaas (Zuivelfabriek)"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 4.33375,52.07636 ]
+    },
+    "properties": {
+    "bedrijf":"E.on Schenkkade"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 4.36930,51.99977 ]
+    },
+    "properties": {
+    "bedrijf":"TU Delft Warmtekrachtcentrale"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 5.01997,51.59164 ]
+    },
+    "properties": {
+    "bedrijf":"Ennatuurlijk (Tilburg)"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 5.82363,51.05659 ]
+    },
+    "properties": {
+    "bedrijf":"FrieslandCampina Born"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 4.35941,52.04316 ]
+    },
+    "properties": {
+    "bedrijf":"Eneco Solar, Bio & Hydro / HWC Ypenburg"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 5.27738,51.73190 ]
+    },
+    "properties": {
+    "bedrijf":"Afvalstoffendienst gemeente 's-Hertogenbosch"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 4.63353,51.78783 ]
+    },
+    "properties": {
+    "bedrijf":"Standic BV"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 4.70006,52.48784 ]
+    },
+    "properties": {
+    "bedrijf":"Gasunie (Beverwijk)"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 4.77277,52.39885 ]
+    },
+    "properties": {
+    "bedrijf":"Greenergy Biofuels Amsterdam B.V."
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 4.88200,52.76434 ]
+    },
+    "properties": {
+    "bedrijf":"FrieslandCampina Lutjewinkel"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 5.52275,52.03825 ]
+    },
+    "properties": {
+    "bedrijf":"RWZI Veenendaal"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 5.25582,52.41246 ]
+    },
+    "properties": {
+    "bedrijf":"Vetsmelterij C.M. Bosland BV"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 4.88898,51.62470 ]
+    },
+    "properties": {
+    "bedrijf":"Tata Steel Nederland Tubes BV (Oosterhout)"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 5.94367,52.19117 ]
+    },
+    "properties": {
+    "bedrijf":"Loparex BV"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 6.57467,53.00141 ]
+    },
+    "properties": {
+    "bedrijf":"RWZI Assen"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 4.57310,51.90624 ]
+    },
+    "properties": {
+    "bedrijf":"IHC Offshore & Marine B.V."
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 4.47403,52.13648 ]
+    },
+    "properties": {
+    "bedrijf":"RWZI Leiden Zuid-West"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 6.90699,52.77500 ]
+    },
+    "properties": {
+    "bedrijf":"Teijin Aramid BV (Emmen)"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 5.89348,51.69624 ]
+    },
+    "properties": {
+    "bedrijf":"RWZI Land van Cuijk"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 7.00811,53.16449 ]
+    },
+    "properties": {
+    "bedrijf":"RWZI Scheemda"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 6.90699,52.77500 ]
+    },
+    "properties": {
+    "bedrijf":"DSM Engineering Plastics (Emmen) BV"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 4.79010,52.92880 ]
+    },
+    "properties": {
+    "bedrijf":"RWZI Den Helder"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 6.67903,52.25704 ]
+    },
+    "properties": {
+    "bedrijf":"Elementis Specialties Netherlands B.V."
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 4.60405,52.48447 ]
+    },
+    "properties": {
+    "bedrijf":"Linde Gas Benelux BV"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 3.83838,51.29641 ]
+    },
+    "properties": {
+    "bedrijf":"RWZI Terneuzen"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 5.72479,51.96684 ]
+    },
+    "properties": {
+    "bedrijf":"RWZI Renkum"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 5.47855,52.23660 ]
+    },
+    "properties": {
+    "bedrijf":"Arla Foods BV"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 3.93449,51.45009 ]
+    },
+    "properties": {
+    "bedrijf":"RWZI Willem Annapolder"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 5.44760,51.43025 ]
+    },
+    "properties": {
+    "bedrijf":"Sonac Eindhoven BV"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 5.95234,52.93123 ]
+    },
+    "properties": {
+    "bedrijf":"Romi Smilfood BV (Heerenveen)"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 5.45407,51.44927 ]
+    },
+    "properties": {
+    "bedrijf":"Ennatuurlijk B.V. (Eindhoven)"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 5.57722,52.16715 ]
+    },
+    "properties": {
+    "bedrijf":"Givaudan Nederland BV (Barneveld)"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 4.31888,52.01541 ]
+    },
+    "properties": {
+    "bedrijf":"Delfluent Services BV"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 5.05425,51.69667 ]
+    },
+    "properties": {
+    "bedrijf":"DSM NeoResins B.V."
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 5.23821,52.13998 ]
+    },
+    "properties": {
+    "bedrijf":"Remia CV"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 5.93977,52.19084 ]
+    },
+    "properties": {
+    "bedrijf":"AFP Holland BV"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 5.55095,51.78380 ]
+    },
+    "properties": {
+    "bedrijf":"Brabant Alucast International"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 4.58416,51.68962 ]
+    },
+    "properties": {
+    "bedrijf":"COATEX Netherlands BV"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 6.41213,52.24330 ]
+    },
+    "properties": {
+    "bedrijf":"RWZI Holten"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 6.50580,52.78784 ]
+    },
+    "properties": {
+    "bedrijf":"Noblesse Proteins BV"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 6.05984,53.11268 ]
+    },
+    "properties": {
+    "bedrijf":"RWZI Drachten"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 5.91270,51.91809 ]
+    },
+    "properties": {
+    "bedrijf":"Groen Gas Gelderland B.V."
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 5.20055,52.06245 ]
+    },
+    "properties": {
+    "bedrijf":"Vrumona BV"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 3.55149,51.48436 ]
+    },
+    "properties": {
+    "bedrijf":"Invista Polyester BV"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 4.61232,51.81197 ]
+    },
+    "properties": {
+    "bedrijf":"Scheepswerf Kooiman BV"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 4.65313,51.85263 ]
+    },
+    "properties": {
+    "bedrijf":"Scheepswerf en machinefabriek 't Ambacht"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 4.35388,51.88340 ]
+    },
+    "properties": {
+    "bedrijf":"Hexion VAD B.V."
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 5.94265,51.63928 ]
+    },
+    "properties": {
+    "bedrijf":"SPGPrints"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 4.49405,52.17439 ]
+    },
+    "properties": {
+    "bedrijf":"RWZI Leiden Noord"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 4.74111,52.64234 ]
+    },
+    "properties": {
+    "bedrijf":"RWZI Alkmaar"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 6.42194,52.50720 ]
+    },
+    "properties": {
+    "bedrijf":"Hyproca Dairy BV"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 4.65971,52.45946 ]
+    },
+    "properties": {
+    "bedrijf":"RWZI Velsen"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 6.02977,53.20955 ]
+    },
+    "properties": {
+    "bedrijf":"GDF SUEZ Centrale Bergum"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 6.90054,53.10406 ]
+    },
+    "properties": {
+    "bedrijf":"RWZI Veendam"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 5.98862,51.55103 ]
+    },
+    "properties": {
+    "bedrijf":"RWZI Venray"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 5.73082,51.85519 ]
+    },
+    "properties": {
+    "bedrijf":"Inter-Che-M BV"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 4.34758,52.03405 ]
+    },
+    "properties": {
+    "bedrijf":"UZIMET BV"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 5.68016,50.86545 ]
+    },
+    "properties": {
+    "bedrijf":"DCC Maastricht B.V."
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 4.18000,51.92840 ]
+    },
+    "properties": {
+    "bedrijf":"Caldic Chemie BV"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 4.24920,51.88901 ]
+    },
+    "properties": {
+    "bedrijf":"Huntsman Holland BV"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 5.32801,51.60867 ]
+    },
+    "properties": {
+    "bedrijf":"RWZI Boxtel"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 6.19691,52.05909 ]
+    },
+    "properties": {
+    "bedrijf":"FrieslandCampina Cheese Steenderen"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 5.89661,50.82687 ]
+    },
+    "properties": {
+    "bedrijf":"RWZI Wijlre"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 5.71735,52.53669 ]
+    },
+    "properties": {
+    "bedrijf":"RWZI Dronten"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 4.72161,52.59460 ]
+    },
+    "properties": {
+    "bedrijf":"RWZI Heiloo"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 5.44542,52.49762 ]
+    },
+    "properties": {
+    "bedrijf":"Technoplating Lelystad B.V."
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 5.91757,51.91543 ]
+    },
+    "properties": {
+    "bedrijf":"Energiecoöperatie Greenhouse Energy"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 4.48065,51.89462 ]
+    },
+    "properties": {
+    "bedrijf":"Meneba Meel BV"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 4.26606,51.89474 ]
+    },
+    "properties": {
+    "bedrijf":"Kemira Rotterdam BV"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 5.79834,50.95276 ]
+    },
+    "properties": {
+    "bedrijf":"Celanese Emulsions BV"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 4.80108,52.42694 ]
+    },
+    "properties": {
+    "bedrijf":"Hilton Meats Zaandam B.V."
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 6.30161,53.34551 ]
+    },
+    "properties": {
+    "bedrijf":"Heiploeg International BV"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 4.54725,51.79039 ]
+    },
+    "properties": {
+    "bedrijf":"FrieslandCampina Maasdam"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 4.55917,51.67302 ]
+    },
+    "properties": {
+    "bedrijf":"Dr. W. Kolb Nederland BV"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 6.47903,52.35595 ]
+    },
+    "properties": {
+    "bedrijf":"Ten Cate Technical Fabrics BV (PC Stamstraat)"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 4.92125,51.61791 ]
+    },
+    "properties": {
+    "bedrijf":"Trobas Gelatine BV"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 6.93305,53.08320 ]
+    },
+    "properties": {
+    "bedrijf":"Ondergrondse aardgasopslag Zuidwending"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 4.95790,52.29501 ]
+    },
+    "properties": {
+    "bedrijf":"AMC Academisch Medisch Centrum"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 5.28345,51.72100 ]
+    },
+    "properties": {
+    "bedrijf":"RWZI 's-Hertogenbosch"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 5.88796,51.72357 ]
+    },
+    "properties": {
+    "bedrijf":"Nutricia Cuijk BV"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 5.60192,51.89607 ]
+    },
+    "properties": {
+    "bedrijf":"De Gerlien van Tiem B.V."
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 6.82125,53.45519 ]
+    },
+    "properties": {
+    "bedrijf":"Holland Malt (Bavaria)"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 5.71669,52.84242 ]
+    },
+    "properties": {
+    "bedrijf":"Veka Shipyard Lemmer B.V."
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 5.72988,51.96583 ]
+    },
+    "properties": {
+    "bedrijf":"Steenbakkerij Randwijk BV"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 5.08426,52.02579 ]
+    },
+    "properties": {
+    "bedrijf":"Eneco (Nieuwegein)"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 4.78716,52.39853 ]
+    },
+    "properties": {
+    "bedrijf":"RWZI Amsterdam-West"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 6.25749,53.17090 ]
+    },
+    "properties": {
+    "bedrijf":"FrieslandCampina Butter (Noordwijk)"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 4.67991,51.82511 ]
+    },
+    "properties": {
+    "bedrijf":"Fokker Aerostructures BV"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 5.64674,51.65208 ]
+    },
+    "properties": {
+    "bedrijf":"Euro Support Advanced Materials B.V."
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 5.58027,53.17750 ]
+    },
+    "properties": {
+    "bedrijf":"RWZI Franeker"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 4.25555,51.88598 ]
+    },
+    "properties": {
+    "bedrijf":"Lucite International Holland BV"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 5.93822,50.90378 ]
+    },
+    "properties": {
+    "bedrijf":"Schiffers Food BV"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 4.80409,52.40629 ]
+    },
+    "properties": {
+    "bedrijf":"Oxea Nederland BV"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 6.08337,51.96396 ]
+    },
+    "properties": {
+    "bedrijf":"Gasunie (Zweekhorst)"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 4.30309,51.89999 ]
+    },
+    "properties": {
+    "bedrijf":"AWZI De Groote Lucht (Vlaardingen)"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 6.03217,52.39518 ]
+    },
+    "properties": {
+    "bedrijf":"Zeepfabriek De Klok BV"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 4.58147,52.46948 ]
+    },
+    "properties": {
+    "bedrijf":"IJ-palen"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 5.18242,52.29601 ]
+    },
+    "properties": {
+    "bedrijf":"Givaudan Nederland BV (Naarden)"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 6.34979,52.00113 ]
+    },
+    "properties": {
+    "bedrijf":"Koninklijke VIV Buisman B.V."
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 5.66912,51.46587 ]
+    },
+    "properties": {
+    "bedrijf":"Remat Chemie B.V."
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 4.63960,52.13006 ]
+    },
+    "properties": {
+    "bedrijf":"Avery Dennison Materials Nederland BV"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 5.02934,51.58926 ]
+    },
+    "properties": {
+    "bedrijf":"CZL Tilburg BV"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 6.18586,52.61971 ]
+    },
+    "properties": {
+    "bedrijf":"Rouveen Kaasspecialiteiten"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 6.14522,52.04667 ]
+    },
+    "properties": {
+    "bedrijf":"RWZI Olburgen"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 5.59984,51.23753 ]
+    },
+    "properties": {
+    "bedrijf":"Nedzink BV"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 6.68683,52.33784 ]
+    },
+    "properties": {
+    "bedrijf":"Enrichment Technology Company Nederland"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 3.82947,51.26716 ]
+    },
+    "properties": {
+    "bedrijf":"Scheepswerf De Schroef"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 5.86548,51.81981 ]
+    },
+    "properties": {
+    "bedrijf":"UMC St Radboud & Radboud Universiteit Nijmegen"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 5.64732,52.03220 ]
+    },
+    "properties": {
+    "bedrijf":"Riedel B.V."
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 5.81017,51.84231 ]
+    },
+    "properties": {
+    "bedrijf":"Smit Draad"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 5.41262,51.88328 ]
+    },
+    "properties": {
+    "bedrijf":"PPG Coatings"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 5.18567,52.10906 ]
+    },
+    "properties": {
+    "bedrijf":"Intervet Schering-Plough Animal Health (De Bilt)"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 5.64482,52.02861 ]
+    },
+    "properties": {
+    "bedrijf":"TANATEX Chemicals BV"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 4.83429,52.34058 ]
+    },
+    "properties": {
+    "bedrijf":"HWC Amsterdam Driehoek"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 4.72257,51.82450 ]
+    },
+    "properties": {
+    "bedrijf":"Scheepswerf Slob BV"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 3.70600,51.43900 ]
+    },
+    "properties": {
+    "bedrijf":"Arrow Terminals"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 4.36430,51.99568 ]
+    },
+    "properties": {
+    "bedrijf":"Prysmian Netherlands B.V."
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 5.27871,51.70212 ]
+    },
+    "properties": {
+    "bedrijf":"Heineken Nederland BV (Den Bosch)"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 6.15397,52.10302 ]
+    },
+    "properties": {
+    "bedrijf":"Arkema BV Location Brummen"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 6.96172,53.31367 ]
+    },
+    "properties": {
+    "bedrijf":"Delamine BV"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 6.94789,53.31960 ]
+    },
+    "properties": {
+    "bedrijf":"Nobian Chemicals BV (Chemie Park Delfzijl)"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 4.41596,51.93005 ]
+    },
+    "properties": {
+    "bedrijf":"FrieslandCampina Rotterdam"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 5.99602,53.18353 ]
+    },
+    "properties": {
+    "bedrijf":"RWZI Bergum-Suameer"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 5.43579,53.17996 ]
+    },
+    "properties": {
+    "bedrijf":"Sonac Harlingen BV"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 6.84439,52.72100 ]
+    },
+    "properties": {
+    "bedrijf":"Zincoat BV"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 4.34662,51.87605 ]
+    },
+    "properties": {
+    "bedrijf":"Pernis PVC Plant"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 5.55483,51.78227 ]
+    },
+    "properties": {
+    "bedrijf":"Merck Sharp & Dohme BV (De Geer)"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 6.98746,53.09302 ]
+    },
+    "properties": {
+    "bedrijf":"Smurfit Kappa Solid Board KM4 (Oude Pekela)"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 4.41598,51.89084 ]
+    },
+    "properties": {
+    "bedrijf":"RZB Holding BV"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 5.32936,51.68417 ]
+    },
+    "properties": {
+    "bedrijf":"FrieslandCampina Den Bosch"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 6.30145,52.98343 ]
+    },
+    "properties": {
+    "bedrijf":"BRF B.V."
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 5.07178,51.71163 ]
+    },
+    "properties": {
+    "bedrijf":"RWZI Waalwijk"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 6.80929,52.20555 ]
+    },
+    "properties": {
+    "bedrijf":"Van Merksteijn Plastics B.V."
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 4.76862,51.60750 ]
+    },
+    "properties": {
+    "bedrijf":"Caligen Europe BV"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 5.87658,52.57435 ]
+    },
+    "properties": {
+    "bedrijf":"UCO Kampen BV"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 6.90699,52.77500 ]
+    },
+    "properties": {
+    "bedrijf":"DSM Advanced Polyesters Emmen BV"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 4.26707,51.87747 ]
+    },
+    "properties": {
+    "bedrijf":"Organik Kimya BV"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 5.98303,51.95685 ]
+    },
+    "properties": {
+    "bedrijf":"Nuon HWC Westervoort"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 5.42630,53.18691 ]
+    },
+    "properties": {
+    "bedrijf":"Frisia Zout"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 5.97299,52.17891 ]
+    },
+    "properties": {
+    "bedrijf":"Ekro BV"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 5.77461,51.29777 ]
+    },
+    "properties": {
+    "bedrijf":"Global Food Group BV eierverwerking"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 6.39677,52.60229 ]
+    },
+    "properties": {
+    "bedrijf":"FrieslandCampina Cheese (Balkbrug)"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 5.71401,50.88301 ]
+    },
+    "properties": {
+    "bedrijf":"Tata Steel Nederland Tubes BV (Maastricht)"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 5.84117,51.94493 ]
+    },
+    "properties": {
+    "bedrijf":"Nuon HWC Schuytgraaf"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 6.04178,50.88762 ]
+    },
+    "properties": {
+    "bedrijf":"Eagle Simrax BV"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 4.18578,51.91910 ]
+    },
+    "properties": {
+    "bedrijf":"Kemira Chemicals BV"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 6.90699,52.77500 ]
+    },
+    "properties": {
+    "bedrijf":"Cumapol Emmen BV"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 6.14221,52.39470 ]
+    },
+    "properties": {
+    "bedrijf":"Stegeman C.V."
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 5.43430,51.43699 ]
+    },
+    "properties": {
+    "bedrijf":"Mirec BV"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 4.25655,51.50389 ]
+    },
+    "properties": {
+    "bedrijf":"Crealis Nederland BV"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 6.22463,51.94762 ]
+    },
+    "properties": {
+    "bedrijf":"B.V. Esbro"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 5.11502,52.08529 ]
+    },
+    "properties": {
+    "bedrijf":"Eneco HWC Nicolaas Beetsstraat"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 4.15324,51.96624 ]
+    },
+    "properties": {
+    "bedrijf":"RWZI Nieuwe Waterweg"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 5.65107,51.48255 ]
+    },
+    "properties": {
+    "bedrijf":"Nedschroef Helmond BV"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 4.62431,51.80556 ]
+    },
+    "properties": {
+    "bedrijf":"Tata Steel Nederland Tubes BV (Zwijndrecht)"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 5.76401,51.30082 ]
+    },
+    "properties": {
+    "bedrijf":"W.F.G.M. van Gemert"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 6.47179,51.93866 ]
+    },
+    "properties": {
+    "bedrijf":"Exploitatiemaatschappij J. ter Horst BV"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 4.48361,51.92169 ]
+    },
+    "properties": {
+    "bedrijf":"Uniper HWC Delftsevaart"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 6.09094,53.10714 ]
+    },
+    "properties": {
+    "bedrijf":"Dunlop Conveyor Belting"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 4.32565,51.89878 ]
+    },
+    "properties": {
+    "bedrijf":"Yara Vlaardingen BV"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 5.50582,51.46011 ]
+    },
+    "properties": {
+    "bedrijf":"RWZI Eindhoven"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 5.02999,51.79281 ]
+    },
+    "properties": {
+    "bedrijf":"HAK"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 4.26655,52.08857 ]
+    },
+    "properties": {
+    "bedrijf":"Delfluent Services BV"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 4.88076,51.80802 ]
+    },
+    "properties": {
+    "bedrijf":"Veka BV"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 6.71143,53.17362 ]
+    },
+    "properties": {
+    "bedrijf":"Covestro B.V."
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 5.54922,51.78340 ]
+    },
+    "properties": {
+    "bedrijf":"KBM Master Alloys BV (Oss)"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 4.83235,52.23791 ]
+    },
+    "properties": {
+    "bedrijf":"Quaker Chemical BV"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 4.92922,51.81543 ]
+    },
+    "properties": {
+    "bedrijf":"RWZI Sleeuwijk"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 4.76558,51.81926 ]
+    },
+    "properties": {
+    "bedrijf":"Scheepswerf L.J. Boer Sliedrecht BV"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 6.19577,52.15570 ]
+    },
+    "properties": {
+    "bedrijf":"Reomas B.V."
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 4.72257,51.82455 ]
+    },
+    "properties": {
+    "bedrijf":"Breko"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 4.96801,51.51265 ]
+    },
+    "properties": {
+    "bedrijf":"Gasunie (Alphen en Riel)"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 5.20555,51.35902 ]
+    },
+    "properties": {
+    "bedrijf":"Koster Keunen (Holland) B.V."
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 4.22877,51.54413 ]
+    },
+    "properties": {
+    "bedrijf":"Holonite BV (Tholen)"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 4.60335,51.99769 ]
+    },
+    "properties": {
+    "bedrijf":"Exportslachterij Clazing BV"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 5.48264,52.23225 ]
+    },
+    "properties": {
+    "bedrijf":"Technoplating Nijkerk BV"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 5.50502,52.35741 ]
+    },
+    "properties": {
+    "bedrijf":"M&R Claushuis BV"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 5.43437,51.43430 ]
+    },
+    "properties": {
+    "bedrijf":"AHC Benelux B.V."
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 6.89329,53.11372 ]
+    },
+    "properties": {
+    "bedrijf":"Kisuma Chemicals BV"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 6.63200,52.40837 ]
+    },
+    "properties": {
+    "bedrijf":"RWZI Vriezenveen"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 5.10762,52.11354 ]
+    },
+    "properties": {
+    "bedrijf":"Eneco HWC Overvecht (Esmoreit)"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 5.54510,51.76588 ]
+    },
+    "properties": {
+    "bedrijf":"Ardagh Metal Beverage Netherlands BV"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 4.85386,52.40746 ]
+    },
+    "properties": {
+    "bedrijf":"Main B.V. (Jan van Riebeeckhavenweg)"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 4.51305,51.90951 ]
+    },
+    "properties": {
+    "bedrijf":"Hunter Douglas Europe BV"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 5.48823,51.81196 ]
+    },
+    "properties": {
+    "bedrijf":"RWZI Oijen"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 5.34945,52.17165 ]
+    },
+    "properties": {
+    "bedrijf":"Hartog Containers B.V."
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 3.75173,51.34378 ]
+    },
+    "properties": {
+    "bedrijf":"Oiltanking Terneuzen BV"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 6.84064,52.23412 ]
+    },
+    "properties": {
+    "bedrijf":"RWZI Enschede West"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 5.13553,52.73280 ]
+    },
+    "properties": {
+    "bedrijf":"RWZI Wervershoof"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 5.66299,51.50599 ]
+    },
+    "properties": {
+    "bedrijf":"RWZI Aarle-Rixtel"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 4.80223,52.41321 ]
+    },
+    "properties": {
+    "bedrijf":"RWZI Amsterdam-Westpoort"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 6.90699,52.77500 ]
+    },
+    "properties": {
+    "bedrijf":"Morssinkhof Plastics Emmen BV"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 5.21462,52.38796 ]
+    },
+    "properties": {
+    "bedrijf":"Nuon HWC (Almere)"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 4.27536,51.50507 ]
+    },
+    "properties": {
+    "bedrijf":"Amcor Tobacco Packaging Brabant BV"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 5.10796,52.10989 ]
+    },
+    "properties": {
+    "bedrijf":"RWZI Utrecht"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 5.91497,50.91254 ]
+    },
+    "properties": {
+    "bedrijf":"RWZI Hoensbroek"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 4.73719,52.69444 ]
+    },
+    "properties": {
+    "bedrijf":"RWZI Geestmerambacht"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 4.48092,51.91586 ]
+    },
+    "properties": {
+    "bedrijf":"Uniper HWC Blekerstraat"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 5.18438,52.00467 ]
+    },
+    "properties": {
+    "bedrijf":"Van der Velden Rioleringsbeheer Buren B.V."
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 5.52944,51.63681 ]
+    },
+    "properties": {
+    "bedrijf":"RWZI Dinther"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 4.60688,52.30338 ]
+    },
+    "properties": {
+    "bedrijf":"RWZI Zwaanshoek"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 4.73683,51.81649 ]
+    },
+    "properties": {
+    "bedrijf":"RWZI Dordrecht"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 5.50384,52.35666 ]
+    },
+    "properties": {
+    "bedrijf":"MRC Plating Products B.V."
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 4.91575,52.51913 ]
+    },
+    "properties": {
+    "bedrijf":"RWZI Zuidoostbeemster"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 4.44016,52.20252 ]
+    },
+    "properties": {
+    "bedrijf":"RWZI Katwijk"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 5.05363,51.59261 ]
+    },
+    "properties": {
+    "bedrijf":"Van de Werken Hardchroomindustrie B.V."
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 4.58050,51.81312 ]
+    },
+    "properties": {
+    "bedrijf":"RWZI Zwijndrecht"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 5.24615,52.39955 ]
+    },
+    "properties": {
+    "bedrijf":"AWZI Almere"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 5.26667,51.81548 ]
+    },
+    "properties": {
+    "bedrijf":"RWZI Bommelerwaard"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 4.55527,51.59117 ]
+    },
+    "properties": {
+    "bedrijf":"Verzinkerij West Brabant BV"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 6.19269,52.15984 ]
+    },
+    "properties": {
+    "bedrijf":"RWZI Zutphen"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 6.41587,52.71017 ]
+    },
+    "properties": {
+    "bedrijf":"RWZI Echten"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 4.60209,51.92875 ]
+    },
+    "properties": {
+    "bedrijf":"RWZI Capelle-Groenedijk"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 4.73974,52.36159 ]
+    },
+    "properties": {
+    "bedrijf":"RWZI Zwanenburg"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 4.63044,51.97208 ]
+    },
+    "properties": {
+    "bedrijf":"RWZI Kortenoord"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 5.49913,52.50294 ]
+    },
+    "properties": {
+    "bedrijf":"AWZI Lelystad"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 4.57660,52.29386 ]
+    },
+    "properties": {
+    "bedrijf":"Draka Interfoam BV"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 6.82795,52.21402 ]
+    },
+    "properties": {
+    "bedrijf":"WKC Enschede"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 5.57131,51.44225 ]
+    },
+    "properties": {
+    "bedrijf":"Slibverwerking Nuenen"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 6.72166,52.66434 ]
+    },
+    "properties": {
+    "bedrijf":"CPC Metal Treatment BV"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 4.62049,51.87314 ]
+    },
+    "properties": {
+    "bedrijf":"RWZI Ridderkerk"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 5.89479,52.97013 ]
+    },
+    "properties": {
+    "bedrijf":"SVI Heerenveen-Noord"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 4.17579,51.84283 ]
+    },
+    "properties": {
+    "bedrijf":"RWZI Hellevoetsluis"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 4.36417,51.84152 ]
+    },
+    "properties": {
+    "bedrijf":"AWZI Spijkenisse-Allemanspolder"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 5.03856,52.11281 ]
+    },
+    "properties": {
+    "bedrijf":"RWZI Leidsche Rijn"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 4.72325,51.81635 ]
+    },
+    "properties": {
+    "bedrijf":"Performance Materials Netherlands B.V. (Dow)"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 6.04936,50.88320 ]
+    },
+    "properties": {
+    "bedrijf":"RWZI Kaffeberg"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 4.26535,51.87635 ]
+    },
+    "properties": {
+    "bedrijf":"Hexion UK Limited, Dutch Branch"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 5.87698,52.57658 ]
+    },
+    "properties": {
+    "bedrijf":"RWZI Kampen"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 4.71325,52.00242 ]
+    },
+    "properties": {
+    "bedrijf":"RWZI Gouda"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 5.89434,52.96947 ]
+    },
+    "properties": {
+    "bedrijf":"Slibontwateringsinstallatie / RWZI Heerenveen"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 4.90919,52.07655 ]
+    },
+    "properties": {
+    "bedrijf":"Koninklijke Eru Kaasfabriek BV"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 4.65138,51.84907 ]
+    },
+    "properties": {
+    "bedrijf":"EPS B.V."
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 6.09098,51.93465 ]
+    },
+    "properties": {
+    "bedrijf":"Compaxo Vlees Zevenaar BV"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 4.93543,51.84369 ]
+    },
+    "properties": {
+    "bedrijf":"RWZI Schelluinen"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 6.59325,52.11844 ]
+    },
+    "properties": {
+    "bedrijf":"RWZI Haarlo"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 5.24070,51.37759 ]
+    },
+    "properties": {
+    "bedrijf":"RWZI Hapert"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 6.19364,52.70966 ]
+    },
+    "properties": {
+    "bedrijf":"RWZI Meppel"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 5.44489,51.56103 ]
+    },
+    "properties": {
+    "bedrijf":"RWZI Sint Oedenrode"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 6.60933,52.54109 ]
+    },
+    "properties": {
+    "bedrijf":"RWZI Hardenberg"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 5.53038,51.76284 ]
+    },
+    "properties": {
+    "bedrijf":"Merck Sharp & Dohme BV (Moleneind)"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 5.68251,50.86434 ]
+    },
+    "properties": {
+    "bedrijf":"RWZI Maastricht-Bosscherveld"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 6.60370,53.12806 ]
+    },
+    "properties": {
+    "bedrijf":"RWZI Eelde"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 5.29841,52.19343 ]
+    },
+    "properties": {
+    "bedrijf":"RWZI Soest"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 4.33481,51.87424 ]
+    },
+    "properties": {
+    "bedrijf":"RWZI Rotterdam-Hoogvliet"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 4.66256,52.05587 ]
+    },
+    "properties": {
+    "bedrijf":"RWZI Reeuwijk-Randenburg"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 5.80254,51.50997 ]
+    },
+    "properties": {
+    "bedrijf":"Keizersberg Diervoeders Elsendorp B.V. (Milheeze)"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 4.62667,52.12786 ]
+    },
+    "properties": {
+    "bedrijf":"RWZI Alphen Kerk en Zanen"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 6.70677,51.98692 ]
+    },
+    "properties": {
+    "bedrijf":"RWZI Winterswijk"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 6.62277,52.34106 ]
+    },
+    "properties": {
+    "bedrijf":"RWZI Almelo-Sumpel"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 5.21151,52.08718 ]
+    },
+    "properties": {
+    "bedrijf":"RWZI Zeist"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 4.59683,51.89725 ]
+    },
+    "properties": {
+    "bedrijf":"RWZI De Groote Zaag"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 5.20379,52.22428 ]
+    },
+    "properties": {
+    "bedrijf":"RWZI Hilversum"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 5.27536,51.88707 ]
+    },
+    "properties": {
+    "bedrijf":"RWZI Geldermalsen"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 4.42965,51.82769 ]
+    },
+    "properties": {
+    "bedrijf":"RWZI Oud Beijerland"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 5.74352,51.39241 ]
+    },
+    "properties": {
+    "bedrijf":"RWZI Asten"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 4.44766,52.22154 ]
+    },
+    "properties": {
+    "bedrijf":"RWZI Noordwijk"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 5.64205,53.02305 ]
+    },
+    "properties": {
+    "bedrijf":"RWZI Sneek"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 5.47382,52.23174 ]
+    },
+    "properties": {
+    "bedrijf":"RWZI Nijkerk"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 5.23643,51.93943 ]
+    },
+    "properties": {
+    "bedrijf":"RWZI Culemborg"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 4.92240,51.60341 ]
+    },
+    "properties": {
+    "bedrijf":"RWZI Rijen"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 6.89322,52.31006 ]
+    },
+    "properties": {
+    "bedrijf":"RWZI Oldenzaal"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 4.88389,52.21162 ]
+    },
+    "properties": {
+    "bedrijf":"RWZI De Ronde Venen"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 4.66773,52.36869 ]
+    },
+    "properties": {
+    "bedrijf":"RWZI Haarlem-Schalkwijk"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 4.85094,52.08507 ]
+    },
+    "properties": {
+    "bedrijf":"RWZI Woerden"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 5.17435,52.11936 ]
+    },
+    "properties": {
+    "bedrijf":"RWZI De Bilt"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 4.67497,52.13752 ]
+    },
+    "properties": {
+    "bedrijf":"RWZI Alphen aan den Rijn-Noord"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 4.70253,51.82601 ]
+    },
+    "properties": {
+    "bedrijf":"RWZI Papendrecht"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 5.71516,50.81688 ]
+    },
+    "properties": {
+    "bedrijf":"RWZI Heugem"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 5.44677,51.70143 ]
+    },
+    "properties": {
+    "bedrijf":"RWZI Vinkel"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 5.96403,51.70522 ]
+    },
+    "properties": {
+    "bedrijf":"RWZI Gennep"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 4.83194,52.23978 ]
+    },
+    "properties": {
+    "bedrijf":"RWZI Uithoorn"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 6.47523,52.36857 ]
+    },
+    "properties": {
+    "bedrijf":"RWZI Nijverdal"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 6.04085,52.48501 ]
+    },
+    "properties": {
+    "bedrijf":"RWZI Hattem"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 5.87907,51.17169 ]
+    },
+    "properties": {
+    "bedrijf":"RWZI Heel en Panheel"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 6.95193,53.30697 ]
+    },
+    "properties": {
+    "bedrijf":"RWZI Delfzijl"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 6.47401,52.61008 ]
+    },
+    "properties": {
+    "bedrijf":"RWZI Dedemsvaart (Woudbloemweg)"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 5.09862,51.99880 ]
+    },
+    "properties": {
+    "bedrijf":"RWZI Vianen"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 4.73506,52.08241 ]
+    },
+    "properties": {
+    "bedrijf":"RWZI Bodegraven"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 5.13101,52.02784 ]
+    },
+    "properties": {
+    "bedrijf":"RWZI Houten"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 5.22415,51.58700 ]
+    },
+    "properties": {
+    "bedrijf":"RWZI Oisterwijk"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 5.59143,51.89248 ]
+    },
+    "properties": {
+    "bedrijf":"RWZI Druten"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 5.03096,52.48269 ]
+    },
+    "properties": {
+    "bedrijf":"RWZI Katwoude"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 5.24089,52.31023 ]
+    },
+    "properties": {
+    "bedrijf":"RWZI Huizen"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 6.71778,52.64294 ]
+    },
+    "properties": {
+    "bedrijf":"RWZI Coevorden"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 4.73617,52.80767 ]
+    },
+    "properties": {
+    "bedrijf":"RWZI De Stolpen"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 5.63432,51.92032 ]
+    },
+    "properties": {
+    "bedrijf":"RWZI Dodewaard"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 6.02049,53.32178 ]
+    },
+    "properties": {
+    "bedrijf":"RWZI Dokkum"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 6.77351,53.17077 ]
+    },
+    "properties": {
+    "bedrijf":"RWZI Hoogezand"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 4.67313,51.85010 ]
+    },
+    "properties": {
+    "bedrijf":"RWZI Alblasserdam"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 6.95622,53.01213 ]
+    },
+    "properties": {
+    "bedrijf":"RWZI Stadskanaal"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 4.99702,51.65567 ]
+    },
+    "properties": {
+    "bedrijf":"RWZI Kaatsheuvel"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 6.14179,51.38287 ]
+    },
+    "properties": {
+    "bedrijf":"Nedri Spanstaal BV"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 4.85806,51.93549 ]
+    },
+    "properties": {
+    "bedrijf":"RWZI Gelkenes"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 6.57315,52.24691 ]
+    },
+    "properties": {
+    "bedrijf":"RWZI Goor"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 5.25996,52.04612 ]
+    },
+    "properties": {
+    "bedrijf":"RWZI Driebergen"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 6.64990,52.36594 ]
+    },
+    "properties": {
+    "bedrijf":"RWZI Almelo Vissedijk"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 5.00186,52.08983 ]
+    },
+    "properties": {
+    "bedrijf":"RWZI De Meern"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 5.52298,53.07357 ]
+    },
+    "properties": {
+    "bedrijf":"RWZI Bolsward"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 5.53128,51.97353 ]
+    },
+    "properties": {
+    "bedrijf":"RWZI Rhenen"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 5.45428,53.17240 ]
+    },
+    "properties": {
+    "bedrijf":"RWZI Harlingen"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 5.44703,52.08865 ]
+    },
+    "properties": {
+    "bedrijf":"RWZI Woudenberg"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 5.35358,52.17331 ]
+    },
+    "properties": {
+    "bedrijf":"Smit & Zoon BV"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 6.49339,52.86004 ]
+    },
+    "properties": {
+    "bedrijf":"RWZI Beilen"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 4.79966,51.83013 ]
+    },
+    "properties": {
+    "bedrijf":"RWZI Sliedrecht"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 5.17261,51.50062 ]
+    },
+    "properties": {
+    "bedrijf":"RWZI Hilvarenbeek"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 6.09111,50.91891 ]
+    },
+    "properties": {
+    "bedrijf":"RWZI Rimburg"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 6.58879,52.24735 ]
+    },
+    "properties": {
+    "bedrijf":"Exploitatiemaatschappij J. ter Horst BV"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 6.18556,52.09296 ]
+    },
+    "properties": {
+    "bedrijf":"RWZI Brummen"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 5.10762,52.07882 ]
+    },
+    "properties": {
+    "bedrijf":"Eneco (Kanaalweg)"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 4.51720,51.83935 ]
+    },
+    "properties": {
+    "bedrijf":"RWZI Barendrecht"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 6.36899,53.15190 ]
+    },
+    "properties": {
+    "bedrijf":"RWZI Leek"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 6.26363,52.39567 ]
+    },
+    "properties": {
+    "bedrijf":"RWZI Raalte"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 5.99915,52.34413 ]
+    },
+    "properties": {
+    "bedrijf":"RWZI Epe"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 4.88779,52.63511 ]
+    },
+    "properties": {
+    "bedrijf":"RWZI Ursem"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 6.77303,53.01530 ]
+    },
+    "properties": {
+    "bedrijf":"RWZI Gieten"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 6.11638,53.22419 ]
+    },
+    "properties": {
+    "bedrijf":"RWZI Kootstertille"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 4.99404,52.16440 ]
+    },
+    "properties": {
+    "bedrijf":"RWZI Breukelen"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 6.52974,52.31862 ]
+    },
+    "properties": {
+    "bedrijf":"RWZI Rijssen"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 4.70149,51.99952 ]
+    },
+    "properties": {
+    "bedrijf":"Compaxo Fijne Vleeswaren BV"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 6.71547,52.17648 ]
+    },
+    "properties": {
+    "bedrijf":"RWZI Haaksbergen"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 6.10909,52.05326 ]
+    },
+    "properties": {
+    "bedrijf":"Linde Gas Benelux BV"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 4.56137,52.24576 ]
+    },
+    "properties": {
+    "bedrijf":"RWZI Lisse"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 5.98890,52.88612 ]
+    },
+    "properties": {
+    "bedrijf":"RWZI Wolvega"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 5.75168,50.97441 ]
+    },
+    "properties": {
+    "bedrijf":"RWZI Stein"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 5.95211,51.75866 ]
+    },
+    "properties": {
+    "bedrijf":"RWZI Breedeweg"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 6.10016,52.78485 ]
+    },
+    "properties": {
+    "bedrijf":"RWZI Steenwijk"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 4.63733,52.34334 ]
+    },
+    "properties": {
+    "bedrijf":"RWZI Heemstede"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 4.05421,51.42849 ]
+    },
+    "properties": {
+    "bedrijf":"RWZI Waarde"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 5.25074,52.26453 ]
+    },
+    "properties": {
+    "bedrijf":"RWZI Gooiergracht"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 6.06318,52.60519 ]
+    },
+    "properties": {
+    "bedrijf":"RWZI Genemuiden"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 6.70906,53.16610 ]
+    },
+    "properties": {
+    "bedrijf":"RWZI Foxhol"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 6.45790,51.95436 ]
+    },
+    "properties": {
+    "bedrijf":"RWZI Varsseveld"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 6.27926,52.99034 ]
+    },
+    "properties": {
+    "bedrijf":"RWZI Oosterwolde"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 6.56542,52.44681 ]
+    },
+    "properties": {
+    "bedrijf":"RWZI Vroomshoop"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 6.79244,52.76302 ]
+    },
+    "properties": {
+    "bedrijf":"RWZI Sleen"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 5.02033,52.31846 ]
+    },
+    "properties": {
+    "bedrijf":"RWZI Weesp"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 5.88345,53.29764 ]
+    },
+    "properties": {
+    "bedrijf":"RWZI Birdaard"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 5.50758,52.36003 ]
+    },
+    "properties": {
+    "bedrijf":"RWZI Zeewolde"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 5.21950,52.06338 ]
+    },
+    "properties": {
+    "bedrijf":"RWZI Bunnik"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 4.75840,52.18765 ]
+    },
+    "properties": {
+    "bedrijf":"RWZI Nieuwveen"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 5.30852,51.97217 ]
+    },
+    "properties": {
+    "bedrijf":"RWZI Wijk bij Duurstede"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 6.33270,52.84524 ]
+    },
+    "properties": {
+    "bedrijf":"RWZI Dieverbrug"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 4.60145,52.21458 ]
+    },
+    "properties": {
+    "bedrijf":"RWZI Nieuwe Wetering"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 4.17892,51.76875 ]
+    },
+    "properties": {
+    "bedrijf":"AWZI Middelharnis"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 6.12397,52.26073 ]
+    },
+    "properties": {
+    "bedrijf":"RWZI Terwolde"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 6.96859,53.29316 ]
+    },
+    "properties": {
+    "bedrijf":"Reststoffen Bewerkingsinstallatie"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 5.11755,51.92207 ]
+    },
+    "properties": {
+    "bedrijf":"Bel Leerdammer BV (Schoonrewoerd)"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 4.42134,51.72609 ]
+    },
+    "properties": {
+    "bedrijf":"RWZI Numansdorp"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 6.93200,52.41293 ]
+    },
+    "properties": {
+    "bedrijf":"RWZI Ootmarsum"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 5.94489,51.87234 ]
+    },
+    "properties": {
+    "bedrijf":"RWZI Gendt"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 6.23713,52.50983 ]
+    },
+    "properties": {
+    "bedrijf":"RWZI Dalfsen"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 6.56124,51.99820 ]
+    },
+    "properties": {
+    "bedrijf":"RWZI Lichtenvoorde"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 6.03271,53.27635 ]
+    },
+    "properties": {
+    "bedrijf":"RWZI Damwoude"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 6.57174,51.91281 ]
+    },
+    "properties": {
+    "bedrijf":"RWZI Aalten"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 6.05617,53.00977 ]
+    },
+    "properties": {
+    "bedrijf":"RWZI Gorredijk"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 6.73854,53.40841 ]
+    },
+    "properties": {
+    "bedrijf":"RWZI Uithuizermeeden"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 7.01315,52.26082 ]
+    },
+    "properties": {
+    "bedrijf":"RWZI Losser"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 3.76302,51.69001 ]
+    },
+    "properties": {
+    "bedrijf":"RWZI Westerschouwen"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 5.59194,51.31178 ]
+    },
+    "properties": {
+    "bedrijf":"RWZI Maarheeze"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 5.06761,51.89229 ]
+    },
+    "properties": {
+    "bedrijf":"RWZI Leerdam"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 4.11727,51.91699 ]
+    },
+    "properties": {
+    "bedrijf":"RWZI Oostvoorne"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 5.11235,52.04742 ]
+    },
+    "properties": {
+    "bedrijf":"Van Vliet Groep Milieu Dienstverleners BV"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 3.87250,51.67843 ]
+    },
+    "properties": {
+    "bedrijf":"RWZI Kerkwerve"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 4.07471,51.55502 ]
+    },
+    "properties": {
+    "bedrijf":"RWZI St. Maartensdijk-Scherpenisse"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 5.45122,52.97209 ]
+    },
+    "properties": {
+    "bedrijf":"RWZI Workum"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 6.05392,52.39122 ]
+    },
+    "properties": {
+    "bedrijf":"RWZI Heerde"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 3.99610,51.82425 ]
+    },
+    "properties": {
+    "bedrijf":"RWZI Goedereede"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 5.65709,51.99712 ]
+    },
+    "properties": {
+    "bedrijf":"RWZI Bennekom"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 6.50326,53.33360 ]
+    },
+    "properties": {
+    "bedrijf":"RWZI Winsum"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 5.81711,53.09264 ]
+    },
+    "properties": {
+    "bedrijf":"RWZI Grouw"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 4.77541,53.07658 ]
+    },
+    "properties": {
+    "bedrijf":"RWZI Everstekoog"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 6.85755,52.22308 ]
+    },
+    "properties": {
+    "bedrijf":"Rogal BV"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 6.76579,52.40959 ]
+    },
+    "properties": {
+    "bedrijf":"RWZI Tubbergen"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 6.16384,52.53039 ]
+    },
+    "properties": {
+    "bedrijf":"RWZI Hessenpoort"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 4.56185,51.74510 ]
+    },
+    "properties": {
+    "bedrijf":"RWZI Strijen"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 4.07575,51.27950 ]
+    },
+    "properties": {
+    "bedrijf":"RWZI Hulst"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 7.09706,52.87988 ]
+    },
+    "properties": {
+    "bedrijf":"RWZI Ter Apel"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 3.58565,51.38533 ]
+    },
+    "properties": {
+    "bedrijf":"RWZI Breskens"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 6.59321,53.32650 ]
+    },
+    "properties": {
+    "bedrijf":"RWZI Onderdendam"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 5.76196,52.97255 ]
+    },
+    "properties": {
+    "bedrijf":"RWZI Joure"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 6.40709,52.52599 ]
+    },
+    "properties": {
+    "bedrijf":"RWZI Ommen"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 4.86181,52.33475 ]
+    },
+    "properties": {
+    "bedrijf":"Vrije Universiteit Amsterdam"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 6.11047,52.34924 ]
+    },
+    "properties": {
+    "bedrijf":"RWZI Olst"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 5.70199,52.86116 ]
+    },
+    "properties": {
+    "bedrijf":"RWZI Lemmer"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 6.32353,53.24791 ]
+    },
+    "properties": {
+    "bedrijf":"RWZI Gaarkeuken"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 5.00848,51.83998 ]
+    },
+    "properties": {
+    "bedrijf":"RWZI Gorinchem-Oost"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 4.83893,51.82223 ]
+    },
+    "properties": {
+    "bedrijf":"RWZI Hardinxveld-De Peulen"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 5.22420,51.82315 ]
+    },
+    "properties": {
+    "bedrijf":"RWZI Haaften"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 4.22726,51.91756 ]
+    },
+    "properties": {
+    "bedrijf":"RWZI Rozenburg"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 3.50141,51.33890 ]
+    },
+    "properties": {
+    "bedrijf":"RWZI Oostburg"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 4.95874,51.96953 ]
+    },
+    "properties": {
+    "bedrijf":"RWZI Lopik"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 5.23848,53.36828 ]
+    },
+    "properties": {
+    "bedrijf":"RWZI Terschelling"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 7.03358,52.38467 ]
+    },
+    "properties": {
+    "bedrijf":"RWZI Denekamp"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 4.73491,51.82469 ]
+    },
+    "properties": {
+    "bedrijf":"De Bioderij BV"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 4.61786,51.95632 ]
+    },
+    "properties": {
+    "bedrijf":"T. Boer & zn."
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 5.96915,50.83239 ]
+    },
+    "properties": {
+    "bedrijf":"RWZI Simpelveld"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 5.63888,53.27499 ]
+    },
+    "properties": {
+    "bedrijf":"RWZI St.-Jacobiparochie"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 3.73417,51.57282 ]
+    },
+    "properties": {
+    "bedrijf":"RWZI Camperlandpolder"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 5.03179,52.92844 ]
+    },
+    "properties": {
+    "bedrijf":"RWZI Wieringen"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 4.93855,52.04210 ]
+    },
+    "properties": {
+    "bedrijf":"RWZI Montfoort"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 6.24627,52.71755 ]
+    },
+    "properties": {
+    "bedrijf":"Metaalindustrie Waelbers BV"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 4.06266,51.63265 ]
+    },
+    "properties": {
+    "bedrijf":"RWZI Mastgat"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 5.63986,52.90264 ]
+    },
+    "properties": {
+    "bedrijf":"RWZI Sloten"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 6.97485,53.26308 ]
+    },
+    "properties": {
+    "bedrijf":"RWZI Scheveklap"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 5.76955,51.58588 ]
+    },
+    "properties": {
+    "bedrijf":"Keizersberg Diervoeders Elsendorp BV"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 3.38020,51.36394 ]
+    },
+    "properties": {
+    "bedrijf":"RWZI Retranchement"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 6.38353,53.25102 ]
+    },
+    "properties": {
+    "bedrijf":"RWZI Zuidhorn"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 6.43939,52.08948 ]
+    },
+    "properties": {
+    "bedrijf":"RWZI Ruurlo"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 4.17973,51.68426 ]
+    },
+    "properties": {
+    "bedrijf":"RWZI Oude Tonge"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 6.97796,52.21905 ]
+    },
+    "properties": {
+    "bedrijf":"RWZI Glanerbrug"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 7.02719,53.11576 ]
+    },
+    "properties": {
+    "bedrijf":"RWZI Oude Pekela"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 4.65382,52.22014 ]
+    },
+    "properties": {
+    "bedrijf":"RWZI Leimuiden"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 4.23189,51.54072 ]
+    },
+    "properties": {
+    "bedrijf":"RWZI Tholen"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 5.39612,52.88494 ]
+    },
+    "properties": {
+    "bedrijf":"RWZI Warns"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 5.83453,53.04495 ]
+    },
+    "properties": {
+    "bedrijf":"RWZI Akkrum"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 5.00669,52.22377 ]
+    },
+    "properties": {
+    "bedrijf":"RWZI Loenen aan de Vecht"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 7.12802,53.06269 ]
+    },
+    "properties": {
+    "bedrijf":"RWZI Vriescheloo"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 5.72269,53.44401 ]
+    },
+    "properties": {
+    "bedrijf":"RWZI Ameland"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 4.85435,52.01929 ]
+    },
+    "properties": {
+    "bedrijf":"RWZI Oudewater"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 4.25595,51.52770 ]
+    },
+    "properties": {
+    "bedrijf":"RWZI Halsteren"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 4.94162,51.70491 ]
+    },
+    "properties": {
+    "bedrijf":"RWZI Waspik"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 6.47006,51.85537 ]
+    },
+    "properties": {
+    "bedrijf":"RWZI Dinxperlo"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 4.89915,51.44857 ]
+    },
+    "properties": {
+    "bedrijf":"RWZI Baarle Nassau"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 6.45379,52.94128 ]
+    },
+    "properties": {
+    "bedrijf":"RWZI Smilde"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 6.20242,52.44099 ]
+    },
+    "properties": {
+    "bedrijf":"RWZI Heino"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 6.26210,52.50882 ]
+    },
+    "properties": {
+    "bedrijf":"Bel Leerdammer BV (Dalfsen)"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 6.26171,53.15295 ]
+    },
+    "properties": {
+    "bedrijf":"RWZI Marum"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 6.94836,52.91787 ]
+    },
+    "properties": {
+    "bedrijf":"RWZI Tweede Exloermond"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 4.24885,51.86833 ]
+    },
+    "properties": {
+    "bedrijf":"RWZI Heenvliet"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 4.36124,51.65183 ]
+    },
+    "properties": {
+    "bedrijf":"RWZI Dinteloord"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 4.78804,51.94063 ]
+    },
+    "properties": {
+    "bedrijf":"RWZI Bergambacht"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 4.02423,51.37603 ]
+    },
+    "properties": {
+    "bedrijf":"RWZI Kloosterzande"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 6.41477,53.36758 ]
+    },
+    "properties": {
+    "bedrijf":"RWZI Wehe den Hoorn"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 5.01919,52.83494 ]
+    },
+    "properties": {
+    "bedrijf":"RWZI Wieringermeer"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 5.94855,52.67129 ]
+    },
+    "properties": {
+    "bedrijf":"RWZI Vollenhove"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 5.64305,51.84582 ]
+    },
+    "properties": {
+    "bedrijf":"RWZI Bergharen"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 6.21085,51.96893 ]
+    },
+    "properties": {
+    "bedrijf":"RWZI Wehl"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 5.11056,51.88407 ]
+    },
+    "properties": {
+    "bedrijf":"RWZI Asperen"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 6.33773,53.35322 ]
+    },
+    "properties": {
+    "bedrijf":"RWZI Ulrum"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 5.16927,51.89791 ]
+    },
+    "properties": {
+    "bedrijf":"RWZI Beesd"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 6.19280,53.47538 ]
+    },
+    "properties": {
+    "bedrijf":"RWZI Schiemonnikoog"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 4.71445,51.71705 ]
+    },
+    "properties": {
+    "bedrijf":"RWZI Hooge Zwaluwe"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 5.07826,53.29609 ]
+    },
+    "properties": {
+    "bedrijf":"RWZI Vlieland"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 6.02297,51.86470 ]
+    },
+    "properties": {
+    "bedrijf":"RWZI Millingen"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 5.02386,51.53418 ]
+    },
+    "properties": {
+    "bedrijf":"RWZI Riel"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 5.43961,51.82832 ]
+    },
+    "properties": {
+    "bedrijf":"RWZI Dreumel"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 4.34631,51.79822 ]
+    },
+    "properties": {
+    "bedrijf":"RWZI Piershil"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 5.86950,51.34881 ]
+    },
+    "properties": {
+    "bedrijf":"RWZI Meijel"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 4.32257,51.39079 ]
+    },
+    "properties": {
+    "bedrijf":"RWZI Ossendrecht"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 5.71172,51.93846 ]
+    },
+    "properties": {
+    "bedrijf":"RWZI Zetten"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 7.17866,53.13034 ]
+    },
+    "properties": {
+    "bedrijf":"RWZI Bellingwolde"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 4.85275,51.51218 ]
+    },
+    "properties": {
+    "bedrijf":"RWZI Chaam"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 4.76713,51.98007 ]
+    },
+    "properties": {
+    "bedrijf":"RWZI Stolwijk"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 6.47814,52.46506 ]
+    },
+    "properties": {
+    "bedrijf":"RWZI Den Ham"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 6.02862,50.92379 ]
+    },
+    "properties": {
+    "bedrijf":"SVI Abdissenbosch"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 5.80070,51.75770 ]
+    },
+    "properties": {
+    "bedrijf":"RWZI Overasselt"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 6.47774,53.30322 ]
+    },
+    "properties": {
+    "bedrijf":"RWZI Feerwerd"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 4.45586,51.68858 ]
+    },
+    "properties": {
+    "bedrijf":"RWZI Willemstad"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 4.99477,52.57964 ]
+    },
+    "properties": {
+    "bedrijf":"RWZI Oosthuizen"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 4.78430,52.00263 ]
+    },
+    "properties": {
+    "bedrijf":"RWZI Haastrecht"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 4.35714,51.67299 ]
+    },
+    "properties": {
+    "bedrijf":"RWZI Ooltgensplaat"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 4.38778,51.36530 ]
+    },
+    "properties": {
+    "bedrijf":"RWZI Putte"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 4.26549,51.72511 ]
+    },
+    "properties": {
+    "bedrijf":"RWZI Den Bommel"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 5.52212,51.82972 ]
+    },
+    "properties": {
+    "bedrijf":"RWZI Maasbommel"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 4.80563,51.92993 ]
+    },
+    "properties": {
+    "bedrijf":"RWZI Ammerstol"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 4.22017,51.57410 ]
+    },
+    "properties": {
+    "bedrijf":"RWZI Vossemeer"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 4.70387,51.92848 ]
+    },
+    "properties": {
+    "bedrijf":"RWZI Berkenwoude"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 4.24385,51.92239 ]
+    },
+    "properties": {
+    "bedrijf":"Vecom Metal Treatment Technology BV"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 3.71116,51.44272 ]
+    },
+    "properties": {
+    "bedrijf":"Martens Havenontvangstinst. Vlissingen BV"
+    }
+  }
+]
+}
