@@ -6,7 +6,7 @@
   import geojsonData from '../data/bedrijven.json';
 
   let map;
-  let satelliteLayer, grayLayer, labelsLayer;
+  let satelliteLayer, grayLayer;
   let isZoomKeyPressed = false;
 
   onMount(async () => {
@@ -36,14 +36,6 @@
         }
       );
 
-      labelsLayer = L.tileLayer(
-        'https://{s}.basemaps.cartocdn.com/light_only_labels/{z}/{x}/{y}{r}.png',
-        {
-          attribution: '© OpenStreetMap contributors © CARTO',
-          maxZoom: 18,
-        }
-      );
-
       // Voeg de aangepaste attributie toe rechtsboven
       L.control
         .attribution({
@@ -56,7 +48,6 @@
 
       // Voeg de lagen toe
       satelliteLayer.addTo(map);
-      labelsLayer.addTo(map);
 
       // Disable scroll zoom by default
       map.scrollWheelZoom.disable();
@@ -68,8 +59,18 @@
       map.on('mouseout', handleMouseOut);
       map.on('zoomend', handleZoomChange);
 
-      // Voeg de GeoJSON-data toe aan de kaart
+      // Voeg de GeoJSON-data toe aan de kaart met aangepaste markers
       L.geoJSON(geojsonData, {
+        pointToLayer: function (feature, latlng) {
+          return L.circleMarker(latlng, {
+            radius: 8,
+            fillColor: 'red',
+            color: 'red', // Randkleur instellen
+            weight: 1, // Dikte van de rand
+            opacity: 1,
+            fillOpacity: 0.5,
+          });
+        },
         onEachFeature: function (feature, layer) {
           if (feature.properties && feature.properties.bedrijf) {
             layer.bindPopup(
@@ -111,14 +112,12 @@
     if (map.getZoom() >= 15) {
       if (map.hasLayer(satelliteLayer)) {
         map.removeLayer(satelliteLayer);
-        map.removeLayer(labelsLayer);
         grayLayer.addTo(map);
       }
     } else {
       if (map.hasLayer(grayLayer)) {
         map.removeLayer(grayLayer);
         satelliteLayer.addTo(map);
-        labelsLayer.addTo(map);
       }
     }
   }
