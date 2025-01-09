@@ -6,7 +6,7 @@
   import geojsonData from '../data/bedrijven.json';
 
   let map;
-  let satelliteLayer, grayLayer;
+  let satelliteLayer, grayLayer, labelsLayer;
   let isZoomKeyPressed = false;
 
   onMount(async () => {
@@ -36,6 +36,14 @@
         }
       );
 
+      labelsLayer = L.tileLayer(
+        'https://{s}.basemaps.cartocdn.com/light_only_labels/{z}/{x}/{y}{r}.png',
+        {
+          attribution: '© OpenStreetMap contributors © CARTO',
+          maxZoom: 18,
+        }
+      );
+
       // Voeg de aangepaste attributie toe rechtsboven
       L.control
         .attribution({
@@ -48,6 +56,7 @@
 
       // Voeg de lagen toe
       satelliteLayer.addTo(map);
+      labelsLayer.addTo(map); // Voeg de labelsLayer toe
 
       // Disable scroll zoom by default
       map.scrollWheelZoom.disable();
