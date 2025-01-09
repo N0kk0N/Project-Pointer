@@ -4,7 +4,7 @@
 
   let map;
   let isZoomKeyPressed = false;
-  let satelliteLayer, grayLayer;
+  let satelliteLayer, grayLayer, labelsLayer;
 
   onMount(async () => {
     if (typeof window !== 'undefined') {
@@ -24,13 +24,19 @@
         maxZoom: 18,
       });
 
+      labelsLayer = L.tileLayer('https://{s}.basemaps.cartocdn.com/light_only_labels/{z}/{x}/{y}{r}.png', {
+        attribution: '© OpenStreetMap contributors © CARTO',
+        maxZoom: 18,
+      });
+
       // Voeg de aangepaste attributie toe rechtsboven
       L.control.attribution({
         position: 'topright'
       }).addAttribution('Tiles © Esri — Source: Esri, DeLorme, NAVTEQ, USGS, Intermap, iPC, NRCAN, Esri Japan, METI, Esri China (Hong Kong), Esri (Thailand), TomTom, 2012').addTo(map);
 
-      // Voeg de satellietlaag toe
+      // Voeg de satellietlaag en labels laag toe
       satelliteLayer.addTo(map);
+      labelsLayer.addTo(map);
 
       // Disable scroll zoom by default
       map.scrollWheelZoom.disable();
@@ -72,12 +78,14 @@
     if (map.getZoom() >= 15) {
       if (map.hasLayer(satelliteLayer)) {
         map.removeLayer(satelliteLayer);
+        map.removeLayer(labelsLayer);
         grayLayer.addTo(map);
       }
     } else {
       if (map.hasLayer(grayLayer)) {
         map.removeLayer(grayLayer);
         satelliteLayer.addTo(map);
+        labelsLayer.addTo(map);
       }
     }
   }
