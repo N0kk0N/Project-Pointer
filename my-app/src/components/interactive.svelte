@@ -73,19 +73,24 @@
       geoJsonLayer = L.geoJSON(geojsonData, {
         pointToLayer: function (feature, latlng) {
           let fillColor;
+          let fillOpacity;
 
-          // Bepaal de kleur op basis van schadekosten
+          // Bepaal de kleur en de opacity op basis van schadekosten
           const schadekosten = feature.properties.schadekosten_2022;
 
-          // Verdeel de schadekosten in vaste categorieën en wijs vaste kleuren toe
+          // Verdeel de schadekosten in vaste categorieën en wijs kleuren en opacity toe
           if (schadekosten > 100000000) {
-            fillColor = 'red'; // Donkerrood voor de hoogste schadekosten (meest ernstig)
+            fillColor = '#0000FF'; // Felblauw voor de hoogste schadekosten
+            fillOpacity = 1; // Maximaal opacity voor blauw
           } else if (schadekosten > 50000000) {
-            fillColor = 'red'; // Rood voor middelhoge schadekosten
+            fillColor = '#FF0000'; // Rood voor middelhoge schadekosten
+            fillOpacity = 0.8; // Iets lagere opacity voor rood
           } else if (schadekosten > 10000000) {
-            fillColor = 'red'; // Oranje voor lagere schadekosten
+            fillColor = '#FFA500'; // Oranje voor lagere schadekosten
+            fillOpacity = 0.6; // Nog lagere opacity voor oranje
           } else {
-            fillColor = 'red'; // Geel voor de laagste schadekosten, maar nog steeds slecht
+            fillColor = '#FFFF00'; // Geel voor de laagste schadekosten
+            fillOpacity = 0.4; // Laagste opacity voor geel
           }
 
           return L.circleMarker(latlng, {
@@ -94,7 +99,7 @@
             color: fillColor, // Randkleur instellen op dezelfde kleur als de vulling
             weight: 1, // Dikte van de rand
             opacity: 1,
-            fillOpacity: .7,
+            fillOpacity: fillOpacity, // Dynamische opacity ingesteld hier
           });
         },
         onEachFeature: function (feature, layer) {
