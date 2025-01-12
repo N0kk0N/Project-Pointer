@@ -94,7 +94,7 @@
             color: fillColor, // Randkleur instellen op dezelfde kleur als de vulling
             weight: 1, // Dikte van de rand
             opacity: 1,
-            fillOpacity: 1,
+            fillOpacity: .7,
           });
         },
         onEachFeature: function (feature, layer) {
