@@ -8,6 +8,7 @@
   let map;
   let satelliteLayer, grayLayer, labelsLayer;
   let isZoomKeyPressed = false;
+  let geoJsonLayer;
 
   onMount(async () => {
     if (typeof window !== 'undefined') {
@@ -69,21 +70,40 @@
       map.on('zoomend', handleZoomChange);
 
       // Voeg de GeoJSON-data toe aan de kaart met aangepaste markers
-      L.geoJSON(geojsonData, {
+      geoJsonLayer = L.geoJSON(geojsonData, {
         pointToLayer: function (feature, latlng) {
+          let fillColor;
+
+          // Bepaal de kleur op basis van schadekosten
+          const schadekosten = feature.properties.schadekosten_2022;
+
+          // Verdeel de schadekosten in vaste categorieën en wijs vaste kleuren toe
+          if (schadekosten > 100000000) {
+            fillColor = 'red'; // Donkerrood voor de hoogste schadekosten (meest ernstig)
+          } else if (schadekosten > 50000000) {
+            fillColor = 'red'; // Rood voor middelhoge schadekosten
+          } else if (schadekosten > 10000000) {
+            fillColor = 'red'; // Oranje voor lagere schadekosten
+          } else {
+            fillColor = 'red'; // Geel voor de laagste schadekosten, maar nog steeds slecht
+          }
+
           return L.circleMarker(latlng, {
-            radius: 8,
-            fillColor: 'red',
-            color: 'red', // Randkleur instellen
+            radius: 2,  // Begin met een klein formaat
+            fillColor: fillColor,
+            color: fillColor, // Randkleur instellen op dezelfde kleur als de vulling
             weight: 1, // Dikte van de rand
             opacity: 1,
-            fillOpacity: 0.5,
+            fillOpacity: 1,
           });
         },
         onEachFeature: function (feature, layer) {
           if (feature.properties && feature.properties.bedrijf) {
+            // Formatteer de schadekosten met komma's als duizendtallen scheidingstekens
+            const formattedCosts = feature.properties.schadekosten_2022.toLocaleString('nl-NL');
+            
             layer.bindPopup(
-              `<b>${feature.properties.bedrijf}</b><br>Schadekosten 2022: €${feature.properties.schadekosten_2022}`
+              `<b>${feature.properties.bedrijf}</b><br>Schadekosten 2022: €${formattedCosts}`
             );
           }
         },
@@ -118,17 +138,24 @@
 
   // Wissel lagen afhankelijk van zoomniveau
   function handleZoomChange() {
-    if (map.getZoom() >= 15) {
-      if (map.hasLayer(satelliteLayer)) {
-        map.removeLayer(satelliteLayer);
-        grayLayer.addTo(map);
+    const zoom = map.getZoom();
+    geoJsonLayer.eachLayer(function(layer) {
+      let radius = 2; // Begin met een radius van 2
+
+      // Pas de radius aan afhankelijk van het zoomniveau
+      if (zoom < 10) {
+        radius = 2;  // Grotere stippen bij ver weg
+      } else if (zoom < 12) {
+        radius = 6;  // Grotere stippen bij iets dichterbij
+      } else if (zoom < 14) {
+        radius = 8;  // Nog grotere stippen bij verder inzoomen
+      } else {
+        radius = 12;  // Het grootste formaat bij hoog inzoomen
       }
-    } else {
-      if (map.hasLayer(grayLayer)) {
-        map.removeLayer(grayLayer);
-        satelliteLayer.addTo(map);
-      }
-    }
+
+      // Pas de radius dynamisch aan voor alle bestaande markers
+      layer.setRadius(radius);
+    });
   }
 </script>
 
