@@ -6,7 +6,7 @@
   import geojsonData from "../data/bedrijven.json";
 
   let map;
-  let blueLayer, labelsLayer;
+  let colorLayer, labelsLayer;
   let isZoomKeyPressed = false;
   let geoJsonLayer;
 
@@ -26,7 +26,7 @@
       }).setView([52.1326, 5.2913], 7);
 
       // Voeg lagen toe
-      blueLayer = L.tileLayer(
+      colorLayer = L.tileLayer(
         "https://{s}.basemaps.cartocdn.com/rastertiles/voyager_nolabels/{z}/{x}/{y}{r}.png",
         {
           attribution: "© OpenStreetMap contributors © CARTO",
@@ -53,7 +53,7 @@
         .addTo(map);
 
       // Voeg de lagen toe
-      blueLayer.addTo(map);
+      colorLayer.addTo(map);
       labelsLayer.addTo(map); // Voeg de labelsLayer toe
 
       // Disable scroll zoom by default
