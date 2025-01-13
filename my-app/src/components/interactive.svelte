@@ -1,66 +1,76 @@
 <script>
-  import { onMount } from 'svelte';
-  import 'leaflet/dist/leaflet.css';
+  import { onMount } from "svelte";
+  import "leaflet/dist/leaflet.css";
 
   // GeoJSON importeren
-  import geojsonData from '../data/bedrijven.json';
+  import geojsonData from "../data/bedrijven.json";
 
   let map;
-  let grayLayer, labelsLayer;
+  let blueLayer, labelsLayer;
   let isZoomKeyPressed = false;
   let geoJsonLayer;
 
   onMount(async () => {
-    if (typeof window !== 'undefined') {
-      const L = await import('leaflet');
+    if (typeof window !== "undefined") {
+      const L = await import("leaflet");
 
       // Initialiseer de kaart
-      map = L.map('map', {
+      // Initialiseer de kaart
+      map = L.map("map", {
         attributionControl: false, // Verwijder de standaard attributie
+        minZoom: 2, // Stel het minimale zoomniveau in zodat de hele wereld zichtbaar blijft
+        maxBounds: [
+          [-90, -180], // Zuidwest grens (breedtegraad, lengtegraad)
+          [90, 180], // Noordoost grens (breedtegraad, lengtegraad)
+        ], // Beperk de kaart tot de hele wereld
       }).setView([52.1326, 5.2913], 7);
 
       // Voeg lagen toe
-      grayLayer = L.tileLayer(
-        'https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png',
+      blueLayer = L.tileLayer(
+        "https://{s}.basemaps.cartocdn.com/rastertiles/voyager_nolabels/{z}/{x}/{y}{r}.png",
         {
-          attribution: '© OpenStreetMap contributors © CARTO',
+          attribution: "© OpenStreetMap contributors © CARTO",
           maxZoom: 18,
-        }
+        },
       );
 
       labelsLayer = L.tileLayer(
-        'https://{s}.basemaps.cartocdn.com/light_only_labels/{z}/{x}/{y}{r}.png',
+        "https://{s}.basemaps.cartocdn.com/rastertiles/voyager_only_labels/{z}/{x}/{y}{r}.png",
         {
-          attribution: '© OpenStreetMap contributors © CARTO',
+          attribution: "© OpenStreetMap contributors © CARTO",
           maxZoom: 18,
-        }
+        },
       );
 
       // Voeg de aangepaste attributie toe rechtsboven
       L.control
         .attribution({
-          position: 'topright',
+          position: "topright",
         })
         .addAttribution(
-          'Tiles © Esri — Source: Esri, DeLorme, NAVTEQ, USGS, Intermap, iPC, NRCAN, Esri Japan, METI, Esri China (Hong Kong), Esri (Thailand), TomTom, 2012'
+          "Tiles © Esri — Source: Esri, DeLorme, NAVTEQ, USGS, Intermap, iPC, NRCAN, Esri Japan, METI, Esri China (Hong Kong), Esri (Thailand), TomTom, 2012",
         )
         .addTo(map);
 
       // Voeg de lagen toe
-      grayLayer.addTo(map);
+      blueLayer.addTo(map);
       labelsLayer.addTo(map); // Voeg de labelsLayer toe
 
       // Disable scroll zoom by default
       map.scrollWheelZoom.disable();
 
       // Event Listeners
-      window.addEventListener('keydown', handleKeyDown);
-      window.addEventListener('keyup', handleKeyUp);
-      map.on('mouseover', handleMouseOver);
-      map.on('mouseout', handleMouseOut);
+      window.addEventListener("keydown", handleKeyDown);
+      window.addEventListener("keyup", handleKeyUp);
+      map.on("mouseover", handleMouseOver);
+      map.on("mouseout", handleMouseOut);
 
       // Bereken de maximale schadekosten om te gebruiken voor schaalverdeling
-      const maxSchadekosten = Math.max(...geojsonData.features.map(feature => feature.properties.schadekosten_2022));
+      const maxSchadekosten = Math.max(
+        ...geojsonData.features.map(
+          (feature) => feature.properties.schadekosten_2022,
+        ),
+      );
 
       // Voeg de GeoJSON-data toe aan de kaart met aangepaste markers
       geoJsonLayer = L.geoJSON(geojsonData, {
@@ -69,12 +79,14 @@
           // Schaal de radius op basis van de schadekosten met een minimum en maximum grootte
           const minRadius = 5;
           const maxRadius = 20;
-          const radius = (schadekosten / maxSchadekosten) * (maxRadius - minRadius) + minRadius;
+          const radius =
+            (schadekosten / maxSchadekosten) * (maxRadius - minRadius) +
+            minRadius;
 
           return L.circleMarker(latlng, {
-            radius: radius,  // Dynamische grootte voor alle markers
-            fillColor: '#FF0000', // Rood voor alle markers
-            color: '#FF0000', // Randkleur instellen op dezelfde kleur als de vulling
+            radius: radius, // Dynamische grootte voor alle markers
+            fillColor: "#FF0000", // Rood voor alle markers
+            color: "#FF0000", // Randkleur instellen op dezelfde kleur als de vulling
             weight: 0, // Dikte van de rand
             opacity: 1,
             fillOpacity: 0.6, // Statische opacity
@@ -83,10 +95,11 @@
         onEachFeature: function (feature, layer) {
           if (feature.properties && feature.properties.bedrijf) {
             // Formatteer de schadekosten met komma's als duizendtallen scheidingstekens
-            const formattedCosts = feature.properties.schadekosten_2022.toLocaleString('nl-NL');
-            
+            const formattedCosts =
+              feature.properties.schadekosten_2022.toLocaleString("nl-NL");
+
             layer.bindPopup(
-              `<b>${feature.properties.bedrijf}</b><br>Schadekosten 2022: €${formattedCosts}`
+              `<b>${feature.properties.bedrijf}</b><br>Schadekosten 2022: €${formattedCosts}`,
             );
           }
         },
@@ -96,14 +109,14 @@
 
   // Functies voor zoom-controle
   function handleKeyDown(event) {
-    if (event.key === 'Control' || event.key === 'Meta') {
+    if (event.key === "Control" || event.key === "Meta") {
       isZoomKeyPressed = true;
       map.scrollWheelZoom.enable();
     }
   }
 
   function handleKeyUp(event) {
-    if (event.key === 'Control' || event.key === 'Meta') {
+    if (event.key === "Control" || event.key === "Meta") {
       isZoomKeyPressed = false;
       map.scrollWheelZoom.disable();
     }
@@ -119,21 +132,6 @@
     map.scrollWheelZoom.disable();
   }
 </script>
-
-<style>
-  #map {
-    height: 600px; /* Pas de hoogte van de kaart aan */
-    width: 100%; /* Zorg ervoor dat de kaart de volledige breedte inneemt */
-  }
-
-  .button-container {
-    position: absolute;
-    bottom: -25px; /* Pas deze waarde aan om de knop te verschuiven */
-    left: 50%;
-    transform: translateX(-50%);
-    z-index: 1000; /* Zorg ervoor dat de knop boven de kaart staat */
-  }
-</style>
 
 <div class="relative w-full h-full">
   <!-- Map -->
@@ -165,3 +163,18 @@
     </button>
   </div>
 </div>
+
+<style>
+  #map {
+    height: 600px; /* Pas de hoogte van de kaart aan */
+    width: 100%; /* Zorg ervoor dat de kaart de volledige breedte inneemt */
+  }
+
+  .button-container {
+    position: absolute;
+    bottom: -25px; /* Pas deze waarde aan om de knop te verschuiven */
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1000; /* Zorg ervoor dat de knop boven de kaart staat */
+  }
+</style>
