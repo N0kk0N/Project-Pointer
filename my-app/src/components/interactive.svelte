@@ -67,6 +67,7 @@
       window.addEventListener('keyup', handleKeyUp);
       map.on('mouseover', handleMouseOver);
       map.on('mouseout', handleMouseOut);
+      map.on('zoomend', handleZoomEnd);
 
       // Bereken de maximale schadekosten om te gebruiken voor schaalverdeling
       const maxSchadekosten = Math.max(...geojsonData.features.map(feature => feature.properties.schadekosten_2022));
@@ -126,6 +127,20 @@
 
   function handleMouseOut() {
     map.scrollWheelZoom.disable();
+  }
+
+  // Functie voor het schakelen van lagen op basis van zoomniveau
+  function handleZoomEnd() {
+    const zoomLevel = map.getZoom();
+    const zoomThreshold = 12; // Drempelwaarde voor het schakelen tussen lagen
+
+    if (zoomLevel >= zoomThreshold && !map.hasLayer(grayLayer)) {
+      map.removeLayer(satelliteLayer);
+      grayLayer.addTo(map);
+    } else if (zoomLevel < zoomThreshold && !map.hasLayer(satelliteLayer)) {
+      map.removeLayer(grayLayer);
+      satelliteLayer.addTo(map);
+    }
   }
 </script>
 
