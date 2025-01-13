@@ -67,39 +67,17 @@
       window.addEventListener('keyup', handleKeyUp);
       map.on('mouseover', handleMouseOver);
       map.on('mouseout', handleMouseOut);
-      map.on('zoomend', handleZoomChange);
 
       // Voeg de GeoJSON-data toe aan de kaart met aangepaste markers
       geoJsonLayer = L.geoJSON(geojsonData, {
         pointToLayer: function (feature, latlng) {
-          let fillColor;
-          let fillOpacity;
-
-          // Bepaal de kleur en de opacity op basis van schadekosten
-          const schadekosten = feature.properties.schadekosten_2022;
-
-          // Verdeel de schadekosten in vaste categorieën en wijs kleuren en opacity toe
-          if (schadekosten > 100000000) {
-            fillColor = '#0000FF'; // Felblauw voor de hoogste schadekosten
-            fillOpacity = 1; // Maximaal opacity voor blauw
-          } else if (schadekosten > 50000000) {
-            fillColor = '#FF0000'; // Rood voor middelhoge schadekosten
-            fillOpacity = 0.8; // Iets lagere opacity voor rood
-          } else if (schadekosten > 10000000) {
-            fillColor = '#FFA500'; // Oranje voor lagere schadekosten
-            fillOpacity = 0.6; // Nog lagere opacity voor oranje
-          } else {
-            fillColor = '#FFFF00'; // Geel voor de laagste schadekosten
-            fillOpacity = 0.4; // Laagste opacity voor geel
-          }
-
           return L.circleMarker(latlng, {
-            radius: 2,  // Begin met een klein formaat
-            fillColor: fillColor,
-            color: fillColor, // Randkleur instellen op dezelfde kleur als de vulling
+            radius: 6,  // Vaste grootte voor alle markers
+            fillColor: '#FF0000', // Rood voor alle markers
+            color: '#FF0000', // Randkleur instellen op dezelfde kleur als de vulling
             weight: 1, // Dikte van de rand
             opacity: 1,
-            fillOpacity: fillOpacity, // Dynamische opacity ingesteld hier
+            fillOpacity: 0.5, // Statische opacity
           });
         },
         onEachFeature: function (feature, layer) {
@@ -139,28 +117,6 @@
 
   function handleMouseOut() {
     map.scrollWheelZoom.disable();
-  }
-
-  // Wissel lagen afhankelijk van zoomniveau
-  function handleZoomChange() {
-    const zoom = map.getZoom();
-    geoJsonLayer.eachLayer(function(layer) {
-      let radius = 2; // Begin met een radius van 2
-
-      // Pas de radius aan afhankelijk van het zoomniveau
-      if (zoom < 10) {
-        radius = 2;  // Grotere stippen bij ver weg
-      } else if (zoom < 12) {
-        radius = 6;  // Grotere stippen bij iets dichterbij
-      } else if (zoom < 14) {
-        radius = 8;  // Nog grotere stippen bij verder inzoomen
-      } else {
-        radius = 12;  // Het grootste formaat bij hoog inzoomen
-      }
-
-      // Pas de radius dynamisch aan voor alle bestaande markers
-      layer.setRadius(radius);
-    });
   }
 </script>
 
