@@ -68,16 +68,25 @@
       map.on('mouseover', handleMouseOver);
       map.on('mouseout', handleMouseOut);
 
+      // Bereken de maximale schadekosten om te gebruiken voor schaalverdeling
+      const maxSchadekosten = Math.max(...geojsonData.features.map(feature => feature.properties.schadekosten_2022));
+
       // Voeg de GeoJSON-data toe aan de kaart met aangepaste markers
       geoJsonLayer = L.geoJSON(geojsonData, {
         pointToLayer: function (feature, latlng) {
+          const schadekosten = feature.properties.schadekosten_2022;
+          // Schaal de radius op basis van de schadekosten met een minimum en maximum grootte
+          const minRadius = 5;
+          const maxRadius = 20;
+          const radius = (schadekosten / maxSchadekosten) * (maxRadius - minRadius) + minRadius;
+
           return L.circleMarker(latlng, {
-            radius: 6,  // Vaste grootte voor alle markers
+            radius: radius,  // Dynamische grootte voor alle markers
             fillColor: '#FF0000', // Rood voor alle markers
             color: '#FF0000', // Randkleur instellen op dezelfde kleur als de vulling
-            weight: 1, // Dikte van de rand
+            weight: 0, // Dikte van de rand
             opacity: 1,
-            fillOpacity: 0.5, // Statische opacity
+            fillOpacity: 0.6, // Statische opacity
           });
         },
         onEachFeature: function (feature, layer) {
