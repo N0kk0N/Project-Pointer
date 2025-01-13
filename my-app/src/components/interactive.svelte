@@ -6,7 +6,7 @@
   import geojsonData from '../data/bedrijven.json';
 
   let map;
-  let satelliteLayer, grayLayer, labelsLayer;
+  let grayLayer, labelsLayer;
   let isZoomKeyPressed = false;
   let geoJsonLayer;
 
@@ -20,15 +20,6 @@
       }).setView([52.1326, 5.2913], 7);
 
       // Voeg lagen toe
-      satelliteLayer = L.tileLayer(
-        'https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}',
-        {
-          attribution:
-            'Tiles © Esri — Source: Esri, DeLorme, NAVTEQ, USGS, Intermap, iPC, NRCAN, Esri Japan, METI, Esri China (Hong Kong), Esri (Thailand), TomTom, 2012',
-          maxZoom: 18,
-        }
-      );
-
       grayLayer = L.tileLayer(
         'https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png',
         {
@@ -56,7 +47,7 @@
         .addTo(map);
 
       // Voeg de lagen toe
-      satelliteLayer.addTo(map);
+      grayLayer.addTo(map);
       labelsLayer.addTo(map); // Voeg de labelsLayer toe
 
       // Disable scroll zoom by default
@@ -67,7 +58,6 @@
       window.addEventListener('keyup', handleKeyUp);
       map.on('mouseover', handleMouseOver);
       map.on('mouseout', handleMouseOut);
-      map.on('zoomend', handleZoomEnd);
 
       // Bereken de maximale schadekosten om te gebruiken voor schaalverdeling
       const maxSchadekosten = Math.max(...geojsonData.features.map(feature => feature.properties.schadekosten_2022));
@@ -127,20 +117,6 @@
 
   function handleMouseOut() {
     map.scrollWheelZoom.disable();
-  }
-
-  // Functie voor het schakelen van lagen op basis van zoomniveau
-  function handleZoomEnd() {
-    const zoomLevel = map.getZoom();
-    const zoomThreshold = 12; // Drempelwaarde voor het schakelen tussen lagen
-
-    if (zoomLevel >= zoomThreshold && !map.hasLayer(grayLayer)) {
-      map.removeLayer(satelliteLayer);
-      grayLayer.addTo(map);
-    } else if (zoomLevel < zoomThreshold && !map.hasLayer(satelliteLayer)) {
-      map.removeLayer(grayLayer);
-      satelliteLayer.addTo(map);
-    }
   }
 </script>
 
