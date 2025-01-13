@@ -1,64 +1,122 @@
 <script>
-  import { onMount } from 'svelte';
-  import 'leaflet/dist/leaflet.css';
+  import { onMount } from "svelte";
+  import "leaflet/dist/leaflet.css";
+
+  // GeoJSON importeren
+  import geojsonData from "../data/bedrijven.json";
 
   let map;
+  let colorLayer, labelsLayer;
   let isZoomKeyPressed = false;
-  let satelliteLayer, grayLayer, labelsLayer;
+  let geoJsonLayer;
 
   onMount(async () => {
-    if (typeof window !== 'undefined') {
-      const L = await import('leaflet');
+    if (typeof window !== "undefined") {
+      const L = await import("leaflet");
 
-      map = L.map('map', {
-        attributionControl: false // Verwijder de standaard attributie
+      // Initialiseer de kaart
+      // Initialiseer de kaart
+      map = L.map("map", {
+        attributionControl: false, // Verwijder de standaard attributie
+        minZoom: 2, // Stel het minimale zoomniveau in zodat de hele wereld zichtbaar blijft
+        maxBounds: [
+          [-90, -180], // Zuidwest grens (breedtegraad, lengtegraad)
+          [90, 180], // Noordoost grens (breedtegraad, lengtegraad)
+        ], // Beperk de kaart tot de hele wereld
       }).setView([52.1326, 5.2913], 7);
 
-      satelliteLayer = L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}', {
-        attribution: 'Tiles © Esri — Source: Esri, DeLorme, NAVTEQ, USGS, Intermap, iPC, NRCAN, Esri Japan, METI, Esri China (Hong Kong), Esri (Thailand), TomTom, 2012',
-        maxZoom: 18,
-      });
+      // Voeg lagen toe
+      colorLayer = L.tileLayer(
+        "https://{s}.basemaps.cartocdn.com/rastertiles/voyager_nolabels/{z}/{x}/{y}{r}.png",
+        {
+          attribution: "© OpenStreetMap contributors © CARTO",
+          maxZoom: 18,
+        },
+      );
 
-      grayLayer = L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png', {
-        attribution: '© OpenStreetMap contributors © CARTO',
-        maxZoom: 18,
-      });
-
-      labelsLayer = L.tileLayer('https://{s}.basemaps.cartocdn.com/light_only_labels/{z}/{x}/{y}{r}.png', {
-        attribution: '© OpenStreetMap contributors © CARTO',
-        maxZoom: 18,
-      });
+      labelsLayer = L.tileLayer(
+        "https://{s}.basemaps.cartocdn.com/rastertiles/voyager_only_labels/{z}/{x}/{y}{r}.png",
+        {
+          attribution: "© OpenStreetMap contributors © CARTO",
+          maxZoom: 18,
+        },
+      );
 
       // Voeg de aangepaste attributie toe rechtsboven
-      L.control.attribution({
-        position: 'topright'
-      }).addAttribution('Tiles © Esri — Source: Esri, DeLorme, NAVTEQ, USGS, Intermap, iPC, NRCAN, Esri Japan, METI, Esri China (Hong Kong), Esri (Thailand), TomTom, 2012').addTo(map);
+      L.control
+        .attribution({
+          position: "topright",
+        })
+        .addAttribution(
+          "Tiles © Esri — Source: Esri, DeLorme, NAVTEQ, USGS, Intermap, iPC, NRCAN, Esri Japan, METI, Esri China (Hong Kong), Esri (Thailand), TomTom, 2012",
+        )
+        .addTo(map);
 
-      // Voeg de satellietlaag en labels laag toe
-      satelliteLayer.addTo(map);
-      labelsLayer.addTo(map);
+      // Voeg de lagen toe
+      colorLayer.addTo(map);
+      labelsLayer.addTo(map); // Voeg de labelsLayer toe
 
       // Disable scroll zoom by default
       map.scrollWheelZoom.disable();
 
-      // Listen for keydown and keyup events
-      window.addEventListener('keydown', handleKeyDown);
-      window.addEventListener('keyup', handleKeyUp);
-      map.on('mouseover', handleMouseOver);
-      map.on('mouseout', handleMouseOut);
-      map.on('zoomend', handleZoomChange);
+      // Event Listeners
+      window.addEventListener("keydown", handleKeyDown);
+      window.addEventListener("keyup", handleKeyUp);
+      map.on("mouseover", handleMouseOver);
+      map.on("mouseout", handleMouseOut);
+
+      // Bereken de maximale schadekosten om te gebruiken voor schaalverdeling
+      const maxSchadekosten = Math.max(
+        ...geojsonData.features.map(
+          (feature) => feature.properties.schadekosten_2022,
+        ),
+      );
+
+      // Voeg de GeoJSON-data toe aan de kaart met aangepaste markers
+      geoJsonLayer = L.geoJSON(geojsonData, {
+        pointToLayer: function (feature, latlng) {
+          const schadekosten = feature.properties.schadekosten_2022;
+          // Schaal de radius op basis van de schadekosten met een minimum en maximum grootte
+          const minRadius = 5;
+          const maxRadius = 20;
+          const radius =
+            (schadekosten / maxSchadekosten) * (maxRadius - minRadius) +
+            minRadius;
+
+          return L.circleMarker(latlng, {
+            radius: radius, // Dynamische grootte voor alle markers
+            fillColor: "#FF0000", // Rood voor alle markers
+            color: "#FF0000", // Randkleur instellen op dezelfde kleur als de vulling
+            weight: 0, // Dikte van de rand
+            opacity: 1,
+            fillOpacity: 0.6, // Statische opacity
+          });
+        },
+        onEachFeature: function (feature, layer) {
+          if (feature.properties && feature.properties.bedrijf) {
+            // Formatteer de schadekosten met komma's als duizendtallen scheidingstekens
+            const formattedCosts =
+              feature.properties.schadekosten_2022.toLocaleString("nl-NL");
+
+            layer.bindPopup(
+              `<b>${feature.properties.bedrijf}</b><br>Schadekosten 2022: €${formattedCosts}`,
+            );
+          }
+        },
+      }).addTo(map);
     }
   });
 
+  // Functies voor zoom-controle
   function handleKeyDown(event) {
-    if (event.key === 'Control' || event.key === 'Meta') {
+    if (event.key === "Control" || event.key === "Meta") {
       isZoomKeyPressed = true;
       map.scrollWheelZoom.enable();
     }
   }
 
   function handleKeyUp(event) {
-    if (event.key === 'Control' || event.key === 'Meta') {
+    if (event.key === "Control" || event.key === "Meta") {
       isZoomKeyPressed = false;
       map.scrollWheelZoom.disable();
     }
@@ -73,37 +131,7 @@
   function handleMouseOut() {
     map.scrollWheelZoom.disable();
   }
-
-  function handleZoomChange() {
-    if (map.getZoom() >= 15) {
-      if (map.hasLayer(satelliteLayer)) {
-        map.removeLayer(satelliteLayer);
-        map.removeLayer(labelsLayer);
-        grayLayer.addTo(map);
-      }
-    } else {
-      if (map.hasLayer(grayLayer)) {
-        map.removeLayer(grayLayer);
-        satelliteLayer.addTo(map);
-        labelsLayer.addTo(map);
-      }
-    }
-  }
 </script>
-
-<style>
-  #map {
-    height: 600px; /* Pas de hoogte van de kaart aan */
-  }
-
-  .button-container {
-    position: absolute;
-    bottom: -25px; /* Pas deze waarde aan om de knop te verschuiven */
-    left: 50%;
-    transform: translateX(-50%);
-    z-index: 1000; /* Zorg ervoor dat de knop boven de kaart staat */
-  }
-</style>
 
 <div class="relative w-full h-full">
   <!-- Map -->
@@ -127,7 +155,7 @@
         stroke-linejoin="round"
         class="icon icon-tabler icons-tabler-outline icon-tabler-arrow-right"
       >
-        <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+        <path stroke="none" d="M0 0h24V24H0z" fill="none" />
         <path d="M5 12l14 0" />
         <path d="M13 18l6 -6" />
         <path d="M13 6l6 6" />
@@ -135,3 +163,18 @@
     </button>
   </div>
 </div>
+
+<style>
+  #map {
+    height: 600px; /* Pas de hoogte van de kaart aan */
+    width: 100%; /* Zorg ervoor dat de kaart de volledige breedte inneemt */
+  }
+
+  .button-container {
+    position: absolute;
+    bottom: -25px; /* Pas deze waarde aan om de knop te verschuiven */
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1000; /* Zorg ervoor dat de knop boven de kaart staat */
+  }
+</style>
