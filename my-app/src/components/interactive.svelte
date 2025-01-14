@@ -165,7 +165,7 @@
       </div>
       <div class="mt-2">
         <p class="inline">Of</p>
-        <button id="skipTourButton" class="inline underline" on:click{hideZipcodeSection}>sla de tour over</button>
+        <button id="skipTourButton" class="inline underline" on:click={hideZipcodeSection}>sla de tour over</button>
       </div>
     </div>
   </div>
