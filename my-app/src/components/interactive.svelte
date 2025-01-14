@@ -5,13 +5,19 @@
   let map;
   let isZoomKeyPressed = false;
   let satelliteLayer, grayLayer, labelsLayer;
+  let imageOverlay;
+
+  const overlayBounds = [
+    [53.555, 3.35], // [North-West corner latitude, longitude]
+    [50.71, 7.15]  // [South-East corner latitude, longitude]
+  ];
 
   onMount(async () => {
     if (typeof window !== 'undefined') {
       const L = await import('leaflet');
 
       map = L.map('map', {
-        attributionControl: false // Verwijder de standaard attributie
+        attributionControl: false
       }).setView([52.1326, 5.2913], 7);
 
       satelliteLayer = L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}', {
@@ -29,19 +35,25 @@
         maxZoom: 18,
       });
 
-      // Voeg de aangepaste attributie toe rechtsboven
+      // Add custom attribution at top right
       L.control.attribution({
         position: 'topright'
-      }).addAttribution('Tiles © Esri — Source: Esri, DeLorme, NAVTEQ, USGS, Intermap, iPC, NRCAN, Esri Japan, METI, Esri China (Hong Kong), Esri (Thailand), TomTom, 2012').addTo(map);
+      }).addAttribution('Custom Image Overlay Example').addTo(map);
 
-      // Voeg de satellietlaag en labels laag toe
       satelliteLayer.addTo(map);
       labelsLayer.addTo(map);
 
       // Disable scroll zoom by default
       map.scrollWheelZoom.disable();
 
-      // Listen for keydown and keyup events
+      // Add image overlay to the map
+      imageOverlay = L.imageOverlay(
+        '/data/QGisTest2.png',
+        overlayBounds,
+        { opacity: 0.5 }
+      ).addTo(map);
+
+      // Event Listeners for zoom key handling
       window.addEventListener('keydown', handleKeyDown);
       window.addEventListener('keyup', handleKeyUp);
       map.on('mouseover', handleMouseOver);
