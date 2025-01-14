@@ -102,7 +102,7 @@
             color: "#FF0000", // Randkleur instellen op dezelfde kleur als de vulling
             weight: 0, // Dikte van de rand
             opacity: 1,
-            fillOpacity: 0.6, // Statische opacity
+            fillOpacity: 0.5, // Statische opacity
           });
         },
         onEachFeature: function (feature, layer) {
