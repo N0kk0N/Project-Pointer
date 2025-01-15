@@ -85,34 +85,45 @@
         ),
       );
 
+      const categoryArray = ["Industrie, Energie en Raffinaderijen", "Verkeer en vervoer", "Afval, riolering, waterzuivering", "Handel/Diensten/Overheid en Bouw", "Landbouw"]
+      const filterCategory = categoryArray[4]
+      
       // Voeg de GeoJSON-data toe aan de kaart met aangepaste markers
       geoJsonLayer = L.geoJSON(geojsonData, {
         pointToLayer: function (feature, latlng) {
-          const schadekosten = feature.properties.schadekosten_2022;
-          // Schaal de radius op basis van de schadekosten met een minimum en maximum grootte
-          const minRadius = 5;
-          const maxRadius = 20;
-          const radius =
-            (schadekosten / maxSchadekosten) * (maxRadius - minRadius) +
-            minRadius;
+          // Filter op aangepaste_sector
+          if (feature.properties.aangepaste_sector === filterCategory) {
+            const schadekosten = feature.properties.schadekosten_2022;
+            
+            // Straal schalen op basis van de schadekosten met een minimum en maximum grootte
+            const minRadius = 5;
+            const maxRadius = 20;
+            const radius =
+              (schadekosten / maxSchadekosten) * (maxRadius - minRadius) +
+              minRadius;
 
-          return L.circleMarker(latlng, {
-            radius: radius, // Dynamische grootte voor alle markers
-            fillColor: "#FF0000", // Rood voor alle markers
-            color: "#FF0000", // Randkleur instellen op dezelfde kleur als de vulling
-            weight: 0, // Dikte van de rand
-            opacity: 1,
-            fillOpacity: 0.5, // Statische opacity
-          });
+            return L.circleMarker(latlng, {
+              radius: radius,
+              fillColor: "#FF0000",
+              color: "#FF0000",
+              weight: 0,
+              opacity: 1,
+              fillOpacity: 0.5,
+            });
+          }
+          return null; // Geen marker genereren als de sector niet overeenkomt
         },
         onEachFeature: function (feature, layer) {
-          if (feature.properties && feature.properties.bedrijf) {
-            // Formatteer de schadekosten met komma's als duizendtallen scheidingstekens
+          if (
+            feature.properties &&
+            feature.properties.bedrijf &&
+            feature.properties.aangepaste_sector === filterCategory
+          ) {
             const formattedCosts =
               feature.properties.schadekosten_2022.toLocaleString("nl-NL");
 
             layer.bindPopup(
-              `<b>${feature.properties.bedrijf}</b><br>Schadekosten 2022: €${formattedCosts}`,
+              `<b>${feature.properties.bedrijf}</b><br>Schadekosten 2022: €${formattedCosts}`
             );
           }
         },
