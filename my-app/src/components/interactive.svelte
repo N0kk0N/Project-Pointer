@@ -31,7 +31,7 @@
       }).setView([currentLat, currentLon], 7);
 
       imageOverlay = L.imageOverlay("/data/QGisTest2.png", overlayBounds, {
-        opacity: 0.5,
+        opacity: 0.7,
       }).addTo(map);
 
       colorLayer = L.tileLayer(
@@ -111,8 +111,8 @@
 
         const marker = L.circleMarker([lat, lon], {
           radius: radius, // Dynamisch bepalen van de grootte op basis van schadekosten
-          fillColor: "red", // Maak de marker rood
-          color: "red", // Kleur van de rand ook rood
+          fillColor: "#00D9AD",
+          color: "#00D9AD",
           weight: 0,
           opacity: 1,
           fillOpacity: 0.7,
@@ -161,8 +161,8 @@
         // Voeg een nieuwe paarse stip toe
         map._purpleMarker = L.circleMarker([lat, lon], {
           radius: 10, // Pas de grootte van de stip aan
-          fillColor: "purple",
-          color: "purple",
+          fillColor: "#4D00FF",
+          color: "#4D00FF",
           weight: 1,
           opacity: 1, // Volledige opacity
           fillOpacity: 1, // Volledige opacity voor de vulling
