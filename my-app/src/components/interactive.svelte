@@ -3,6 +3,7 @@
   import "leaflet/dist/leaflet.css";
 
   import geojsonData from "../data/bedrijven.json";
+  import stoffenData from "../data/stoffen.json"; // Nieuw JSON-bestand importeren
 
   let map;
   let colorLayer, labelsLayer;
@@ -74,6 +75,22 @@
     return postcodeRegEx.test(postcode);
   }
 
+  // Functie om uitstootgegevens per bedrijf te combineren
+  function getUitstootPerBedrijf(bedrijf) {
+    const uitstootPerBedrijf = stoffenData.filter(stof => stof.Bedrijf === bedrijf);
+    const preferredUitstoot = {};
+
+    uitstootPerBedrijf.forEach(stof => {
+      if (preferredUitstoot[stof.Stof] && stof.Eenheid === "kg CO₂-eq") {
+        preferredUitstoot[stof.Stof] = stof; // Voorkeur voor "kg CO₂-eq"
+      } else if (!preferredUitstoot[stof.Stof]) {
+        preferredUitstoot[stof.Stof] = stof;
+      }
+    });
+
+    return Object.values(preferredUitstoot);
+  }
+
   // Functie om locaties in de buurt van de opgezochte postcode te tonen
   function toonMarkersInDeBuurt() {
     const L = window.L;
@@ -109,6 +126,8 @@
         const maxRadius = 20;
         const radius = (schadekosten / maxSchadekosten) * (maxRadius - minRadius) + minRadius;
 
+        const uitstoot = getUitstootPerBedrijf(feature.properties.bedrijf);
+
         const marker = L.circleMarker([lat, lon], {
           radius: radius, // Dynamisch bepalen van de grootte op basis van schadekosten
           fillColor: "#00D9AD",
@@ -119,7 +138,11 @@
         }).bindPopup(`
           <b>${feature.properties.bedrijf}</b><br>
           Sector: ${feature.properties.aangepaste_sector}<br>
-          Schadekosten 2022: €${feature.properties.schadekosten_2022.toLocaleString()}
+          Schadekosten 2022: €${feature.properties.schadekosten_2022.toLocaleString()}<br>
+          Uitstoot:
+          <ul>
+            ${uitstoot.map(stof => `<li>${stof.Stof}: ${stof.Hoeveelheid} ${stof.Eenheid}</li>`).join('')}
+          </ul>
         `);
 
         buurtMarkersLayer.addLayer(marker);
