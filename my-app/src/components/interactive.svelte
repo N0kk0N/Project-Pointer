@@ -67,6 +67,13 @@
     }
   });
 
+  // Functie om te controleren of de ingevoerde postcode geldig is (Nederlandse postcode)
+  function isValidPostcode(postcode) {
+    // Reguliere expressie voor Nederlandse postcodes (4 cijfers en 2 letters)
+    const postcodeRegEx = /^[1-9][0-9]{3}[A-Za-z]{2}$/;
+    return postcodeRegEx.test(postcode);
+  }
+
   // Functie om locaties in de buurt van de opgezochte postcode te tonen
   function toonMarkersInDeBuurt() {
     const L = window.L;
@@ -132,6 +139,11 @@
   }
 
   async function zoekPostcode() {
+    if (!isValidPostcode(postcode)) {
+      alert("Voer een geldige Nederlandse postcode in.");
+      return;
+    }
+
     const apiUrl = `https://nominatim.openstreetmap.org/search?postalcode=${postcode}&country=Netherlands&format=json`;
 
     try {
@@ -157,9 +169,9 @@
           zIndexOffset: 1000, // Zorg ervoor dat de stip boven alles komt
         }).addTo(map);
 
-        // Zoom direct in op de locatie van de gebruiker zonder markers
-        map.setView([lat, lon], 18); // Verhoog de zoomfactor naar 13 voor meer inzoomen
-        
+        // Zoom direct in op de locatie zonder animatie
+        map.setView([lat, lon], 18);
+
         // Update de huidige locatie voor de buurtmarkers
         currentLat = lat;
         currentLon = lon;
@@ -198,6 +210,13 @@
   function handleMouseOut() {
     map.scrollWheelZoom.disable();
   }
+
+  // Functie voor het afhandelen van de Enter-toets zonder dat er een zoekknop nodig is
+  function handleKeyPress(event) {
+    if (event.key === "Enter" && postcode && isValidPostcode(postcode)) {
+      zoekPostcode();
+    }
+  }
 </script>
 
 <div class="relative w-full h-full">
@@ -207,8 +226,9 @@
       type="text"
       placeholder="Voer postcode in (bv. 1234AB)"
       bind:value={postcode}
+      on:keydown={handleKeyPress}
     />
-    <button on:click={zoekPostcode}>Zoek</button>
+    <button on:click={zoekPostcode} class="zoek-button">Zoek</button> <!-- Voeg de zoekknop terug toe -->
   </div>
 
   <!-- Map -->
@@ -240,16 +260,17 @@
     border-radius: 4px;
   }
 
-  .postcode-container button {
-    padding: 6px 12px;
+  .zoek-button {
     background-color: #007bff;
     color: white;
     border: none;
-    border-radius: 4px;
+    padding: 5px 15px;
+    font-size: 14px;
     cursor: pointer;
+    border-radius: 4px;
   }
 
-  .postcode-container button:hover {
+  .zoek-button:hover {
     background-color: #0056b3;
   }
 </style>
