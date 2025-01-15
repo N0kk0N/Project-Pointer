@@ -9,12 +9,18 @@
   let colorLayer, labelsLayer;
   let isZoomKeyPressed = false;
   let geoJsonLayer;
+  let imageOverlay;
+
+  // Definieer de bounds voor de afbeeldingoverlay
+  const overlayBounds = [
+    [53.555, 3.35], // [North-West corner latitude, longitude]
+    [50.71, 7.15]  // [South-East corner latitude, longitude]
+  ];
 
   onMount(async () => {
     if (typeof window !== "undefined") {
       const L = await import("leaflet");
 
-      // Initialiseer de kaart
       // Initialiseer de kaart
       map = L.map("map", {
         attributionControl: false, // Verwijder de standaard attributie
@@ -24,6 +30,13 @@
           [90, 180], // Noordoost grens (breedtegraad, lengtegraad)
         ], // Beperk de kaart tot de hele wereld
       }).setView([52.1326, 5.2913], 7);
+
+      // Voeg de afbeeldingoverlay toe aan de kaart
+      imageOverlay = L.imageOverlay(
+        '/data/QGisTest2.png', // Pad naar de PNG-afbeelding
+        overlayBounds,          // De bounds waarin de afbeelding wordt geplaatst
+        { opacity: 0.5 }        // Optionele instellingen zoals de opacity
+      ).addTo(map);
 
       // Voeg lagen toe
       colorLayer = L.tileLayer(
@@ -89,7 +102,7 @@
             color: "#FF0000", // Randkleur instellen op dezelfde kleur als de vulling
             weight: 0, // Dikte van de rand
             opacity: 1,
-            fillOpacity: 0.6, // Statische opacity
+            fillOpacity: 0.5, // Statische opacity
           });
         },
         onEachFeature: function (feature, layer) {
