@@ -3,21 +3,22 @@
   import "leaflet/dist/leaflet.css";
 
   import geojsonData from "../data/bedrijven.json";
-  import stoffenData from "../data/stoffen.json"; // Nieuw JSON-bestand importeren
+  import stoffenData from "../data/stoffen.json"; // NIEUW JSON-BESTAND IMPORTEREN
 
   let map;
   let colorLayer, labelsLayer;
   let isZoomKeyPressed = false;
   let imageOverlay;
-  let postcode = ""; // Postcode die de gebruiker invoert
+  let postcode = ""; // POSTCODE DIE DE GEBRUIKER INVOERT
   let overlayBounds = [
     [53.555, 3.35],
     [50.71, 7.15],
   ];
-  let buurtMarkersLayer; // Laag voor de markers in de buurt
-  let currentLat = 52.1326;  // Huidige locatie breedtegraad (voorbeeld)
-  let currentLon = 5.2913;   // Huidige locatie lengtegraad (voorbeeld)
+  let buurtMarkersLayer; // LAAG VOOR DE MARKERS IN DE BUURT
+  let currentLat = 52.1326;  // HUIDIGE LOCATIE BREEDTEGRAAD (VOORBEELD)
+  let currentLon = 5.2913;   // HUIDIGE LOCATIE LENGTEGRAAD (VOORBEELD)
 
+  // INITIEERT DE KAART NA HET MONTEREN VAN DE COMPONENT
   onMount(async () => {
     if (typeof window !== "undefined") {
       const L = await import("leaflet");
@@ -68,68 +69,63 @@
     }
   });
 
-  // Functie om te controleren of de ingevoerde postcode geldig is (Nederlandse postcode)
+  // FUNCTIE OM TE CONTROLEREN OF DE INGEVOERDE POSTCODE GELDIG IS (NEDERLANDSE POSTCODE)
   function isValidPostcode(postcode) {
-    // Reguliere expressie voor Nederlandse postcodes (4 cijfers en 2 letters)
     const postcodeRegEx = /^[1-9][0-9]{3}[A-Za-z]{2}$/;
     return postcodeRegEx.test(postcode);
   }
 
-  // Functie om uitstootgegevens per bedrijf te combineren
-  function getUitstootPerBedrijf(bedrijf) {
+  // FUNCTIE OM UITSTOOTGEGEVENS PER BEDRIJF TE COMBINEREN
+  function getTop3UitstootPerBedrijf(bedrijf) {
     const uitstootPerBedrijf = stoffenData.filter(stof => stof.Bedrijf === bedrijf);
     const preferredUitstoot = {};
 
     uitstootPerBedrijf.forEach(stof => {
       if (preferredUitstoot[stof.Stof] && stof.Eenheid === "kg CO₂-eq") {
-        preferredUitstoot[stof.Stof] = stof; // Voorkeur voor "kg CO₂-eq"
+        preferredUitstoot[stof.Stof] = stof; // VOORKEUR VOOR "KG CO₂-EQ"
       } else if (!preferredUitstoot[stof.Stof]) {
         preferredUitstoot[stof.Stof] = stof;
       }
     });
 
-    return Object.values(preferredUitstoot);
+    return Object.values(preferredUitstoot)
+      .sort((a, b) => b.Hoeveelheid - a.Hoeveelheid)
+      .slice(0, 3);
   }
 
-  // Functie om locaties in de buurt van de opgezochte postcode te tonen
+  // FUNCTIE OM LOCATIES IN DE BUURT VAN DE OPGEZOCHTE POSTCODE TE TONEN
   function toonMarkersInDeBuurt() {
     const L = window.L;
 
-    // Verwijder bestaande buurtmarkers (indien eerder toegevoegd)
     if (buurtMarkersLayer) {
-      map.removeLayer(buurtMarkersLayer);
+      map.removeLayer(buurtMarkersLayer); // VERWIJDER BESTAANDE BUURTMARKERS
     }
 
-    // Definieer een straal in meters voor de zoekfunctie
-    const buurtStraal = 25000; // 25 km, pas aan naar wens
+    const buurtStraal = 25000; // 25 KM STRAAL
     buurtMarkersLayer = L.layerGroup();
 
-    // Bepaal de max schadekosten voor schaal
     const maxSchadekosten = Math.max(
       ...geojsonData.features.map((feature) => feature.properties.schadekosten_2022)
     );
 
-    // Om de grenzen van de markers te berekenen
     const boundsArray = [];
 
     geojsonData.features.forEach(feature => {
       const lat = feature.geometry.coordinates[1];
       const lon = feature.geometry.coordinates[0];
 
-      // Bereken de afstand tussen de huidige locatie en de locatie van de marker
       const afstand = L.latLng(currentLat, currentLon).distanceTo([lat, lon]);
 
-      // Voeg markers toe als ze binnen de straal vallen
       if (afstand <= buurtStraal) {
         const schadekosten = feature.properties.schadekosten_2022;
         const minRadius = 5;
         const maxRadius = 20;
         const radius = (schadekosten / maxSchadekosten) * (maxRadius - minRadius) + minRadius;
 
-        const uitstoot = getUitstootPerBedrijf(feature.properties.bedrijf);
+        const top3Uitstoot = getTop3UitstootPerBedrijf(feature.properties.bedrijf);
 
         const marker = L.circleMarker([lat, lon], {
-          radius: radius, // Dynamisch bepalen van de grootte op basis van schadekosten
+          radius: radius,
           fillColor: "#00D9AD",
           color: "#00D9AD",
           weight: 0,
@@ -138,29 +134,23 @@
         }).bindPopup(`
           <b>${feature.properties.bedrijf}</b><br>
           Sector: ${feature.properties.aangepaste_sector}<br>
-          Schadekosten 2022: €${feature.properties.schadekosten_2022.toLocaleString()}<br>
-          Uitstoot:
+          Schadekosten 2022: €${feature.properties.schadekosten_2022.toLocaleString('nl-NL')}<br>
+          Uitstoot (Top 3):
           <ul>
-            ${uitstoot.map(stof => `<li>${stof.Stof}: ${stof.Hoeveelheid} ${stof.Eenheid}</li>`).join('')}
+            ${top3Uitstoot.map(stof => `<li>${stof.Stof}: ${stof.Hoeveelheid.toLocaleString('nl-NL')} ${stof.Eenheid}</li>`).join('')}
           </ul>
         `);
 
         buurtMarkersLayer.addLayer(marker);
 
-        // Voeg de marker toe aan de array voor het berekenen van de bounds
         boundsArray.push(marker.getLatLng());
       }
     });
 
-    // Voeg de buurtmarkers toe aan de kaart
     buurtMarkersLayer.addTo(map);
-
-    // Zoom niet in op de markers, laat ze gewoon zien in de buurt
-    if (boundsArray.length > 0) {
-      // We willen niet opnieuw inzoomen, dus we slaan deze stap over.
-    }
   }
 
+  // ASYNCHRONISCHE FUNCTIE OM LOCATIE VAN POSTCODE OP TE HOGEN EN MARKERS TE TONEN
   async function zoekPostcode() {
     if (!isValidPostcode(postcode)) {
       alert("Voer een geldige Nederlandse postcode in.");
@@ -176,30 +166,25 @@
       if (data.length > 0) {
         const { lat, lon } = data[0];
 
-        // Verwijder oude marker (als die bestaat)
         if (map._purpleMarker) {
-          map.removeLayer(map._purpleMarker);
+          map.removeLayer(map._purpleMarker); // VERWIJDER OUDERE MARKER
         }
 
-        // Voeg een nieuwe paarse stip toe
         map._purpleMarker = L.circleMarker([lat, lon], {
-          radius: 10, // Pas de grootte van de stip aan
+          radius: 10,
           fillColor: "#4D00FF",
           color: "#4D00FF",
           weight: 1,
-          opacity: 1, // Volledige opacity
-          fillOpacity: 1, // Volledige opacity voor de vulling
-          zIndexOffset: 1000, // Zorg ervoor dat de stip boven alles komt
+          opacity: 1,
+          fillOpacity: 1,
+          zIndexOffset: 1000,
         }).addTo(map);
 
-        // Zoom direct in op de locatie zonder animatie
         map.setView([lat, lon], 18);
 
-        // Update de huidige locatie voor de buurtmarkers
         currentLat = lat;
         currentLon = lon;
 
-        // Toon de markers in de buurt van de nieuwe locatie
         toonMarkersInDeBuurt();
       } else {
         alert("Geen locatie gevonden voor de ingevoerde postcode.");
@@ -210,6 +195,7 @@
     }
   }
 
+  // HANDLES KEYDOWN EVENT VOOR INZOOMEN MET CONTROL/META TOETS
   function handleKeyDown(event) {
     if (event.key === "Control" || event.key === "Meta") {
       isZoomKeyPressed = true;
@@ -217,6 +203,7 @@
     }
   }
 
+  // HANDLES KEYUP EVENT VOOR ZORGEN DAT INZOOMEN AAN/UIT STAAT
   function handleKeyUp(event) {
     if (event.key === "Control" || event.key === "Meta") {
       isZoomKeyPressed = false;
@@ -224,17 +211,19 @@
     }
   }
 
+  // HANDLES MOUSEOVER EVENEMENT VOOR ZOEKEN INZOOMEN MET WIEL
   function handleMouseOver() {
     if (isZoomKeyPressed) {
       map.scrollWheelZoom.enable();
     }
   }
 
+  // HANDLES MOUSEOUT EVENEMENT VOOR ZOEKEN INZOOMEN UIT
   function handleMouseOut() {
     map.scrollWheelZoom.disable();
   }
 
-  // Functie voor het afhandelen van de Enter-toets zonder dat er een zoekknop nodig is
+  // FUNCTIE VOOR ENTER-TOETS ZONDER ZOEKKNOP
   function handleKeyPress(event) {
     if (event.key === "Enter" && postcode && isValidPostcode(postcode)) {
       zoekPostcode();
@@ -242,8 +231,9 @@
   }
 </script>
 
+<!-- HTML STRUCTUUR -->
 <div class="relative w-full h-full">
-  <!-- Postcode Input -->
+  <!-- POSTCODE INPUT EN ZOEKKNOP -->
   <div class="postcode-container">
     <input
       type="text"
@@ -251,10 +241,10 @@
       bind:value={postcode}
       on:keydown={handleKeyPress}
     />
-    <button on:click={zoekPostcode} class="zoek-button">Zoek</button> <!-- Voeg de zoekknop terug toe -->
+    <button on:click={zoekPostcode} class="zoek-button">Zoek</button>
   </div>
 
-  <!-- Map -->
+  <!-- KAART WEERGAVE -->
   <div id="map" class="w-full h-full"></div>
 </div>
 
@@ -267,7 +257,7 @@
   .postcode-container {
     position: absolute;
     top: 20px;
-    left: 50px; /* Verplaatst het inputveld iets naar rechts */
+    left: 50px;
     z-index: 1000;
     background: white;
     padding: 10px;
