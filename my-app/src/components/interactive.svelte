@@ -246,6 +246,15 @@
 
   <!-- KAART WEERGAVE -->
   <div id="map" class="w-full h-full"></div>
+
+  <!-- HORIZONTALE KADERS -->
+  <div class="scroll-container">
+    <div class="scroll-content">
+      <div class="box">Kader 1</div>
+      <div class="box">Kader 2</div>
+      <div class="box">Kader 3</div>
+    </div>
+  </div>
 </div>
 
 <style>
@@ -285,5 +294,33 @@
 
   .zoek-button:hover {
     background-color: #0056b3;
+  }
+
+  .scroll-container {
+    overflow-x: auto;
+    white-space: nowrap;
+    padding: 20px 0;
+  }
+
+  .scroll-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 200%; /* Aangepaste breedte voor een beetje buiten beeld */
+  }
+
+  .scroll-content .box {
+    flex: 0 0 33.33%; /* Stel de breedte van elke box in op 33.33% */
+    width: calc(100vw - 20px); /* Elke box is iets smaller dan 100vw */
+    height: 200px;
+    background-color: #f0f0f0;
+    border: 2px solid #ccc;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    margin: 0 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+    font-weight: bold;
   }
 </style>
