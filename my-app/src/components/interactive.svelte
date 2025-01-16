@@ -237,7 +237,7 @@
   <div class="postcode-container">
     <input
       type="text"
-      placeholder="Voer postcode in (bv. 1234AB)"
+      placeholder="1234AB"
       bind:value={postcode}
       on:keydown={handleKeyPress}
     />
