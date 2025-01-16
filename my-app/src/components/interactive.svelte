@@ -14,7 +14,7 @@
   // Definieer de bounds voor de afbeeldingoverlay
   const overlayBounds = [
     [53.555, 3.35], // [North-West corner latitude, longitude]
-    [50.71, 7.15]  // [South-East corner latitude, longitude]
+    [50.71, 7.15], // [South-East corner latitude, longitude]
   ];
 
   onMount(async () => {
@@ -33,9 +33,9 @@
 
       // Voeg de afbeeldingoverlay toe aan de kaart
       imageOverlay = L.imageOverlay(
-        '/data/QGisTest2.png', // Pad naar de PNG-afbeelding
-        overlayBounds,          // De bounds waarin de afbeelding wordt geplaatst
-        { opacity: 0.5 }        // Optionele instellingen zoals de opacity
+        "/data/QGisTest2.png", // Pad naar de PNG-afbeelding
+        overlayBounds, // De bounds waarin de afbeelding wordt geplaatst
+        { opacity: 0.5 } // Optionele instellingen zoals de opacity
       ).addTo(map);
 
       // Voeg lagen toe
@@ -44,7 +44,7 @@
         {
           attribution: "© OpenStreetMap contributors © CARTO",
           maxZoom: 18,
-        },
+        }
       );
 
       labelsLayer = L.tileLayer(
@@ -52,7 +52,7 @@
         {
           attribution: "© OpenStreetMap contributors © CARTO",
           maxZoom: 18,
-        },
+        }
       );
 
       // Voeg de aangepaste attributie toe rechtsboven
@@ -61,7 +61,7 @@
           position: "topright",
         })
         .addAttribution(
-          "Tiles © Esri — Source: Esri, DeLorme, NAVTEQ, USGS, Intermap, iPC, NRCAN, Esri Japan, METI, Esri China (Hong Kong), Esri (Thailand), TomTom, 2012",
+          "Tiles © Esri — Source: Esri, DeLorme, NAVTEQ, USGS, Intermap, iPC, NRCAN, Esri Japan, METI, Esri China (Hong Kong), Esri (Thailand), TomTom, 2012"
         )
         .addTo(map);
 
@@ -81,8 +81,8 @@
       // Bereken de maximale schadekosten om te gebruiken voor schaalverdeling
       const maxSchadekosten = Math.max(
         ...geojsonData.features.map(
-          (feature) => feature.properties.schadekosten_2022,
-        ),
+          (feature) => feature.properties.schadekosten_2022
+        )
       );
 
       // Voeg de GeoJSON-data toe aan de kaart met aangepaste markers
@@ -112,7 +112,7 @@
               feature.properties.schadekosten_2022.toLocaleString("nl-NL");
 
             layer.bindPopup(
-              `<b>${feature.properties.bedrijf}</b><br>Schadekosten 2022: €${formattedCosts}`,
+              `<b>${feature.properties.bedrijf}</b><br>Schadekosten 2022: €${formattedCosts}`
             );
           }
         },
@@ -148,10 +148,71 @@
 
 <div class="relative w-full h-full">
   <!-- Map -->
-  <div id="map" class="w-full h-full"></div>
+
+  <div class="absolute bottom-0 left-0 z-40 bg-white m-8 p-8 rounded-lg shadow-2xl">
+    <div class="max-w-96">
+      <div class="flex justify-between text-2xl font-bold">
+        <h3>Zware Industrie</h3>
+        <p class="text-slate-300">3/5</p>
+      </div>
+      <p class="text-xl mt-2">
+        Luchtvervuiling heeft grote invloed op onze gezondheid en omgeving. Deze
+        interactieve ervaring laat zien hoe vervuiling en geluid jouw omgeving
+        beïnvloeden.
+      </p>
+      <div class="flex justify-between items-center mt-8">
+        <button
+        class="inline-flex gap-2 items-center rounded-full text-xl bg-[#DEFF9C] px-4 py-4"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="16"
+            height="16"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            class="icon icon-tabler icons-tabler-outline icon-tabler-arrow-left"
+            ><path stroke="none" d="M0 0h24v24H0z" fill="none" /><path
+              d="M5 12l14 0"
+            /><path d="M5 12l6 6" /><path d="M5 12l6 -6" /></svg
+          >
+        </button>
+        <div class="flex gap-4">
+          <div class="w-2 h-2 rounded-full bg-slate-300"></div>
+          <div class="w-2 h-2 rounded-full bg-slate-600"></div>
+          <div class="w-2 h-2 rounded-full bg-slate-300"></div>
+        </div>
+        <button
+          class="inline-flex gap-2 items-center rounded-full text-xl bg-[#DEFF9C] px-4 py-4"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="16"
+            height="16"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            class="icon icon-tabler icons-tabler-outline icon-tabler-arrow-right"
+          >
+            <path stroke="none" d="M0 0h24V24H0z" fill="none" />
+            <path d="M5 12l14 0" />
+            <path d="M13 18l6 -6" />
+            <path d="M13 6l6 6" />
+          </svg>
+        </button>
+      </div>
+    </div>
+  </div>
+  <div id="map" class="w-full h-full z-20"></div>
 
   <!-- Button Container -->
-  <div class="button-container">
+  <!-- <div class="button-container">
     <button
       class="inline-flex gap-2 items-center rounded-full text-xl bg-[#DEFF9C] px-6 py-4"
     >
@@ -174,7 +235,7 @@
         <path d="M13 6l6 6" />
       </svg>
     </button>
-  </div>
+  </div> -->
 </div>
 
 <style>
