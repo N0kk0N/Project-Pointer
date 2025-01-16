@@ -58,7 +58,7 @@
       // Voeg de aangepaste attributie toe rechtsboven
       L.control
         .attribution({
-          position: "topright",
+          position: "bottomright",
         })
         .addAttribution(
           "Tiles © Esri — Source: Esri, DeLorme, NAVTEQ, USGS, Intermap, iPC, NRCAN, Esri Japan, METI, Esri China (Hong Kong), Esri (Thailand), TomTom, 2012"
@@ -149,7 +149,7 @@
 <div class="relative w-full h-full">
   <!-- Map -->
 
-  <div class="absolute bottom-0 left-0 z-40 bg-white m-8 p-8 rounded-lg shadow-2xl">
+  <!-- <div class="absolute bottom-0 left-0 z-40 bg-white m-8 p-8 rounded-lg shadow-2xl">
     <div class="max-w-96">
       <div class="flex justify-between text-2xl font-bold">
         <h3>Zware Industrie</h3>
@@ -208,7 +208,7 @@
         </button>
       </div>
     </div>
-  </div>
+  </div> -->
   <div id="map" class="w-full h-full z-20"></div>
 
   <!-- Button Container -->
@@ -237,7 +237,76 @@
     </button>
   </div> -->
 </div>
-
+<div class="w-full flex justify-center">
+  <div class="flex gap-2 my-4">
+    <div class="w-2 h-2 rounded-full bg-slate-300"></div>
+    <div class="w-2 h-2 rounded-full bg-slate-600"></div>
+    <div class="w-2 h-2 rounded-full bg-slate-300"></div>
+    <div class="w-2 h-2 rounded-full bg-slate-300"></div>
+    <div class="w-2 h-2 rounded-full bg-slate-300"></div>
+    <div class="w-2 h-2 rounded-full bg-slate-300"></div>
+    <div class="w-2 h-2 rounded-full bg-slate-300"></div>
+    <div class="w-2 h-2 rounded-full bg-slate-300"></div>
+    <div class="w-2 h-2 rounded-full bg-slate-300"></div>
+    <div class="w-2 h-2 rounded-full bg-slate-300"></div>
+    <div class="w-2 h-2 rounded-full bg-slate-300"></div>
+    <div class="w-2 h-2 rounded-full bg-slate-300"></div>
+    <div class="w-2 h-2 rounded-full bg-slate-300"></div>
+    <div class="w-2 h-2 rounded-full bg-slate-300"></div>
+    <div class="w-2 h-2 rounded-full bg-slate-300"></div>
+    <div class="w-2 h-2 rounded-full bg-slate-300"></div>
+  </div>
+</div>
+<div class="flex justify-start overflow-hidden w-fit">
+  <div class="bg-white p-8 rounded-lg shadow-2xl w-96">
+    <div class="">
+      <div class="flex justify-between text-2xl font-bold">
+        <h3>Zware Industrie</h3>
+      </div>
+      <p class="text-xl mt-2">
+        Luchtvervuiling heeft grote invloed op onze gezondheid en omgeving. Deze
+        interactieve ervaring laat zien hoe vervuiling en geluid jouw omgeving
+        beïnvloeden.
+      </p>
+    </div>
+  </div>
+  <div class="bg-white p-8 rounded-lg shadow-2xl w-96">
+    <div class="">
+      <div class="flex justify-between text-2xl font-bold">
+        <h3>Zware Industrie</h3>
+      </div>
+      <p class="text-xl mt-2">
+        Luchtvervuiling heeft grote invloed op onze gezondheid en omgeving. Deze
+        interactieve ervaring laat zien hoe vervuiling en geluid jouw omgeving
+        beïnvloeden.
+      </p>
+    </div>
+  </div>
+  <div class="bg-white p-8 rounded-lg shadow-2xl w-96">
+    <div class="">
+      <div class="flex justify-between text-2xl font-bold">
+        <h3>Zware Industrie</h3>
+      </div>
+      <p class="text-xl mt-2">
+        Luchtvervuiling heeft grote invloed op onze gezondheid en omgeving. Deze
+        interactieve ervaring laat zien hoe vervuiling en geluid jouw omgeving
+        beïnvloeden.
+      </p>
+    </div>
+  </div>
+  <div class="bg-white p-8 rounded-lg shadow-2xl w-96">
+    <div class="">
+      <div class="flex justify-between text-2xl font-bold">
+        <h3>Zware Industrie</h3>
+      </div>
+      <p class="text-xl mt-2">
+        Luchtvervuiling heeft grote invloed op onze gezondheid en omgeving. Deze
+        interactieve ervaring laat zien hoe vervuiling en geluid jouw omgeving
+        beïnvloeden.
+      </p>
+    </div>
+  </div>
+</div>
 <style>
   #map {
     height: 600px; /* Pas de hoogte van de kaart aan */
