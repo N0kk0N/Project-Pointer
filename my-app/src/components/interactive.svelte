@@ -2,43 +2,40 @@
   import { onMount } from "svelte";
   import "leaflet/dist/leaflet.css";
 
-  // GeoJSON importeren
   import geojsonData from "../data/bedrijven.json";
+  import stoffenData from "../data/stoffen.json"; // NIEUW JSON-BESTAND IMPORTEREN
 
   let map;
   let colorLayer, labelsLayer;
   let isZoomKeyPressed = false;
-  let geoJsonLayer;
   let imageOverlay;
-
-  // Definieer de bounds voor de afbeeldingoverlay
-  const overlayBounds = [
-    [53.555, 3.35], // [North-West corner latitude, longitude]
-    [50.71, 7.15]  // [South-East corner latitude, longitude]
+  let postcode = ""; // POSTCODE DIE DE GEBRUIKER INVOERT
+  let overlayBounds = [
+    [53.555, 3.35],
+    [50.71, 7.15],
   ];
+  let buurtMarkersLayer; // LAAG VOOR DE MARKERS IN DE BUURT
+  let currentLat = 52.1326;  // HUIDIGE LOCATIE BREEDTEGRAAD (VOORBEELD)
+  let currentLon = 5.2913;   // HUIDIGE LOCATIE LENGTEGRAAD (VOORBEELD)
 
+  // INITIEERT DE KAART NA HET MONTEREN VAN DE COMPONENT
   onMount(async () => {
     if (typeof window !== "undefined") {
       const L = await import("leaflet");
 
-      // Initialiseer de kaart
       map = L.map("map", {
-        attributionControl: false, // Verwijder de standaard attributie
-        minZoom: 2, // Stel het minimale zoomniveau in zodat de hele wereld zichtbaar blijft
+        attributionControl: false,
+        minZoom: 2,
         maxBounds: [
-          [-90, -180], // Zuidwest grens (breedtegraad, lengtegraad)
-          [90, 180], // Noordoost grens (breedtegraad, lengtegraad)
-        ], // Beperk de kaart tot de hele wereld
-      }).setView([52.1326, 5.2913], 7);
+          [-90, -180],
+          [90, 180],
+        ],
+      }).setView([currentLat, currentLon], 7);
 
-      // Voeg de afbeeldingoverlay toe aan de kaart
-      imageOverlay = L.imageOverlay(
-        '/data/QGisTest2.png', // Pad naar de PNG-afbeelding
-        overlayBounds,          // De bounds waarin de afbeelding wordt geplaatst
-        { opacity: 0.5 }        // Optionele instellingen zoals de opacity
-      ).addTo(map);
+      imageOverlay = L.imageOverlay("/data/QGisTest2.png", overlayBounds, {
+        opacity: 0.7,
+      }).addTo(map);
 
-      // Voeg lagen toe
       colorLayer = L.tileLayer(
         "https://{s}.basemaps.cartocdn.com/rastertiles/voyager_nolabels/{z}/{x}/{y}{r}.png",
         {
@@ -55,72 +52,150 @@
         },
       );
 
-      // Voeg de aangepaste attributie toe rechtsboven
       L.control
-        .attribution({
-          position: "topright",
-        })
-        .addAttribution(
-          "Tiles © Esri — Source: Esri, DeLorme, NAVTEQ, USGS, Intermap, iPC, NRCAN, Esri Japan, METI, Esri China (Hong Kong), Esri (Thailand), TomTom, 2012",
-        )
+        .attribution({ position: "topright" })
+        .addAttribution("Tiles © OpenStreetMap contributors © CARTO")
         .addTo(map);
 
-      // Voeg de lagen toe
       colorLayer.addTo(map);
-      labelsLayer.addTo(map); // Voeg de labelsLayer toe
+      labelsLayer.addTo(map);
 
-      // Disable scroll zoom by default
       map.scrollWheelZoom.disable();
 
-      // Event Listeners
       window.addEventListener("keydown", handleKeyDown);
       window.addEventListener("keyup", handleKeyUp);
       map.on("mouseover", handleMouseOver);
       map.on("mouseout", handleMouseOut);
-
-      // Bereken de maximale schadekosten om te gebruiken voor schaalverdeling
-      const maxSchadekosten = Math.max(
-        ...geojsonData.features.map(
-          (feature) => feature.properties.schadekosten_2022,
-        ),
-      );
-
-      // Voeg de GeoJSON-data toe aan de kaart met aangepaste markers
-      geoJsonLayer = L.geoJSON(geojsonData, {
-        pointToLayer: function (feature, latlng) {
-          const schadekosten = feature.properties.schadekosten_2022;
-          // Schaal de radius op basis van de schadekosten met een minimum en maximum grootte
-          const minRadius = 5;
-          const maxRadius = 20;
-          const radius =
-            (schadekosten / maxSchadekosten) * (maxRadius - minRadius) +
-            minRadius;
-
-          return L.circleMarker(latlng, {
-            radius: radius, // Dynamische grootte voor alle markers
-            fillColor: "#FF0000", // Rood voor alle markers
-            color: "#FF0000", // Randkleur instellen op dezelfde kleur als de vulling
-            weight: 0, // Dikte van de rand
-            opacity: 1,
-            fillOpacity: 0.5, // Statische opacity
-          });
-        },
-        onEachFeature: function (feature, layer) {
-          if (feature.properties && feature.properties.bedrijf) {
-            // Formatteer de schadekosten met komma's als duizendtallen scheidingstekens
-            const formattedCosts =
-              feature.properties.schadekosten_2022.toLocaleString("nl-NL");
-
-            layer.bindPopup(
-              `<b>${feature.properties.bedrijf}</b><br>Schadekosten 2022: €${formattedCosts}`,
-            );
-          }
-        },
-      }).addTo(map);
     }
   });
 
-  // Functies voor zoom-controle
+  // FUNCTIE OM TE CONTROLEREN OF DE INGEVOERDE POSTCODE GELDIG IS (NEDERLANDSE POSTCODE)
+  function isValidPostcode(postcode) {
+    const postcodeRegEx = /^[1-9][0-9]{3}[A-Za-z]{2}$/;
+    return postcodeRegEx.test(postcode);
+  }
+
+  // FUNCTIE OM UITSTOOTGEGEVENS PER BEDRIJF TE COMBINEREN
+  function getTop3UitstootPerBedrijf(bedrijf) {
+    const uitstootPerBedrijf = stoffenData.filter(stof => stof.Bedrijf === bedrijf);
+    const preferredUitstoot = {};
+
+    uitstootPerBedrijf.forEach(stof => {
+      if (preferredUitstoot[stof.Stof] && stof.Eenheid === "kg CO₂-eq") {
+        preferredUitstoot[stof.Stof] = stof; // VOORKEUR VOOR "KG CO₂-EQ"
+      } else if (!preferredUitstoot[stof.Stof]) {
+        preferredUitstoot[stof.Stof] = stof;
+      }
+    });
+
+    return Object.values(preferredUitstoot)
+      .sort((a, b) => b.Hoeveelheid - a.Hoeveelheid)
+      .slice(0, 3);
+  }
+
+  // FUNCTIE OM LOCATIES IN DE BUURT VAN DE OPGEZOCHTE POSTCODE TE TONEN
+  function toonMarkersInDeBuurt() {
+    const L = window.L;
+
+    if (buurtMarkersLayer) {
+      map.removeLayer(buurtMarkersLayer); // VERWIJDER BESTAANDE BUURTMARKERS
+    }
+
+    const buurtStraal = 25000; // 25 KM STRAAL
+    buurtMarkersLayer = L.layerGroup();
+
+    const maxSchadekosten = Math.max(
+      ...geojsonData.features.map((feature) => feature.properties.schadekosten_2022)
+    );
+
+    const boundsArray = [];
+
+    geojsonData.features.forEach(feature => {
+      const lat = feature.geometry.coordinates[1];
+      const lon = feature.geometry.coordinates[0];
+
+      const afstand = L.latLng(currentLat, currentLon).distanceTo([lat, lon]);
+
+      if (afstand <= buurtStraal) {
+        const schadekosten = feature.properties.schadekosten_2022;
+        const minRadius = 5;
+        const maxRadius = 20;
+        const radius = (schadekosten / maxSchadekosten) * (maxRadius - minRadius) + minRadius;
+
+        const top3Uitstoot = getTop3UitstootPerBedrijf(feature.properties.bedrijf);
+
+        const marker = L.circleMarker([lat, lon], {
+          radius: radius,
+          fillColor: "#00D9AD",
+          color: "#00D9AD",
+          weight: 0,
+          opacity: 1,
+          fillOpacity: 0.7,
+        }).bindPopup(`
+          <b>${feature.properties.bedrijf}</b><br>
+          Sector: ${feature.properties.aangepaste_sector}<br>
+          Schadekosten 2022: €${feature.properties.schadekosten_2022.toLocaleString('nl-NL')}<br>
+          Uitstoot (Top 3):
+          <ul>
+            ${top3Uitstoot.map(stof => `<li>${stof.Stof}: ${stof.Hoeveelheid.toLocaleString('nl-NL')} ${stof.Eenheid}</li>`).join('')}
+          </ul>
+        `);
+
+        buurtMarkersLayer.addLayer(marker);
+
+        boundsArray.push(marker.getLatLng());
+      }
+    });
+
+    buurtMarkersLayer.addTo(map);
+  }
+
+  // ASYNCHRONISCHE FUNCTIE OM LOCATIE VAN POSTCODE OP TE HOGEN EN MARKERS TE TONEN
+  async function zoekPostcode() {
+    if (!isValidPostcode(postcode)) {
+      alert("Voer een geldige Nederlandse postcode in.");
+      return;
+    }
+
+    const apiUrl = `https://nominatim.openstreetmap.org/search?postalcode=${postcode}&country=Netherlands&format=json`;
+
+    try {
+      const response = await fetch(apiUrl);
+      const data = await response.json();
+
+      if (data.length > 0) {
+        const { lat, lon } = data[0];
+
+        if (map._purpleMarker) {
+          map.removeLayer(map._purpleMarker); // VERWIJDER OUDERE MARKER
+        }
+
+        map._purpleMarker = L.circleMarker([lat, lon], {
+          radius: 10,
+          fillColor: "#4D00FF",
+          color: "#4D00FF",
+          weight: 1,
+          opacity: 1,
+          fillOpacity: 1,
+          zIndexOffset: 1000,
+        }).addTo(map);
+
+        map.setView([lat, lon], 18);
+
+        currentLat = lat;
+        currentLon = lon;
+
+        toonMarkersInDeBuurt();
+      } else {
+        alert("Geen locatie gevonden voor de ingevoerde postcode.");
+      }
+    } catch (error) {
+      console.error("Fout bij ophalen van gegevens:", error);
+      alert("Er ging iets mis bij het zoeken naar de locatie.");
+    }
+  }
+
+  // HANDLES KEYDOWN EVENT VOOR INZOOMEN MET CONTROL/META TOETS
   function handleKeyDown(event) {
     if (event.key === "Control" || event.key === "Meta") {
       isZoomKeyPressed = true;
@@ -128,6 +203,7 @@
     }
   }
 
+  // HANDLES KEYUP EVENT VOOR ZORGEN DAT INZOOMEN AAN/UIT STAAT
   function handleKeyUp(event) {
     if (event.key === "Control" || event.key === "Meta") {
       isZoomKeyPressed = false;
@@ -135,59 +211,116 @@
     }
   }
 
+  // HANDLES MOUSEOVER EVENEMENT VOOR ZOEKEN INZOOMEN MET WIEL
   function handleMouseOver() {
     if (isZoomKeyPressed) {
       map.scrollWheelZoom.enable();
     }
   }
 
+  // HANDLES MOUSEOUT EVENEMENT VOOR ZOEKEN INZOOMEN UIT
   function handleMouseOut() {
     map.scrollWheelZoom.disable();
   }
+
+  // FUNCTIE VOOR ENTER-TOETS ZONDER ZOEKKNOP
+  function handleKeyPress(event) {
+    if (event.key === "Enter" && postcode && isValidPostcode(postcode)) {
+      zoekPostcode();
+    }
+  }
 </script>
 
+<!-- HTML STRUCTUUR -->
 <div class="relative w-full h-full">
-  <!-- Map -->
+  <!-- POSTCODE INPUT EN ZOEKKNOP -->
+  <div class="postcode-container">
+    <input
+      type="text"
+      placeholder="1234AB"
+      bind:value={postcode}
+      on:keydown={handleKeyPress}
+    />
+    <button on:click={zoekPostcode} class="zoek-button">Zoek</button>
+  </div>
+
+  <!-- KAART WEERGAVE -->
   <div id="map" class="w-full h-full"></div>
 
-  <!-- Button Container -->
-  <div class="button-container">
-    <button
-      class="inline-flex gap-2 items-center rounded-full text-xl bg-[#DEFF9C] px-6 py-4"
-    >
-      Start interactive
-      <svg
-        xmlns="http://www.w3.org/2000/svg"
-        width="16"
-        height="16"
-        viewBox="0 0 24 24"
-        fill="none"
-        stroke="currentColor"
-        stroke-width="2"
-        stroke-linecap="round"
-        stroke-linejoin="round"
-        class="icon icon-tabler icons-tabler-outline icon-tabler-arrow-right"
-      >
-        <path stroke="none" d="M0 0h24V24H0z" fill="none" />
-        <path d="M5 12l14 0" />
-        <path d="M13 18l6 -6" />
-        <path d="M13 6l6 6" />
-      </svg>
-    </button>
+  <!-- HORIZONTALE KADERS -->
+  <div class="scroll-container">
+    <div class="scroll-content">
+      <div class="box">Kader 1</div>
+      <div class="box">Kader 2</div>
+      <div class="box">Kader 3</div>
+    </div>
   </div>
 </div>
 
 <style>
   #map {
-    height: 600px; /* Pas de hoogte van de kaart aan */
-    width: 100%; /* Zorg ervoor dat de kaart de volledige breedte inneemt */
+    height: 600px;
+    width: 100%;
   }
 
-  .button-container {
+  .postcode-container {
     position: absolute;
-    bottom: -25px; /* Pas deze waarde aan om de knop te verschuiven */
-    left: 50%;
-    transform: translateX(-50%);
-    z-index: 1000; /* Zorg ervoor dat de knop boven de kaart staat */
+    top: 20px;
+    left: 50px;
+    z-index: 1000;
+    background: white;
+    padding: 10px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  }
+
+  .postcode-container input {
+    margin-right: 10px;
+    padding: 5px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+
+  .zoek-button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 5px 15px;
+    font-size: 14px;
+    cursor: pointer;
+    border-radius: 4px;
+  }
+
+  .zoek-button:hover {
+    background-color: #0056b3;
+  }
+
+  .scroll-container {
+    overflow-x: auto;
+    white-space: nowrap;
+    padding: 20px 0;
+  }
+
+  .scroll-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 200%; /* Aangepaste breedte voor een beetje buiten beeld */
+  }
+
+  .scroll-content .box {
+    flex: 0 0 33.33%; /* Stel de breedte van elke box in op 33.33% */
+    width: calc(100vw - 20px); /* Elke box is iets smaller dan 100vw */
+    height: 200px;
+    background-color: #f0f0f0;
+    border: 2px solid #ccc;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    margin: 0 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+    font-weight: bold;
   }
 </style>
