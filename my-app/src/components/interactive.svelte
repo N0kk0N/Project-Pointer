@@ -18,6 +18,16 @@
   let currentLat = 52.1326;  // HUIDIGE LOCATIE BREEDTEGRAAD (VOORBEELD)
   let currentLon = 5.2913;   // HUIDIGE LOCATIE LENGTEGRAAD (VOORBEELD)
 
+  // Array van sectoren
+  const categoryArray = [
+    "Industrie, Energie en Raffinaderijen",
+    "Verkeer en vervoer",
+    "Afval, riolering, waterzuivering",
+    "Handel/Diensten/Overheid en Bouw",
+    "Landbouw"
+  ];
+  let selectedCategory = categoryArray[0]; // Standaard geselecteerde sector
+
   // INITIEERT DE KAART NA HET MONTEREN VAN DE COMPONENT
   onMount(async () => {
     if (typeof window !== "undefined") {
@@ -103,10 +113,10 @@
     const L = window.L;
 
     if (buurtMarkersLayer) {
-      map.removeLayer(buurtMarkersLayer); // VERWIJDER BESTAANDE BUURTMARKERS
+      map.removeLayer(buurtMarkersLayer); // Verwijder bestaande buurtmarkers
     }
 
-    const buurtStraal = 25000; // 25 KM STRAAL
+    const buurtStraal = 25000; // 25 KM straal
     buurtMarkersLayer = L.layerGroup();
 
     const maxSchadekosten = Math.max(
@@ -118,6 +128,12 @@
     geojsonData.features.forEach(feature => {
       const lat = feature.geometry.coordinates[1];
       const lon = feature.geometry.coordinates[0];
+      const sector = feature.properties.aangepaste_sector;
+
+      // Filter op de geselecteerde sector
+      if (sector !== selectedCategory) {
+        return;
+      }
 
       const afstand = L.latLng(currentLat, currentLon).distanceTo([lat, lon]);
 
@@ -138,7 +154,7 @@
           fillOpacity: 0.7,
         }).bindPopup(`
           <b>${feature.properties.bedrijf}</b><br>
-          Sector: ${feature.properties.aangepaste_sector}<br>
+          Sector: ${sector}<br>
           Schadekosten 2022: €${feature.properties.schadekosten_2022.toLocaleString('nl-NL')}<br>
           Uitstoot (Top 3):
           <ul>
@@ -176,7 +192,7 @@
         const { lat, lon } = data[0];
 
         if (map._purpleMarker) {
-          map.removeLayer(map._purpleMarker); // VERWIJDER OUDERE MARKER
+          map.removeLayer(map._purpleMarker); // Verwijder oudere marker
         }
 
         map._purpleMarker = L.circleMarker([lat, lon], {
