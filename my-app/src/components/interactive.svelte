@@ -158,17 +158,19 @@
         opacity: 1,
         fillOpacity: 0.7,
       }).bindPopup(`
-        <b>${feature.properties.bedrijf}</b><br>
-        Sector: ${sector}<br>
-        Schadekosten 2022: €${feature.properties.schadekosten_2022.toLocaleString('nl-NL')}<br>
-        Uitstoot (Top 3):
-        <ul>
-          ${top3Uitstoot.length > 0 ? 
-            top3Uitstoot.map(stof => `<li>${stof.Stof}: ${stof.Hoeveelheid.toLocaleString('nl-NL')} ${stof.Eenheid}</li>`).join('') 
-            : 
-            `<li>Geen gegevens aanwezig</li>`
-          }
-        </ul>
+        <div class="popup-content">
+          <h3>${feature.properties.bedrijf}</h3>
+          <p><strong>Sector:</strong> ${sector}</p>
+          <p><strong>Schadekosten 2022:</strong> €${feature.properties.schadekosten_2022.toLocaleString('nl-NL')}</p>
+          <p><strong>Uitstoot (Top 3):</strong></p>
+          <ul>
+            ${top3Uitstoot.length > 0 ? 
+              top3Uitstoot.map(stof => `<li>${stof.Stof}: ${stof.Hoeveelheid.toLocaleString('nl-NL')} ${stof.Eenheid}</li>`).join('') 
+              : 
+              `<li>Geen gegevens aanwezig</li>`
+            }
+          </ul>
+        </div>
       `);
 
       buurtMarkersLayer.addLayer(marker);
@@ -317,5 +319,33 @@
 
   .zoek-button:hover {
     background-color: #0056b3;
+  }
+
+  .popup-content {
+    font-family: Arial, sans-serif;
+    text-align: left;
+  }
+
+  .popup-content h3 {
+    margin: 0;
+    font-size: 16px;
+    color: #333;
+  }
+
+  .popup-content p {
+    margin: 5px 0;
+    font-size: 14px;
+    color: #555;
+  }
+
+  .popup-content ul {
+    list-style-type: disc;
+    padding-left: 20px;
+    margin: 5px 0;
+  }
+
+  .popup-content li {
+    font-size: 14px;
+    color: #555;
   }
 </style>
