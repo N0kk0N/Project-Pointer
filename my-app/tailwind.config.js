@@ -11,6 +11,10 @@ export default {
       },
       height: {
         'interactiveHeight': '32em',
+        'cardHeight': 'calc(100% - 4em)',
+      },
+      width: {
+        'ierWidth': '60%',
       }
     }
   },
