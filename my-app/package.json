@@ -19,6 +19,7 @@
 	},
 	"dependencies": {
 		"@tailwindcss/typography": "^0.5.15",
+		"chart.js": "^4.4.7",
 		"leaflet": "^1.9.4",
 		"svelte-leaflet": "^0.2.0"
 	}

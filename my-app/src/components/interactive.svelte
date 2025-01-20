@@ -1,6 +1,8 @@
 <script>
   import { onMount } from "svelte";
   import "leaflet/dist/leaflet.css";
+  import { Chart, registerables } from "chart.js";
+  Chart.register(...registerables);
 
   import geojsonData from "../data/bedrijven.json";
   import stoffenData from "../data/stoffen.json"; // NIEUW JSON-BESTAND IMPORTEREN
@@ -17,6 +19,27 @@
   let buurtMarkersLayer; // LAAG VOOR DE MARKERS IN DE BUURT
   let currentLat = 52.1326; // HUIDIGE LOCATIE BREEDTEGRAAD (VOORBEELD)
   let currentLon = 5.2913; // HUIDIGE LOCATIE LENGTEGRAAD (VOORBEELD)
+
+  // Array van sectoren
+  const categoryArray = [
+    "Alle sectoren",
+    "Industrie, Energie en Raffinaderijen",
+    "Verkeer en vervoer",
+    "Afval, riolering, waterzuivering",
+    "Handel/Diensten/Overheid en Bouw",
+    "Landbouw"
+  ];
+  let selectedCategory = categoryArray[0]; // Standaard geselecteerde sector
+
+  // Kleuren toewijzen aan sectoren
+  const sectorKleuren = {
+    "Industrie, Energie en Raffinaderijen": "#1E90FF",
+    "Verkeer en vervoer": "#4D00FF",
+    "Afval, riolering, waterzuivering": "#00D9AD",
+    "Handel/Diensten/Overheid en Bouw": "#DEFF9C",
+    "Landbouw": "#FF8800", // Zelfgekozen kleur voor Landbouw
+    "Overig": "#8A2BE2" // Zelfgekozen kleur voor overige sectoren
+  };
 
   // INITIEERT DE KAART NA HET MONTEREN VAN DE COMPONENT
   onMount(async () => {
@@ -100,15 +123,14 @@
       .slice(0, 3);
   }
 
-  // FUNCTIE OM LOCATIES IN DE BUURT VAN DE OPGEZOCHTE POSTCODE TE TONEN
-  function toonMarkersInDeBuurt() {
+  // FUNCTIE OM ALLE LOCATIES TE TONEN
+  function toonAlleMarkers() {
     const L = window.L;
 
     if (buurtMarkersLayer) {
-      map.removeLayer(buurtMarkersLayer); // VERWIJDER BESTAANDE BUURTMARKERS
+      map.removeLayer(buurtMarkersLayer); // Verwijder bestaande markers
     }
 
-    const buurtStraal = 25000; // 25 KM STRAAL
     buurtMarkersLayer = L.layerGroup();
 
     const maxSchadekosten = Math.max(
@@ -117,59 +139,106 @@
       )
     );
 
-    const boundsArray = [];
+    geojsonData.features.forEach(feature => {
 
-    geojsonData.features.forEach((feature) => {
       const lat = feature.geometry.coordinates[1];
       const lon = feature.geometry.coordinates[0];
+      const sector = feature.properties.aangepaste_sector;
 
-      const afstand = L.latLng(currentLat, currentLon).distanceTo([lat, lon]);
+      // Filter op de geselecteerde sector
+      if (selectedCategory !== "Alle sectoren" && sector !== selectedCategory) {
+        return;
+      }
 
-      if (afstand <= buurtStraal) {
-        const schadekosten = feature.properties.schadekosten_2022;
-        const minRadius = 5;
-        const maxRadius = 20;
-        const radius =
-          (schadekosten / maxSchadekosten) * (maxRadius - minRadius) +
-          minRadius;
+      const schadekosten = feature.properties.schadekosten_2022;
+      const minRadius = 5;
+      const maxRadius = 20;
+      const radius = (schadekosten / maxSchadekosten) * (maxRadius - minRadius) + minRadius;
 
-        const top3Uitstoot = getTop3UitstootPerBedrijf(
-          feature.properties.bedrijf
-        );
+      const top3Uitstoot = getTop3UitstootPerBedrijf(feature.properties.bedrijf);
 
-        const marker = L.circleMarker([lat, lon], {
-          radius: radius,
-          fillColor: "#00D9AD",
-          color: "#00D9AD",
-          weight: 0,
-          opacity: 1,
-          fillOpacity: 0.7,
-        }).bindPopup(`
-          <b>${feature.properties.bedrijf}</b><br>
-          Sector: ${feature.properties.aangepaste_sector}<br>
-          Schadekosten 2022: €${feature.properties.schadekosten_2022.toLocaleString("nl-NL")}<br>
-          Uitstoot (Top 3):
-          <ul>
-            ${
-              top3Uitstoot.length > 0
-                ? top3Uitstoot
-                    .map(
-                      (stof) =>
-                        `<li>${stof.Stof}: ${stof.Hoeveelheid.toLocaleString("nl-NL")} ${stof.Eenheid}</li>`
-                    )
-                    .join("")
-                : `<li>Geen gegevens aanwezig</li>`
-            }
-          </ul>
-        `);
+      const popupContent = `
+        <div class="popup-content">
+          <h3>${feature.properties.bedrijf}</h3>
+          <p><strong>Sector:</strong> ${sector}</p>
+          <p><strong>Schadekosten 2022:</strong> €${feature.properties.schadekosten_2022.toLocaleString('nl-NL')}</p>
+          <p><strong>Uitstoot (Top 3):</strong></p>
+          ${top3Uitstoot.length > 0 ? `<canvas id="chart-${feature.properties.bedrijf.replace(/\s+/g, '-')}" width="200" height="200"></canvas>` : '<p>Geen gegevens gevonden</p>'}
+        </div>
+      `;
 
-        buurtMarkersLayer.addLayer(marker);
+      const marker = L.circleMarker([lat, lon], {
+        radius: radius,
+        fillColor: sectorKleuren[sector] || "#8A2BE2", // Gebruik de sector kleur of standaard kleur
+        color: sectorKleuren[sector] || "#8A2BE2", // Gebruik de sector kleur of standaard kleur
+        weight: 0,
+        opacity: 1,
+        fillOpacity: 0.7,
+      }).bindPopup(popupContent, { maxWidth: 'auto', maxHeight: 'auto' });
 
-        boundsArray.push(marker.getLatLng());
+      buurtMarkersLayer.addLayer(marker);
+
+      // Create the chart after the popup has been opened, if there is data
+      if (top3Uitstoot.length > 0) {
+        marker.on('popupopen', () => {
+          createChart(`chart-${feature.properties.bedrijf.replace(/\s+/g, '-')}`, top3Uitstoot);
+        });
       }
     });
 
     buurtMarkersLayer.addTo(map);
+  }
+
+  // FUNCTIE OM EEN TAARTGRAFIEK TE MAKEN VAN DE TOP 3 UITSTOOT
+  function createChart(chartId, data) {
+    const ctx = document.getElementById(chartId).getContext('2d');
+    const labels = data.map(item => item.Stof);
+    const values = data.map(item => item.Hoeveelheid);
+    const eenheden = data.map(item => item.Eenheid);
+
+    // Definieer een reeks kleuren om te gebruiken in de pie chart
+    const backgroundColors = [
+      '#FF6384', '#36A2EB', '#FFCE56', '#4BC0C0', '#9966FF', '#FF9F40',
+      '#FF6384', '#36A2EB', '#FFCE56', '#4BC0C0', '#9966FF', '#FF9F40'
+    ];
+
+    // Minimum waardepercentage om weer te geven
+    const minPercentage = 2;
+
+    // Bereken totale hoeveelheid
+    const total = values.reduce((a, b) => a + b, 0);
+
+    // Bereken percentage voor elke waarde en zorg ervoor dat elke waarde ten minste het minimum percentage heeft
+    const adjustedValues = values.map(value => {
+      const percentage = (value / total) * 100;
+      return percentage < minPercentage ? (minPercentage / 100) * total : value;
+    });
+
+    new Chart(ctx, {
+      type: 'pie',
+      data: {
+        labels: labels,
+        datasets: [{
+          label: 'Uitstoot',
+          data: adjustedValues,
+          backgroundColor: backgroundColors.slice(0, labels.length), // Gebruik alleen zoveel kleuren als nodig
+          hoverBackgroundColor: backgroundColors.slice(0, labels.length), // Gebruik alleen zoveel kleuren als nodig
+        }]
+      },
+      options: {
+        responsive: true,
+        plugins: {
+          tooltip: {
+            callbacks: {
+              label: function(tooltipItem) {
+                const percentage = ((values[tooltipItem.dataIndex] / total) * 100).toFixed(2);
+                return `${values[tooltipItem.dataIndex].toLocaleString('nl-NL')} ${eenheden[tooltipItem.dataIndex]} (${percentage}%)`;
+              }
+            }
+          }
+        }
+      }
+    });
   }
 
   // ASYNCHRONISCHE FUNCTIE OM LOCATIE VAN POSTCODE OP TE HOGEN EN MARKERS TE TONEN
@@ -191,7 +260,7 @@
         const { lat, lon } = data[0];
 
         if (map._purpleMarker) {
-          map.removeLayer(map._purpleMarker); // VERWIJDER OUDERE MARKER
+          map.removeLayer(map._purpleMarker); // Verwijder oudere marker
         }
 
         map._purpleMarker = L.circleMarker([lat, lon], {
@@ -510,6 +579,7 @@
         });
 
         toonMarkersInDeBuurt();
+
       } else {
         document.getElementById("zipcodeError").classList.remove("hidden");
         document.getElementById("postcode").classList.add("border-red-500");
@@ -1282,6 +1352,7 @@
       <p class="block text-xl font-bold text-slate-200 leading-9">6/7</p>
     </div>
     <p class="text-xl leading-9">Landbouwbedrijven vestigen zich vaak buiten de randstad, maar dit betekent niet dat de luchtvervuiling verder reikt. Daarnaast ligt de focus nu op 5 bedrijven, maar in realiteit zijn er natuurlijk veel meer kleinere bedrijven die ook een bijdrage hebben aan luchtvervuiling.</p>
+
   </div>
   <div class="flex justify-between items-center">
     <button id="card63prev" class="p-4 bg-[#DEFF9C] rounded-full hover:brightness-90 transition ease-in-out duration-100">
@@ -1329,5 +1400,69 @@ class="z-40 h-cardHeight absolute left-0 top-0 rounded-2xl m-8 p-8 w-96 bg-white
   #map {
     height: 600px;
     width: 100%;
+  }
+
+  .postcode-container {
+    position: absolute;
+    top: 20px;
+    left: 50px;
+    z-index: 1000;
+    background: white;
+    padding: 10px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  }
+
+  .postcode-container input {
+    margin-right: 10px;
+    padding: 5px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+
+  .zoek-button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 5px 15px;
+    font-size: 14px;
+    cursor: pointer;
+    border-radius: 4px;
+  }
+
+  .zoek-button:hover {
+    background-color: #0056b3;
+  }
+
+  .popup-content {
+    font-family: Arial, sans-serif;
+    text-align: left;
+    max-width: 300px; /* Maximale breedte van de popup */
+    max-height: 300px; /* Maximale hoogte van de popup */
+    overflow-y: auto; /* Scrollbare inhoud als deze groter is dan de popup */
+  }
+
+  .popup-content h3 {
+    margin: 0;
+    font-size: 16px;
+    color: #333;
+  }
+
+  .popup-content p {
+    margin: 5px 0;
+    font-size: 14px;
+    color: #555;
+  }
+
+  .popup-content ul {
+    list-style-type: disc;
+    padding-left: 20px;
+    margin: 5px 0;
+  }
+
+  .popup-content li {
+    font-size: 14px;
+    color: #555;
   }
 </style>
