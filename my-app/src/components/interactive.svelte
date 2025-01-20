@@ -44,53 +44,56 @@
   // INITIEERT DE KAART NA HET MONTEREN VAN DE COMPONENT
   onMount(async () => {
     if (typeof window !== "undefined") {
-      const L = await import("leaflet");
+        const L = await import("leaflet");
 
-      map = L.map("map", {
-        attributionControl: false,
-        minZoom: 2,
-        maxBounds: [
-          [-90, -180],
-          [90, 180],
-        ],
-      }).setView([currentLat, currentLon], 7);
+        map = L.map("map", {
+            attributionControl: false,
+            minZoom: 2,
+            maxBounds: [
+                [-90, -180],
+                [90, 180],
+            ],
+        }).setView([currentLat, currentLon], 7);
 
-      imageOverlay = L.imageOverlay("/data/QGisTest2.png", overlayBounds, {
-        opacity: 0.7,
-      }).addTo(map);
+        imageOverlay = L.imageOverlay("/data/QGisTest2.png", overlayBounds, {
+            opacity: 0.7,
+        }).addTo(map);
 
-      colorLayer = L.tileLayer(
-        "https://{s}.basemaps.cartocdn.com/rastertiles/voyager_nolabels/{z}/{x}/{y}{r}.png",
-        {
-          attribution: "© OpenStreetMap contributors © CARTO",
-          maxZoom: 18,
-        }
-      );
+        colorLayer = L.tileLayer(
+            "https://{s}.basemaps.cartocdn.com/rastertiles/voyager_nolabels/{z}/{x}/{y}{r}.png",
+            {
+                attribution: "© OpenStreetMap contributors © CARTO",
+                maxZoom: 18,
+            }
+        );
 
-      labelsLayer = L.tileLayer(
-        "https://{s}.basemaps.cartocdn.com/rastertiles/voyager_only_labels/{z}/{x}/{y}{r}.png",
-        {
-          attribution: "© OpenStreetMap contributors © CARTO",
-          maxZoom: 18,
-        }
-      );
+        labelsLayer = L.tileLayer(
+            "https://{s}.basemaps.cartocdn.com/rastertiles/voyager_only_labels/{z}/{x}/{y}{r}.png",
+            {
+                attribution: "© OpenStreetMap contributors © CARTO",
+                maxZoom: 18,
+            }
+        );
 
-      L.control
-        .attribution({ position: "topright" })
-        .addAttribution("Tiles © OpenStreetMap contributors © CARTO")
-        .addTo(map);
+        L.control
+            .attribution({ position: "topright" })
+            .addAttribution("Tiles © OpenStreetMap contributors © CARTO")
+            .addTo(map);
 
-      colorLayer.addTo(map);
-      labelsLayer.addTo(map);
+        colorLayer.addTo(map);
+        labelsLayer.addTo(map);
 
-      map.scrollWheelZoom.disable();
+        map.scrollWheelZoom.disable();
 
-      window.addEventListener("keydown", handleKeyDown);
-      window.addEventListener("keyup", handleKeyUp);
-      map.on("mouseover", handleMouseOver);
-      map.on("mouseout", handleMouseOut);
+        window.addEventListener("keydown", handleKeyDown);
+        window.addEventListener("keyup", handleKeyUp);
+        map.on("mouseover", handleMouseOver);
+        map.on("mouseout", handleMouseOut);
+
+        // Voeg deze regel toe om de markers te tonen
+        toonAlleMarkers();
     }
-  });
+});
 
   // FUNCTIE OM TE CONTROLEREN OF DE INGEVOERDE POSTCODE GELDIG IS (NEDERLANDSE POSTCODE)
   function isValidPostcode(postcode) {
@@ -128,66 +131,65 @@
     const L = window.L;
 
     if (buurtMarkersLayer) {
-      map.removeLayer(buurtMarkersLayer); // Verwijder bestaande markers
+        map.removeLayer(buurtMarkersLayer); // Verwijder bestaande markers
     }
 
     buurtMarkersLayer = L.layerGroup();
 
     const maxSchadekosten = Math.max(
-      ...geojsonData.features.map(
-        (feature) => feature.properties.schadekosten_2022
-      )
+        ...geojsonData.features.map(
+            (feature) => feature.properties.schadekosten_2022
+        )
     );
 
     geojsonData.features.forEach(feature => {
+        const lat = feature.geometry.coordinates[1];
+        const lon = feature.geometry.coordinates[0];
+        const sector = feature.properties.aangepaste_sector;
 
-      const lat = feature.geometry.coordinates[1];
-      const lon = feature.geometry.coordinates[0];
-      const sector = feature.properties.aangepaste_sector;
+        // Filter op de geselecteerde sector
+        if (selectedCategory !== "Alle sectoren" && sector !== selectedCategory) {
+            return;
+        }
 
-      // Filter op de geselecteerde sector
-      if (selectedCategory !== "Alle sectoren" && sector !== selectedCategory) {
-        return;
-      }
+        const schadekosten = feature.properties.schadekosten_2022;
+        const minRadius = 5;
+        const maxRadius = 20;
+        const radius = (schadekosten / maxSchadekosten) * (maxRadius - minRadius) + minRadius;
 
-      const schadekosten = feature.properties.schadekosten_2022;
-      const minRadius = 5;
-      const maxRadius = 20;
-      const radius = (schadekosten / maxSchadekosten) * (maxRadius - minRadius) + minRadius;
+        const top3Uitstoot = getTop3UitstootPerBedrijf(feature.properties.bedrijf);
 
-      const top3Uitstoot = getTop3UitstootPerBedrijf(feature.properties.bedrijf);
+        const popupContent = `
+            <div class="popup-content">
+                <h3>${feature.properties.bedrijf}</h3>
+                <p><strong>Sector:</strong> ${sector}</p>
+                <p><strong>Schadekosten 2022:</strong> €${feature.properties.schadekosten_2022.toLocaleString('nl-NL')}</p>
+                <p><strong>Uitstoot (Top 3):</strong></p>
+                ${top3Uitstoot.length > 0 ? `<canvas id="chart-${feature.properties.bedrijf.replace(/\s+/g, '-')}" width="200" height="200"></canvas>` : '<p>Geen gegevens gevonden</p>'}
+            </div>
+        `;
 
-      const popupContent = `
-        <div class="popup-content">
-          <h3>${feature.properties.bedrijf}</h3>
-          <p><strong>Sector:</strong> ${sector}</p>
-          <p><strong>Schadekosten 2022:</strong> €${feature.properties.schadekosten_2022.toLocaleString('nl-NL')}</p>
-          <p><strong>Uitstoot (Top 3):</strong></p>
-          ${top3Uitstoot.length > 0 ? `<canvas id="chart-${feature.properties.bedrijf.replace(/\s+/g, '-')}" width="200" height="200"></canvas>` : '<p>Geen gegevens gevonden</p>'}
-        </div>
-      `;
+        const marker = L.circleMarker([lat, lon], {
+            radius: radius,
+            fillColor: sectorKleuren[sector] || "#8A2BE2", // Gebruik de sector kleur of standaard kleur
+            color: sectorKleuren[sector] || "#8A2BE2", // Gebruik de sector kleur of standaard kleur
+            weight: 0,
+            opacity: 1,
+            fillOpacity: 0.7,
+        }).bindPopup(popupContent, { maxWidth: 'auto', maxHeight: 'auto' });
 
-      const marker = L.circleMarker([lat, lon], {
-        radius: radius,
-        fillColor: sectorKleuren[sector] || "#8A2BE2", // Gebruik de sector kleur of standaard kleur
-        color: sectorKleuren[sector] || "#8A2BE2", // Gebruik de sector kleur of standaard kleur
-        weight: 0,
-        opacity: 1,
-        fillOpacity: 0.7,
-      }).bindPopup(popupContent, { maxWidth: 'auto', maxHeight: 'auto' });
+        buurtMarkersLayer.addLayer(marker);
 
-      buurtMarkersLayer.addLayer(marker);
-
-      // Create the chart after the popup has been opened, if there is data
-      if (top3Uitstoot.length > 0) {
-        marker.on('popupopen', () => {
-          createChart(`chart-${feature.properties.bedrijf.replace(/\s+/g, '-')}`, top3Uitstoot);
-        });
-      }
+        // Maak de grafiek aan nadat de popup geopend is, als er data is
+        if (top3Uitstoot.length > 0) {
+            marker.on('popupopen', () => {
+                createChart(`chart-${feature.properties.bedrijf.replace(/\s+/g, '-')}`, top3Uitstoot);
+            });
+        }
     });
 
     buurtMarkersLayer.addTo(map);
-  }
+}
 
   // FUNCTIE OM EEN TAARTGRAFIEK TE MAKEN VAN DE TOP 3 UITSTOOT
   function createChart(chartId, data) {
