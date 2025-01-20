@@ -220,6 +220,24 @@
         const card3 = document.getElementById("card3");
         const card31 = document.getElementById("card31");
         const card32 = document.getElementById("card32");
+        const card33 = document.getElementById("card33");
+
+        const card4 = document.getElementById("card4");
+        const card41 = document.getElementById("card41");
+        const card42 = document.getElementById("card42");
+        const card43 = document.getElementById("card43");
+
+        const card5 = document.getElementById("card5");
+        const card51 = document.getElementById("card51");
+        const card52 = document.getElementById("card52");
+        const card53 = document.getElementById("card53");
+      
+        const card6 = document.getElementById("card6");
+        const card61 = document.getElementById("card61");
+        const card62 = document.getElementById("card62");
+        const card63 = document.getElementById("card63");
+
+        const card7 = document.getElementById("card7");
 
         card2.classList.replace("hidden", "flex");
 
@@ -320,6 +338,175 @@
         card33next.addEventListener("click", () => {
           card33.classList.replace("flex", "hidden");
           card4.classList.replace("hidden", "flex");
+        });
+
+        // card 4 | algemeen
+        const card4prev = document.getElementById("card4prev")
+        card4prev.addEventListener("click", () => {
+          card4.classList.replace("flex", "hidden");
+          card33.classList.replace("hidden", "flex");
+        });
+
+        const card4next = document.getElementById("card4next");
+        card4next.addEventListener("click", () => {
+          card4.classList.replace("flex", "hidden");
+          card41.classList.replace("hidden", "flex");
+        });
+
+        // card 4.1 | ergste
+        const card41prev = document.getElementById("card41prev")
+        card41prev.addEventListener("click", () => {
+          card41.classList.replace("flex", "hidden");
+          card4.classList.replace("hidden", "flex");
+        });
+
+        const card41next = document.getElementById("card41next");
+        card41next.addEventListener("click", () => {
+          card41.classList.replace("flex", "hidden");
+          card42.classList.replace("hidden", "flex");
+        });
+
+        // card 4.2 | interessant
+        const card42prev = document.getElementById("card42prev")
+        card42prev.addEventListener("click", () => {
+          card42.classList.replace("flex", "hidden");
+          card41.classList.replace("hidden", "flex");
+        });
+
+        const card42next = document.getElementById("card42next");
+        card42next.addEventListener("click", () => {
+          card42.classList.replace("flex", "hidden");
+          card43.classList.replace("hidden", "flex");
+        });
+
+        // card 4.3 | interessant
+        const card43prev = document.getElementById("card43prev")
+        card43prev.addEventListener("click", () => {
+          card43.classList.replace("flex", "hidden");
+          card42.classList.replace("hidden", "flex");
+        });
+
+        const card43next = document.getElementById("card43next");
+        card43next.addEventListener("click", () => {
+          card43.classList.replace("flex", "hidden");
+          card5.classList.replace("hidden", "flex");
+        });
+
+        // card 5 | algemeen
+        const card5prev = document.getElementById("card5prev")
+        card5prev.addEventListener("click", () => {
+          card5.classList.replace("flex", "hidden");
+          card43.classList.replace("hidden", "flex");
+        });
+
+        const card5next = document.getElementById("card5next");
+        card5next.addEventListener("click", () => {
+          card5.classList.replace("flex", "hidden");
+          card51.classList.replace("hidden", "flex");
+        });
+
+        // card 5.1 | ergste
+        const card51prev = document.getElementById("card51prev")
+        card51prev.addEventListener("click", () => {
+          card51.classList.replace("flex", "hidden");
+          card5.classList.replace("hidden", "flex");
+        });
+
+        const card51next = document.getElementById("card51next");
+        card51next.addEventListener("click", () => {
+          card51.classList.replace("flex", "hidden");
+          card52.classList.replace("hidden", "flex");
+        });
+
+        // card 5.2 | interessant
+        const card52prev = document.getElementById("card52prev")
+        card52prev.addEventListener("click", () => {
+          card52.classList.replace("flex", "hidden");
+          card51.classList.replace("hidden", "flex");
+        });
+
+        const card52next = document.getElementById("card52next");
+        card52next.addEventListener("click", () => {
+          card52.classList.replace("flex", "hidden");
+          card53.classList.replace("hidden", "flex");
+        });
+
+        // card 5.3 | eigen locatie
+        const card53prev = document.getElementById("card53prev")
+        card53prev.addEventListener("click", () => {
+          card53.classList.replace("flex", "hidden");
+          card52.classList.replace("hidden", "flex");
+        });
+
+        const card53next = document.getElementById("card53next");
+        card53next.addEventListener("click", () => {
+          card53.classList.replace("flex", "hidden");
+          card6.classList.replace("hidden", "flex");
+        });
+
+        // card 6 | algemeen
+        const card6prev = document.getElementById("card6prev")
+        card6prev.addEventListener("click", () => {
+          card6.classList.replace("flex", "hidden");
+          card53.classList.replace("hidden", "flex");
+        });
+
+        const card6next = document.getElementById("card6next");
+        card6next.addEventListener("click", () => {
+          card6.classList.replace("flex", "hidden");
+          card61.classList.replace("hidden", "flex");
+        });
+
+        // card 6.1 | ergste
+        const card61prev = document.getElementById("card61prev")
+        card61prev.addEventListener("click", () => {
+          card61.classList.replace("flex", "hidden");
+          card6.classList.replace("hidden", "flex");
+        });
+
+        const card61next = document.getElementById("card61next");
+        card61next.addEventListener("click", () => {
+          card61.classList.replace("flex", "hidden");
+          card62.classList.replace("hidden", "flex");
+        });
+
+        // card 6.2 | interessant
+        const card62prev = document.getElementById("card62prev")
+        card62prev.addEventListener("click", () => {
+          card62.classList.replace("flex", "hidden");
+          card61.classList.replace("hidden", "flex");
+        });
+
+        const card62next = document.getElementById("card62next");
+        card62next.addEventListener("click", () => {
+          card62.classList.replace("flex", "hidden");
+          card63.classList.replace("hidden", "flex");
+        });
+
+        // card 6.3 | eigen locatie
+        const card63prev = document.getElementById("card63prev")
+        card63prev.addEventListener("click", () => {
+          card63.classList.replace("flex", "hidden");
+          card62.classList.replace("hidden", "flex");
+        });
+
+        const card63next = document.getElementById("card63next");
+        card63next.addEventListener("click", () => {
+          card63.classList.replace("flex", "hidden");
+          card7.classList.replace("hidden", "flex");
+        });
+
+        // card 7 | afronden
+        const card7prev = document.getElementById("card7prev")
+        card7prev.addEventListener("click", () => {
+          card7.classList.replace("flex", "hidden");
+          card63.classList.replace("hidden", "flex");
+        });
+
+        const card7next = document.getElementById("card7next");
+        card7next.addEventListener("click", () => {
+          card7.classList.replace("flex", "hidden");
+          // eventueel nog overlay voor exploratie aanzetten.
         });
 
         toonMarkersInDeBuurt();
@@ -434,7 +621,7 @@
     id="card2"
    class="z-30 h-cardHeight absolute left-0 top-0 rounded-2xl m-8 p-8 w-96 bg-white shadow-2xl hidden flex-col justify-between">
     <div>
-      <div class="w-full flex justify-between pb-2">
+      <div class="w-full flex justify-between pb-2 gap-4">
         <p class="block text-xl font-bold leading-9">Industrie, Energie en
           Raffinaderijen</p>
         <p class="block text-xl font-bold text-slate-200 leading-9">2/7</p>
@@ -467,7 +654,7 @@
     id="card21"
    class="z-40 h-cardHeight absolute left-0 top-0 rounded-2xl m-8 p-8 w-96 bg-white shadow-2xl hidden flex-col justify-between">
     <div>
-      <div class="w-full flex justify-between pb-2">
+      <div class="w-full flex justify-between pb-2 gap-4">
         <p class="block text-xl font-bold leading-9">Industrie, Energie en
           Raffinaderijen</p>
         <p class="block text-xl font-bold text-slate-200 leading-9">2/7</p>
@@ -498,7 +685,7 @@
     id="card22"
    class="z-40 h-cardHeight absolute left-0 top-0 rounded-2xl m-8 p-8 w-96 bg-white shadow-2xl hidden flex-col justify-between">
     <div>
-      <div class="w-full flex justify-between pb-2">
+      <div class="w-full flex justify-between pb-2 gap-4">
         <p class="block text-xl font-bold leading-9">Industrie, Energie en
           Raffinaderijen</p>
         <p class="block text-xl font-bold text-slate-200 leading-9">2/7</p>
@@ -529,7 +716,7 @@
     id="card23"
    class="z-40 h-cardHeight absolute left-0 top-0 rounded-2xl m-8 p-8 w-96 bg-white shadow-2xl hidden flex-col justify-between">
     <div>
-      <div class="w-full flex justify-between pb-2">
+      <div class="w-full flex justify-between pb-2 gap-4">
         <p class="block text-xl font-bold leading-9">Industrie, Energie en
           Raffinaderijen</p>
         <p class="block text-xl font-bold text-slate-200 leading-9">2/7</p>
@@ -573,7 +760,7 @@
     id="card3"
    class="z-30 h-cardHeight absolute left-0 top-0 rounded-2xl m-8 p-8 w-96 bg-white shadow-2xl hidden flex-col justify-between">
     <div>
-      <div class="w-full flex justify-between pb-2">
+      <div class="w-full flex justify-between pb-2 gap-4">
         <p class="block text-xl font-bold leading-9">Verkeer en vervoer</p>
         <p class="block text-xl font-bold text-slate-200 leading-9">3/7</p>
       </div>
@@ -606,7 +793,7 @@
   id="card31"
   class="z-40 h-cardHeight absolute left-0 top-0 rounded-2xl m-8 p-8 w-96 bg-white shadow-2xl hidden flex-col justify-between">
     <div>
-      <div class="w-full flex justify-between pb-2">
+      <div class="w-full flex justify-between pb-2 gap-4">
         <p class="block text-xl font-bold leading-9">Verkeer en vervoer</p>
         <p class="block text-xl font-bold text-slate-200 leading-9">3/7</p>
       </div>
@@ -636,7 +823,7 @@
     id="card32"
     class="z-40 h-cardHeight absolute left-0 top-0 rounded-2xl m-8 p-8 w-96 bg-white shadow-2xl hidden flex-col justify-between">
     <div>
-      <div class="w-full flex justify-between pb-2">
+      <div class="w-full flex justify-between pb-2 gap-4">
         <p class="block text-xl font-bold leading-9">Verkeer en vervoer</p>
         <p class="block text-xl font-bold text-slate-200 leading-9">3/7</p>
       </div>
@@ -666,7 +853,7 @@
     id="card33"
    class="z-40 h-cardHeight absolute left-0 top-0 rounded-2xl m-8 p-8 w-96 bg-white shadow-2xl hidden flex-col justify-between">
     <div>
-      <div class="w-full flex justify-between pb-2">
+      <div class="w-full flex justify-between pb-2 gap-4">
         <p class="block text-xl font-bold leading-9">Verkeer en vervoer</p>
         <p class="block text-xl font-bold text-slate-200 leading-9">3/7</p>
       </div>
@@ -704,6 +891,435 @@
         <svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-arrow-right"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M5 12l14 0" /><path d="M13 18l6 -6" /><path d="M13 6l6 6" /></svg>      </button>
     </div>
   </div>
+
+<div
+  id="card4"
+  class="z-30 h-cardHeight absolute left-0 top-0 rounded-2xl m-8 p-8 w-96 bg-white shadow-2xl hidden flex-col justify-between">
+  <div>
+    <div class="w-full flex justify-between pb-2 gap-4">
+      <p class="block text-xl font-bold leading-9">Afval, riolering,
+        waterzuivering</p>
+      <p class="block text-xl font-bold text-slate-200 leading-9">4/7</p>
+    </div>
+    <p class="text-xl leading-9">De 348 installaties in Nederland die het land voorzien van afval-verwerking, riolering en ook waterzuivering zijn goed voor 34% van de schadekosten voor luchtvervuiling in Nederland.</p>
+    <div class="w-full h-2 bg-slate-200 mt-8 rounded-full overflow-hidden flex justify-start">
+      <div class="w-ierWidth bg-red-600"></div>
+      <div class="w-vevWidth bg-blue-600"></div>
+      <div class="w-arwWidth bg-green-600"></div>
+    </div>
+  </div>
+  <div class="flex justify-between items-center">
+    <button id="card4prev" class="p-4 bg-[#DEFF9C] rounded-full hover:brightness-90 transition ease-in-out duration-100">
+      <svg xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-arrow-left"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M5 12l14 0" /><path d="M5 12l6 6" /><path d="M5 12l6 -6" /></svg>
+    </button>
+    <div class="flex gap-4">
+      <div class="w-2 h-2 rounded-full bg-slate-900">
+      </div>
+      <div class="w-2 h-2 rounded-full bg-slate-200">
+      </div>
+      <div class="w-2 h-2 rounded-full bg-slate-200">
+      </div>
+      <div class="w-2 h-2 rounded-full bg-slate-200">
+      </div>
+    </div>
+    <button id="card4next" class="p-4 bg-[#DEFF9C] rounded-full hover:brightness-90 transition ease-in-out duration-100">
+      <svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-arrow-right"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M5 12l14 0" /><path d="M13 18l6 -6" /><path d="M13 6l6 6" /></svg>      </button>
+  </div>
+</div>
+
+<div
+  id="card41"
+  class="z-40 h-cardHeight absolute left-0 top-0 rounded-2xl m-8 p-8 w-96 bg-white shadow-2xl hidden flex-col justify-between">
+    <div>
+      <div class="w-full flex justify-between pb-2 gap-4">
+        <p class="block text-xl font-bold leading-9">Afval, riolering,
+          waterzuivering</p>
+        <p class="block text-xl font-bold text-slate-200 leading-9">4/7</p>
+      </div>
+      <p class="text-xl leading-9">Afval Energie Bedrijf (Amsterdam) is het bedrijf in Nederland met de grootste kosten. Deze kosten waren in 2022 in totaal €23.489.029.</p>
+      <p class="mt-4 leading-6 text-slate-300">Klik op de bedrijven en bekijk de opbouw van de veroorzaakte luchtvervuiling.</p>
+    </div>
+    <div class="flex justify-between items-center">
+      <button id="card41prev" class="p-4 bg-[#DEFF9C] rounded-full hover:brightness-90 transition ease-in-out duration-100">
+        <svg xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-arrow-left"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M5 12l14 0" /><path d="M5 12l6 6" /><path d="M5 12l6 -6" /></svg>
+      </button>
+      <div class="flex gap-4">
+        <div class="w-2 h-2 rounded-full bg-slate-200">
+        </div>
+        <div class="w-2 h-2 rounded-full bg-slate-900">
+        </div>
+        <div class="w-2 h-2 rounded-full bg-slate-200">
+        </div>
+        <div class="w-2 h-2 rounded-full bg-slate-200">
+        </div>
+      </div>
+      <button id="card41next" class="p-4 bg-[#DEFF9C] rounded-full hover:brightness-90 transition ease-in-out duration-100">
+        <svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-arrow-right"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M5 12l14 0" /><path d="M13 18l6 -6" /><path d="M13 6l6 6" /></svg>      </button>
+    </div>
+  </div>
+
+  <div
+    id="card42"
+    class="z-40 h-cardHeight absolute left-0 top-0 rounded-2xl m-8 p-8 w-96 bg-white shadow-2xl hidden flex-col justify-between">
+    <div>
+      <div class="w-full flex justify-between pb-2 gap-4">
+        <p class="block text-xl font-bold leading-9">Afval, riolering,
+          waterzuivering</p>
+        <p class="block text-xl font-bold text-slate-200 leading-9">4/7</p>
+      </div>
+      <p class="text-xl leading-9">De schadekosten van deze grote sector variëren sterk. De kosten van rioolwaterzuiverings-installaties (RWZI) verschillen sterk door de grootte van de plaats. De kleinste RWZI, Berkenwoude, heeft een kostenpost van €10.</p>
+      <p class="mt-4 leading-6 text-slate-300">Klik op de bedrijven en bekijk de opbouw van de veroorzaakte luchtvervuiling.</p>
+    </div>
+    <div class="flex justify-between items-center">
+      <button id="card42prev" class="p-4 bg-[#DEFF9C] rounded-full hover:brightness-90 transition ease-in-out duration-100">
+        <svg xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-arrow-left"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M5 12l14 0" /><path d="M5 12l6 6" /><path d="M5 12l6 -6" /></svg>
+      </button>
+      <div class="flex gap-4">
+        <div class="w-2 h-2 rounded-full bg-slate-200">
+        </div>
+        <div class="w-2 h-2 rounded-full bg-slate-200">
+        </div>
+        <div class="w-2 h-2 rounded-full bg-slate-900">
+        </div>
+        <div class="w-2 h-2 rounded-full bg-slate-200">
+        </div>
+      </div>
+      <button id="card42next" class="p-4 bg-[#DEFF9C] rounded-full hover:brightness-90 transition ease-in-out duration-100">
+        <svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-arrow-right"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M5 12l14 0" /><path d="M13 18l6 -6" /><path d="M13 6l6 6" /></svg>      </button>
+    </div>
+  </div>
+
+  <div
+  id="card43"
+ class="z-40 h-cardHeight absolute left-0 top-0 rounded-2xl m-8 p-8 w-96 bg-white shadow-2xl hidden flex-col justify-between">
+  <div>
+    <div class="w-full flex justify-between pb-2 gap-4">
+      <p class="block text-xl font-bold leading-9">Afval, riolering, waterzuivering</p>
+      <p class="block text-xl font-bold text-slate-200 leading-9">4/7</p>
+    </div>
+    <p class="text-xl leading-9">In uw buurt zijn dit de bedrijven met de hoogste kosten:</p>
+    <div class="mt-6">
+      <p class="text-xl">Bedrijfsnaam 1</p>
+      <div class="mt-1 mb-2 w-full h-2 bg-slate-200 rounded-full overflow-hidden">
+        <div class="w-2/3 h-2 bg-red-500"></div>
+      </div>
+      <p class="text-xl">Bedrijfsnaam 2</p>
+      <div class="mt-1 mb-2 w-full h-2 bg-slate-200 rounded-full overflow-hidden">
+        <div class="w-1/3 h-2 bg-red-500"></div>
+      </div>
+      <p class="text-xl">Bedrijfsnaam 3</p>
+      <div class="mt-1 mb-2 w-full h-2 bg-slate-200 rounded-full overflow-hidden">
+        <div class="w-1/4 h-2 bg-red-500"></div>
+      </div>
+    </div>
+  </div>
+  <div class="flex justify-between items-center">
+    <button id="card43prev" class="p-4 bg-[#DEFF9C] rounded-full hover:brightness-90 transition ease-in-out duration-100">
+      <svg xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-arrow-left"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M5 12l14 0" /><path d="M5 12l6 6" /><path d="M5 12l6 -6" /></svg>
+    </button>
+    <div class="flex gap-4">
+      <div class="w-2 h-2 rounded-full bg-slate-200">
+      </div>
+      <div class="w-2 h-2 rounded-full bg-slate-200">
+      </div>
+      <div class="w-2 h-2 rounded-full bg-slate-200">
+      </div>
+      <div class="w-2 h-2 rounded-full bg-slate-900">
+      </div>
+    </div>
+    <button id="card43next" class="p-4 bg-[#DEFF9C] rounded-full hover:brightness-90 transition ease-in-out duration-100">
+      <svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-arrow-right"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M5 12l14 0" /><path d="M13 18l6 -6" /><path d="M13 6l6 6" /></svg>      </button>
+  </div>
+</div>
+
+<div
+  id="card5"
+  class="z-30 h-cardHeight absolute left-0 top-0 rounded-2xl m-8 p-8 w-96 bg-white shadow-2xl hidden flex-col justify-between">
+  <div>
+    <div class="w-full flex justify-between pb-2 gap-4">
+      <p class="block text-xl font-bold leading-9">Handel, diensten,
+        overheid en bouw</p>
+      <p class="block text-xl font-bold text-slate-200 leading-9">5/7</p>
+    </div>
+    <p class="text-xl leading-9">Op de kaart ziet u nu 47 locaties staan die vallen binnen deze sector. In totaal maakt dit 8% uit van de totale schadenkosten in Nederland.</p>
+    <div class="w-full h-2 bg-slate-200 mt-8 rounded-full overflow-hidden flex justify-start">
+      <div class="w-ierWidth bg-red-600"></div>
+      <div class="w-vevWidth bg-blue-600"></div>
+      <div class="w-arwWidth bg-green-600"></div>
+      <div class="w-hdoebWidth bg-purple-600"></div>
+    </div>
+  </div>
+  <div class="flex justify-between items-center">
+    <button id="card5prev" class="p-4 bg-[#DEFF9C] rounded-full hover:brightness-90 transition ease-in-out duration-100">
+      <svg xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-arrow-left"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M5 12l14 0" /><path d="M5 12l6 6" /><path d="M5 12l6 -6" /></svg>
+    </button>
+    <div class="flex gap-4">
+      <div class="w-2 h-2 rounded-full bg-slate-900">
+      </div>
+      <div class="w-2 h-2 rounded-full bg-slate-200">
+      </div>
+      <div class="w-2 h-2 rounded-full bg-slate-200">
+      </div>
+      <div class="w-2 h-2 rounded-full bg-slate-200">
+      </div>
+    </div>
+    <button id="card5next" class="p-4 bg-[#DEFF9C] rounded-full hover:brightness-90 transition ease-in-out duration-100">
+      <svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-arrow-right"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M5 12l14 0" /><path d="M13 18l6 -6" /><path d="M13 6l6 6" /></svg>      </button>
+  </div>
+</div>
+
+<div
+  id="card51"
+  class="z-40 h-cardHeight absolute left-0 top-0 rounded-2xl m-8 p-8 w-96 bg-white shadow-2xl hidden flex-col justify-between">
+    <div>
+      <div class="w-full flex justify-between pb-2 gap-4">
+        <p class="block text-xl font-bold leading-9">Handel, diensten,
+          overheid en bouw</p>
+        <p class="block text-xl font-bold text-slate-200 leading-9">5/7</p>
+      </div>
+      <p class="text-xl leading-9">In Veendam bevindt zich het bedrijf genaamd Nedmag BV. Dit is het bedrijf met de grootste schade, namelijk €23.110.334.</p>
+      <p class="mt-4 leading-6 text-slate-300">Klik op de bedrijven en bekijk de opbouw van de veroorzaakte luchtvervuiling.</p>
+    </div>
+    <div class="flex justify-between items-center">
+      <button id="card51prev" class="p-4 bg-[#DEFF9C] rounded-full hover:brightness-90 transition ease-in-out duration-100">
+        <svg xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-arrow-left"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M5 12l14 0" /><path d="M5 12l6 6" /><path d="M5 12l6 -6" /></svg>
+      </button>
+      <div class="flex gap-4">
+        <div class="w-2 h-2 rounded-full bg-slate-200">
+        </div>
+        <div class="w-2 h-2 rounded-full bg-slate-900">
+        </div>
+        <div class="w-2 h-2 rounded-full bg-slate-200">
+        </div>
+        <div class="w-2 h-2 rounded-full bg-slate-200">
+        </div>
+      </div>
+      <button id="card51next" class="p-4 bg-[#DEFF9C] rounded-full hover:brightness-90 transition ease-in-out duration-100">
+        <svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-arrow-right"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M5 12l14 0" /><path d="M13 18l6 -6" /><path d="M13 6l6 6" /></svg>      </button>
+    </div>
+  </div>
+
+
+  <div
+    id="card52"
+    class="z-40 h-cardHeight absolute left-0 top-0 rounded-2xl m-8 p-8 w-96 bg-white shadow-2xl hidden flex-col justify-between">
+    <div>
+      <div class="w-full flex justify-between pb-2 gap-4">
+        <p class="block text-xl font-bold leading-9">Handel, diensten,
+          overheid en bouw</p>
+        <p class="block text-xl font-bold text-slate-200 leading-9">5/7</p>
+      </div>
+      <p class="text-xl leading-9">De vervuilers in deze sector zijn enigszins verspreid door Nederland. In Rotterdam zijn enkele bedrijven die in de buurt van elkaar zijn, maar ook in andere steden zijn er meerdere bedrijven te vinden.</p>
+      <p class="mt-4 leading-6 text-slate-300">Klik op de bedrijven en bekijk de opbouw van de veroorzaakte luchtvervuiling.</p>
+    </div>
+    <div class="flex justify-between items-center">
+      <button id="card52prev" class="p-4 bg-[#DEFF9C] rounded-full hover:brightness-90 transition ease-in-out duration-100">
+        <svg xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-arrow-left"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M5 12l14 0" /><path d="M5 12l6 6" /><path d="M5 12l6 -6" /></svg>
+      </button>
+      <div class="flex gap-4">
+        <div class="w-2 h-2 rounded-full bg-slate-200">
+        </div>
+        <div class="w-2 h-2 rounded-full bg-slate-200">
+        </div>
+        <div class="w-2 h-2 rounded-full bg-slate-900">
+        </div>
+        <div class="w-2 h-2 rounded-full bg-slate-200">
+        </div>
+      </div>
+      <button id="card52next" class="p-4 bg-[#DEFF9C] rounded-full hover:brightness-90 transition ease-in-out duration-100">
+        <svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-arrow-right"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M5 12l14 0" /><path d="M13 18l6 -6" /><path d="M13 6l6 6" /></svg>      </button>
+    </div>
+  </div>
+
+  <div
+  id="card53"
+ class="z-40 h-cardHeight absolute left-0 top-0 rounded-2xl m-8 p-8 w-96 bg-white shadow-2xl hidden flex-col justify-between">
+  <div>
+    <div class="w-full flex justify-between pb-2 gap-4">
+      <p class="block text-xl font-bold leading-9">Handel, diensten,
+        overheid en bouw</p>
+      <p class="block text-xl font-bold text-slate-200 leading-9">5/7</p>
+    </div>
+    <p class="text-xl leading-9">In uw buurt zijn dit de vervuilers met de hoogste kosten:</p>
+    <div class="mt-6">
+      <p class="text-xl">Bedrijfsnaam 1</p>
+      <div class="mt-1 mb-2 w-full h-2 bg-slate-200 rounded-full overflow-hidden">
+        <div class="w-2/3 h-2 bg-red-500"></div>
+      </div>
+      <p class="text-xl">Bedrijfsnaam 2</p>
+      <div class="mt-1 mb-2 w-full h-2 bg-slate-200 rounded-full overflow-hidden">
+        <div class="w-1/3 h-2 bg-red-500"></div>
+      </div>
+      <p class="text-xl">Bedrijfsnaam 3</p>
+      <div class="mt-1 mb-2 w-full h-2 bg-slate-200 rounded-full overflow-hidden">
+        <div class="w-1/4 h-2 bg-red-500"></div>
+      </div>
+    </div>
+  </div>
+  <div class="flex justify-between items-center">
+    <button id="card53prev" class="p-4 bg-[#DEFF9C] rounded-full hover:brightness-90 transition ease-in-out duration-100">
+      <svg xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-arrow-left"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M5 12l14 0" /><path d="M5 12l6 6" /><path d="M5 12l6 -6" /></svg>
+    </button>
+    <div class="flex gap-4">
+      <div class="w-2 h-2 rounded-full bg-slate-200">
+      </div>
+      <div class="w-2 h-2 rounded-full bg-slate-200">
+      </div>
+      <div class="w-2 h-2 rounded-full bg-slate-200">
+      </div>
+      <div class="w-2 h-2 rounded-full bg-slate-900">
+      </div>
+    </div>
+    <button id="card53next" class="p-4 bg-[#DEFF9C] rounded-full hover:brightness-90 transition ease-in-out duration-100">
+      <svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-arrow-right"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M5 12l14 0" /><path d="M13 18l6 -6" /><path d="M13 6l6 6" /></svg>      </button>
+  </div>
+</div>
+
+
+<div
+  id="card6"
+  class="z-30 h-cardHeight absolute left-0 top-0 rounded-2xl m-8 p-8 w-96 bg-white shadow-2xl hidden flex-col justify-between">
+  <div>
+    <div class="w-full flex justify-between pb-2 gap-4">
+      <p class="block text-xl font-bold leading-9">Landbouw</p>
+      <p class="block text-xl font-bold text-slate-200 leading-9">6/7</p>
+    </div>
+    <p class="text-xl leading-9">Nu zoomen wij in op vijf vervuilende landbouwbedrijven. Deze zijn nu te zien op de kaart. De landbouw is een zeer vervuilende sector, goed voor 50% van de totale schadekosten.</p>
+    <div class="w-full h-2 bg-slate-200 mt-8 rounded-full overflow-hidden flex justify-start">
+      <div class="w-ierWidth bg-red-600"></div>
+      <div class="w-vevWidth bg-blue-600"></div>
+      <div class="w-arwWidth bg-green-600"></div>
+      <div class="w-hdoebWidth bg-purple-600"></div>
+      <div class="w-lWidth bg-orange-600"></div>
+    </div>
+  </div>
+  <div class="flex justify-between items-center">
+    <button id="card6prev" class="p-4 bg-[#DEFF9C] rounded-full hover:brightness-90 transition ease-in-out duration-100">
+      <svg xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-arrow-left"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M5 12l14 0" /><path d="M5 12l6 6" /><path d="M5 12l6 -6" /></svg>
+    </button>
+    <div class="flex gap-4">
+      <div class="w-2 h-2 rounded-full bg-slate-900">
+      </div>
+      <div class="w-2 h-2 rounded-full bg-slate-200">
+      </div>
+      <div class="w-2 h-2 rounded-full bg-slate-200">
+      </div>
+      <div class="w-2 h-2 rounded-full bg-slate-200">
+      </div>
+    </div>
+    <button id="card6next" class="p-4 bg-[#DEFF9C] rounded-full hover:brightness-90 transition ease-in-out duration-100">
+      <svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-arrow-right"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M5 12l14 0" /><path d="M13 18l6 -6" /><path d="M13 6l6 6" /></svg>      </button>
+  </div>
+</div>
+
+<div
+  id="card61"
+  class="z-40 h-cardHeight absolute left-0 top-0 rounded-2xl m-8 p-8 w-96 bg-white shadow-2xl hidden flex-col justify-between">
+    <div>
+      <div class="w-full flex justify-between pb-2 gap-4">
+        <p class="block text-xl font-bold leading-9">Landbouw</p>
+        <p class="block text-xl font-bold text-slate-200 leading-9">6/7</p>
+      </div>
+      <p class="text-xl leading-9">Het landbouw bedrijf met de grootste schadenkosten is gevestigd in Kapelle en heet Seasun BV. Deze groententeler heeft in totaal €367.333 schadekosten.</p>
+      <p class="mt-4 leading-6 text-slate-300">Klik op de bedrijven en bekijk de opbouw van de veroorzaakte luchtvervuiling.</p>
+    </div>
+    <div class="flex justify-between items-center">
+      <button id="card61prev" class="p-4 bg-[#DEFF9C] rounded-full hover:brightness-90 transition ease-in-out duration-100">
+        <svg xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-arrow-left"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M5 12l14 0" /><path d="M5 12l6 6" /><path d="M5 12l6 -6" /></svg>
+      </button>
+      <div class="flex gap-4">
+        <div class="w-2 h-2 rounded-full bg-slate-200">
+        </div>
+        <div class="w-2 h-2 rounded-full bg-slate-900">
+        </div>
+        <div class="w-2 h-2 rounded-full bg-slate-200">
+        </div>
+        <div class="w-2 h-2 rounded-full bg-slate-200">
+        </div>
+      </div>
+      <button id="card61next" class="p-4 bg-[#DEFF9C] rounded-full hover:brightness-90 transition ease-in-out duration-100">
+        <svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-arrow-right"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M5 12l14 0" /><path d="M13 18l6 -6" /><path d="M13 6l6 6" /></svg>      </button>
+    </div>
+  </div>
+
+
+  <div
+    id="card62"
+    class="z-40 h-cardHeight absolute left-0 top-0 rounded-2xl m-8 p-8 w-96 bg-white shadow-2xl hidden flex-col justify-between">
+    <div>
+      <div class="w-full flex justify-between pb-2 gap-4">
+        <p class="block text-xl font-bold leading-9">Landbouw</p>
+        <p class="block text-xl font-bold text-slate-200 leading-9">6/7</p>
+      </div>
+      <p class="text-xl leading-9">Op de tweede plaats staat Leo Hoogweg BV met in totaal €323.379 aan kosten. Deze kwekerij bevindt zich in Luttelgeest.</p>
+      <p class="mt-4 leading-6 text-slate-300">Klik op de bedrijven en bekijk de opbouw van de veroorzaakte luchtvervuiling.</p>
+    </div>
+    <div class="flex justify-between items-center">
+      <button id="card62prev" class="p-4 bg-[#DEFF9C] rounded-full hover:brightness-90 transition ease-in-out duration-100">
+        <svg xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-arrow-left"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M5 12l14 0" /><path d="M5 12l6 6" /><path d="M5 12l6 -6" /></svg>
+      </button>
+      <div class="flex gap-4">
+        <div class="w-2 h-2 rounded-full bg-slate-200">
+        </div>
+        <div class="w-2 h-2 rounded-full bg-slate-200">
+        </div>
+        <div class="w-2 h-2 rounded-full bg-slate-900">
+        </div>
+        <div class="w-2 h-2 rounded-full bg-slate-200">
+        </div>
+      </div>
+      <button id="card62next" class="p-4 bg-[#DEFF9C] rounded-full hover:brightness-90 transition ease-in-out duration-100">
+        <svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-arrow-right"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M5 12l14 0" /><path d="M13 18l6 -6" /><path d="M13 6l6 6" /></svg>      </button>
+    </div>
+  </div>
+
+  <div
+  id="card63"
+ class="z-40 h-cardHeight absolute left-0 top-0 rounded-2xl m-8 p-8 w-96 bg-white shadow-2xl hidden flex-col justify-between">
+  <div>
+    <div class="w-full flex justify-between pb-2 gap-4">
+      <p class="block text-xl font-bold leading-9">Landbouw</p>
+      <p class="block text-xl font-bold text-slate-200 leading-9">6/7</p>
+    </div>
+    <p class="text-xl leading-9">Landbouwbedrijven vestigen zich vaak buiten de randstad, maar dit betekent niet dat de luchtvervuiling verder reikt. Daarnaast ligt de focus nu op 5 bedrijven, maar in realiteit zijn er natuurlijk veel meer kleinere bedrijven die ook een bijdrage hebben aan luchtvervuiling.</p>
+  </div>
+  <div class="flex justify-between items-center">
+    <button id="card63prev" class="p-4 bg-[#DEFF9C] rounded-full hover:brightness-90 transition ease-in-out duration-100">
+      <svg xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-arrow-left"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M5 12l14 0" /><path d="M5 12l6 6" /><path d="M5 12l6 -6" /></svg>
+    </button>
+    <div class="flex gap-4">
+      <div class="w-2 h-2 rounded-full bg-slate-200">
+      </div>
+      <div class="w-2 h-2 rounded-full bg-slate-200">
+      </div>
+      <div class="w-2 h-2 rounded-full bg-slate-200">
+      </div>
+      <div class="w-2 h-2 rounded-full bg-slate-900">
+      </div>
+    </div>
+    <button id="card63next" class="p-4 bg-[#DEFF9C] rounded-full hover:brightness-90 transition ease-in-out duration-100">
+      <svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-arrow-right"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M5 12l14 0" /><path d="M13 18l6 -6" /><path d="M13 6l6 6" /></svg>      </button>
+  </div>
+</div>
+
+<div
+id="card7"
+class="z-40 h-cardHeight absolute left-0 top-0 rounded-2xl m-8 p-8 w-96 bg-white shadow-2xl hidden flex-col justify-between">
+<div>
+  <div class="w-full flex justify-between pb-2 gap-4">
+    <p class="block text-xl font-bold leading-9">Einde</p>
+    <p class="block text-xl font-bold text-slate-200 leading-9">7/7</p>
+  </div>
+  <p class="text-xl leading-9">U kunt nu zelf rond kijken om een compleet beeld van alle vervuilende bedrijven in Nederland te krijgen. Met filters kunt u verschillende sectoren aan en uit zetten.</p>
+</div>
+<div class="flex justify-between items-center">
+  <button id="card7prev" class="p-4 bg-[#DEFF9C] rounded-full hover:brightness-90 transition ease-in-out duration-100">
+    <svg xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-arrow-left"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M5 12l14 0" /><path d="M5 12l6 6" /><path d="M5 12l6 -6" /></svg>
+  </button>
+  <button id="card7next" class="text-lg gap-2 items-center flex p-4 bg-[#DEFF9C] rounded-full hover:brightness-90 transition ease-in-out duration-100">
+    Zelf rondkijken<svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-arrow-right"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M5 12l14 0" /><path d="M13 18l6 -6" /><path d="M13 6l6 6" /></svg>      </button>
+</div>
+</div>
 
   <!-- KAART WEERGAVE -->
   <div id="map" class="w-full h-full z-10"></div>

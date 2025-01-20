@@ -16,6 +16,9 @@ export default {
       width: {
         'ierWidth': '60%',
         'vevWidth': '17%',
+        'arwWidth': '8%',
+        'hdoebWidth': '10%',
+        'lWidth': '5%',
       }
     }
   },
