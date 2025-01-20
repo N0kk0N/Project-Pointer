@@ -273,7 +273,9 @@
           zIndexOffset: 1000,
         }).addTo(map);
 
-        map.setView([lat, lon], 18);
+
+        // ZOOMT IN OP GEBRUIKER LOCATIE
+        // map.setView([lat, lon], 18); 
 
         currentLat = lat;
         currentLon = lon;
@@ -696,9 +698,9 @@
           Raffinaderijen</p>
         <p class="block text-xl font-bold text-slate-200 leading-9">2/7</p>
       </div>
-      <p class="text-xl leading-9">U ziet nu 442 bedrijven in de desbetreffende sector. Deze sector is verantwoordelijk voor 60% van alle kosten voor luchtvervuiling in Nederland.</p>
+      <p class="text-xl leading-9">U ziet nu 443 bedrijven in de desbetreffende sector. Deze sector is verantwoordelijk voor 39% van alle kosten voor luchtvervuiling in Nederland.</p>
       <div class="w-full h-2 bg-slate-200 mt-8 rounded-full overflow-hidden flex justify-start">
-        <div class="w-ierWidth bg-red-600"></div>
+        <div class="w-2/5 bg-red-600"></div>
       </div>
     </div>
     <div class="flex justify-between items-center">
