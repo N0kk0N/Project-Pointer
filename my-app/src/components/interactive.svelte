@@ -20,6 +20,10 @@
   let currentLat = 52.1326; // HUIDIGE LOCATIE BREEDTEGRAAD (VOORBEELD)
   let currentLon = 5.2913; // HUIDIGE LOCATIE LENGTEGRAAD (VOORBEELD)
 
+  const defaultLat = 52.0; // Voorbeeld coördinaten voor uitzoomen
+  const defaultLon = 5.0;
+  const defaultZoomLevel = 7; // Stel het gewenste uitzoomniveau in
+
   const ijmuidenLat = 52.4607;
   const ijmuidenLon = 4.6117;
   const zoomLevel = 12; // Stel het gewenste zoomniveau in
@@ -347,10 +351,12 @@
         card2next.addEventListener("click", () => {
           card2.classList.replace("flex", "hidden");
           card21.classList.replace("hidden", "flex");
+
+          // Start de animatie om in te zoomen
           map.flyTo([ijmuidenLat, ijmuidenLon], zoomLevel, {
             animate: true,
-            duration: 2, // De duur van de animatie in seconden
-          }); // Vloeiend inzoomen op IJmuiden
+            duration: 1.5, // De duur van de animatie in seconden
+          });
         });
 
         // card 2.1 | ergste
@@ -358,6 +364,12 @@
         card21prev.addEventListener("click", () => {
           card21.classList.replace("flex", "hidden");
           card2.classList.replace("hidden", "flex");
+
+          // Start de animatie om uit te zoomen
+          map.flyTo([defaultLat, defaultLon], defaultZoomLevel, {
+            animate: true,
+            duration: 1.5, // De duur van de animatie in seconden
+          });
         });
 
         const card21next = document.getElementById("card21next");
