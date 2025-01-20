@@ -127,68 +127,68 @@
   }
 
   // FUNCTIE OM ALLE LOCATIES TE TONEN
-  function toonAlleMarkers() {
-    const L = window.L;
+  function toonAlleMarkers(selectedCategory = "Alle sectoren") {
+  const L = window.L;
 
-    if (buurtMarkersLayer) {
-        map.removeLayer(buurtMarkersLayer); // Verwijder bestaande markers
+  if (buurtMarkersLayer) {
+    map.removeLayer(buurtMarkersLayer); // Verwijder bestaande markers
+  }
+
+  buurtMarkersLayer = L.layerGroup();
+
+  const maxSchadekosten = Math.max(
+    ...geojsonData.features.map(
+      (feature) => feature.properties.schadekosten_2022
+    )
+  );
+
+  geojsonData.features.forEach(feature => {
+    const lat = feature.geometry.coordinates[1];
+    const lon = feature.geometry.coordinates[0];
+    const sector = feature.properties.aangepaste_sector;
+
+    // Filter op de geselecteerde sector
+    if (selectedCategory !== "Alle sectoren" && sector !== selectedCategory) {
+      return;
     }
 
-    buurtMarkersLayer = L.layerGroup();
+    const schadekosten = feature.properties.schadekosten_2022;
+    const minRadius = 5;
+    const maxRadius = 20;
+    const radius = (schadekosten / maxSchadekosten) * (maxRadius - minRadius) + minRadius;
 
-    const maxSchadekosten = Math.max(
-        ...geojsonData.features.map(
-            (feature) => feature.properties.schadekosten_2022
-        )
-    );
+    const top3Uitstoot = getTop3UitstootPerBedrijf(feature.properties.bedrijf);
 
-    geojsonData.features.forEach(feature => {
-        const lat = feature.geometry.coordinates[1];
-        const lon = feature.geometry.coordinates[0];
-        const sector = feature.properties.aangepaste_sector;
+    const popupContent = `
+      <div class="popup-content">
+        <h3>${feature.properties.bedrijf}</h3>
+        <p><strong>Sector:</strong> ${sector}</p>
+        <p><strong>Schadekosten 2022:</strong> €${feature.properties.schadekosten_2022.toLocaleString('nl-NL')}</p>
+        <p><strong>Uitstoot (Top 3):</strong></p>
+        ${top3Uitstoot.length > 0 ? `<canvas id="chart-${feature.properties.bedrijf.replace(/\s+/g, '-')}" width="200" height="200"></canvas>` : '<p>Geen gegevens gevonden</p>'}
+      </div>
+    `;
 
-        // Filter op de geselecteerde sector
-        if (selectedCategory !== "Alle sectoren" && sector !== selectedCategory) {
-            return;
-        }
+    const marker = L.circleMarker([lat, lon], {
+      radius: radius,
+      fillColor: sectorKleuren[sector] || "#8A2BE2", // Gebruik de sector kleur of standaard kleur
+      color: sectorKleuren[sector] || "#8A2BE2", // Gebruik de sector kleur of standaard kleur
+      weight: 0,
+      opacity: 1,
+      fillOpacity: 0.7,
+    }).bindPopup(popupContent, { maxWidth: 'auto', maxHeight: 'auto' });
 
-        const schadekosten = feature.properties.schadekosten_2022;
-        const minRadius = 5;
-        const maxRadius = 20;
-        const radius = (schadekosten / maxSchadekosten) * (maxRadius - minRadius) + minRadius;
+    buurtMarkersLayer.addLayer(marker);
 
-        const top3Uitstoot = getTop3UitstootPerBedrijf(feature.properties.bedrijf);
+    // Maak de grafiek aan nadat de popup geopend is, als er data is
+    if (top3Uitstoot.length > 0) {
+      marker.on('popupopen', () => {
+        createChart(`chart-${feature.properties.bedrijf.replace(/\s+/g, '-')}`, top3Uitstoot);
+      });
+    }
+  });
 
-        const popupContent = `
-            <div class="popup-content">
-                <h3>${feature.properties.bedrijf}</h3>
-                <p><strong>Sector:</strong> ${sector}</p>
-                <p><strong>Schadekosten 2022:</strong> €${feature.properties.schadekosten_2022.toLocaleString('nl-NL')}</p>
-                <p><strong>Uitstoot (Top 3):</strong></p>
-                ${top3Uitstoot.length > 0 ? `<canvas id="chart-${feature.properties.bedrijf.replace(/\s+/g, '-')}" width="200" height="200"></canvas>` : '<p>Geen gegevens gevonden</p>'}
-            </div>
-        `;
-
-        const marker = L.circleMarker([lat, lon], {
-            radius: radius,
-            fillColor: sectorKleuren[sector] || "#8A2BE2", // Gebruik de sector kleur of standaard kleur
-            color: sectorKleuren[sector] || "#8A2BE2", // Gebruik de sector kleur of standaard kleur
-            weight: 0,
-            opacity: 1,
-            fillOpacity: 0.7,
-        }).bindPopup(popupContent, { maxWidth: 'auto', maxHeight: 'auto' });
-
-        buurtMarkersLayer.addLayer(marker);
-
-        // Maak de grafiek aan nadat de popup geopend is, als er data is
-        if (top3Uitstoot.length > 0) {
-            marker.on('popupopen', () => {
-                createChart(`chart-${feature.properties.bedrijf.replace(/\s+/g, '-')}`, top3Uitstoot);
-            });
-        }
-    });
-
-    buurtMarkersLayer.addTo(map);
+  buurtMarkersLayer.addTo(map);
 }
 
   // FUNCTIE OM EEN TAARTGRAFIEK TE MAKEN VAN DE TOP 3 UITSTOOT
@@ -284,6 +284,10 @@
 
         const cardOverlay = document.getElementById("cardOverlay");
         cardOverlay.classList.replace("block", "hidden");
+
+        // Wijzig de geselecteerde categorie en toon alleen markers van de sector "Industrie, Energie en Raffinaderijen"
+        selectedCategory = categoryArray[1]; // Set to "Industrie, Energie en Raffinaderijen"
+        toonAlleMarkers(selectedCategory);
 
         const card2 = document.getElementById("card2");
         const card21 = document.getElementById("card21");
