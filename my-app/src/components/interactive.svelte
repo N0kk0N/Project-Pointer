@@ -28,6 +28,10 @@
   const ijmuidenLon = 4.6117;
   const zoomLevel = 12; // Stel het gewenste zoomniveau in
 
+  const rotterdamLat = 51.9225;
+  const rotterdamLon = 4.47917;
+  const rotterdamZoomLevel = 10; // Stel het gewenste zoomniveau in voor Rotterdam
+
   // Array van sectoren
   const categoryArray = [
     "Alle sectoren",
@@ -394,6 +398,12 @@
         card21next.addEventListener("click", () => {
           card21.classList.replace("flex", "hidden");
           card22.classList.replace("hidden", "flex");
+
+          // Start de animatie om naar de haven van Rotterdam te vliegen
+          map.flyTo([rotterdamLat, rotterdamLon], rotterdamZoomLevel, {
+            animate: true,
+            duration: 1.5, // De duur van de animatie in seconden
+          });
         });
 
         // card 2.2 | interssant
@@ -401,6 +411,12 @@
         card22prev.addEventListener("click", () => {
           card22.classList.replace("flex", "hidden");
           card21.classList.replace("hidden", "flex");
+
+          // Start de animatie om terug te vliegen naar IJmuiden
+          map.flyTo([ijmuidenLat, ijmuidenLon], zoomLevel, {
+            animate: true,
+            duration: 1.5, // De duur van de animatie in seconden
+          });
         });
 
         const card22next = document.getElementById("card22next");
