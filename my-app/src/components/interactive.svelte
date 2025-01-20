@@ -211,22 +211,30 @@
 
         const cardOverlay = document.getElementById("cardOverlay");
         cardOverlay.classList.replace("block", "hidden");
-        const card1 = document.getElementById("card1");
-        card1.classList.replace("hidden", "flex");
 
-        // card 1 functionality
-        const card1next = document.getElementById("card1next");
-        card1next.addEventListener("click", () => {
-          card1.classList.replace("flex", "hidden");
-          const card21 = document.getElementById("card21");
+        const card2 = document.getElementById("card2");
+        const card21 = document.getElementById("card21");
+        const card22 = document.getElementById("card22");
+        const card23 = document.getElementById("card23");
+
+        const card3 = document.getElementById("card3");
+        const card31 = document.getElementById("card31");
+        const card32 = document.getElementById("card32");
+
+        card2.classList.replace("hidden", "flex");
+
+        // card 2 | algemeen
+        const card2next = document.getElementById("card2next");
+        card2next.addEventListener("click", () => {
+          card2.classList.replace("flex", "hidden");
           card21.classList.replace("hidden", "flex");
         });
 
-        // card functionality 21
+        // card 2.1 | ergste
         const card21prev = document.getElementById("card21prev");
         card21prev.addEventListener("click", () => {
           card21.classList.replace("flex", "hidden");
-          card1.classList.replace("hidden", "flex");
+          card2.classList.replace("hidden", "flex");
         });
 
         const card21next = document.getElementById("card21next");
@@ -235,7 +243,7 @@
           card22.classList.replace("hidden", "flex");
         });
 
-        // card functionality 22
+        // card 2.2 | interssant
         const card22prev = document.getElementById("card22prev");
         card22prev.addEventListener("click", () => {
           card22.classList.replace("flex", "hidden");
@@ -248,8 +256,8 @@
           card23.classList.replace("hidden", "flex");
         });
 
-        // card functionality 23
-        const card23prev = document.getElementById("card23prev");
+        // card 2.3 | eigen locatie
+        const card23prev = document.getElementById("card23prev")
         card23prev.addEventListener("click", () => {
           card23.classList.replace("flex", "hidden");
           card22.classList.replace("hidden", "flex");
@@ -258,7 +266,60 @@
         const card23next = document.getElementById("card23next");
         card23next.addEventListener("click", () => {
           card23.classList.replace("flex", "hidden");
-          card24.classList.replace("hidden", "flex");
+          card3.classList.replace("hidden", "flex");
+        });
+
+        // card 3 | algemeen
+        const card3prev = document.getElementById("card3prev")
+        card3prev.addEventListener("click", () => {
+          card3.classList.replace("flex", "hidden");
+          card23.classList.replace("hidden", "flex");
+        });
+
+        const card3next = document.getElementById("card3next");
+        card3next.addEventListener("click", () => {
+          card3.classList.replace("flex", "hidden");
+          card31.classList.replace("hidden", "flex");
+        });
+
+        // card 3.1 | ergste
+        const card31prev = document.getElementById("card31prev")
+        card31prev.addEventListener("click", () => {
+          card31.classList.replace("flex", "hidden");
+          card3.classList.replace("hidden", "flex");
+        });
+
+        const card31next = document.getElementById("card31next");
+        card31next.addEventListener("click", () => {
+          card31.classList.replace("flex", "hidden");
+          card32.classList.replace("hidden", "flex");
+        });
+
+        // card 3.2 | interessant
+        const card32prev = document.getElementById("card32prev")
+        card32prev.addEventListener("click", () => {
+          card32.classList.replace("flex", "hidden");
+          card31.classList.replace("hidden", "flex");
+        });
+
+        const card32next = document.getElementById("card32next");
+        card32next.addEventListener("click", () => {
+          card32.classList.replace("flex", "hidden");
+          card33.classList.replace("hidden", "flex");
+        });
+
+
+        // card 3.3 | eigen locatie
+        const card33prev = document.getElementById("card33prev")
+        card33prev.addEventListener("click", () => {
+          card33.classList.replace("flex", "hidden");
+          card32.classList.replace("hidden", "flex");
+        });
+
+        const card33next = document.getElementById("card33next");
+        card33next.addEventListener("click", () => {
+          card33.classList.replace("flex", "hidden");
+          card4.classList.replace("hidden", "flex");
         });
 
         toonMarkersInDeBuurt();
@@ -370,7 +431,7 @@
   </div>
 
   <div
-    id="card1"
+    id="card2"
    class="z-30 h-cardHeight absolute left-0 top-0 rounded-2xl m-8 p-8 w-96 bg-white shadow-2xl hidden flex-col justify-between">
     <div>
       <div class="w-full flex justify-between pb-2">
@@ -397,7 +458,7 @@
         <div class="w-2 h-2 rounded-full bg-slate-200">
         </div>
       </div>
-      <button id="card1next" class="p-4 bg-[#DEFF9C] rounded-full hover:brightness-90 transition ease-in-out duration-100">
+      <button id="card2next" class="p-4 bg-[#DEFF9C] rounded-full hover:brightness-90 transition ease-in-out duration-100">
         <svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-arrow-right"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M5 12l14 0" /><path d="M13 18l6 -6" /><path d="M13 6l6 6" /></svg>      </button>
     </div>
   </div>
@@ -504,6 +565,142 @@
         </div>
       </div>
       <button id="card23next" class="p-4 bg-[#DEFF9C] rounded-full hover:brightness-90 transition ease-in-out duration-100">
+        <svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-arrow-right"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M5 12l14 0" /><path d="M13 18l6 -6" /><path d="M13 6l6 6" /></svg>      </button>
+    </div>
+  </div>
+
+  <div
+    id="card3"
+   class="z-30 h-cardHeight absolute left-0 top-0 rounded-2xl m-8 p-8 w-96 bg-white shadow-2xl hidden flex-col justify-between">
+    <div>
+      <div class="w-full flex justify-between pb-2">
+        <p class="block text-xl font-bold leading-9">Verkeer en vervoer</p>
+        <p class="block text-xl font-bold text-slate-200 leading-9">3/7</p>
+      </div>
+      <p class="text-xl leading-9">In Nederland zijn er in totaal 17 verschillende vliegvelden. Deze sector is verantwoordelijk voor 17% van de kosten die worden gemaakt voor luchtvervuiling in Nederland.</p>
+      <div class="w-full h-2 bg-slate-200 mt-8 rounded-full overflow-hidden flex justify-start">
+        <div class="w-ierWidth bg-red-600"></div>
+        <div class="w-vevWidth bg-blue-600"></div>
+      </div>
+    </div>
+    <div class="flex justify-between items-center">
+      <button id="card3prev" class="p-4 bg-[#DEFF9C] rounded-full hover:brightness-90 transition ease-in-out duration-100">
+        <svg xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-arrow-left"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M5 12l14 0" /><path d="M5 12l6 6" /><path d="M5 12l6 -6" /></svg>
+      </button>
+      <div class="flex gap-4">
+        <div class="w-2 h-2 rounded-full bg-slate-900">
+        </div>
+        <div class="w-2 h-2 rounded-full bg-slate-200">
+        </div>
+        <div class="w-2 h-2 rounded-full bg-slate-200">
+        </div>
+        <div class="w-2 h-2 rounded-full bg-slate-200">
+        </div>
+      </div>
+      <button id="card3next" class="p-4 bg-[#DEFF9C] rounded-full hover:brightness-90 transition ease-in-out duration-100">
+        <svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-arrow-right"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M5 12l14 0" /><path d="M13 18l6 -6" /><path d="M13 6l6 6" /></svg>      </button>
+    </div>
+  </div>
+  
+  <div
+  id="card31"
+  class="z-40 h-cardHeight absolute left-0 top-0 rounded-2xl m-8 p-8 w-96 bg-white shadow-2xl hidden flex-col justify-between">
+    <div>
+      <div class="w-full flex justify-between pb-2">
+        <p class="block text-xl font-bold leading-9">Verkeer en vervoer</p>
+        <p class="block text-xl font-bold text-slate-200 leading-9">3/7</p>
+      </div>
+      <p class="text-xl leading-9">Schiphol is een van de belangrijkste luchthavens van Europa en de grootste van Nederland. Hier staat een prijskaartje van €161.264.591 in schadekosten voor luchtvervuiling tegenover.</p>
+      <p class="mt-4 leading-6 text-slate-300">Klik op de bedrijven en bekijk de opbouw van de veroorzaakte luchtvervuiling.</p>
+    </div>
+    <div class="flex justify-between items-center">
+      <button id="card31prev" class="p-4 bg-[#DEFF9C] rounded-full hover:brightness-90 transition ease-in-out duration-100">
+        <svg xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-arrow-left"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M5 12l14 0" /><path d="M5 12l6 6" /><path d="M5 12l6 -6" /></svg>
+      </button>
+      <div class="flex gap-4">
+        <div class="w-2 h-2 rounded-full bg-slate-200">
+        </div>
+        <div class="w-2 h-2 rounded-full bg-slate-900">
+        </div>
+        <div class="w-2 h-2 rounded-full bg-slate-200">
+        </div>
+        <div class="w-2 h-2 rounded-full bg-slate-200">
+        </div>
+      </div>
+      <button id="card31next" class="p-4 bg-[#DEFF9C] rounded-full hover:brightness-90 transition ease-in-out duration-100">
+        <svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-arrow-right"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M5 12l14 0" /><path d="M13 18l6 -6" /><path d="M13 6l6 6" /></svg>      </button>
+    </div>
+  </div>
+
+  <div
+    id="card32"
+    class="z-40 h-cardHeight absolute left-0 top-0 rounded-2xl m-8 p-8 w-96 bg-white shadow-2xl hidden flex-col justify-between">
+    <div>
+      <div class="w-full flex justify-between pb-2">
+        <p class="block text-xl font-bold leading-9">Verkeer en vervoer</p>
+        <p class="block text-xl font-bold text-slate-200 leading-9">3/7</p>
+      </div>
+      <p class="text-xl leading-9">De luchthaven met de laagste schadekosten ligt is vliegveld De Kooy. Met €215.731 staat dit vliegveld onderaan.</p>
+      <p class="mt-4 leading-6 text-slate-300">Klik op de bedrijven en bekijk de opbouw van de veroorzaakte luchtvervuiling.</p>
+    </div>
+    <div class="flex justify-between items-center">
+      <button id="card32prev" class="p-4 bg-[#DEFF9C] rounded-full hover:brightness-90 transition ease-in-out duration-100">
+        <svg xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-arrow-left"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M5 12l14 0" /><path d="M5 12l6 6" /><path d="M5 12l6 -6" /></svg>
+      </button>
+      <div class="flex gap-4">
+        <div class="w-2 h-2 rounded-full bg-slate-200">
+        </div>
+        <div class="w-2 h-2 rounded-full bg-slate-200">
+        </div>
+        <div class="w-2 h-2 rounded-full bg-slate-900">
+        </div>
+        <div class="w-2 h-2 rounded-full bg-slate-200">
+        </div>
+      </div>
+      <button id="card32next" class="p-4 bg-[#DEFF9C] rounded-full hover:brightness-90 transition ease-in-out duration-100">
+        <svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-arrow-right"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M5 12l14 0" /><path d="M13 18l6 -6" /><path d="M13 6l6 6" /></svg>      </button>
+    </div>
+  </div>
+
+  <div
+    id="card33"
+   class="z-40 h-cardHeight absolute left-0 top-0 rounded-2xl m-8 p-8 w-96 bg-white shadow-2xl hidden flex-col justify-between">
+    <div>
+      <div class="w-full flex justify-between pb-2">
+        <p class="block text-xl font-bold leading-9">Verkeer en vervoer</p>
+        <p class="block text-xl font-bold text-slate-200 leading-9">3/7</p>
+      </div>
+      <p class="text-xl leading-9">Dit zijn de luchthavens in uw buurt gesorteerd op hoogte van de schadekosten.</p>
+      <div class="mt-6">
+        <p class="text-xl">Bedrijfsnaam 1</p>
+        <div class="mt-1 mb-2 w-full h-2 bg-slate-200 rounded-full overflow-hidden">
+          <div class="w-2/3 h-2 bg-red-500"></div>
+        </div>
+        <p class="text-xl">Bedrijfsnaam 2</p>
+        <div class="mt-1 mb-2 w-full h-2 bg-slate-200 rounded-full overflow-hidden">
+          <div class="w-1/3 h-2 bg-red-500"></div>
+        </div>
+        <p class="text-xl">Bedrijfsnaam 3</p>
+        <div class="mt-1 mb-2 w-full h-2 bg-slate-200 rounded-full overflow-hidden">
+          <div class="w-1/4 h-2 bg-red-500"></div>
+        </div>
+      </div>
+    </div>
+    <div class="flex justify-between items-center">
+      <button id="card33prev" class="p-4 bg-[#DEFF9C] rounded-full hover:brightness-90 transition ease-in-out duration-100">
+        <svg xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-arrow-left"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M5 12l14 0" /><path d="M5 12l6 6" /><path d="M5 12l6 -6" /></svg>
+      </button>
+      <div class="flex gap-4">
+        <div class="w-2 h-2 rounded-full bg-slate-200">
+        </div>
+        <div class="w-2 h-2 rounded-full bg-slate-200">
+        </div>
+        <div class="w-2 h-2 rounded-full bg-slate-200">
+        </div>
+        <div class="w-2 h-2 rounded-full bg-slate-900">
+        </div>
+      </div>
+      <button id="card33next" class="p-4 bg-[#DEFF9C] rounded-full hover:brightness-90 transition ease-in-out duration-100">
         <svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-arrow-right"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M5 12l14 0" /><path d="M13 18l6 -6" /><path d="M13 6l6 6" /></svg>      </button>
     </div>
   </div>

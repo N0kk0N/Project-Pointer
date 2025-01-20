@@ -15,6 +15,7 @@ export default {
       },
       width: {
         'ierWidth': '60%',
+        'vevWidth': '17%',
       }
     }
   },
