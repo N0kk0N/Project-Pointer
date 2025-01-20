@@ -100,6 +100,16 @@
 
       // Voeg deze regel toe om de markers te tonen
       toonAlleMarkers();
+
+      map.on("zoomstart", () => {
+        if (buurtMarkersLayer) {
+          map.removeLayer(buurtMarkersLayer);
+        }
+      });
+
+      map.on("zoomend", () => {
+        toonAlleMarkers(selectedCategory);
+      });
     }
   });
 
@@ -356,6 +366,14 @@
           map.flyTo([ijmuidenLat, ijmuidenLon], zoomLevel, {
             animate: true,
             duration: 1.5, // De duur van de animatie in seconden
+            start: () => {
+              if (buurtMarkersLayer) {
+                map.removeLayer(buurtMarkersLayer);
+              }
+            },
+            end: () => {
+              toonAlleMarkers(selectedCategory);
+            },
           });
         });
 
