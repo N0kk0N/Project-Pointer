@@ -1,6 +1,8 @@
 <script>
   import { onMount } from "svelte";
   import "leaflet/dist/leaflet.css";
+  import { Chart, registerables } from "chart.js";
+  Chart.register(...registerables);
 
   import geojsonData from "../data/bedrijven.json";
   import stoffenData from "../data/stoffen.json"; // NIEUW JSON-BESTAND IMPORTEREN
@@ -20,6 +22,7 @@
 
   // Array van sectoren
   const categoryArray = [
+    "Alle sectoren",
     "Industrie, Energie en Raffinaderijen",
     "Verkeer en vervoer",
     "Afval, riolering, waterzuivering",
@@ -27,6 +30,16 @@
     "Landbouw"
   ];
   let selectedCategory = categoryArray[0]; // Standaard geselecteerde sector
+
+  // Kleuren toewijzen aan sectoren
+  const sectorKleuren = {
+    "Industrie, Energie en Raffinaderijen": "#1E90FF",
+    "Verkeer en vervoer": "#4D00FF",
+    "Afval, riolering, waterzuivering": "#00D9AD",
+    "Handel/Diensten/Overheid en Bouw": "#DEFF9C",
+    "Landbouw": "#FF8800", // Zelfgekozen kleur voor Landbouw
+    "Overig": "#8A2BE2" // Zelfgekozen kleur voor overige sectoren
+  };
 
   // INITIEERT DE KAART NA HET MONTEREN VAN DE COMPONENT
   onMount(async () => {
@@ -108,22 +121,19 @@
       .slice(0, 3);
   }
 
-  // FUNCTIE OM LOCATIES IN DE BUURT VAN DE OPGEZOCHTE POSTCODE TE TONEN
-  function toonMarkersInDeBuurt() {
+  // FUNCTIE OM ALLE LOCATIES TE TONEN
+  function toonAlleMarkers() {
     const L = window.L;
 
     if (buurtMarkersLayer) {
-      map.removeLayer(buurtMarkersLayer); // Verwijder bestaande buurtmarkers
+      map.removeLayer(buurtMarkersLayer); // Verwijder bestaande markers
     }
 
-    const buurtStraal = 25000; // 25 KM straal
     buurtMarkersLayer = L.layerGroup();
 
     const maxSchadekosten = Math.max(
       ...geojsonData.features.map((feature) => feature.properties.schadekosten_2022)
     );
-
-    const boundsArray = [];
 
     geojsonData.features.forEach(feature => {
       const lat = feature.geometry.coordinates[1];
@@ -131,48 +141,99 @@
       const sector = feature.properties.aangepaste_sector;
 
       // Filter op de geselecteerde sector
-      if (sector !== selectedCategory) {
+      if (selectedCategory !== "Alle sectoren" && sector !== selectedCategory) {
         return;
       }
 
-      const afstand = L.latLng(currentLat, currentLon).distanceTo([lat, lon]);
+      const schadekosten = feature.properties.schadekosten_2022;
+      const minRadius = 5;
+      const maxRadius = 20;
+      const radius = (schadekosten / maxSchadekosten) * (maxRadius - minRadius) + minRadius;
 
-      if (afstand <= buurtStraal) {
-        const schadekosten = feature.properties.schadekosten_2022;
-        const minRadius = 5;
-        const maxRadius = 20;
-        const radius = (schadekosten / maxSchadekosten) * (maxRadius - minRadius) + minRadius;
+      const top3Uitstoot = getTop3UitstootPerBedrijf(feature.properties.bedrijf);
 
-        const top3Uitstoot = getTop3UitstootPerBedrijf(feature.properties.bedrijf);
+      const popupContent = `
+        <div class="popup-content">
+          <h3>${feature.properties.bedrijf}</h3>
+          <p><strong>Sector:</strong> ${sector}</p>
+          <p><strong>Schadekosten 2022:</strong> €${feature.properties.schadekosten_2022.toLocaleString('nl-NL')}</p>
+          <p><strong>Uitstoot (Top 3):</strong></p>
+          ${top3Uitstoot.length > 0 ? `<canvas id="chart-${feature.properties.bedrijf.replace(/\s+/g, '-')}" width="200" height="200"></canvas>` : '<p>Geen gegevens gevonden</p>'}
+        </div>
+      `;
 
-        const marker = L.circleMarker([lat, lon], {
-          radius: radius,
-          fillColor: "#00D9AD",
-          color: "#00D9AD",
-          weight: 0,
-          opacity: 1,
-          fillOpacity: 0.7,
-        }).bindPopup(`
-          <b>${feature.properties.bedrijf}</b><br>
-          Sector: ${sector}<br>
-          Schadekosten 2022: €${feature.properties.schadekosten_2022.toLocaleString('nl-NL')}<br>
-          Uitstoot (Top 3):
-          <ul>
-            ${top3Uitstoot.length > 0 ? 
-              top3Uitstoot.map(stof => `<li>${stof.Stof}: ${stof.Hoeveelheid.toLocaleString('nl-NL')} ${stof.Eenheid}</li>`).join('') 
-              : 
-              `<li>Geen gegevens aanwezig</li>`
-            }
-          </ul>
-        `);
+      const marker = L.circleMarker([lat, lon], {
+        radius: radius,
+        fillColor: sectorKleuren[sector] || "#8A2BE2", // Gebruik de sector kleur of standaard kleur
+        color: sectorKleuren[sector] || "#8A2BE2", // Gebruik de sector kleur of standaard kleur
+        weight: 0,
+        opacity: 1,
+        fillOpacity: 0.7,
+      }).bindPopup(popupContent, { maxWidth: 'auto', maxHeight: 'auto' });
 
-        buurtMarkersLayer.addLayer(marker);
+      buurtMarkersLayer.addLayer(marker);
 
-        boundsArray.push(marker.getLatLng());
+      // Create the chart after the popup has been opened, if there is data
+      if (top3Uitstoot.length > 0) {
+        marker.on('popupopen', () => {
+          createChart(`chart-${feature.properties.bedrijf.replace(/\s+/g, '-')}`, top3Uitstoot);
+        });
       }
     });
 
     buurtMarkersLayer.addTo(map);
+  }
+
+  // FUNCTIE OM EEN TAARTGRAFIEK TE MAKEN VAN DE TOP 3 UITSTOOT
+  function createChart(chartId, data) {
+    const ctx = document.getElementById(chartId).getContext('2d');
+    const labels = data.map(item => item.Stof);
+    const values = data.map(item => item.Hoeveelheid);
+    const eenheden = data.map(item => item.Eenheid);
+
+    // Definieer een reeks kleuren om te gebruiken in de pie chart
+    const backgroundColors = [
+      '#FF6384', '#36A2EB', '#FFCE56', '#4BC0C0', '#9966FF', '#FF9F40',
+      '#FF6384', '#36A2EB', '#FFCE56', '#4BC0C0', '#9966FF', '#FF9F40'
+    ];
+
+    // Minimum waardepercentage om weer te geven
+    const minPercentage = 2;
+
+    // Bereken totale hoeveelheid
+    const total = values.reduce((a, b) => a + b, 0);
+
+    // Bereken percentage voor elke waarde en zorg ervoor dat elke waarde ten minste het minimum percentage heeft
+    const adjustedValues = values.map(value => {
+      const percentage = (value / total) * 100;
+      return percentage < minPercentage ? (minPercentage / 100) * total : value;
+    });
+
+    new Chart(ctx, {
+      type: 'pie',
+      data: {
+        labels: labels,
+        datasets: [{
+          label: 'Uitstoot',
+          data: adjustedValues,
+          backgroundColor: backgroundColors.slice(0, labels.length), // Gebruik alleen zoveel kleuren als nodig
+          hoverBackgroundColor: backgroundColors.slice(0, labels.length), // Gebruik alleen zoveel kleuren als nodig
+        }]
+      },
+      options: {
+        responsive: true,
+        plugins: {
+          tooltip: {
+            callbacks: {
+              label: function(tooltipItem) {
+                const percentage = ((values[tooltipItem.dataIndex] / total) * 100).toFixed(2);
+                return `${values[tooltipItem.dataIndex].toLocaleString('nl-NL')} ${eenheden[tooltipItem.dataIndex]} (${percentage}%)`;
+              }
+            }
+          }
+        }
+      }
+    });
   }
 
   // ASYNCHRONISCHE FUNCTIE OM LOCATIE VAN POSTCODE OP TE HOGEN EN MARKERS TE TONEN
@@ -210,7 +271,7 @@
         currentLat = lat;
         currentLon = lon;
 
-        toonMarkersInDeBuurt();
+        toonAlleMarkers();
       } else {
         alert("Geen locatie gevonden voor de ingevoerde postcode.");
       }
@@ -267,6 +328,11 @@
       on:keydown={handleKeyPress}
     />
     <button on:click={zoekPostcode} class="zoek-button">Zoek</button>
+    <select bind:value={selectedCategory} on:change={toonAlleMarkers}>
+      {#each categoryArray as category}
+        <option value={category}>{category}</option>
+      {/each}
+    </select>
   </div>
 
   <!-- KAART WEERGAVE -->
@@ -310,5 +376,36 @@
 
   .zoek-button:hover {
     background-color: #0056b3;
+  }
+
+  .popup-content {
+    font-family: Arial, sans-serif;
+    text-align: left;
+    max-width: 300px; /* Maximale breedte van de popup */
+    max-height: 300px; /* Maximale hoogte van de popup */
+    overflow-y: auto; /* Scrollbare inhoud als deze groter is dan de popup */
+  }
+
+  .popup-content h3 {
+    margin: 0;
+    font-size: 16px;
+    color: #333;
+  }
+
+  .popup-content p {
+    margin: 5px 0;
+    font-size: 14px;
+    color: #555;
+  }
+
+  .popup-content ul {
+    list-style-type: disc;
+    padding-left: 20px;
+    margin: 5px 0;
+  }
+
+  .popup-content li {
+    font-size: 14px;
+    color: #555;
   }
 </style>
