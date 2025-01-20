@@ -19,6 +19,8 @@ export default {
         'arwWidth': '8%',
         'hdoebWidth': '10%',
         'lWidth': '5%',
+        '1/10': '10%',
+        '1/20': '5%',
       }
     }
   },

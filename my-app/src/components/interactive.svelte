@@ -32,6 +32,38 @@
   const rotterdamLon = 4.47917;
   const rotterdamZoomLevel = 10; // Stel het gewenste zoomniveau in voor Rotterdam
 
+  const schipholLat = 52.3105;
+  const schipholLon = 4.7683;
+  const schipholZoomLevel = 12; // Stel het gewenste zoomniveau in
+
+  const deKooyLat = 52.9234;
+  const deKooyLon = 4.7806;
+  const deKooyZoomLevel = 12; // Stel het gewenste zoomniveau in
+
+  const amsterdamLat = 52.3700;  // Iets verhoogd
+const amsterdamLon = 4.8900;   // Iets verlaagd
+const amsterdamZoomLevel = 12; // Stel het gewenste zoomniveau in
+
+  const berkenwoudeLat = 51.9375;
+  const berkenwoudeLon = 4.7355;
+  const berkenwoudeZoomLevel = 12; // Stel het gewenste zoomniveau in
+
+  const veendamLat = 53.1061;
+  const veendamLon = 6.8797;
+  const veendamZoomLevel = 12; // Stel het gewenste zoomniveau in
+
+  const rotterdamHavenLat = 51.9526;  // Aangepast naar het uiterste puntje van de haven
+const rotterdamHavenLon = 4.0559;   // Aangepast naar het uiterste puntje van de haven
+const rotterdamHavenZoomLevel = 12; // Stel het gewenste zoomniveau in
+
+  const kapelleLat = 51.4867;
+  const kapelleLon = 3.9622;
+  const kapelleZoomLevel = 12; // Stel het gewenste zoomniveau in
+
+  const luttelgeestLat = 52.7425;
+  const luttelgeestLon = 5.8322;
+  const luttelgeestZoomLevel = 12; // Stel het gewenste zoomniveau in
+
   // Array van sectoren
   const categoryArray = [
     "Alle sectoren",
@@ -448,6 +480,15 @@
         card23next.addEventListener("click", () => {
           card23.classList.replace("flex", "hidden");
           card3.classList.replace("hidden", "flex");
+
+          // Verander de geselecteerde categorie naar "Verkeer en vervoer"
+          selectedCategory = categoryArray[2]; // Set to "Verkeer en vervoer"
+          toonAlleMarkers(selectedCategory);
+
+          map.flyTo([defaultLat, defaultLon], defaultZoomLevel, {
+            animate: true,
+            duration: 1.5, // De duur van de animatie in seconden
+          });
         });
 
         // card 3 | algemeen
@@ -455,12 +496,26 @@
         card3prev.addEventListener("click", () => {
           card3.classList.replace("flex", "hidden");
           card23.classList.replace("hidden", "flex");
+
+          // Verander de geselecteerde categorie terug naar de vorige categorie
+          selectedCategory = categoryArray[1]; // Terug naar "Industrie, Energie en Raffinaderijen"
+          toonAlleMarkers(selectedCategory);
+
+          map.flyTo([currentLat, currentLon], 11, {
+            animate: true,
+            duration: 1.5, // De duur van de animatie in seconden
+          });
         });
 
         const card3next = document.getElementById("card3next");
         card3next.addEventListener("click", () => {
           card3.classList.replace("flex", "hidden");
           card31.classList.replace("hidden", "flex");
+
+          map.flyTo([schipholLat, schipholLon], 12, {
+            animate: true,
+            duration: 1.5, // De duur van de animatie in seconden
+          });
         });
 
         // card 3.1 | ergste
@@ -468,12 +523,21 @@
         card31prev.addEventListener("click", () => {
           card31.classList.replace("flex", "hidden");
           card3.classList.replace("hidden", "flex");
+
+          map.flyTo([defaultLat, defaultLon], defaultZoomLevel, {
+            animate: true,
+            duration: 1.5, // De duur van de animatie in seconden
+          });
         });
 
         const card31next = document.getElementById("card31next");
         card31next.addEventListener("click", () => {
           card31.classList.replace("flex", "hidden");
           card32.classList.replace("hidden", "flex");
+          map.flyTo([deKooyLat, deKooyLon], 12, {
+            animate: true,
+            duration: 1.5, // De duur van de animatie in seconden
+          });
         });
 
         // card 3.2 | interessant
@@ -481,12 +545,22 @@
         card32prev.addEventListener("click", () => {
           card32.classList.replace("flex", "hidden");
           card31.classList.replace("hidden", "flex");
+
+          map.flyTo([schipholLat, schipholLon], 12, {
+            animate: true,
+            duration: 1.5, // De duur van de animatie in seconden
+          });
         });
 
         const card32next = document.getElementById("card32next");
         card32next.addEventListener("click", () => {
           card32.classList.replace("flex", "hidden");
           card33.classList.replace("hidden", "flex");
+
+          map.flyTo([currentLat, currentLon], 11, {
+            animate: true,
+            duration: 1.5, // De duur van de animatie in seconden
+          });
         });
 
         // card 3.3 | eigen locatie
@@ -494,12 +568,25 @@
         card33prev.addEventListener("click", () => {
           card33.classList.replace("flex", "hidden");
           card32.classList.replace("hidden", "flex");
+
+          map.flyTo([deKooyLat, deKooyLon], 12, {
+            animate: true,
+            duration: 1.5, // De duur van de animatie in seconden
+          });
         });
 
         const card33next = document.getElementById("card33next");
         card33next.addEventListener("click", () => {
           card33.classList.replace("flex", "hidden");
           card4.classList.replace("hidden", "flex");
+
+          selectedCategory = categoryArray[3];
+          toonAlleMarkers(selectedCategory);
+
+          map.flyTo([defaultLat, defaultLon], defaultZoomLevel, {
+            animate: true,
+            duration: 1.5, // De duur van de animatie in seconden
+          });
         });
 
         // card 4 | algemeen
@@ -507,12 +594,25 @@
         card4prev.addEventListener("click", () => {
           card4.classList.replace("flex", "hidden");
           card33.classList.replace("hidden", "flex");
+
+          selectedCategory = categoryArray[2];
+          toonAlleMarkers(selectedCategory);
+
+          map.flyTo([currentLat, currentLon], 11, {
+            animate: true,
+            duration: 1.5, // De duur van de animatie in seconden
+          });
         });
 
         const card4next = document.getElementById("card4next");
         card4next.addEventListener("click", () => {
           card4.classList.replace("flex", "hidden");
           card41.classList.replace("hidden", "flex");
+
+          map.flyTo([amsterdamLat, amsterdamLon], 12, {
+            animate: true,
+            duration: 1.5, // De duur van de animatie in seconden
+          });
         });
 
         // card 4.1 | ergste
@@ -520,12 +620,22 @@
         card41prev.addEventListener("click", () => {
           card41.classList.replace("flex", "hidden");
           card4.classList.replace("hidden", "flex");
+
+          map.flyTo([defaultLat, defaultLon], defaultZoomLevel, {
+            animate: true,
+            duration: 1.5, // De duur van de animatie in seconden
+          });
         });
 
         const card41next = document.getElementById("card41next");
         card41next.addEventListener("click", () => {
           card41.classList.replace("flex", "hidden");
           card42.classList.replace("hidden", "flex");
+
+          map.flyTo([berkenwoudeLat, berkenwoudeLon], 12, {
+            animate: true,
+            duration: 1.5, // De duur van de animatie in seconden
+          });
         });
 
         // card 4.2 | interessant
@@ -533,25 +643,48 @@
         card42prev.addEventListener("click", () => {
           card42.classList.replace("flex", "hidden");
           card41.classList.replace("hidden", "flex");
+
+          map.flyTo([amsterdamLat, amsterdamLon], 12, {
+            animate: true,
+            duration: 1.5, // De duur van de animatie in seconden
+          });
         });
 
         const card42next = document.getElementById("card42next");
         card42next.addEventListener("click", () => {
           card42.classList.replace("flex", "hidden");
           card43.classList.replace("hidden", "flex");
+
+          map.flyTo([currentLat, currentLon], 11, {
+            animate: true,
+            duration: 1.5, // De duur van de animatie in seconden
+          });
         });
 
-        // card 4.3 | interessant
+        // card 4.3 | eigen locatie
         const card43prev = document.getElementById("card43prev");
         card43prev.addEventListener("click", () => {
           card43.classList.replace("flex", "hidden");
           card42.classList.replace("hidden", "flex");
+
+          map.flyTo([berkenwoudeLat, berkenwoudeLon], 12, {
+            animate: true,
+            duration: 1.5, // De duur van de animatie in seconden
+          });
         });
 
         const card43next = document.getElementById("card43next");
         card43next.addEventListener("click", () => {
           card43.classList.replace("flex", "hidden");
           card5.classList.replace("hidden", "flex");
+
+          selectedCategory = categoryArray[4];
+          toonAlleMarkers(selectedCategory);
+
+          map.flyTo([defaultLat, defaultLon], defaultZoomLevel, {
+            animate: true,
+            duration: 1.5, // De duur van de animatie in seconden
+          });
         });
 
         // card 5 | algemeen
@@ -559,12 +692,25 @@
         card5prev.addEventListener("click", () => {
           card5.classList.replace("flex", "hidden");
           card43.classList.replace("hidden", "flex");
+
+          selectedCategory = categoryArray[3];
+          toonAlleMarkers(selectedCategory);
+
+          map.flyTo([currentLat, currentLon], 11, {
+            animate: true,
+            duration: 1.5, // De duur van de animatie in seconden
+          });
         });
 
         const card5next = document.getElementById("card5next");
         card5next.addEventListener("click", () => {
           card5.classList.replace("flex", "hidden");
           card51.classList.replace("hidden", "flex");
+
+          map.flyTo([veendamLat, veendamLon], 12, {
+            animate: true,
+            duration: 1.5, // De duur van de animatie in seconden
+          });
         });
 
         // card 5.1 | ergste
@@ -572,12 +718,22 @@
         card51prev.addEventListener("click", () => {
           card51.classList.replace("flex", "hidden");
           card5.classList.replace("hidden", "flex");
+
+          map.flyTo([defaultLat, defaultLon], defaultZoomLevel, {
+            animate: true,
+            duration: 1.5, // De duur van de animatie in seconden
+          });
         });
 
         const card51next = document.getElementById("card51next");
         card51next.addEventListener("click", () => {
           card51.classList.replace("flex", "hidden");
           card52.classList.replace("hidden", "flex");
+
+          map.flyTo([rotterdamHavenLat, rotterdamHavenLon], 12, {
+            animate: true,
+            duration: 1.5, // De duur van de animatie in seconden
+          });
         });
 
         // card 5.2 | interessant
@@ -585,12 +741,22 @@
         card52prev.addEventListener("click", () => {
           card52.classList.replace("flex", "hidden");
           card51.classList.replace("hidden", "flex");
+
+          map.flyTo([veendamLat, veendamLon], 12, {
+            animate: true,
+            duration: 1.5, // De duur van de animatie in seconden
+          });
         });
 
         const card52next = document.getElementById("card52next");
         card52next.addEventListener("click", () => {
           card52.classList.replace("flex", "hidden");
           card53.classList.replace("hidden", "flex");
+
+          map.flyTo([currentLat, currentLon], 11, {
+            animate: true,
+            duration: 1.5, // De duur van de animatie in seconden
+          });
         });
 
         // card 5.3 | eigen locatie
@@ -598,12 +764,25 @@
         card53prev.addEventListener("click", () => {
           card53.classList.replace("flex", "hidden");
           card52.classList.replace("hidden", "flex");
+
+          map.flyTo([rotterdamHavenLat, rotterdamHavenLon], 12, {
+            animate: true,
+            duration: 1.5, // De duur van de animatie in seconden
+          });
         });
 
         const card53next = document.getElementById("card53next");
         card53next.addEventListener("click", () => {
           card53.classList.replace("flex", "hidden");
           card6.classList.replace("hidden", "flex");
+
+          selectedCategory = categoryArray[5];
+          toonAlleMarkers(selectedCategory);
+
+          map.flyTo([defaultLat, defaultLon], defaultZoomLevel, {
+            animate: true,
+            duration: 1.5, // De duur van de animatie in seconden
+          });
         });
 
         // card 6 | algemeen
@@ -611,12 +790,25 @@
         card6prev.addEventListener("click", () => {
           card6.classList.replace("flex", "hidden");
           card53.classList.replace("hidden", "flex");
+
+          selectedCategory = categoryArray[4];
+          toonAlleMarkers(selectedCategory);
+
+          map.flyTo([currentLat, currentLon], 11, {
+            animate: true,
+            duration: 1.5, // De duur van de animatie in seconden
+          });
         });
 
         const card6next = document.getElementById("card6next");
         card6next.addEventListener("click", () => {
           card6.classList.replace("flex", "hidden");
           card61.classList.replace("hidden", "flex");
+
+          map.flyTo([kapelleLat, kapelleLon], 12, {
+            animate: true,
+            duration: 1.5, // De duur van de animatie in seconden
+          });
         });
 
         // card 6.1 | ergste
@@ -624,12 +816,22 @@
         card61prev.addEventListener("click", () => {
           card61.classList.replace("flex", "hidden");
           card6.classList.replace("hidden", "flex");
+
+          map.flyTo([defaultLat, defaultLon], defaultZoomLevel, {
+            animate: true,
+            duration: 1.5, // De duur van de animatie in seconden
+          });
         });
 
         const card61next = document.getElementById("card61next");
         card61next.addEventListener("click", () => {
           card61.classList.replace("flex", "hidden");
           card62.classList.replace("hidden", "flex");
+
+          map.flyTo([luttelgeestLat, luttelgeestLon], 12, {
+            animate: true,
+            duration: 1.5, // De duur van de animatie in seconden
+          });
         });
 
         // card 6.2 | interessant
@@ -637,12 +839,22 @@
         card62prev.addEventListener("click", () => {
           card62.classList.replace("flex", "hidden");
           card61.classList.replace("hidden", "flex");
+
+          map.flyTo([kapelleLat, kapelleLon], 12, {
+            animate: true,
+            duration: 1.5, // De duur van de animatie in seconden
+          });
         });
 
         const card62next = document.getElementById("card62next");
         card62next.addEventListener("click", () => {
           card62.classList.replace("flex", "hidden");
           card63.classList.replace("hidden", "flex");
+
+          map.flyTo([defaultLat, defaultLon], defaultZoomLevel, {
+            animate: true,
+            duration: 1.5, // De duur van de animatie in seconden
+          });
         });
 
         // card 6.3 | eigen locatie
@@ -650,12 +862,25 @@
         card63prev.addEventListener("click", () => {
           card63.classList.replace("flex", "hidden");
           card62.classList.replace("hidden", "flex");
+
+          map.flyTo([luttelgeestLat, luttelgeestLon], 12, {
+            animate: true,
+            duration: 1.5, // De duur van de animatie in seconden
+          });
         });
 
         const card63next = document.getElementById("card63next");
         card63next.addEventListener("click", () => {
           card63.classList.replace("flex", "hidden");
           card7.classList.replace("hidden", "flex");
+
+          selectedCategory = categoryArray[0];
+          toonAlleMarkers(selectedCategory);
+
+          map.flyTo([defaultLat, defaultLon], defaultZoomLevel, {
+            animate: true,
+            duration: 0, // De duur van de animatie in seconden
+          });
         });
 
         // card 7 | afronden
@@ -663,6 +888,14 @@
         card7prev.addEventListener("click", () => {
           card7.classList.replace("flex", "hidden");
           card63.classList.replace("hidden", "flex");
+
+          selectedCategory = categoryArray[5];
+          toonAlleMarkers(selectedCategory);
+
+          map.flyTo([defaultLat, defaultLon], defaultZoomLevel, {
+            animate: true,
+            duration: 0, // De duur van de animatie in seconden
+          });
         });
 
         const card7next = document.getElementById("card7next");
@@ -798,7 +1031,7 @@
       </div>
       <p class="text-xl leading-9">
         U ziet nu 443 bedrijven in de desbetreffende sector. Deze sector is
-        verantwoordelijk voor 39% van alle kosten voor luchtvervuiling in
+        verantwoordelijk voor 40% van alle kosten voor luchtvervuiling in
         Nederland.
       </p>
       <div
@@ -1090,15 +1323,15 @@
         <p class="block text-xl font-bold text-slate-200 leading-9">3/7</p>
       </div>
       <p class="text-xl leading-9">
-        In Nederland zijn er in totaal 17 verschillende vliegvelden. Deze sector
-        is verantwoordelijk voor 17% van de kosten die worden gemaakt voor
+        In Nederland zijn er in totaal 20 verschillende vliegvelden. Deze sector
+        is verantwoordelijk voor 10% van de kosten die worden gemaakt voor
         luchtvervuiling in Nederland.
       </p>
       <div
         class="w-full h-2 bg-slate-200 mt-8 rounded-full overflow-hidden flex justify-start"
       >
-        <div class="w-ierWidth bg-red-600"></div>
-        <div class="w-vevWidth bg-blue-600"></div>
+        <div class="w-2/5 bg-red-600"></div>
+        <div class="w-1/10 bg-blue-600"></div>
       </div>
     </div>
     <div class="flex justify-between items-center">
@@ -1385,15 +1618,15 @@
       </div>
       <p class="text-xl leading-9">
         De 348 installaties in Nederland die het land voorzien van
-        afval-verwerking, riolering en ook waterzuivering zijn goed voor 34% van
+        afval-verwerking, riolering en ook waterzuivering zijn goed voor 5% van
         de schadekosten voor luchtvervuiling in Nederland.
       </p>
       <div
         class="w-full h-2 bg-slate-200 mt-8 rounded-full overflow-hidden flex justify-start"
       >
-        <div class="w-ierWidth bg-red-600"></div>
-        <div class="w-vevWidth bg-blue-600"></div>
-        <div class="w-arwWidth bg-green-600"></div>
+        <div class="w-2/5 bg-red-600"></div>
+        <div class="w-1/10 bg-blue-600"></div>
+        <div class="w-1/20 bg-green-600"></div>
       </div>
     </div>
     <div class="flex justify-between items-center">
@@ -1686,15 +1919,15 @@
       </div>
       <p class="text-xl leading-9">
         Op de kaart ziet u nu 47 locaties staan die vallen binnen deze sector.
-        In totaal maakt dit 8% uit van de totale schadenkosten in Nederland.
+        In totaal maakt dit 5% uit van de totale schadenkosten in Nederland.
       </p>
       <div
         class="w-full h-2 bg-slate-200 mt-8 rounded-full overflow-hidden flex justify-start"
       >
-        <div class="w-ierWidth bg-red-600"></div>
-        <div class="w-vevWidth bg-blue-600"></div>
-        <div class="w-arwWidth bg-green-600"></div>
-        <div class="w-hdoebWidth bg-purple-600"></div>
+        <div class="w-2/5 bg-red-600"></div>
+        <div class="w-1/10 bg-blue-600"></div>
+        <div class="w-1/20 bg-green-600"></div>
+        <div class="w-1/20 bg-purple-600"></div>
       </div>
     </div>
     <div class="flex justify-between items-center">
@@ -1985,16 +2218,16 @@
       <p class="text-xl leading-9">
         Nu zoomen wij in op vijf vervuilende landbouwbedrijven. Deze zijn nu te
         zien op de kaart. De landbouw is een zeer vervuilende sector, goed voor
-        50% van de totale schadekosten.
+        40% van de totale schadekosten.
       </p>
       <div
         class="w-full h-2 bg-slate-200 mt-8 rounded-full overflow-hidden flex justify-start"
       >
-        <div class="w-ierWidth bg-red-600"></div>
-        <div class="w-vevWidth bg-blue-600"></div>
-        <div class="w-arwWidth bg-green-600"></div>
-        <div class="w-hdoebWidth bg-purple-600"></div>
-        <div class="w-lWidth bg-orange-600"></div>
+        <div class="w-2/5 bg-red-600"></div>
+        <div class="w-1/10 bg-blue-600"></div>
+        <div class="w-1/20 bg-green-600"></div>
+        <div class="w-1/20 bg-purple-600"></div>
+        <div class="w-2/5 bg-orange-600"></div>
       </div>
     </div>
     <div class="flex justify-between items-center">
