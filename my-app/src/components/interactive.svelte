@@ -423,6 +423,12 @@
         card22next.addEventListener("click", () => {
           card22.classList.replace("flex", "hidden");
           card23.classList.replace("hidden", "flex");
+
+          // Start de animatie om naar de eigen locatie te vliegen
+          map.flyTo([currentLat, currentLon], 11, {
+            animate: true,
+            duration: 1.5, // De duur van de animatie in seconden
+          });
         });
 
         // card 2.3 | eigen locatie
@@ -430,6 +436,12 @@
         card23prev.addEventListener("click", () => {
           card23.classList.replace("flex", "hidden");
           card22.classList.replace("hidden", "flex");
+
+          // Start de animatie om terug te vliegen naar de locatie van kaart 22 (bijv. Rotterdam)
+          map.flyTo([rotterdamLat, rotterdamLon], rotterdamZoomLevel, {
+            animate: true,
+            duration: 1.5, // De duur van de animatie in seconden
+          });
         });
 
         const card23next = document.getElementById("card23next");
