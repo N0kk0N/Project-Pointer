@@ -1,6 +1,8 @@
 <script>
   import { onMount } from "svelte";
   import "leaflet/dist/leaflet.css";
+  import { Chart, registerables } from "chart.js";
+  Chart.register(...registerables);
 
   import geojsonData from "../data/bedrijven.json";
   import stoffenData from "../data/stoffen.json"; // NIEUW JSON-BESTAND IMPORTEREN
@@ -150,6 +152,16 @@
 
       const top3Uitstoot = getTop3UitstootPerBedrijf(feature.properties.bedrijf);
 
+      const popupContent = `
+        <div class="popup-content">
+          <h3>${feature.properties.bedrijf}</h3>
+          <p><strong>Sector:</strong> ${sector}</p>
+          <p><strong>Schadekosten 2022:</strong> €${feature.properties.schadekosten_2022.toLocaleString('nl-NL')}</p>
+          <p><strong>Uitstoot (Top 3):</strong></p>
+          ${top3Uitstoot.length > 0 ? `<canvas id="chart-${feature.properties.bedrijf.replace(/\s+/g, '-')}" width="200" height="200"></canvas>` : '<p>Geen gegevens gevonden</p>'}
+        </div>
+      `;
+
       const marker = L.circleMarker([lat, lon], {
         radius: radius,
         fillColor: sectorKleuren[sector] || "#8A2BE2", // Gebruik de sector kleur of standaard kleur
@@ -157,26 +169,71 @@
         weight: 0,
         opacity: 1,
         fillOpacity: 0.7,
-      }).bindPopup(`
-        <div class="popup-content">
-          <h3>${feature.properties.bedrijf}</h3>
-          <p><strong>Sector:</strong> ${sector}</p>
-          <p><strong>Schadekosten 2022:</strong> €${feature.properties.schadekosten_2022.toLocaleString('nl-NL')}</p>
-          <p><strong>Uitstoot (Top 3):</strong></p>
-          <ul>
-            ${top3Uitstoot.length > 0 ? 
-              top3Uitstoot.map(stof => `<li>${stof.Stof}: ${stof.Hoeveelheid.toLocaleString('nl-NL')} ${stof.Eenheid}</li>`).join('') 
-              : 
-              `<li>Geen gegevens aanwezig</li>`
-            }
-          </ul>
-        </div>
-      `);
+      }).bindPopup(popupContent, { maxWidth: 'auto', maxHeight: 'auto' });
 
       buurtMarkersLayer.addLayer(marker);
+
+      // Create the chart after the popup has been opened, if there is data
+      if (top3Uitstoot.length > 0) {
+        marker.on('popupopen', () => {
+          createChart(`chart-${feature.properties.bedrijf.replace(/\s+/g, '-')}`, top3Uitstoot);
+        });
+      }
     });
 
     buurtMarkersLayer.addTo(map);
+  }
+
+  // FUNCTIE OM EEN TAARTGRAFIEK TE MAKEN VAN DE TOP 3 UITSTOOT
+  function createChart(chartId, data) {
+    const ctx = document.getElementById(chartId).getContext('2d');
+    const labels = data.map(item => item.Stof);
+    const values = data.map(item => item.Hoeveelheid);
+    const eenheden = data.map(item => item.Eenheid);
+
+    // Definieer een reeks kleuren om te gebruiken in de pie chart
+    const backgroundColors = [
+      '#FF6384', '#36A2EB', '#FFCE56', '#4BC0C0', '#9966FF', '#FF9F40',
+      '#FF6384', '#36A2EB', '#FFCE56', '#4BC0C0', '#9966FF', '#FF9F40'
+    ];
+
+    // Minimum waardepercentage om weer te geven
+    const minPercentage = 2;
+
+    // Bereken totale hoeveelheid
+    const total = values.reduce((a, b) => a + b, 0);
+
+    // Bereken percentage voor elke waarde en zorg ervoor dat elke waarde ten minste het minimum percentage heeft
+    const adjustedValues = values.map(value => {
+      const percentage = (value / total) * 100;
+      return percentage < minPercentage ? (minPercentage / 100) * total : value;
+    });
+
+    new Chart(ctx, {
+      type: 'pie',
+      data: {
+        labels: labels,
+        datasets: [{
+          label: 'Uitstoot',
+          data: adjustedValues,
+          backgroundColor: backgroundColors.slice(0, labels.length), // Gebruik alleen zoveel kleuren als nodig
+          hoverBackgroundColor: backgroundColors.slice(0, labels.length), // Gebruik alleen zoveel kleuren als nodig
+        }]
+      },
+      options: {
+        responsive: true,
+        plugins: {
+          tooltip: {
+            callbacks: {
+              label: function(tooltipItem) {
+                const percentage = ((values[tooltipItem.dataIndex] / total) * 100).toFixed(2);
+                return `${values[tooltipItem.dataIndex].toLocaleString('nl-NL')} ${eenheden[tooltipItem.dataIndex]} (${percentage}%)`;
+              }
+            }
+          }
+        }
+      }
+    });
   }
 
   // ASYNCHRONISCHE FUNCTIE OM LOCATIE VAN POSTCODE OP TE HOGEN EN MARKERS TE TONEN
@@ -324,6 +381,9 @@
   .popup-content {
     font-family: Arial, sans-serif;
     text-align: left;
+    max-width: 300px; /* Maximale breedte van de popup */
+    max-height: 300px; /* Maximale hoogte van de popup */
+    overflow-y: auto; /* Scrollbare inhoud als deze groter is dan de popup */
   }
 
   .popup-content h3 {
