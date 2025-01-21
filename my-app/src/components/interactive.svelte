@@ -349,10 +349,7 @@ const rotterdamHavenZoomLevel = 12; // Stel het gewenste zoomniveau in
           fillOpacity: 1,
           zIndexOffset: 1000,
         }).addTo(map);
-
-        // ZOOMT IN OP GEBRUIKER LOCATIE
-        // map.setView([lat, lon], 18);
-
+        
         currentLat = lat;
         currentLon = lon;
 
