@@ -40,9 +40,9 @@
   const deKooyLon = 4.7806;
   const deKooyZoomLevel = 12; // Stel het gewenste zoomniveau in
 
-  const amsterdamLat = 52.3700;  // Iets verhoogd
-const amsterdamLon = 4.8900;   // Iets verlaagd
-const amsterdamZoomLevel = 12; // Stel het gewenste zoomniveau in
+  const amsterdamLat = 52.37; // Iets verhoogd
+  const amsterdamLon = 4.89; // Iets verlaagd
+  const amsterdamZoomLevel = 12; // Stel het gewenste zoomniveau in
 
   const berkenwoudeLat = 51.9375;
   const berkenwoudeLon = 4.7355;
@@ -52,9 +52,9 @@ const amsterdamZoomLevel = 12; // Stel het gewenste zoomniveau in
   const veendamLon = 6.8797;
   const veendamZoomLevel = 12; // Stel het gewenste zoomniveau in
 
-  const rotterdamHavenLat = 51.9526;  // Aangepast naar het uiterste puntje van de haven
-const rotterdamHavenLon = 4.0559;   // Aangepast naar het uiterste puntje van de haven
-const rotterdamHavenZoomLevel = 12; // Stel het gewenste zoomniveau in
+  const rotterdamHavenLat = 51.9526; // Aangepast naar het uiterste puntje van de haven
+  const rotterdamHavenLon = 4.0559; // Aangepast naar het uiterste puntje van de haven
+  const rotterdamHavenZoomLevel = 12; // Stel het gewenste zoomniveau in
 
   const kapelleLat = 51.4867;
   const kapelleLon = 3.9622;
@@ -323,7 +323,6 @@ const rotterdamHavenZoomLevel = 12; // Stel het gewenste zoomniveau in
     if (!isValidPostcode(postcode)) {
       document.getElementById("zipcodeError").classList.remove("hidden");
       document.getElementById("postcode").classList.add("border-red-500");
-
       return;
     }
 
@@ -340,6 +339,7 @@ const rotterdamHavenZoomLevel = 12; // Stel het gewenste zoomniveau in
           map.removeLayer(map._purpleMarker); // Verwijder oudere marker
         }
 
+        // Plaats nieuwe marker op de kaart
         map._purpleMarker = L.circleMarker([lat, lon], {
           radius: 10,
           fillColor: "#4D00FF",
@@ -349,12 +349,220 @@ const rotterdamHavenZoomLevel = 12; // Stel het gewenste zoomniveau in
           fillOpacity: 1,
           zIndexOffset: 1000,
         }).addTo(map);
-        
+
         currentLat = lat;
         currentLon = lon;
 
         const cardOverlay = document.getElementById("cardOverlay");
         cardOverlay.classList.replace("block", "hidden");
+
+        // Wijzig de geselecteerde categorie en toon alleen markers van de sector "Industrie, Energie en Raffinaderijen"
+        selectedCategory = categoryArray[1]; // Set to "Industrie, Energie en Raffinaderijen"
+        toonAlleMarkers(selectedCategory);
+
+        // VIND DE 3 DICHTSTBIJZIJNDE BEDRIJVEN IN DE SECTOR "Industrie, Energie en Raffinaderijen"
+        const bedrijvenInSectorIndustrie = geojsonData.features.filter(
+          (feature) =>
+            feature.properties.aangepaste_sector ===
+            "Industrie, Energie en Raffinaderijen",
+        );
+
+        // Bereken de afstand tussen de huidige locatie en de bedrijven in de sector
+        const bedrijvenMetAfstandIndustrie = bedrijvenInSectorIndustrie.map(
+          (bedrijf) => ({
+            ...bedrijf,
+            afstand: calculateDistance(
+              lat,
+              lon,
+              bedrijf.geometry.coordinates[1],
+              bedrijf.geometry.coordinates[0],
+            ),
+          }),
+        );
+
+        // Sorteer de bedrijven op afstand
+        bedrijvenMetAfstandIndustrie.sort((a, b) => a.afstand - b.afstand);
+
+        // Selecteer de 3 dichtstbijzijnde bedrijven
+        const dichtsbijzijndeBedrijvenIndustrie =
+          bedrijvenMetAfstandIndustrie.slice(0, 3);
+
+        // Update de HTML met de bedrijfsnamen
+        document.querySelector(
+          "#card23 .mt-6 .text-xl:nth-of-type(1)",
+        ).textContent =
+          dichtsbijzijndeBedrijvenIndustrie[0]?.properties.bedrijf ||
+          "Geen gegevens";
+        document.querySelector(
+          "#card23 .mt-6 .text-xl:nth-of-type(2)",
+        ).textContent =
+          dichtsbijzijndeBedrijvenIndustrie[1]?.properties.bedrijf ||
+          "Geen gegevens";
+        document.querySelector(
+          "#card23 .mt-6 .text-xl:nth-of-type(3)",
+        ).textContent =
+          dichtsbijzijndeBedrijvenIndustrie[2]?.properties.bedrijf ||
+          "Geen gegevens";
+
+        // VIND DE 3 DICHTSTBIJZIJNDE BEDRIJVEN IN DE SECTOR "Verkeer en vervoer"
+        const bedrijvenInSectorVerkeer = geojsonData.features.filter(
+          (feature) =>
+            feature.properties.aangepaste_sector === "Verkeer en vervoer",
+        );
+
+        // Bereken de afstand tussen de huidige locatie en de bedrijven in de sector
+        const bedrijvenMetAfstandVerkeer = bedrijvenInSectorVerkeer.map(
+          (bedrijf) => ({
+            ...bedrijf,
+            afstand: calculateDistance(
+              lat,
+              lon,
+              bedrijf.geometry.coordinates[1],
+              bedrijf.geometry.coordinates[0],
+            ),
+          }),
+        );
+
+        // Sorteer de bedrijven op afstand
+        bedrijvenMetAfstandVerkeer.sort((a, b) => a.afstand - b.afstand);
+
+        // Selecteer de 3 dichtstbijzijnde bedrijven
+        const dichtsbijzijndeBedrijvenVerkeer =
+          bedrijvenMetAfstandVerkeer.slice(0, 3);
+
+        // Update de HTML met de bedrijfsnamen
+        document.querySelector(
+          "#card33 .mt-6 .text-xl:nth-of-type(1)",
+        ).textContent =
+          dichtsbijzijndeBedrijvenVerkeer[0]?.properties.bedrijf ||
+          "Geen gegevens";
+        document.querySelector(
+          "#card33 .mt-6 .text-xl:nth-of-type(2)",
+        ).textContent =
+          dichtsbijzijndeBedrijvenVerkeer[1]?.properties.bedrijf ||
+          "Geen gegevens";
+        document.querySelector(
+          "#card33 .mt-6 .text-xl:nth-of-type(3)",
+        ).textContent =
+          dichtsbijzijndeBedrijvenVerkeer[2]?.properties.bedrijf ||
+          "Geen gegevens";
+
+        // VIND DE 3 DICHTSTBIJZIJNDE BEDRIJVEN IN DE SECTOR "Afval, riolering, waterzuivering"
+        const bedrijvenInSectorAfval = geojsonData.features.filter(
+          (feature) =>
+            feature.properties.aangepaste_sector ===
+            "Afval, riolering, waterzuivering",
+        );
+
+        // Bereken de afstand tussen de huidige locatie en de bedrijven in de sector
+        const bedrijvenMetAfstandAfval = bedrijvenInSectorAfval.map(
+          (bedrijf) => ({
+            ...bedrijf,
+            afstand: calculateDistance(
+              lat,
+              lon,
+              bedrijf.geometry.coordinates[1],
+              bedrijf.geometry.coordinates[0],
+            ),
+          }),
+        );
+
+        // Sorteer de bedrijven op afstand
+        bedrijvenMetAfstandAfval.sort((a, b) => a.afstand - b.afstand);
+
+        // Selecteer de 3 dichtstbijzijnde bedrijven
+        const dichtsbijzijndeBedrijvenAfval = bedrijvenMetAfstandAfval.slice(
+          0,
+          3,
+        );
+
+        // Update de HTML met de bedrijfsnamen
+        document.querySelector(
+          "#card43 .mt-6 .text-xl:nth-of-type(1)",
+        ).textContent =
+          dichtsbijzijndeBedrijvenAfval[0]?.properties.bedrijf ||
+          "Geen gegevens";
+        document.querySelector(
+          "#card43 .mt-6 .text-xl:nth-of-type(2)",
+        ).textContent =
+          dichtsbijzijndeBedrijvenAfval[1]?.properties.bedrijf ||
+          "Geen gegevens";
+        document.querySelector(
+          "#card43 .mt-6 .text-xl:nth-of-type(3)",
+        ).textContent =
+          dichtsbijzijndeBedrijvenAfval[2]?.properties.bedrijf ||
+          "Geen gegevens";
+
+        // VIND DE 3 DICHTSTBIJZIJNDE BEDRIJVEN IN DE SECTOR "Handel/Diensten/Overheid en Bouw"
+        const bedrijvenInSectorHandel = geojsonData.features.filter(
+          (feature) =>
+            feature.properties.aangepaste_sector ===
+            "Handel/Diensten/Overheid en Bouw",
+        );
+
+        // Bereken de afstand tussen de huidige locatie en de bedrijven in de sector
+        const bedrijvenMetAfstandHandel = bedrijvenInSectorHandel.map(
+          (bedrijf) => ({
+            ...bedrijf,
+            afstand: calculateDistance(
+              lat,
+              lon,
+              bedrijf.geometry.coordinates[1],
+              bedrijf.geometry.coordinates[0],
+            ),
+          }),
+        );
+
+        // Sorteer de bedrijven op afstand
+        bedrijvenMetAfstandHandel.sort((a, b) => a.afstand - b.afstand);
+
+        // Selecteer de 3 dichtstbijzijnde bedrijven
+        const dichtsbijzijndeBedrijvenHandel = bedrijvenMetAfstandHandel.slice(
+          0,
+          3,
+        );
+
+        // Update de HTML met de bedrijfsnamen
+        document.querySelector(
+          "#card53 .mt-6 .text-xl:nth-of-type(1)",
+        ).textContent =
+          dichtsbijzijndeBedrijvenHandel[0]?.properties.bedrijf ||
+          "Geen gegevens";
+        document.querySelector(
+          "#card53 .mt-6 .text-xl:nth-of-type(2)",
+        ).textContent =
+          dichtsbijzijndeBedrijvenHandel[1]?.properties.bedrijf ||
+          "Geen gegevens";
+        document.querySelector(
+          "#card53 .mt-6 .text-xl:nth-of-type(3)",
+        ).textContent =
+          dichtsbijzijndeBedrijvenHandel[2]?.properties.bedrijf ||
+          "Geen gegevens";
+
+        // VIND DE 3 DICHTSTBIJZIJNDE BEDRIJVEN IN DE SECTOR "Landbouw"
+        const bedrijvenInSectorLandbouw = geojsonData.features.filter(
+          (feature) => feature.properties.aangepaste_sector === "Landbouw",
+        );
+
+        // Bereken de afstand tussen de huidige locatie en de bedrijven in de sector
+        const bedrijvenMetAfstandLandbouw = bedrijvenInSectorLandbouw.map(
+          (bedrijf) => ({
+            ...bedrijf,
+            afstand: calculateDistance(
+              lat,
+              lon,
+              bedrijf.geometry.coordinates[1],
+              bedrijf.geometry.coordinates[0],
+            ),
+          }),
+        );
+
+        // Sorteer de bedrijven op afstand
+        bedrijvenMetAfstandLandbouw.sort((a, b) => a.afstand - b.afstand);
+
+        // Selecteer de 3 dichtstbijzijnde bedrijven
+        const dichtsbijzijndeBedrijvenLandbouw =
+          bedrijvenMetAfstandLandbouw.slice(0, 3);
 
         // Wijzig de geselecteerde categorie en toon alleen markers van de sector "Industrie, Energie en Raffinaderijen"
         selectedCategory = categoryArray[1]; // Set to "Industrie, Energie en Raffinaderijen"
@@ -911,6 +1119,22 @@ const rotterdamHavenZoomLevel = 12; // Stel het gewenste zoomniveau in
       document.getElementById("zipcodeError").classList.remove("hidden");
       document.getElementById("postcode").classList.add("border-red-500");
     }
+  }
+
+  // FUNCTIE OM DE AFSTAND TUSSEN TWEE PUNTEN TE BEREKENEN
+  function calculateDistance(lat1, lon1, lat2, lon2) {
+    const R = 6371; // Aardstraal in kilometers
+    const dLat = ((lat2 - lat1) * Math.PI) / 180;
+    const dLon = ((lon2 - lon1) * Math.PI) / 180;
+    const a =
+      Math.sin(dLat / 2) * Math.sin(dLat / 2) +
+      Math.cos((lat1 * Math.PI) / 180) *
+        Math.cos((lat2 * Math.PI) / 180) *
+        Math.sin(dLon / 2) *
+        Math.sin(dLon / 2);
+    const c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1 - a));
+    const distance = R * c;
+    return distance;
   }
 
   // HANDLES KEYDOWN EVENT VOOR INZOOMEN MET CONTROL/META TOETS
