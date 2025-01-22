@@ -6,6 +6,13 @@ export default {
 
   theme: {
     extend: {
+      colors: {
+        industrie: '#1E90FF',
+        verkeer: '#4D00FF',
+        afval: '#00D9AD',
+        handel: '#C5E88B',
+        landbouw: '#FF8800'
+      },
       fontFamily: {
         'formula': ['titlefont', 'sans-serif'],
       },

@@ -1580,6 +1580,17 @@ function verwijderAlleMarkers() {
   }
 }
 
+function getColor(label) {
+    const colors = {
+      "Industrie, Energie en Raffinaderijen": "#1E90FF",
+      "Verkeer en vervoer": "#4D00FF",
+      "Afval, riolering, waterzuivering": "#00D9AD",
+      "Handel/Diensten/Overheid en Bouw": "#C5E88B",
+      "Landbouw": "#FF8800"
+    };
+    return colors[label] || "black";
+  }
+
 </script>
 
 <!-- HTML STRUCTUUR -->
@@ -3198,12 +3209,12 @@ function verwijderAlleMarkers() {
         ></button
       >
     </div>
-    <div id="filterSection" class="w-96 p-8 block">
+    <div id="filterSection" class="w-96 p-8 block bg-white-100">
       <div>
         <div class="w-full flex justify-between pb-2 gap-4">
-          <p class="block text-xl font-bold leading-9">Filters</p>
-          <button on:click={closeFilters}
-            ><svg
+          <p class="block text-xl font-bold leading-9" style="color: black">Filters</p>
+          <button on:click={closeFilters} class="text-black-500">
+            <svg
               xmlns="http://www.w3.org/2000/svg"
               width="24"
               height="24"
@@ -3214,11 +3225,12 @@ function verwijderAlleMarkers() {
               stroke-linecap="round"
               stroke-linejoin="round"
               class="icon icon-tabler icons-tabler-outline icon-tabler-x"
-              ><path stroke="none" d="M0 0h24v24H0z" fill="none" /><path
-                d="M18 6l-12 12"
-              /><path d="M6 6l12 12" /></svg
-            ></button
-          >
+            >
+              <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+              <path d="M18 6l-12 12" />
+              <path d="M6 6l12 12" />
+            </svg>
+          </button>
         </div>
         <div>
           {#each [
@@ -3229,18 +3241,18 @@ function verwijderAlleMarkers() {
             "Landbouw"
           ] as label}
             <div class="checkbox-container">
-              <label class="leading-9 text-lg">
+              <label class="leading-9 text-lg" style={`color: ${getColor(label)};`}>
                 <input
                   type="checkbox"
                   checked={selectedItems.includes(label)}
                   on:change={() => toggleItem(label)}
+                  class="mr-2"
                 />
                 {label}
               </label>
             </div>
           {/each}
         </div>
-
       </div>
     </div>
   </div>
