@@ -258,8 +258,8 @@
       ) {
         markerOptions = {
           radius: radius,
-          fillColor: "#FF5362", // Specifieke kleur voor Tata Steel
-          color: "#FF5362",
+          fillColor: "#FFD700", // Specifieke kleur voor Tata Steel
+          color: "#FFD700",
           weight: 0,
           opacity: 1,
           fillOpacity: 0.9,
@@ -273,8 +273,8 @@
       ) {
         markerOptions = {
           radius: radius,
-          fillColor: "#00D9AD", // Specifieke kleur voor Esso
-          color: "#00D9AD",
+          fillColor: "#FFD700", // Specifieke kleur voor Esso
+          color: "#FFD700",
           weight: 0,
           opacity: 1,
           fillOpacity: 0.9,
@@ -287,8 +287,8 @@
       ) {
         markerOptions = {
           radius: radius,
-          fillColor: "#FF9933", // Specifieke kleur voor Schiphol
-          color: "#FF9933",
+          fillColor: "#FFD700", // Specifieke kleur voor Schiphol
+          color: "#FFD700",
           weight: 0,
           opacity: 1,
           fillOpacity: 0.9,
@@ -301,8 +301,8 @@
       ) {
         markerOptions = {
           radius: radius,
-          fillColor: "#3399FF", // Specifieke kleur voor de Kooy
-          color: "#3399FF",
+          fillColor: "#FFD700", // Specifieke kleur voor de Kooy
+          color: "#FFD700",
           weight: 0,
           opacity: 1,
           fillOpacity: 0.9,
@@ -315,8 +315,8 @@
       ) {
         markerOptions = {
           radius: radius,
-          fillColor: "#66CC33", // Specifieke kleur voor Afval Energie Bedrijf
-          color: "#66CC33",
+          fillColor: "#FFD700", // Specifieke kleur voor Afval Energie Bedrijf
+          color: "#FFD700",
           weight: 0,
           opacity: 1,
           fillOpacity: 0.9,
@@ -329,8 +329,8 @@
       ) {
         markerOptions = {
           radius: radius,
-          fillColor: "#9933CC", // Specifieke kleur voor RWZI Berkenwoude
-          color: "#9933CC",
+          fillColor: "#FFD700", // Specifieke kleur voor RWZI Berkenwoude
+          color: "#FFD700",
           weight: 0,
           opacity: 1,
           fillOpacity: 0.9,
@@ -340,8 +340,8 @@
       if (feature.properties.bedrijf === "Nedmag BV" && highlightNedmag) {
         markerOptions = {
           radius: radius,
-          fillColor: "#CC3366", // Specifieke kleur voor Nedmag BV
-          color: "#CC3366",
+          fillColor: "#FFD700", // Specifieke kleur voor Nedmag BV
+          color: "#FFD700",
           weight: 0,
           opacity: 1,
           fillOpacity: 0.9,
@@ -351,8 +351,8 @@
       if (feature.properties.bedrijf === "Seasun BV" && highlightSeasun) {
         markerOptions = {
           radius: radius,
-          fillColor: "#33CCCC", // Specifieke kleur voor Seasun BV
-          color: "#33CCCC",
+          fillColor: "#FFD700", // Specifieke kleur voor Seasun BV
+          color: "#FFD700",
           weight: 0,
           opacity: 1,
           fillOpacity: 0.9,
@@ -365,8 +365,8 @@
       ) {
         markerOptions = {
           radius: radius,
-          fillColor: "#FF6600", // Specifieke kleur voor Leo Hoogweg BV
-          color: "#FF6600",
+          fillColor: "#FFD700", // Specifieke kleur voor Leo Hoogweg BV
+          color: "#FFD700",
           weight: 0,
           opacity: 1,
           fillOpacity: 0.9,
