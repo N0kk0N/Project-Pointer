@@ -7,6 +7,8 @@
   import geojsonData from "../data/bedrijven.json";
   import stoffenData from "../data/stoffen.json"; // NIEUW JSON-BESTAND IMPORTEREN
 
+  let zoomEnd = true;
+
   let map;
   let colorLayer, labelsLayer;
   let isZoomKeyPressed = false;
@@ -144,7 +146,12 @@
       });
 
       map.on("zoomend", () => {
-        toonAlleMarkers(selectedCategory);
+        console.log(zoomEnd); // Log the value of zoomEnd for debugging
+        if (zoomEnd) {
+          toonAlleMarkers(selectedCategory);
+        } else {
+          voegNieuweMarkersToe();
+        }
       });
     }
   });
@@ -1119,6 +1126,8 @@
         card7next.addEventListener("click", () => {
           card7.classList.replace("flex", "hidden");
           document.getElementById("cardExploration").classList.replace("hidden", "flex");
+          zoomEnd = false;
+          console.log(zoomEnd);
         });
 
         toonMarkersInDeBuurt();
@@ -1187,6 +1196,8 @@
   function skipTour() {
     cardOverlay.classList.replace("block", "hidden");
     document.getElementById("cardExploration").classList.replace("hidden", "flex");
+    zoomEnd = false;
+    console.log(zoomEnd);
   }
 
   function openFilters() {
