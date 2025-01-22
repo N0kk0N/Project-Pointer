@@ -90,71 +90,91 @@
   // INITIEERT DE KAART NA HET MONTEREN VAN DE COMPONENT
   onMount(async () => {
     if (typeof window !== "undefined") {
-      const L = await import("leaflet");
+        const L = await import("leaflet");
 
-      map = L.map("map", {
-        attributionControl: false,
-        minZoom: 2,
-        maxBounds: [
-          [-90, -180],
-          [90, 180],
-        ],
-      }).setView([currentLat, currentLon], 7);
+        map = L.map("map", {
+            attributionControl: false,
+            minZoom: 2,
+            maxBounds: [
+                [-90, -180],
+                [90, 180],
+            ],
+        }).setView([currentLat, currentLon], 7);
 
-      imageOverlay = L.imageOverlay("/data/QGisTest6.png", overlayBounds, {
-        opacity: 0.7,
-      }).addTo(map);
+        imageOverlay = L.imageOverlay("/data/QGisTest6.png", overlayBounds, {
+            opacity: 0.7,
+        }).addTo(map);
 
-      colorLayer = L.tileLayer(
-        "https://{s}.basemaps.cartocdn.com/rastertiles/voyager_nolabels/{z}/{x}/{y}{r}.png",
-        {
-          attribution: "© OpenStreetMap contributors © CARTO",
-          maxZoom: 18,
+        colorLayer = L.tileLayer(
+            "https://{s}.basemaps.cartocdn.com/rastertiles/voyager_nolabels/{z}/{x}/{y}{r}.png",
+            {
+                attribution: "© OpenStreetMap contributors © CARTO",
+                maxZoom: 18,
+            }
+        );
+
+        labelsLayer = L.tileLayer(
+            "https://{s}.basemaps.cartocdn.com/rastertiles/voyager_only_labels/{z}/{x}/{y}{r}.png",
+            {
+                attribution: "© OpenStreetMap contributors © CARTO",
+                maxZoom: 18,
+            }
+        );
+
+        L.control
+            .attribution({ position: "topright" })
+            .addAttribution("Tiles © OpenStreetMap contributors © CARTO")
+            .addTo(map);
+
+        colorLayer.addTo(map);
+        labelsLayer.addTo(map);
+
+        map.scrollWheelZoom.disable();
+
+        // Voeg een aangepaste control toe rechtsonderin de kaart
+        L.Control.InfoBox = L.Control.extend({
+            onAdd: function (map) {
+                var div = L.DomUtil.create('div', 'info-box');
+                div.innerHTML = 'Houd Ctrl/Command ingedrukt om te navigeren.';
+                div.style.backgroundColor = 'rgba(255, 255, 255, 0.8)'; // Witte achtergrond met transparantie
+                div.style.padding = '5px 10px';
+                div.style.color = '#333'; // Donkere grijze tekst
+                div.style.borderRadius = '5px';
+                div.style.fontSize = '12px';
+                return div;
+            },
+        });
+
+        L.control.infoBox = function (opts) {
+            return new L.Control.InfoBox(opts);
         }
-      );
 
-      labelsLayer = L.tileLayer(
-        "https://{s}.basemaps.cartocdn.com/rastertiles/voyager_only_labels/{z}/{x}/{y}{r}.png",
-        {
-          attribution: "© OpenStreetMap contributors © CARTO",
-          maxZoom: 18,
-        }
-      );
+        L.control.infoBox({ position: 'bottomright' }).addTo(map);
 
-      L.control
-        .attribution({ position: "topright" })
-        .addAttribution("Tiles © OpenStreetMap contributors © CARTO")
-        .addTo(map);
+        window.addEventListener("keydown", handleKeyDown);
+        window.addEventListener("keyup", handleKeyUp);
+        map.on("mouseover", handleMouseOver);
+        map.on("mouseout", handleMouseOut);
 
-      colorLayer.addTo(map);
-      labelsLayer.addTo(map);
+        // Voeg deze regel toe om de markers te tonen
+        toonAlleMarkers();
 
-      map.scrollWheelZoom.disable();
+        map.on("zoomstart", () => {
+            if (buurtMarkersLayer) {
+                map.removeLayer(buurtMarkersLayer);
+            }
+        });
 
-      window.addEventListener("keydown", handleKeyDown);
-      window.addEventListener("keyup", handleKeyUp);
-      map.on("mouseover", handleMouseOver);
-      map.on("mouseout", handleMouseOut);
-
-      // Voeg deze regel toe om de markers te tonen
-      toonAlleMarkers();
-
-      map.on("zoomstart", () => {
-        if (buurtMarkersLayer) {
-          map.removeLayer(buurtMarkersLayer);
-        }
-      });
-
-      map.on("zoomend", () => {
-        console.log(zoomEnd); // Log the value of zoomEnd for debugging
-        if (zoomEnd) {
-          toonAlleMarkers(selectedCategory);
-        } else {
-          voegNieuweMarkersToe();
-        }
-      });
+        map.on("zoomend", () => {
+            console.log(zoomEnd); // Log the value of zoomEnd for debugging
+            if (zoomEnd) {
+                toonAlleMarkers(selectedCategory);
+            } else {
+                voegNieuweMarkersToe();
+            }
+        });
     }
-  });
+});
 
   // FUNCTIE OM TE CONTROLEREN OF DE INGEVOERDE POSTCODE GELDIG IS (NEDERLANDSE POSTCODE)
   function isValidPostcode(postcode) {
