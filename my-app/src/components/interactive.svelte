@@ -180,7 +180,18 @@
       .slice(0, 3);
   }
 
-  // FUNCTIE OM ALLE LOCATIES TE TONEN
+  // Globale variabelen
+  let highlightIjmuiden = false;
+  let highlightEsso = false;
+  let highlightSchiphol = false;
+  let highlightDeKooy = false;
+  let highlightAfvalEnergieBedrijf = false;
+  let highlightRWZIBerkenwoude = false;
+  let highlightNedmag = false;
+  let highlightSeasun = false;
+  let highlightLeoHoogweg = false;
+
+  // PLOT MARKERS OP DE KAART
   function toonAlleMarkers(selectedCategory = "Alle sectoren") {
     const L = window.L;
 
@@ -222,18 +233,150 @@
         <p><strong>Sector:</strong> ${sector}</p>
         <p><strong>Schadekosten 2022:</strong> €${feature.properties.schadekosten_2022.toLocaleString("nl-NL")}</p>
         <p><strong>Uitstoot (Top 3):</strong></p>
-        ${top3Uitstoot.length > 0 ? `<canvas id="chart-${feature.properties.bedrijf.replace(/\s+/g, "-")}" width="200" height="200"></canvas>` : "<p>Geen gegevens gevonden</p>"}
+        ${
+          top3Uitstoot.length > 0
+            ? `<canvas id="chart-${feature.properties.bedrijf.replace(/\s+/g, "-")}" width="200" height="200"></canvas>`
+            : "<p>Geen gegevens gevonden</p>"
+        }
       </div>
     `;
 
-      const marker = L.circleMarker([lat, lon], {
+      // Marker opties, standaardkleur op basis van sector
+      let markerOptions = {
         radius: radius,
-        fillColor: sectorKleuren[sector] || "#8A2BE2", // Gebruik de sector kleur of standaard kleur
-        color: sectorKleuren[sector] || "#8A2BE2", // Gebruik de sector kleur of standaard kleur
+        fillColor: sectorKleuren[sector], // Gebruik de sector kleur of standaard kleur
+        color: sectorKleuren[sector],
         weight: 0,
         opacity: 1,
         fillOpacity: 0.7,
-      }).bindPopup(popupContent, { maxWidth: "auto", maxHeight: "auto" });
+      };
+
+      // Highlight specifieke bedrijven
+      if (
+        feature.properties.bedrijf === "Tata Steel IJmuiden BV" &&
+        highlightIjmuiden
+      ) {
+        markerOptions = {
+          radius: radius,
+          fillColor: "#FF5362", // Specifieke kleur voor Tata Steel
+          color: "#FF5362",
+          weight: 0,
+          opacity: 1,
+          fillOpacity: 0.9,
+        };
+      }
+
+      if (
+        feature.properties.bedrijf ===
+          "Esso Nederland BV (Raffinaderij Rotterdam)" &&
+        highlightEsso
+      ) {
+        markerOptions = {
+          radius: radius,
+          fillColor: "#00D9AD", // Specifieke kleur voor Esso
+          color: "#00D9AD",
+          weight: 0,
+          opacity: 1,
+          fillOpacity: 0.9,
+        };
+      }
+
+      if (
+        feature.properties.bedrijf === "Vliegveld Luchthaven Schiphol" &&
+        highlightSchiphol
+      ) {
+        markerOptions = {
+          radius: radius,
+          fillColor: "#FF9933", // Specifieke kleur voor Schiphol
+          color: "#FF9933",
+          weight: 0,
+          opacity: 1,
+          fillOpacity: 0.9,
+        };
+      }
+
+      if (
+        feature.properties.bedrijf === "Vliegveld de Kooy" &&
+        highlightDeKooy
+      ) {
+        markerOptions = {
+          radius: radius,
+          fillColor: "#3399FF", // Specifieke kleur voor de Kooy
+          color: "#3399FF",
+          weight: 0,
+          opacity: 1,
+          fillOpacity: 0.9,
+        };
+      }
+
+      if (
+        feature.properties.bedrijf === "Afval Energie Bedrijf (Amsterdam)" &&
+        highlightAfvalEnergieBedrijf
+      ) {
+        markerOptions = {
+          radius: radius,
+          fillColor: "#66CC33", // Specifieke kleur voor Afval Energie Bedrijf
+          color: "#66CC33",
+          weight: 0,
+          opacity: 1,
+          fillOpacity: 0.9,
+        };
+      }
+
+      if (
+        feature.properties.bedrijf === "RWZI Berkenwoude" &&
+        highlightRWZIBerkenwoude
+      ) {
+        markerOptions = {
+          radius: radius,
+          fillColor: "#9933CC", // Specifieke kleur voor RWZI Berkenwoude
+          color: "#9933CC",
+          weight: 0,
+          opacity: 1,
+          fillOpacity: 0.9,
+        };
+      }
+
+      if (feature.properties.bedrijf === "Nedmag BV" && highlightNedmag) {
+        markerOptions = {
+          radius: radius,
+          fillColor: "#CC3366", // Specifieke kleur voor Nedmag BV
+          color: "#CC3366",
+          weight: 0,
+          opacity: 1,
+          fillOpacity: 0.9,
+        };
+      }
+
+      if (feature.properties.bedrijf === "Seasun BV" && highlightSeasun) {
+        markerOptions = {
+          radius: radius,
+          fillColor: "#33CCCC", // Specifieke kleur voor Seasun BV
+          color: "#33CCCC",
+          weight: 0,
+          opacity: 1,
+          fillOpacity: 0.9,
+        };
+      }
+
+      if (
+        feature.properties.bedrijf === "Leo Hoogweg BV" &&
+        highlightLeoHoogweg
+      ) {
+        markerOptions = {
+          radius: radius,
+          fillColor: "#FF6600", // Specifieke kleur voor Leo Hoogweg BV
+          color: "#FF6600",
+          weight: 0,
+          opacity: 1,
+          fillOpacity: 0.9,
+        };
+      }
+
+      const marker = L.circleMarker([lat, lon], markerOptions).bindPopup(
+        popupContent,
+        { maxWidth: "auto", maxHeight: "auto" },
+      );
 
       buurtMarkersLayer.addLayer(marker);
 
@@ -598,35 +741,20 @@
         card2.classList.replace("hidden", "flex");
 
         // card 2 | algemeen
-        const card2next = document.getElementById("card2next");
-        card2next.addEventListener("click", () => {
-          card2.classList.replace("flex", "hidden");
-          card21.classList.replace("hidden", "flex");
+card2next.addEventListener("click", () => {
+  card2.classList.replace("flex", "hidden");
+  card21.classList.replace("hidden", "flex");
 
-          // Start de animatie om in te zoomen
-          map.flyTo([ijmuidenLat, ijmuidenLon], zoomLevel, {
-            animate: true,
-            duration: 1.5, // De duur van de animatie in seconden
-            start: () => {
-              if (buurtMarkersLayer) {
-                map.removeLayer(buurtMarkersLayer);
-              }
-            },
-             end: () => {
-              toonAlleMarkers(selectedCategory);
+  // Start de animatie om in te zoomen
+  map.flyTo([ijmuidenLat, ijmuidenLon], zoomLevel, {
+    animate: true,
+    duration: 1.5, // De duur van de animatie in seconden
+  });
 
-              // Zoek de marker voor IJmuiden en open de popup automatisch
-              const ijmuidenMarker = buurtMarkersLayer.getLayers().find(marker => {
-                const [markerLon, markerLat] = marker.getLatLng();
-                return markerLat === ijmuidenLat && markerLon === ijmuidenLon;
-              });
+  // Zet highlightIjmuiden naar true wanneer de knop wordt ingedrukt
+  highlightIjmuiden = true;
+});
 
-              if (ijmuidenMarker) {
-                ijmuidenMarker.openPopup();
-              }
-            },
-          });
-        });
 
         // card 2.1 | ergste
         const card21prev = document.getElementById("card21prev");
@@ -664,6 +792,8 @@
             animate: true,
             duration: 1.5, // De duur van de animatie in seconden
           });
+
+          highlightIjmuiden = true;
         });
 
         const card22next = document.getElementById("card22next");
