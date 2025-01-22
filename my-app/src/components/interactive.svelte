@@ -850,6 +850,7 @@
 
           highlightIjmuiden = false;
           highlightEsso = false;
+
         });
 
         // card 3 | algemeen
@@ -895,9 +896,10 @@
             animate: true,
             duration: 1.5, // De duur van de animatie in seconden
           });
-
+        
           highlightSchiphol = false;
           highlightDeKooy = false;
+
         });
 
         const card31next = document.getElementById("card31next");
@@ -908,9 +910,10 @@
             animate: true,
             duration: 1.5, // De duur van de animatie in seconden
           });
-
+          
           highlightSchiphol = false;
           highlightDeKooy = true;
+          
         });
 
         // card 3.2 | interessant
@@ -926,6 +929,7 @@
 
           highlightSchiphol = true;
           highlightDeKooy = false;
+          
         });
 
         const card32next = document.getElementById("card32next");
@@ -990,6 +994,7 @@
 
           highlightAfvalEnergieBedrijf = false;
           highlightRWZIBerkenwoude = false;
+
         });
 
         const card4next = document.getElementById("card4next");
@@ -1102,7 +1107,7 @@
             animate: true,
             duration: 1.5, // De duur van de animatie in seconden
           });
-          highlightNedmag = false;
+           highlightNedmag = false;
         });
 
         const card5next = document.getElementById("card5next");
