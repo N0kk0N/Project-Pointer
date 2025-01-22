@@ -187,7 +187,18 @@
       .slice(0, 3);
   }
 
-  // FUNCTIE OM ALLE LOCATIES TE TONEN
+  // Globale variabelen
+  let highlightIjmuiden = false;
+  let highlightEsso = false;
+  let highlightSchiphol = false;
+  let highlightDeKooy = false;
+  let highlightAfvalEnergieBedrijf = false;
+  let highlightRWZIBerkenwoude = false;
+  let highlightNedmag = false;
+  let highlightSeasun = false;
+  let highlightLeoHoogweg = false;
+
+  // PLOT MARKERS OP DE KAART
   function toonAlleMarkers(selectedCategory = "Alle sectoren") {
     const L = window.L;
 
@@ -229,18 +240,150 @@
         <p><strong>Sector:</strong> ${sector}</p>
         <p><strong>Schadekosten 2022:</strong> €${feature.properties.schadekosten_2022.toLocaleString("nl-NL")}</p>
         <p><strong>Uitstoot (Top 3):</strong></p>
-        ${top3Uitstoot.length > 0 ? `<canvas id="chart-${feature.properties.bedrijf.replace(/\s+/g, "-")}" width="200" height="200"></canvas>` : "<p>Geen gegevens gevonden</p>"}
+        ${
+          top3Uitstoot.length > 0
+            ? `<canvas id="chart-${feature.properties.bedrijf.replace(/\s+/g, "-")}" width="200" height="200"></canvas>`
+            : "<p>Geen gegevens gevonden</p>"
+        }
       </div>
     `;
 
-      const marker = L.circleMarker([lat, lon], {
+      // Marker opties, standaardkleur op basis van sector
+      let markerOptions = {
         radius: radius,
-        fillColor: sectorKleuren[sector] || "#8A2BE2", // Gebruik de sector kleur of standaard kleur
-        color: sectorKleuren[sector] || "#8A2BE2", // Gebruik de sector kleur of standaard kleur
+        fillColor: sectorKleuren[sector], // Gebruik de sector kleur of standaard kleur
+        color: sectorKleuren[sector],
         weight: 0,
         opacity: 1,
         fillOpacity: 0.7,
-      }).bindPopup(popupContent, { maxWidth: "auto", maxHeight: "auto" });
+      };
+
+      // Highlight specifieke bedrijven
+      if (
+        feature.properties.bedrijf === "Tata Steel IJmuiden BV" &&
+        highlightIjmuiden
+      ) {
+        markerOptions = {
+          radius: radius,
+          fillColor: "#FFD700", // Specifieke kleur voor Tata Steel
+          color: "#FFD700",
+          weight: 0,
+          opacity: 1,
+          fillOpacity: 0.9,
+        };
+      }
+
+      if (
+        feature.properties.bedrijf ===
+          "Esso Nederland BV (Raffinaderij Rotterdam)" &&
+        highlightEsso
+      ) {
+        markerOptions = {
+          radius: radius,
+          fillColor: "#FFD700", // Specifieke kleur voor Esso
+          color: "#FFD700",
+          weight: 0,
+          opacity: 1,
+          fillOpacity: 0.9,
+        };
+      }
+
+      if (
+        feature.properties.bedrijf === "Vliegveld Luchthaven Schiphol" &&
+        highlightSchiphol
+      ) {
+        markerOptions = {
+          radius: radius,
+          fillColor: "#FFD700", // Specifieke kleur voor Schiphol
+          color: "#FFD700",
+          weight: 0,
+          opacity: 1,
+          fillOpacity: 0.9,
+        };
+      }
+
+      if (
+        feature.properties.bedrijf === "Vliegveld de Kooy" &&
+        highlightDeKooy
+      ) {
+        markerOptions = {
+          radius: radius,
+          fillColor: "#FFD700", // Specifieke kleur voor de Kooy
+          color: "#FFD700",
+          weight: 0,
+          opacity: 1,
+          fillOpacity: 0.9,
+        };
+      }
+
+      if (
+        feature.properties.bedrijf === "Afval Energie Bedrijf (Amsterdam)" &&
+        highlightAfvalEnergieBedrijf
+      ) {
+        markerOptions = {
+          radius: radius,
+          fillColor: "#FFD700", // Specifieke kleur voor Afval Energie Bedrijf
+          color: "#FFD700",
+          weight: 0,
+          opacity: 1,
+          fillOpacity: 0.9,
+        };
+      }
+
+      if (
+        feature.properties.bedrijf === "RWZI Berkenwoude" &&
+        highlightRWZIBerkenwoude
+      ) {
+        markerOptions = {
+          radius: radius,
+          fillColor: "#FFD700", // Specifieke kleur voor RWZI Berkenwoude
+          color: "#FFD700",
+          weight: 0,
+          opacity: 1,
+          fillOpacity: 0.9,
+        };
+      }
+
+      if (feature.properties.bedrijf === "Nedmag BV" && highlightNedmag) {
+        markerOptions = {
+          radius: radius,
+          fillColor: "#FFD700", // Specifieke kleur voor Nedmag BV
+          color: "#FFD700",
+          weight: 0,
+          opacity: 1,
+          fillOpacity: 0.9,
+        };
+      }
+
+      if (feature.properties.bedrijf === "Seasun BV" && highlightSeasun) {
+        markerOptions = {
+          radius: radius,
+          fillColor: "#FFD700", // Specifieke kleur voor Seasun BV
+          color: "#FFD700",
+          weight: 0,
+          opacity: 1,
+          fillOpacity: 0.9,
+        };
+      }
+
+      if (
+        feature.properties.bedrijf === "Leo Hoogweg BV" &&
+        highlightLeoHoogweg
+      ) {
+        markerOptions = {
+          radius: radius,
+          fillColor: "#FFD700", // Specifieke kleur voor Leo Hoogweg BV
+          color: "#FFD700",
+          weight: 0,
+          opacity: 1,
+          fillOpacity: 0.9,
+        };
+      }
+
+      const marker = L.circleMarker([lat, lon], markerOptions).bindPopup(
+        popupContent,
+        { maxWidth: "auto", maxHeight: "auto" },
+      );
 
       buurtMarkersLayer.addLayer(marker);
 
@@ -605,7 +748,6 @@
         card2.classList.replace("hidden", "flex");
 
         // card 2 | algemeen
-        const card2next = document.getElementById("card2next");
         card2next.addEventListener("click", () => {
           card2.classList.replace("flex", "hidden");
           card21.classList.replace("hidden", "flex");
@@ -614,6 +756,7 @@
           map.flyTo([ijmuidenLat, ijmuidenLon], zoomLevel, {
             animate: true,
             duration: 1.5, // De duur van de animatie in seconden
+
             start: () => {
               if (buurtMarkersLayer) {
                 map.removeLayer(buurtMarkersLayer);
@@ -635,6 +778,10 @@
               }
             },
           });
+
+          // Zet highlightIjmuiden naar true wanneer de knop wordt ingedrukt
+          highlightIjmuiden = true;
+          highlightEsso = false;
         });
 
         // card 2.1 | ergste
@@ -648,6 +795,9 @@
             animate: true,
             duration: 1.5, // De duur van de animatie in seconden
           });
+
+          highlightIjmuiden = false;
+          highlightEsso = false;
         });
 
         const card21next = document.getElementById("card21next");
@@ -660,6 +810,9 @@
             animate: true,
             duration: 1.5, // De duur van de animatie in seconden
           });
+
+          highlightIjmuiden = false;
+          highlightEsso = true;
         });
 
         // card 2.2 | interssant
@@ -673,6 +826,9 @@
             animate: true,
             duration: 1.5, // De duur van de animatie in seconden
           });
+
+          highlightIjmuiden = true;
+          highlightEsso = false;
         });
 
         const card22next = document.getElementById("card22next");
@@ -685,6 +841,9 @@
             animate: true,
             duration: 1.5, // De duur van de animatie in seconden
           });
+
+          highlightIjmuiden = false;
+          highlightEsso = false;
         });
 
         // card 2.3 | eigen locatie
@@ -698,6 +857,9 @@
             animate: true,
             duration: 1.5, // De duur van de animatie in seconden
           });
+
+          highlightIjmuiden = false;
+          highlightEsso = true;
         });
 
         const card23next = document.getElementById("card23next");
@@ -713,6 +875,10 @@
             animate: true,
             duration: 1.5, // De duur van de animatie in seconden
           });
+
+          highlightIjmuiden = false;
+          highlightEsso = false;
+
         });
 
         // card 3 | algemeen
@@ -729,6 +895,9 @@
             animate: true,
             duration: 1.5, // De duur van de animatie in seconden
           });
+
+          highlightSchiphol = false;
+          highlightDeKooy = false;
         });
 
         const card3next = document.getElementById("card3next");
@@ -740,6 +909,9 @@
             animate: true,
             duration: 1.5, // De duur van de animatie in seconden
           });
+
+          highlightSchiphol = true;
+          highlightDeKooy = false;
         });
 
         // card 3.1 | ergste
@@ -752,6 +924,10 @@
             animate: true,
             duration: 1.5, // De duur van de animatie in seconden
           });
+        
+          highlightSchiphol = false;
+          highlightDeKooy = false;
+
         });
 
         const card31next = document.getElementById("card31next");
@@ -762,6 +938,10 @@
             animate: true,
             duration: 1.5, // De duur van de animatie in seconden
           });
+          
+          highlightSchiphol = false;
+          highlightDeKooy = true;
+          
         });
 
         // card 3.2 | interessant
@@ -774,6 +954,10 @@
             animate: true,
             duration: 1.5, // De duur van de animatie in seconden
           });
+
+          highlightSchiphol = true;
+          highlightDeKooy = false;
+          
         });
 
         const card32next = document.getElementById("card32next");
@@ -785,6 +969,9 @@
             animate: true,
             duration: 1.5, // De duur van de animatie in seconden
           });
+
+          highlightSchiphol = false;
+          highlightDeKooy = false;
         });
 
         // card 3.3 | eigen locatie
@@ -797,6 +984,9 @@
             animate: true,
             duration: 1.5, // De duur van de animatie in seconden
           });
+
+          highlightSchiphol = false;
+          highlightDeKooy = true;
         });
 
         const card33next = document.getElementById("card33next");
@@ -811,6 +1001,9 @@
             animate: true,
             duration: 1.5, // De duur van de animatie in seconden
           });
+
+          highlightSchiphol = false;
+          highlightDeKooy = false;
         });
 
         // card 4 | algemeen
@@ -826,6 +1019,10 @@
             animate: true,
             duration: 1.5, // De duur van de animatie in seconden
           });
+
+          highlightAfvalEnergieBedrijf = false;
+          highlightRWZIBerkenwoude = false;
+
         });
 
         const card4next = document.getElementById("card4next");
@@ -837,6 +1034,8 @@
             animate: true,
             duration: 1.5, // De duur van de animatie in seconden
           });
+          highlightAfvalEnergieBedrijf = true;
+          highlightRWZIBerkenwoude = false;
         });
 
         // card 4.1 | ergste
@@ -849,6 +1048,8 @@
             animate: true,
             duration: 1.5, // De duur van de animatie in seconden
           });
+          highlightAfvalEnergieBedrijf = false;
+          highlightRWZIBerkenwoude = false;
         });
 
         const card41next = document.getElementById("card41next");
@@ -860,6 +1061,8 @@
             animate: true,
             duration: 1.5, // De duur van de animatie in seconden
           });
+          highlightAfvalEnergieBedrijf = false;
+          highlightRWZIBerkenwoude = true;
         });
 
         // card 4.2 | interessant
@@ -872,6 +1075,8 @@
             animate: true,
             duration: 1.5, // De duur van de animatie in seconden
           });
+          highlightAfvalEnergieBedrijf = true;
+          highlightRWZIBerkenwoude = false;
         });
 
         const card42next = document.getElementById("card42next");
@@ -883,6 +1088,8 @@
             animate: true,
             duration: 1.5, // De duur van de animatie in seconden
           });
+          highlightAfvalEnergieBedrijf = false;
+          highlightRWZIBerkenwoude = false;
         });
 
         // card 4.3 | eigen locatie
@@ -895,6 +1102,8 @@
             animate: true,
             duration: 1.5, // De duur van de animatie in seconden
           });
+          highlightAfvalEnergieBedrijf = false;
+          highlightRWZIBerkenwoude = true;
         });
 
         const card43next = document.getElementById("card43next");
@@ -909,6 +1118,8 @@
             animate: true,
             duration: 1.5, // De duur van de animatie in seconden
           });
+          highlightAfvalEnergieBedrijf = false;
+          highlightRWZIBerkenwoude = false;
         });
 
         // card 5 | algemeen
@@ -924,6 +1135,7 @@
             animate: true,
             duration: 1.5, // De duur van de animatie in seconden
           });
+           highlightNedmag = false;
         });
 
         const card5next = document.getElementById("card5next");
@@ -935,6 +1147,7 @@
             animate: true,
             duration: 1.5, // De duur van de animatie in seconden
           });
+          highlightNedmag = true;
         });
 
         // card 5.1 | ergste
@@ -947,6 +1160,7 @@
             animate: true,
             duration: 1.5, // De duur van de animatie in seconden
           });
+          highlightNedmag = false;
         });
 
         const card51next = document.getElementById("card51next");
@@ -958,6 +1172,7 @@
             animate: true,
             duration: 1.5, // De duur van de animatie in seconden
           });
+          highlightNedmag = false;
         });
 
         // card 5.2 | interessant
@@ -970,6 +1185,7 @@
             animate: true,
             duration: 1.5, // De duur van de animatie in seconden
           });
+          highlightNedmag = true;
         });
 
         const card52next = document.getElementById("card52next");
@@ -981,6 +1197,7 @@
             animate: true,
             duration: 1.5, // De duur van de animatie in seconden
           });
+          highlightNedmag = false;
         });
 
         // card 5.3 | eigen locatie
@@ -993,6 +1210,7 @@
             animate: true,
             duration: 1.5, // De duur van de animatie in seconden
           });
+          highlightNedmag = false;
         });
 
         const card53next = document.getElementById("card53next");
@@ -1007,6 +1225,7 @@
             animate: true,
             duration: 1.5, // De duur van de animatie in seconden
           });
+          highlightNedmag = false;
         });
 
         // card 6 | algemeen
@@ -1022,6 +1241,8 @@
             animate: true,
             duration: 1.5, // De duur van de animatie in seconden
           });
+          highlightSeasun = false;
+          highlightLeoHoogweg = false;
         });
 
         const card6next = document.getElementById("card6next");
@@ -1033,6 +1254,8 @@
             animate: true,
             duration: 1.5, // De duur van de animatie in seconden
           });
+          highlightSeasun = true;
+          highlightLeoHoogweg = false;
         });
 
         // card 6.1 | ergste
@@ -1045,6 +1268,8 @@
             animate: true,
             duration: 1.5, // De duur van de animatie in seconden
           });
+          highlightSeasun = false;
+          highlightLeoHoogweg = false;
         });
 
         const card61next = document.getElementById("card61next");
@@ -1056,6 +1281,8 @@
             animate: true,
             duration: 1.5, // De duur van de animatie in seconden
           });
+          highlightSeasun = false;
+          highlightLeoHoogweg = true;
         });
 
         // card 6.2 | interessant
@@ -1068,6 +1295,8 @@
             animate: true,
             duration: 1.5, // De duur van de animatie in seconden
           });
+          highlightSeasun = true;
+          highlightLeoHoogweg = false;
         });
 
         const card62next = document.getElementById("card62next");
@@ -1079,6 +1308,8 @@
             animate: true,
             duration: 1.5, // De duur van de animatie in seconden
           });
+          highlightSeasun = false;
+          highlightLeoHoogweg = false;
         });
 
         // card 6.3 | eigen locatie
@@ -1091,6 +1322,8 @@
             animate: true,
             duration: 1.5, // De duur van de animatie in seconden
           });
+          highlightSeasun = false;
+          highlightLeoHoogweg = true;
         });
 
         const card63next = document.getElementById("card63next");
@@ -1105,6 +1338,8 @@
             animate: true,
             duration: 0, // De duur van de animatie in seconden
           });
+          highlightSeasun = false;
+          highlightLeoHoogweg = false;
         });
 
         // card 7 | afronden
@@ -1120,6 +1355,8 @@
             animate: true,
             duration: 0, // De duur van de animatie in seconden
           });
+          highlightSeasun = false;
+          highlightLeoHoogweg = false;
         });
 
         const card7next = document.getElementById("card7next");
@@ -1924,8 +2161,7 @@ function verwijderAlleMarkers() {
         <p class="block text-xl font-bold text-slate-200 leading-9">3/7</p>
       </div>
       <p class="text-xl leading-9">
-        Dit zijn de luchthavens in uw buurt gesorteerd op hoogte van de
-        schadekosten.
+        Dit zijn de dichtsbijzijnde luchthavens in uw buurt.
       </p>
       <div class="mt-6">
         <p class="text-xl">Bedrijfsnaam 1</p>
@@ -2226,7 +2462,7 @@ function verwijderAlleMarkers() {
         <p class="block text-xl font-bold text-slate-200 leading-9">4/7</p>
       </div>
       <p class="text-xl leading-9">
-        In uw buurt zijn dit de bedrijven met de hoogste kosten:
+        Dit zijn de vervuilende bedrijven bij u in de buurt.
       </p>
       <div class="mt-6">
         <p class="text-xl">Bedrijfsnaam 1</p>
@@ -2526,7 +2762,7 @@ function verwijderAlleMarkers() {
         <p class="block text-xl font-bold text-slate-200 leading-9">5/7</p>
       </div>
       <p class="text-xl leading-9">
-        In uw buurt zijn dit de vervuilers met de hoogste kosten:
+        Deze bedrijven zijn bij u in de buurt.
       </p>
       <div class="mt-6">
         <p class="text-xl">Bedrijfsnaam 1</p>
