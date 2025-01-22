@@ -99,7 +99,7 @@
         ],
       }).setView([currentLat, currentLon], 7);
 
-      imageOverlay = L.imageOverlay("/data/QGisTest2.png", overlayBounds, {
+      imageOverlay = L.imageOverlay("/data/QGisTest6.png", overlayBounds, {
         opacity: 0.7,
       }).addTo(map);
 
@@ -612,8 +612,18 @@
                 map.removeLayer(buurtMarkersLayer);
               }
             },
-            end: () => {
+             end: () => {
               toonAlleMarkers(selectedCategory);
+
+              // Zoek de marker voor IJmuiden en open de popup automatisch
+              const ijmuidenMarker = buurtMarkersLayer.getLayers().find(marker => {
+                const [markerLon, markerLat] = marker.getLatLng();
+                return markerLat === ijmuidenLat && markerLon === ijmuidenLon;
+              });
+
+              if (ijmuidenMarker) {
+                ijmuidenMarker.openPopup();
+              }
             },
           });
         });
@@ -1258,7 +1268,7 @@
       <div
         class="w-full h-2 bg-slate-200 mt-8 rounded-full overflow-hidden flex justify-start"
       >
-        <div class="w-2/5 bg-red-600"></div>
+        <div class="w-2/5 bg-[#1E90FF]"></div>
       </div>
     </div>
     <div class="flex justify-between items-center">
@@ -1468,19 +1478,19 @@
         <div
           class="mt-1 mb-2 w-full h-2 bg-slate-200 rounded-full overflow-hidden"
         >
-          <div class="w-2/3 h-2 bg-red-500"></div>
+          <div class="w-2/3 h-2 bg-[#FF5362]"></div>
         </div>
         <p class="text-xl">Bedrijfsnaam 2</p>
         <div
           class="mt-1 mb-2 w-full h-2 bg-slate-200 rounded-full overflow-hidden"
         >
-          <div class="w-1/3 h-2 bg-red-500"></div>
+          <div class="w-1/3 h-2 bg-[#FF5362]"></div>
         </div>
         <p class="text-xl">Bedrijfsnaam 3</p>
         <div
           class="mt-1 mb-2 w-full h-2 bg-slate-200 rounded-full overflow-hidden"
         >
-          <div class="w-1/4 h-2 bg-red-500"></div>
+          <div class="w-1/4 h-2 bg-[#FF5362]"></div>
         </div>
       </div>
     </div>
@@ -1551,8 +1561,8 @@
       <div
         class="w-full h-2 bg-slate-200 mt-8 rounded-full overflow-hidden flex justify-start"
       >
-        <div class="w-2/5 bg-red-600"></div>
-        <div class="w-1/10 bg-blue-600"></div>
+        <div class="w-2/5 bg-[#1E90FF]"></div>
+        <div class="w-1/10 bg-[#4D00FF]"></div>
       </div>
     </div>
     <div class="flex justify-between items-center">
@@ -1760,19 +1770,19 @@
         <div
           class="mt-1 mb-2 w-full h-2 bg-slate-200 rounded-full overflow-hidden"
         >
-          <div class="w-2/3 h-2 bg-red-500"></div>
+          <div class="w-2/3 h-2 bg-[#FF5362]"></div>
         </div>
         <p class="text-xl">Bedrijfsnaam 2</p>
         <div
           class="mt-1 mb-2 w-full h-2 bg-slate-200 rounded-full overflow-hidden"
         >
-          <div class="w-1/3 h-2 bg-red-500"></div>
+          <div class="w-1/3 h-2 bg-[#FF5362]"></div>
         </div>
         <p class="text-xl">Bedrijfsnaam 3</p>
         <div
           class="mt-1 mb-2 w-full h-2 bg-slate-200 rounded-full overflow-hidden"
         >
-          <div class="w-1/4 h-2 bg-red-500"></div>
+          <div class="w-1/4 h-2 bg-[#FF5362]"></div>
         </div>
       </div>
     </div>
@@ -1845,9 +1855,9 @@
       <div
         class="w-full h-2 bg-slate-200 mt-8 rounded-full overflow-hidden flex justify-start"
       >
-        <div class="w-2/5 bg-red-600"></div>
-        <div class="w-1/10 bg-blue-600"></div>
-        <div class="w-1/20 bg-green-600"></div>
+        <div class="w-2/5 bg-[#1E90FF]"></div>
+        <div class="w-1/10 bg-[#4D00FF]"></div>
+        <div class="w-1/20 bg-[#00D9AD]"></div>
       </div>
     </div>
     <div class="flex justify-between items-center">
@@ -2061,19 +2071,19 @@
         <div
           class="mt-1 mb-2 w-full h-2 bg-slate-200 rounded-full overflow-hidden"
         >
-          <div class="w-2/3 h-2 bg-red-500"></div>
+          <div class="w-2/3 h-2 bg-[#FF5362]"></div>
         </div>
         <p class="text-xl">Bedrijfsnaam 2</p>
         <div
           class="mt-1 mb-2 w-full h-2 bg-slate-200 rounded-full overflow-hidden"
         >
-          <div class="w-1/3 h-2 bg-red-500"></div>
+          <div class="w-1/3 h-2 bg-[#FF5362]"></div>
         </div>
         <p class="text-xl">Bedrijfsnaam 3</p>
         <div
           class="mt-1 mb-2 w-full h-2 bg-slate-200 rounded-full overflow-hidden"
         >
-          <div class="w-1/4 h-2 bg-red-500"></div>
+          <div class="w-1/4 h-2 bg-[#FF5362]"></div>
         </div>
       </div>
     </div>
@@ -2145,10 +2155,10 @@
       <div
         class="w-full h-2 bg-slate-200 mt-8 rounded-full overflow-hidden flex justify-start"
       >
-        <div class="w-2/5 bg-red-600"></div>
-        <div class="w-1/10 bg-blue-600"></div>
-        <div class="w-1/20 bg-green-600"></div>
-        <div class="w-1/20 bg-purple-600"></div>
+        <div class="w-2/5 bg-[#1E90FF]"></div>
+        <div class="w-1/10 bg-[#4D00FF]"></div>
+        <div class="w-1/20 bg-[#00D9AD]"></div>
+        <div class="w-1/20 bg-[#DEFF9C]"></div>
       </div>
     </div>
     <div class="flex justify-between items-center">
@@ -2361,19 +2371,19 @@
         <div
           class="mt-1 mb-2 w-full h-2 bg-slate-200 rounded-full overflow-hidden"
         >
-          <div class="w-2/3 h-2 bg-red-500"></div>
+          <div class="w-2/3 h-2 bg-[#FF5362]"></div>
         </div>
         <p class="text-xl">Bedrijfsnaam 2</p>
         <div
           class="mt-1 mb-2 w-full h-2 bg-slate-200 rounded-full overflow-hidden"
         >
-          <div class="w-1/3 h-2 bg-red-500"></div>
+          <div class="w-1/3 h-2 bg-[#FF5362]"></div>
         </div>
         <p class="text-xl">Bedrijfsnaam 3</p>
         <div
           class="mt-1 mb-2 w-full h-2 bg-slate-200 rounded-full overflow-hidden"
         >
-          <div class="w-1/4 h-2 bg-red-500"></div>
+          <div class="w-1/4 h-2 bg-[#FF5362]"></div>
         </div>
       </div>
     </div>
@@ -2444,11 +2454,11 @@
       <div
         class="w-full h-2 bg-slate-200 mt-8 rounded-full overflow-hidden flex justify-start"
       >
-        <div class="w-2/5 bg-red-600"></div>
-        <div class="w-1/10 bg-blue-600"></div>
-        <div class="w-1/20 bg-green-600"></div>
-        <div class="w-1/20 bg-purple-600"></div>
-        <div class="w-2/5 bg-orange-600"></div>
+        <div class="w-2/5 bg-[#1E90FF]"></div>
+        <div class="w-1/10 bg-[#4D00FF]"></div>
+        <div class="w-1/20 bg-[#00D9AD]"></div>
+        <div class="w-1/20 bg-[#DEFF9C]"></div>
+        <div class="w-2/5 bg-[#FF8800]"></div>
       </div>
     </div>
     <div class="flex justify-between items-center">
