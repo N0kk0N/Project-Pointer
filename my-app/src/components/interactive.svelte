@@ -7,6 +7,8 @@
   import geojsonData from "../data/bedrijven.json";
   import stoffenData from "../data/stoffen.json"; // NIEUW JSON-BESTAND IMPORTEREN
 
+  let zoomEnd = true;
+
   let map;
   let colorLayer, labelsLayer;
   let isZoomKeyPressed = false;
@@ -108,7 +110,7 @@
         {
           attribution: "© OpenStreetMap contributors © CARTO",
           maxZoom: 18,
-        },
+        }
       );
 
       labelsLayer = L.tileLayer(
@@ -116,7 +118,7 @@
         {
           attribution: "© OpenStreetMap contributors © CARTO",
           maxZoom: 18,
-        },
+        }
       );
 
       L.control
@@ -144,7 +146,12 @@
       });
 
       map.on("zoomend", () => {
-        toonAlleMarkers(selectedCategory);
+        console.log(zoomEnd); // Log the value of zoomEnd for debugging
+        if (zoomEnd) {
+          toonAlleMarkers(selectedCategory);
+        } else {
+          voegNieuweMarkersToe();
+        }
       });
     }
   });
@@ -158,7 +165,7 @@
   // FUNCTIE OM UITSTOOTGEGEVENS PER BEDRIJF TE COMBINEREN
   function getTop3UitstootPerBedrijf(bedrijf) {
     const uitstootPerBedrijf = stoffenData.filter(
-      (stof) => stof.Bedrijf === bedrijf,
+      (stof) => stof.Bedrijf === bedrijf
     );
 
     if (uitstootPerBedrijf.length === 0) {
@@ -203,8 +210,8 @@
 
     const maxSchadekosten = Math.max(
       ...geojsonData.features.map(
-        (feature) => feature.properties.schadekosten_2022,
-      ),
+        (feature) => feature.properties.schadekosten_2022
+      )
     );
 
     geojsonData.features.forEach((feature) => {
@@ -224,7 +231,7 @@
         (schadekosten / maxSchadekosten) * (maxRadius - minRadius) + minRadius;
 
       const top3Uitstoot = getTop3UitstootPerBedrijf(
-        feature.properties.bedrijf,
+        feature.properties.bedrijf
       );
 
       const popupContent = `
@@ -385,7 +392,7 @@
         marker.on("popupopen", () => {
           createChart(
             `chart-${feature.properties.bedrijf.replace(/\s+/g, "-")}`,
-            top3Uitstoot,
+            top3Uitstoot
           );
         });
       }
@@ -507,7 +514,7 @@
         const bedrijvenInSectorIndustrie = geojsonData.features.filter(
           (feature) =>
             feature.properties.aangepaste_sector ===
-            "Industrie, Energie en Raffinaderijen",
+            "Industrie, Energie en Raffinaderijen"
         );
 
         // Bereken de afstand tussen de huidige locatie en de bedrijven in de sector
@@ -518,9 +525,9 @@
               lat,
               lon,
               bedrijf.geometry.coordinates[1],
-              bedrijf.geometry.coordinates[0],
+              bedrijf.geometry.coordinates[0]
             ),
-          }),
+          })
         );
 
         // Sorteer de bedrijven op afstand
@@ -532,17 +539,17 @@
 
         // Update de HTML met de bedrijfsnamen
         document.querySelector(
-          "#card23 .mt-6 .text-xl:nth-of-type(1)",
+          "#card23 .mt-6 .text-xl:nth-of-type(1)"
         ).textContent =
           dichtsbijzijndeBedrijvenIndustrie[0]?.properties.bedrijf ||
           "Geen gegevens";
         document.querySelector(
-          "#card23 .mt-6 .text-xl:nth-of-type(2)",
+          "#card23 .mt-6 .text-xl:nth-of-type(2)"
         ).textContent =
           dichtsbijzijndeBedrijvenIndustrie[1]?.properties.bedrijf ||
           "Geen gegevens";
         document.querySelector(
-          "#card23 .mt-6 .text-xl:nth-of-type(3)",
+          "#card23 .mt-6 .text-xl:nth-of-type(3)"
         ).textContent =
           dichtsbijzijndeBedrijvenIndustrie[2]?.properties.bedrijf ||
           "Geen gegevens";
@@ -550,7 +557,7 @@
         // VIND DE 3 DICHTSTBIJZIJNDE BEDRIJVEN IN DE SECTOR "Verkeer en vervoer"
         const bedrijvenInSectorVerkeer = geojsonData.features.filter(
           (feature) =>
-            feature.properties.aangepaste_sector === "Verkeer en vervoer",
+            feature.properties.aangepaste_sector === "Verkeer en vervoer"
         );
 
         // Bereken de afstand tussen de huidige locatie en de bedrijven in de sector
@@ -561,9 +568,9 @@
               lat,
               lon,
               bedrijf.geometry.coordinates[1],
-              bedrijf.geometry.coordinates[0],
+              bedrijf.geometry.coordinates[0]
             ),
-          }),
+          })
         );
 
         // Sorteer de bedrijven op afstand
@@ -575,17 +582,17 @@
 
         // Update de HTML met de bedrijfsnamen
         document.querySelector(
-          "#card33 .mt-6 .text-xl:nth-of-type(1)",
+          "#card33 .mt-6 .text-xl:nth-of-type(1)"
         ).textContent =
           dichtsbijzijndeBedrijvenVerkeer[0]?.properties.bedrijf ||
           "Geen gegevens";
         document.querySelector(
-          "#card33 .mt-6 .text-xl:nth-of-type(2)",
+          "#card33 .mt-6 .text-xl:nth-of-type(2)"
         ).textContent =
           dichtsbijzijndeBedrijvenVerkeer[1]?.properties.bedrijf ||
           "Geen gegevens";
         document.querySelector(
-          "#card33 .mt-6 .text-xl:nth-of-type(3)",
+          "#card33 .mt-6 .text-xl:nth-of-type(3)"
         ).textContent =
           dichtsbijzijndeBedrijvenVerkeer[2]?.properties.bedrijf ||
           "Geen gegevens";
@@ -594,7 +601,7 @@
         const bedrijvenInSectorAfval = geojsonData.features.filter(
           (feature) =>
             feature.properties.aangepaste_sector ===
-            "Afval, riolering, waterzuivering",
+            "Afval, riolering, waterzuivering"
         );
 
         // Bereken de afstand tussen de huidige locatie en de bedrijven in de sector
@@ -605,9 +612,9 @@
               lat,
               lon,
               bedrijf.geometry.coordinates[1],
-              bedrijf.geometry.coordinates[0],
+              bedrijf.geometry.coordinates[0]
             ),
-          }),
+          })
         );
 
         // Sorteer de bedrijven op afstand
@@ -616,22 +623,22 @@
         // Selecteer de 3 dichtstbijzijnde bedrijven
         const dichtsbijzijndeBedrijvenAfval = bedrijvenMetAfstandAfval.slice(
           0,
-          3,
+          3
         );
 
         // Update de HTML met de bedrijfsnamen
         document.querySelector(
-          "#card43 .mt-6 .text-xl:nth-of-type(1)",
+          "#card43 .mt-6 .text-xl:nth-of-type(1)"
         ).textContent =
           dichtsbijzijndeBedrijvenAfval[0]?.properties.bedrijf ||
           "Geen gegevens";
         document.querySelector(
-          "#card43 .mt-6 .text-xl:nth-of-type(2)",
+          "#card43 .mt-6 .text-xl:nth-of-type(2)"
         ).textContent =
           dichtsbijzijndeBedrijvenAfval[1]?.properties.bedrijf ||
           "Geen gegevens";
         document.querySelector(
-          "#card43 .mt-6 .text-xl:nth-of-type(3)",
+          "#card43 .mt-6 .text-xl:nth-of-type(3)"
         ).textContent =
           dichtsbijzijndeBedrijvenAfval[2]?.properties.bedrijf ||
           "Geen gegevens";
@@ -640,7 +647,7 @@
         const bedrijvenInSectorHandel = geojsonData.features.filter(
           (feature) =>
             feature.properties.aangepaste_sector ===
-            "Handel/Diensten/Overheid en Bouw",
+            "Handel/Diensten/Overheid en Bouw"
         );
 
         // Bereken de afstand tussen de huidige locatie en de bedrijven in de sector
@@ -651,9 +658,9 @@
               lat,
               lon,
               bedrijf.geometry.coordinates[1],
-              bedrijf.geometry.coordinates[0],
+              bedrijf.geometry.coordinates[0]
             ),
-          }),
+          })
         );
 
         // Sorteer de bedrijven op afstand
@@ -662,29 +669,29 @@
         // Selecteer de 3 dichtstbijzijnde bedrijven
         const dichtsbijzijndeBedrijvenHandel = bedrijvenMetAfstandHandel.slice(
           0,
-          3,
+          3
         );
 
         // Update de HTML met de bedrijfsnamen
         document.querySelector(
-          "#card53 .mt-6 .text-xl:nth-of-type(1)",
+          "#card53 .mt-6 .text-xl:nth-of-type(1)"
         ).textContent =
           dichtsbijzijndeBedrijvenHandel[0]?.properties.bedrijf ||
           "Geen gegevens";
         document.querySelector(
-          "#card53 .mt-6 .text-xl:nth-of-type(2)",
+          "#card53 .mt-6 .text-xl:nth-of-type(2)"
         ).textContent =
           dichtsbijzijndeBedrijvenHandel[1]?.properties.bedrijf ||
           "Geen gegevens";
         document.querySelector(
-          "#card53 .mt-6 .text-xl:nth-of-type(3)",
+          "#card53 .mt-6 .text-xl:nth-of-type(3)"
         ).textContent =
           dichtsbijzijndeBedrijvenHandel[2]?.properties.bedrijf ||
           "Geen gegevens";
 
         // VIND DE 3 DICHTSTBIJZIJNDE BEDRIJVEN IN DE SECTOR "Landbouw"
         const bedrijvenInSectorLandbouw = geojsonData.features.filter(
-          (feature) => feature.properties.aangepaste_sector === "Landbouw",
+          (feature) => feature.properties.aangepaste_sector === "Landbouw"
         );
 
         // Bereken de afstand tussen de huidige locatie en de bedrijven in de sector
@@ -695,9 +702,9 @@
               lat,
               lon,
               bedrijf.geometry.coordinates[1],
-              bedrijf.geometry.coordinates[0],
+              bedrijf.geometry.coordinates[0]
             ),
-          }),
+          })
         );
 
         // Sorteer de bedrijven op afstand
@@ -749,6 +756,27 @@
           map.flyTo([ijmuidenLat, ijmuidenLon], zoomLevel, {
             animate: true,
             duration: 1.5, // De duur van de animatie in seconden
+
+            start: () => {
+              if (buurtMarkersLayer) {
+                map.removeLayer(buurtMarkersLayer);
+              }
+            },
+            end: () => {
+              toonAlleMarkers(selectedCategory);
+
+              // Zoek de marker voor IJmuiden en open de popup automatisch
+              const ijmuidenMarker = buurtMarkersLayer
+                .getLayers()
+                .find((marker) => {
+                  const [markerLon, markerLat] = marker.getLatLng();
+                  return markerLat === ijmuidenLat && markerLon === ijmuidenLon;
+                });
+
+              if (ijmuidenMarker) {
+                ijmuidenMarker.openPopup();
+              }
+            },
           });
 
           // Zet highlightIjmuiden naar true wanneer de knop wordt ingedrukt
@@ -1334,7 +1362,9 @@
         const card7next = document.getElementById("card7next");
         card7next.addEventListener("click", () => {
           card7.classList.replace("flex", "hidden");
-          // eventueel nog overlay voor exploratie aanzetten.
+          document.getElementById("cardExploration").classList.replace("hidden", "flex");
+          zoomEnd = false;
+          console.log(zoomEnd);
         });
 
         toonMarkersInDeBuurt();
@@ -1399,6 +1429,157 @@
       zoekPostcode();
     }
   }
+
+  function skipTour() {
+    cardOverlay.classList.replace("block", "hidden");
+    document.getElementById("cardExploration").classList.replace("hidden", "flex");
+    zoomEnd = false;
+    console.log(zoomEnd);
+  }
+
+  function openFilters() {
+    document.getElementById("filterButton").classList.replace("flex", "hidden");
+    document.getElementById("filterSection").classList.replace("hidden", "block");
+  }
+
+  function closeFilters() {
+    document.getElementById("filterButton").classList.replace("hidden", "flex");
+    document.getElementById("filterSection").classList.replace("block", "hidden");
+  }
+
+// Array om de geselecteerde waarden bij te houden, begint met alles aan
+let selectedItems = [
+  "Industrie, Energie en Raffinaderijen",
+  "Verkeer en vervoer",
+  "Afval, riolering, waterzuivering",
+  "Handel/Diensten/Overheid en Bouw",
+  "Landbouw",
+  "Overig",
+];
+
+// Variabele voor de kaartlaag
+let buurtMarkersLayer2;
+
+function voegNieuweMarkersToe() {
+  const L = window.L;
+
+  verwijderAlleMarkers();
+
+  try {
+    // Controleer of de kaartlaag al bestaat, anders maak je een nieuwe laag
+    if (buurtMarkersLayer2) {
+      buurtMarkersLayer2.clearLayers(); // Wis alle bestaande markers
+    } else {
+      buurtMarkersLayer2 = L.layerGroup().addTo(map);
+    }
+
+    // Controleer of geojsonData bestaat en geldig is
+    if (!geojsonData || !geojsonData.features) {
+      console.error("GeoJSON data is ongeldig of ontbreekt.");
+      return;
+    }
+
+    const maxSchadekosten = Math.max(
+      ...geojsonData.features.map(
+        (feature) => feature.properties.schadekosten_2022 || 0 // Fallback naar 0 bij ontbrekende data
+      )
+    );
+
+    geojsonData.features.forEach((feature) => {
+      const { coordinates } = feature.geometry || {};
+      const { aangepaste_sector: sector, schadekosten_2022: schadekosten } =
+        feature.properties || {};
+
+      if (!coordinates || !sector) {
+        console.warn("Feature ontbreekt cruciale data:", feature);
+        return;
+      }
+
+      const [lon, lat] = coordinates;
+      const minRadius = 5;
+      const maxRadius = 20;
+      const radius =
+        (schadekosten / maxSchadekosten) * (maxRadius - minRadius) + minRadius;
+
+      // Controleer of de sector in de geselecteerde items zit
+      if (!selectedItems.includes(sector)) {
+        return;
+      }
+
+      const top3Uitstoot = getTop3UitstootPerBedrijf(feature.properties.bedrijf);
+      const popupContent = `
+        <div class="popup-content">
+          <h3>${feature.properties.bedrijf || "Onbekend Bedrijf"}</h3>
+          <p><strong>Sector:</strong> ${sector}</p>
+          <p><strong>Schadekosten 2022:</strong> €${schadekosten?.toLocaleString(
+            "nl-NL"
+          )}</p>
+          <p><strong>Uitstoot (Top 3):</strong></p>
+          ${
+            top3Uitstoot.length > 0
+              ? `<canvas id="chart-${feature.properties.bedrijf.replace(
+                  /\s+/g,
+                  "-"
+                )}" width="200" height="200"></canvas>`
+              : "<p>Geen gegevens gevonden</p>"
+          }
+        </div>
+      `;
+
+      const marker = L.circleMarker([lat, lon], {
+        radius: radius,
+        fillColor: sectorKleuren[sector] || "#8A2BE2", // Gebruik de sector kleur of standaard kleur
+        color: sectorKleuren[sector] || "#8A2BE2", // Gebruik de sector kleur of standaard kleur
+        weight: 0,
+        opacity: 1,
+        fillOpacity: 0.7,
+      }).bindPopup(popupContent, { maxWidth: "auto", maxHeight: "auto" });
+
+      buurtMarkersLayer2.addLayer(marker);
+
+      // Maak de grafiek aan nadat de popup geopend is, als er data is
+      if (top3Uitstoot.length > 0) {
+        marker.on("popupopen", () => {
+          createChart(
+            `chart-${feature.properties.bedrijf.replace(/\s+/g, "-")}`,
+            top3Uitstoot
+          );
+        });
+      }
+    });
+  } catch (error) {
+    console.error("Er is een fout opgetreden:", error);
+  }
+}
+
+// Functie om items toe te voegen of te verwijderen
+let filterCount = 5;
+
+function toggleItem(item) {
+  if (selectedItems.includes(item)) {
+    // Verwijder item
+    selectedItems = selectedItems.filter((i) => i !== item);
+    filterCount = selectedItems.length - 1;
+    console.log(filterCount)
+  } else {
+    // Voeg item toe
+    selectedItems = [...selectedItems, item];
+    filterCount = selectedItems.length -1;
+    console.log(filterCount)
+  }
+
+  // Verwijder alle markers en voeg opnieuw toe op basis van de geselecteerde categorieën
+  voegNieuweMarkersToe();
+}
+
+function verwijderAlleMarkers() {
+  if (buurtMarkersLayer) {
+    buurtMarkersLayer.clearLayers(); // Verwijder alle markers uit de laag
+    map.removeLayer(buurtMarkersLayer); // Verwijder de laag zelf van de kaart
+    buurtMarkersLayer = null; // Reset de variabele
+  }
+}
+
 </script>
 
 <!-- HTML STRUCTUUR -->
@@ -1460,7 +1641,7 @@
         </div>
       </div>
       <div class="flex w-full mt-auto justify-center">
-        <button class="block w-fit underline leading-9"
+        <button class="block w-fit underline leading-9" on:click={skipTour}
           >Of sla de ervaring over</button
         >
       </div>
@@ -2990,6 +3171,79 @@
     </div>
   </div>
 
+  <div
+    id="cardExploration"
+    class="z-40 h-fit w-fit absolute left-0 bottom-0 rounded-2xl m-8  bg-white shadow-2xl hidden flex-col justify-between"
+  >
+    <div class="w-fit hidden items-center justify-center" id="filterButton">
+      <button on:click={openFilters} class="p-4 relative"
+        >
+        <p class="h-6 w-6 rounded-full text-white p-1 flex items-center justify-center absolute -top-2 -right-2 bg-[#4D00FF] text-white>">
+          {filterCount}
+        </p>
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          class="icon icon-tabler icons-tabler-outline icon-tabler-filter"
+          ><path stroke="none" d="M0 0h24v24H0z" fill="none" /><path
+            d="M4 4h16v2.172a2 2 0 0 1 -.586 1.414l-4.414 4.414v7l-6 2v-8.5l-4.48 -4.928a2 2 0 0 1 -.52 -1.345v-2.227z"
+          /></svg
+        ></button
+      >
+    </div>
+    <div id="filterSection" class="w-96 p-8 block">
+      <div>
+        <div class="w-full flex justify-between pb-2 gap-4">
+          <p class="block text-xl font-bold leading-9">Filters</p>
+          <button on:click={closeFilters}
+            ><svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              class="icon icon-tabler icons-tabler-outline icon-tabler-x"
+              ><path stroke="none" d="M0 0h24v24H0z" fill="none" /><path
+                d="M18 6l-12 12"
+              /><path d="M6 6l12 12" /></svg
+            ></button
+          >
+        </div>
+        <div>
+          {#each [
+            "Industrie, Energie en Raffinaderijen",
+            "Verkeer en vervoer",
+            "Afval, riolering, waterzuivering",
+            "Handel/Diensten/Overheid en Bouw",
+            "Landbouw"
+          ] as label}
+            <div class="checkbox-container">
+              <label class="leading-9 text-lg">
+                <input
+                  type="checkbox"
+                  checked={selectedItems.includes(label)}
+                  on:change={() => toggleItem(label)}
+                />
+                {label}
+              </label>
+            </div>
+          {/each}
+        </div>
+
+      </div>
+    </div>
+  </div>
   <!-- KAART WEERGAVE -->
   <div id="map" class="w-full h-full z-10"></div>
 </div>
