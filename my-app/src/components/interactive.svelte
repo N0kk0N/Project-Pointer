@@ -741,20 +741,20 @@
         card2.classList.replace("hidden", "flex");
 
         // card 2 | algemeen
-card2next.addEventListener("click", () => {
-  card2.classList.replace("flex", "hidden");
-  card21.classList.replace("hidden", "flex");
+        card2next.addEventListener("click", () => {
+          card2.classList.replace("flex", "hidden");
+          card21.classList.replace("hidden", "flex");
 
-  // Start de animatie om in te zoomen
-  map.flyTo([ijmuidenLat, ijmuidenLon], zoomLevel, {
-    animate: true,
-    duration: 1.5, // De duur van de animatie in seconden
-  });
+          // Start de animatie om in te zoomen
+          map.flyTo([ijmuidenLat, ijmuidenLon], zoomLevel, {
+            animate: true,
+            duration: 1.5, // De duur van de animatie in seconden
+          });
 
-  // Zet highlightIjmuiden naar true wanneer de knop wordt ingedrukt
-  highlightIjmuiden = true;
-});
-
+          // Zet highlightIjmuiden naar true wanneer de knop wordt ingedrukt
+          highlightIjmuiden = true;
+          highlightEsso = false;
+        });
 
         // card 2.1 | ergste
         const card21prev = document.getElementById("card21prev");
@@ -767,6 +767,9 @@ card2next.addEventListener("click", () => {
             animate: true,
             duration: 1.5, // De duur van de animatie in seconden
           });
+
+          highlightIjmuiden = false;
+          highlightEsso = false;
         });
 
         const card21next = document.getElementById("card21next");
@@ -779,6 +782,9 @@ card2next.addEventListener("click", () => {
             animate: true,
             duration: 1.5, // De duur van de animatie in seconden
           });
+
+          highlightIjmuiden = false;
+          highlightEsso = true;
         });
 
         // card 2.2 | interssant
@@ -794,6 +800,7 @@ card2next.addEventListener("click", () => {
           });
 
           highlightIjmuiden = true;
+          highlightEsso = false;
         });
 
         const card22next = document.getElementById("card22next");
@@ -806,6 +813,9 @@ card2next.addEventListener("click", () => {
             animate: true,
             duration: 1.5, // De duur van de animatie in seconden
           });
+
+          highlightIjmuiden = false;
+          highlightEsso = false;
         });
 
         // card 2.3 | eigen locatie
@@ -819,6 +829,9 @@ card2next.addEventListener("click", () => {
             animate: true,
             duration: 1.5, // De duur van de animatie in seconden
           });
+
+          highlightIjmuiden = false;
+          highlightEsso = true;
         });
 
         const card23next = document.getElementById("card23next");
@@ -834,6 +847,9 @@ card2next.addEventListener("click", () => {
             animate: true,
             duration: 1.5, // De duur van de animatie in seconden
           });
+
+          highlightIjmuiden = false;
+          highlightEsso = false;
         });
 
         // card 3 | algemeen
@@ -850,6 +866,9 @@ card2next.addEventListener("click", () => {
             animate: true,
             duration: 1.5, // De duur van de animatie in seconden
           });
+
+          highlightSchiphol = false;
+          highlightDeKooy = false;
         });
 
         const card3next = document.getElementById("card3next");
@@ -861,6 +880,9 @@ card2next.addEventListener("click", () => {
             animate: true,
             duration: 1.5, // De duur van de animatie in seconden
           });
+
+          highlightSchiphol = true;
+          highlightDeKooy = false;
         });
 
         // card 3.1 | ergste
@@ -873,6 +895,9 @@ card2next.addEventListener("click", () => {
             animate: true,
             duration: 1.5, // De duur van de animatie in seconden
           });
+
+          highlightSchiphol = false;
+          highlightDeKooy = false;
         });
 
         const card31next = document.getElementById("card31next");
@@ -883,6 +908,9 @@ card2next.addEventListener("click", () => {
             animate: true,
             duration: 1.5, // De duur van de animatie in seconden
           });
+
+          highlightSchiphol = false;
+          highlightDeKooy = true;
         });
 
         // card 3.2 | interessant
@@ -895,6 +923,9 @@ card2next.addEventListener("click", () => {
             animate: true,
             duration: 1.5, // De duur van de animatie in seconden
           });
+
+          highlightSchiphol = true;
+          highlightDeKooy = false;
         });
 
         const card32next = document.getElementById("card32next");
@@ -906,6 +937,9 @@ card2next.addEventListener("click", () => {
             animate: true,
             duration: 1.5, // De duur van de animatie in seconden
           });
+
+          highlightSchiphol = false;
+          highlightDeKooy = false;
         });
 
         // card 3.3 | eigen locatie
@@ -918,6 +952,9 @@ card2next.addEventListener("click", () => {
             animate: true,
             duration: 1.5, // De duur van de animatie in seconden
           });
+
+          highlightSchiphol = false;
+          highlightDeKooy = true;
         });
 
         const card33next = document.getElementById("card33next");
@@ -932,6 +969,9 @@ card2next.addEventListener("click", () => {
             animate: true,
             duration: 1.5, // De duur van de animatie in seconden
           });
+
+          highlightSchiphol = false;
+          highlightDeKooy = false;
         });
 
         // card 4 | algemeen
@@ -947,6 +987,9 @@ card2next.addEventListener("click", () => {
             animate: true,
             duration: 1.5, // De duur van de animatie in seconden
           });
+
+          highlightAfvalEnergieBedrijf = false;
+          highlightRWZIBerkenwoude = false;
         });
 
         const card4next = document.getElementById("card4next");
@@ -958,6 +1001,8 @@ card2next.addEventListener("click", () => {
             animate: true,
             duration: 1.5, // De duur van de animatie in seconden
           });
+          highlightAfvalEnergieBedrijf = true;
+          highlightRWZIBerkenwoude = false;
         });
 
         // card 4.1 | ergste
@@ -970,6 +1015,8 @@ card2next.addEventListener("click", () => {
             animate: true,
             duration: 1.5, // De duur van de animatie in seconden
           });
+          highlightAfvalEnergieBedrijf = false;
+          highlightRWZIBerkenwoude = false;
         });
 
         const card41next = document.getElementById("card41next");
@@ -981,6 +1028,8 @@ card2next.addEventListener("click", () => {
             animate: true,
             duration: 1.5, // De duur van de animatie in seconden
           });
+          highlightAfvalEnergieBedrijf = false;
+          highlightRWZIBerkenwoude = true;
         });
 
         // card 4.2 | interessant
@@ -993,6 +1042,8 @@ card2next.addEventListener("click", () => {
             animate: true,
             duration: 1.5, // De duur van de animatie in seconden
           });
+          highlightAfvalEnergieBedrijf = true;
+          highlightRWZIBerkenwoude = false;
         });
 
         const card42next = document.getElementById("card42next");
@@ -1004,6 +1055,8 @@ card2next.addEventListener("click", () => {
             animate: true,
             duration: 1.5, // De duur van de animatie in seconden
           });
+          highlightAfvalEnergieBedrijf = false;
+          highlightRWZIBerkenwoude = false;
         });
 
         // card 4.3 | eigen locatie
@@ -1016,6 +1069,8 @@ card2next.addEventListener("click", () => {
             animate: true,
             duration: 1.5, // De duur van de animatie in seconden
           });
+          highlightAfvalEnergieBedrijf = false;
+          highlightRWZIBerkenwoude = true;
         });
 
         const card43next = document.getElementById("card43next");
@@ -1030,6 +1085,8 @@ card2next.addEventListener("click", () => {
             animate: true,
             duration: 1.5, // De duur van de animatie in seconden
           });
+          highlightAfvalEnergieBedrijf = false;
+          highlightRWZIBerkenwoude = false;
         });
 
         // card 5 | algemeen
@@ -1045,6 +1102,7 @@ card2next.addEventListener("click", () => {
             animate: true,
             duration: 1.5, // De duur van de animatie in seconden
           });
+          highlightNedmag = false;
         });
 
         const card5next = document.getElementById("card5next");
@@ -1056,6 +1114,7 @@ card2next.addEventListener("click", () => {
             animate: true,
             duration: 1.5, // De duur van de animatie in seconden
           });
+          highlightNedmag = true;
         });
 
         // card 5.1 | ergste
@@ -1068,6 +1127,7 @@ card2next.addEventListener("click", () => {
             animate: true,
             duration: 1.5, // De duur van de animatie in seconden
           });
+          highlightNedmag = false;
         });
 
         const card51next = document.getElementById("card51next");
@@ -1079,6 +1139,7 @@ card2next.addEventListener("click", () => {
             animate: true,
             duration: 1.5, // De duur van de animatie in seconden
           });
+          highlightNedmag = false;
         });
 
         // card 5.2 | interessant
@@ -1091,6 +1152,7 @@ card2next.addEventListener("click", () => {
             animate: true,
             duration: 1.5, // De duur van de animatie in seconden
           });
+          highlightNedmag = true;
         });
 
         const card52next = document.getElementById("card52next");
@@ -1102,6 +1164,7 @@ card2next.addEventListener("click", () => {
             animate: true,
             duration: 1.5, // De duur van de animatie in seconden
           });
+          highlightNedmag = false;
         });
 
         // card 5.3 | eigen locatie
@@ -1114,6 +1177,7 @@ card2next.addEventListener("click", () => {
             animate: true,
             duration: 1.5, // De duur van de animatie in seconden
           });
+          highlightNedmag = false;
         });
 
         const card53next = document.getElementById("card53next");
@@ -1128,6 +1192,7 @@ card2next.addEventListener("click", () => {
             animate: true,
             duration: 1.5, // De duur van de animatie in seconden
           });
+          highlightNedmag = false;
         });
 
         // card 6 | algemeen
@@ -1143,6 +1208,8 @@ card2next.addEventListener("click", () => {
             animate: true,
             duration: 1.5, // De duur van de animatie in seconden
           });
+          highlightSeasun = false;
+          highlightLeoHoogweg = false;
         });
 
         const card6next = document.getElementById("card6next");
@@ -1154,6 +1221,8 @@ card2next.addEventListener("click", () => {
             animate: true,
             duration: 1.5, // De duur van de animatie in seconden
           });
+          highlightSeasun = true;
+          highlightLeoHoogweg = false;
         });
 
         // card 6.1 | ergste
@@ -1166,6 +1235,8 @@ card2next.addEventListener("click", () => {
             animate: true,
             duration: 1.5, // De duur van de animatie in seconden
           });
+          highlightSeasun = false;
+          highlightLeoHoogweg = false;
         });
 
         const card61next = document.getElementById("card61next");
@@ -1177,6 +1248,8 @@ card2next.addEventListener("click", () => {
             animate: true,
             duration: 1.5, // De duur van de animatie in seconden
           });
+          highlightSeasun = false;
+          highlightLeoHoogweg = true;
         });
 
         // card 6.2 | interessant
@@ -1189,6 +1262,8 @@ card2next.addEventListener("click", () => {
             animate: true,
             duration: 1.5, // De duur van de animatie in seconden
           });
+          highlightSeasun = true;
+          highlightLeoHoogweg = false;
         });
 
         const card62next = document.getElementById("card62next");
@@ -1200,6 +1275,8 @@ card2next.addEventListener("click", () => {
             animate: true,
             duration: 1.5, // De duur van de animatie in seconden
           });
+          highlightSeasun = false;
+          highlightLeoHoogweg = false;
         });
 
         // card 6.3 | eigen locatie
@@ -1212,6 +1289,8 @@ card2next.addEventListener("click", () => {
             animate: true,
             duration: 1.5, // De duur van de animatie in seconden
           });
+          highlightSeasun = false;
+          highlightLeoHoogweg = true;
         });
 
         const card63next = document.getElementById("card63next");
@@ -1226,6 +1305,8 @@ card2next.addEventListener("click", () => {
             animate: true,
             duration: 0, // De duur van de animatie in seconden
           });
+          highlightSeasun = false;
+          highlightLeoHoogweg = false;
         });
 
         // card 7 | afronden
@@ -1241,6 +1322,8 @@ card2next.addEventListener("click", () => {
             animate: true,
             duration: 0, // De duur van de animatie in seconden
           });
+          highlightSeasun = false;
+          highlightLeoHoogweg = false;
         });
 
         const card7next = document.getElementById("card7next");
