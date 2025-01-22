@@ -1980,8 +1980,7 @@
         <p class="block text-xl font-bold text-slate-200 leading-9">3/7</p>
       </div>
       <p class="text-xl leading-9">
-        Dit zijn de luchthavens in uw buurt gesorteerd op hoogte van de
-        schadekosten.
+        Dit zijn de dichtsbijzijnde luchthavens in uw buurt.
       </p>
       <div class="mt-6">
         <p class="text-xl">Bedrijfsnaam 1</p>
@@ -2282,7 +2281,7 @@
         <p class="block text-xl font-bold text-slate-200 leading-9">4/7</p>
       </div>
       <p class="text-xl leading-9">
-        In uw buurt zijn dit de bedrijven met de hoogste kosten:
+        Dit zijn de vervuilende bedrijven bij u in de buurt.
       </p>
       <div class="mt-6">
         <p class="text-xl">Bedrijfsnaam 1</p>
@@ -2582,7 +2581,7 @@
         <p class="block text-xl font-bold text-slate-200 leading-9">5/7</p>
       </div>
       <p class="text-xl leading-9">
-        In uw buurt zijn dit de vervuilers met de hoogste kosten:
+        Deze bedrijven zijn bij u in de buurt.
       </p>
       <div class="mt-6">
         <p class="text-xl">Bedrijfsnaam 1</p>
