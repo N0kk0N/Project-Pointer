@@ -24,9 +24,22 @@ export default {
         'lWidth': '5%',
         '1/10': '10%',
         '1/20': '5%',
-      }
-    }
+      },
+      textDecorationColor: {
+        'black': '#000000', // Add custom text decoration color
+      },
+    },
   },
 
-  plugins: [typography]
+  plugins: [
+    typography,
+    function({ addUtilities }) {
+      addUtilities({
+        '.underline-black': {
+          'text-decoration': 'underline',
+          'text-decoration-color': '#000000',
+        },
+      });
+    },
+  ],
 };
