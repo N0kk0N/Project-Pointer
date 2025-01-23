@@ -539,8 +539,8 @@
         map._purpleMarker = L.circleMarker([lat, lon], {
           radius: 10,
           fillColor: "#4D00FF",
-          color: "#4D00FF",
-          weight: 1,
+          color: "white",
+          weight: 2,
           opacity: 1,
           fillOpacity: 1,
           zIndexOffset: 1000,
@@ -583,22 +583,24 @@
         const dichtsbijzijndeBedrijvenIndustrie =
           bedrijvenMetAfstandIndustrie.slice(0, 3);
 
-        // Update de HTML met de bedrijfsnamen
+        // Functie om getallen te formatteren met een punt als duizendtalscheidingsteken
+        function formatNumber(num) {
+          return num.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
+        }
+
+        // Update de HTML met de bedrijfsnamen en schade kosten
         document.querySelector(
           "#card23 .mt-6 .text-xl:nth-of-type(1)",
-        ).textContent =
-          dichtsbijzijndeBedrijvenIndustrie[0]?.properties.bedrijf ||
-          "Geen gegevens";
+        ).innerHTML =
+          `${dichtsbijzijndeBedrijvenIndustrie[0]?.properties.bedrijf || "Geen gegevens"}<br><span style="font-size: smaller;">Schadekosten (2022): <span style="color: #FF5362;">€${formatNumber(dichtsbijzijndeBedrijvenIndustrie[0]?.properties.schadekosten_2022) || "Geen gegevens"}</span></span>`;
         document.querySelector(
           "#card23 .mt-6 .text-xl:nth-of-type(2)",
-        ).textContent =
-          dichtsbijzijndeBedrijvenIndustrie[1]?.properties.bedrijf ||
-          "Geen gegevens";
+        ).innerHTML =
+          `${dichtsbijzijndeBedrijvenIndustrie[1]?.properties.bedrijf || "Geen gegevens"}<br><span style="font-size: smaller;">Schadekosten (2022): <span style="color: #FF5362;">€${formatNumber(dichtsbijzijndeBedrijvenIndustrie[1]?.properties.schadekosten_2022) || "Geen gegevens"}</span></span>`;
         document.querySelector(
           "#card23 .mt-6 .text-xl:nth-of-type(3)",
-        ).textContent =
-          dichtsbijzijndeBedrijvenIndustrie[2]?.properties.bedrijf ||
-          "Geen gegevens";
+        ).innerHTML =
+          `${dichtsbijzijndeBedrijvenIndustrie[2]?.properties.bedrijf || "Geen gegevens"}<br><span style="font-size: smaller;">Schadekosten (2022): <span style="color: #FF5362;">€${formatNumber(dichtsbijzijndeBedrijvenIndustrie[2]?.properties.schadekosten_2022) || "Geen gegevens"}</span></span>`;
 
         // VIND DE 3 DICHTSTBIJZIJNDE BEDRIJVEN IN DE SECTOR "Verkeer en vervoer"
         const bedrijvenInSectorVerkeer = geojsonData.features.filter(
@@ -626,22 +628,19 @@
         const dichtsbijzijndeBedrijvenVerkeer =
           bedrijvenMetAfstandVerkeer.slice(0, 3);
 
-        // Update de HTML met de bedrijfsnamen
+        // Update de HTML met de bedrijfsnamen en schade kosten
         document.querySelector(
           "#card33 .mt-6 .text-xl:nth-of-type(1)",
-        ).textContent =
-          dichtsbijzijndeBedrijvenVerkeer[0]?.properties.bedrijf ||
-          "Geen gegevens";
+        ).innerHTML =
+          `${dichtsbijzijndeBedrijvenVerkeer[0]?.properties.bedrijf || "Geen gegevens"}<br><span style="font-size: smaller;">Schadekosten (2022): <span style="color: #FF5362;">€${formatNumber(dichtsbijzijndeBedrijvenVerkeer[0]?.properties.schadekosten_2022) || "Geen gegevens"}</span></span>`;
         document.querySelector(
           "#card33 .mt-6 .text-xl:nth-of-type(2)",
-        ).textContent =
-          dichtsbijzijndeBedrijvenVerkeer[1]?.properties.bedrijf ||
-          "Geen gegevens";
+        ).innerHTML =
+          `${dichtsbijzijndeBedrijvenVerkeer[1]?.properties.bedrijf || "Geen gegevens"}<br><span style="font-size: smaller;">Schadekosten (2022): <span style="color: #FF5362;">€${formatNumber(dichtsbijzijndeBedrijvenVerkeer[1]?.properties.schadekosten_2022) || "Geen gegevens"}</span></span>`;
         document.querySelector(
           "#card33 .mt-6 .text-xl:nth-of-type(3)",
-        ).textContent =
-          dichtsbijzijndeBedrijvenVerkeer[2]?.properties.bedrijf ||
-          "Geen gegevens";
+        ).innerHTML =
+          `${dichtsbijzijndeBedrijvenVerkeer[2]?.properties.bedrijf || "Geen gegevens"}<br><span style="font-size: smaller;">Schadekosten (2022): <span style="color: #FF5362;">€${formatNumber(dichtsbijzijndeBedrijvenVerkeer[2]?.properties.schadekosten_2022) || "Geen gegevens"}</span></span>`;
 
         // VIND DE 3 DICHTSTBIJZIJNDE BEDRIJVEN IN DE SECTOR "Afval, riolering, waterzuivering"
         const bedrijvenInSectorAfval = geojsonData.features.filter(
@@ -672,22 +671,19 @@
           3,
         );
 
-        // Update de HTML met de bedrijfsnamen
+        // Update de HTML met de bedrijfsnamen en schade kosten
         document.querySelector(
           "#card43 .mt-6 .text-xl:nth-of-type(1)",
-        ).textContent =
-          dichtsbijzijndeBedrijvenAfval[0]?.properties.bedrijf ||
-          "Geen gegevens";
+        ).innerHTML =
+          `${dichtsbijzijndeBedrijvenAfval[0]?.properties.bedrijf || "Geen gegevens"}<br><span style="font-size: smaller;">Schadekosten (2022): <span style="color: #FF5362;">€${formatNumber(dichtsbijzijndeBedrijvenAfval[0]?.properties.schadekosten_2022) || "Geen gegevens"}</span></span>`;
         document.querySelector(
           "#card43 .mt-6 .text-xl:nth-of-type(2)",
-        ).textContent =
-          dichtsbijzijndeBedrijvenAfval[1]?.properties.bedrijf ||
-          "Geen gegevens";
+        ).innerHTML =
+          `${dichtsbijzijndeBedrijvenAfval[1]?.properties.bedrijf || "Geen gegevens"}<br><span style="font-size: smaller;">Schadekosten (2022): <span style="color: #FF5362;">€${formatNumber(dichtsbijzijndeBedrijvenAfval[1]?.properties.schadekosten_2022) || "Geen gegevens"}</span></span>`;
         document.querySelector(
           "#card43 .mt-6 .text-xl:nth-of-type(3)",
-        ).textContent =
-          dichtsbijzijndeBedrijvenAfval[2]?.properties.bedrijf ||
-          "Geen gegevens";
+        ).innerHTML =
+          `${dichtsbijzijndeBedrijvenAfval[2]?.properties.bedrijf || "Geen gegevens"}<br><span style="font-size: smaller;">Schadekosten (2022): <span style="color: #FF5362;">€${formatNumber(dichtsbijzijndeBedrijvenAfval[2]?.properties.schadekosten_2022) || "Geen gegevens"}</span></span>`;
 
         // VIND DE 3 DICHTSTBIJZIJNDE BEDRIJVEN IN DE SECTOR "Handel/Diensten/Overheid en Bouw"
         const bedrijvenInSectorHandel = geojsonData.features.filter(
@@ -718,22 +714,19 @@
           3,
         );
 
-        // Update de HTML met de bedrijfsnamen
-        document.querySelector(
+         // Update de HTML met de bedrijfsnamen en schade kosten
+         document.querySelector(
           "#card53 .mt-6 .text-xl:nth-of-type(1)",
-        ).textContent =
-          dichtsbijzijndeBedrijvenHandel[0]?.properties.bedrijf ||
-          "Geen gegevens";
+        ).innerHTML =
+          `${dichtsbijzijndeBedrijvenHandel[0]?.properties.bedrijf || "Geen gegevens"}<br><span style="font-size: smaller;">Schadekosten (2022): <span style="color: #FF5362;">€${formatNumber(dichtsbijzijndeBedrijvenHandel[0]?.properties.schadekosten_2022) || "Geen gegevens"}</span></span>`;
         document.querySelector(
           "#card53 .mt-6 .text-xl:nth-of-type(2)",
-        ).textContent =
-          dichtsbijzijndeBedrijvenHandel[1]?.properties.bedrijf ||
-          "Geen gegevens";
+        ).innerHTML =
+          `${dichtsbijzijndeBedrijvenHandel[1]?.properties.bedrijf || "Geen gegevens"}<br><span style="font-size: smaller;">Schadekosten (2022): <span style="color: #FF5362;">€${formatNumber(dichtsbijzijndeBedrijvenHandel[1]?.properties.schadekosten_2022) || "Geen gegevens"}</span></span>`;
         document.querySelector(
           "#card53 .mt-6 .text-xl:nth-of-type(3)",
-        ).textContent =
-          dichtsbijzijndeBedrijvenHandel[2]?.properties.bedrijf ||
-          "Geen gegevens";
+        ).innerHTML =
+          `${dichtsbijzijndeBedrijvenHandel[2]?.properties.bedrijf || "Geen gegevens"}<br><span style="font-size: smaller;">Schadekosten (2022): <span style="color: #FF5362;">€${formatNumber(dichtsbijzijndeBedrijvenHandel[2]?.properties.schadekosten_2022) || "Geen gegevens"}</span></span>`;
 
         // VIND DE 3 DICHTSTBIJZIJNDE BEDRIJVEN IN DE SECTOR "Landbouw"
         const bedrijvenInSectorLandbouw = geojsonData.features.filter(
@@ -1936,23 +1929,10 @@
       </p>
       <div class="mt-6">
         <p class="text-xl">Bedrijfsnaam 1</p>
-        <div
-          class="mt-1 mb-2 w-full h-2 bg-slate-200 rounded-full overflow-hidden"
-        >
-          <div class="w-2/3 h-2 bg-[#FF5362]"></div>
-        </div>
+        <br />
         <p class="text-xl">Bedrijfsnaam 2</p>
-        <div
-          class="mt-1 mb-2 w-full h-2 bg-slate-200 rounded-full overflow-hidden"
-        >
-          <div class="w-1/3 h-2 bg-[#FF5362]"></div>
-        </div>
+        <br />
         <p class="text-xl">Bedrijfsnaam 3</p>
-        <div
-          class="mt-1 mb-2 w-full h-2 bg-slate-200 rounded-full overflow-hidden"
-        >
-          <div class="w-1/4 h-2 bg-[#FF5362]"></div>
-        </div>
       </div>
     </div>
     <div class="flex justify-between items-center">
@@ -2227,23 +2207,10 @@
       </p>
       <div class="mt-6">
         <p class="text-xl">Bedrijfsnaam 1</p>
-        <div
-          class="mt-1 mb-2 w-full h-2 bg-slate-200 rounded-full overflow-hidden"
-        >
-          <div class="w-2/3 h-2 bg-[#FF5362]"></div>
-        </div>
+        <br />
         <p class="text-xl">Bedrijfsnaam 2</p>
-        <div
-          class="mt-1 mb-2 w-full h-2 bg-slate-200 rounded-full overflow-hidden"
-        >
-          <div class="w-1/3 h-2 bg-[#FF5362]"></div>
-        </div>
+        <br />
         <p class="text-xl">Bedrijfsnaam 3</p>
-        <div
-          class="mt-1 mb-2 w-full h-2 bg-slate-200 rounded-full overflow-hidden"
-        >
-          <div class="w-1/4 h-2 bg-[#FF5362]"></div>
-        </div>
       </div>
     </div>
     <div class="flex justify-between items-center">
@@ -2528,23 +2495,10 @@
       </p>
       <div class="mt-6">
         <p class="text-xl">Bedrijfsnaam 1</p>
-        <div
-          class="mt-1 mb-2 w-full h-2 bg-slate-200 rounded-full overflow-hidden"
-        >
-          <div class="w-2/3 h-2 bg-[#FF5362]"></div>
-        </div>
+        <br />
         <p class="text-xl">Bedrijfsnaam 2</p>
-        <div
-          class="mt-1 mb-2 w-full h-2 bg-slate-200 rounded-full overflow-hidden"
-        >
-          <div class="w-1/3 h-2 bg-[#FF5362]"></div>
-        </div>
+        <br />
         <p class="text-xl">Bedrijfsnaam 3</p>
-        <div
-          class="mt-1 mb-2 w-full h-2 bg-slate-200 rounded-full overflow-hidden"
-        >
-          <div class="w-1/4 h-2 bg-[#FF5362]"></div>
-        </div>
       </div>
     </div>
     <div class="flex justify-between items-center">
@@ -2826,23 +2780,10 @@
       <p class="text-xl leading-9">Deze bedrijven zijn bij u in de buurt.</p>
       <div class="mt-6">
         <p class="text-xl">Bedrijfsnaam 1</p>
-        <div
-          class="mt-1 mb-2 w-full h-2 bg-slate-200 rounded-full overflow-hidden"
-        >
-          <div class="w-2/3 h-2 bg-[#FF5362]"></div>
-        </div>
+        <br />
         <p class="text-xl">Bedrijfsnaam 2</p>
-        <div
-          class="mt-1 mb-2 w-full h-2 bg-slate-200 rounded-full overflow-hidden"
-        >
-          <div class="w-1/3 h-2 bg-[#FF5362]"></div>
-        </div>
+        <br />
         <p class="text-xl">Bedrijfsnaam 3</p>
-        <div
-          class="mt-1 mb-2 w-full h-2 bg-slate-200 rounded-full overflow-hidden"
-        >
-          <div class="w-1/4 h-2 bg-[#FF5362]"></div>
-        </div>
       </div>
     </div>
     <div class="flex justify-between items-center">
