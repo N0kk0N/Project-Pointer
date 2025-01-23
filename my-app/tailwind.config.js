@@ -14,7 +14,7 @@ export default {
         landbouw: '#FF8800'
       },
       fontFamily: {
-        'formula': ['titlefont', 'sans-serif'],
+        custom: ['custom', 'sans-serif'], // Add fallback fonts if needed
       },
       maxWidth: {
         'relatedMax': '80rem', // Add a custom class for max width

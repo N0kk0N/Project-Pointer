@@ -2,10 +2,9 @@
 @import 'tailwindcss/components';
 @import 'tailwindcss/utilities';
 
-    @font-face {
-      font-family: 'titlefont';
-      font-style: normal;
-      font-weight: 400;
-      font-display: swap;
-      src: url(/fonts/titlefont.otf) format('otf');
-    }
+@font-face {
+  font-family: 'custom';
+  src: url('/fonts/titlefont.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
