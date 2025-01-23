@@ -539,8 +539,8 @@
         map._purpleMarker = L.circleMarker([lat, lon], {
           radius: 10,
           fillColor: "#4D00FF",
-          color: "#4D00FF",
-          weight: 1,
+          color: "white",
+          weight: 2,
           opacity: 1,
           fillOpacity: 1,
           zIndexOffset: 1000,
