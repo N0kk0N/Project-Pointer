@@ -3,7 +3,7 @@
         <!-- Section: Ons onderzoek -->
         <div class="pt-10 px-5 lg:pl-28 lg:w-1/2">
             <div>
-                <h2 class="text-4xl lg:text-6xl">
+                <h2 class="text-4xl lg:text-6xl font-custom">
                     Ons onderzoek<br />
                     begint bij jou
                 </h2>
