@@ -1787,7 +1787,7 @@
         Het schadelijkste bedrijf in Nederland bevind zich in IJmuiden.
         Tatasteel BV heeft in totaal €408.378.600 schade-kosten in 2022.
       </p>
-      <p class="mt-4 leading-6 text-slate-300">
+      <p class="mt-4 leading-6 text-slate-400">
         Klik op de bedrijven en bekijk de opbouw van de veroorzaakte
         luchtvervuiling.
       </p>
@@ -1858,7 +1858,7 @@
         luchtvervuiling door deze sector. De grootste vervuiler is Esso
         Nederland BV (Raffinaderij Rotterdam).
       </p>
-      <p class="mt-4 leading-6 text-slate-300">
+      <p class="mt-4 leading-6 text-slate-400">
         Klik op de bedrijven en bekijk de opbouw van de veroorzaakte
         luchtvervuiling.
       </p>
@@ -2070,7 +2070,7 @@
         grootste van Nederland. Hier staat een prijskaartje van €161.264.591 in
         schadekosten voor luchtvervuiling tegenover.
       </p>
-      <p class="mt-4 leading-6 text-slate-300">
+      <p class="mt-4 leading-6 text-slate-400">
         Klik op de bedrijven en bekijk de opbouw van de veroorzaakte
         luchtvervuiling.
       </p>
@@ -2138,7 +2138,7 @@
         De luchthaven met de laagste schadekosten ligt is vliegveld De Kooy. Met
         €215.731 staat dit vliegveld onderaan.
       </p>
-      <p class="mt-4 leading-6 text-slate-300">
+      <p class="mt-4 leading-6 text-slate-400">
         Klik op de bedrijven en bekijk de opbouw van de veroorzaakte
         luchtvervuiling.
       </p>
@@ -2352,7 +2352,7 @@
         Afval Energie Bedrijf (Amsterdam) is het bedrijf in Nederland met de
         grootste kosten. Deze kosten waren in 2022 in totaal €23.489.029.
       </p>
-      <p class="mt-4 leading-6 text-slate-300">
+      <p class="mt-4 leading-6 text-slate-400">
         Klik op de bedrijven en bekijk de opbouw van de veroorzaakte
         luchtvervuiling.
       </p>
@@ -2424,7 +2424,7 @@
         grootte van de plaats. De kleinste RWZI, Berkenwoude, heeft een
         kostenpost van €10.
       </p>
-      <p class="mt-4 leading-6 text-slate-300">
+      <p class="mt-4 leading-6 text-slate-400">
         Klik op de bedrijven en bekijk de opbouw van de veroorzaakte
         luchtvervuiling.
       </p>
@@ -2640,7 +2640,7 @@
         In Veendam bevindt zich het bedrijf genaamd Nedmag BV. Dit is het
         bedrijf met de grootste schade, namelijk €23.110.334.
       </p>
-      <p class="mt-4 leading-6 text-slate-300">
+      <p class="mt-4 leading-6 text-slate-400">
         Klik op de bedrijven en bekijk de opbouw van de veroorzaakte
         luchtvervuiling.
       </p>
@@ -2711,7 +2711,7 @@
         Rotterdam zijn enkele bedrijven die in de buurt van elkaar zijn, maar
         ook in andere steden zijn er meerdere bedrijven te vinden.
       </p>
-      <p class="mt-4 leading-6 text-slate-300">
+      <p class="mt-4 leading-6 text-slate-400">
         Klik op de bedrijven en bekijk de opbouw van de veroorzaakte
         luchtvervuiling.
       </p>
@@ -2924,7 +2924,7 @@
         Kapelle en heet Seasun BV. Deze groententeler heeft in totaal €367.333
         schadekosten.
       </p>
-      <p class="mt-4 leading-6 text-slate-300">
+      <p class="mt-4 leading-6 text-slate-400">
         Klik op de bedrijven en bekijk de opbouw van de veroorzaakte
         luchtvervuiling.
       </p>
@@ -2992,7 +2992,7 @@
         Op de tweede plaats staat Leo Hoogweg BV met in totaal €323.379 aan
         kosten. Deze kwekerij bevindt zich in Luttelgeest.
       </p>
-      <p class="mt-4 leading-6 text-slate-300">
+      <p class="mt-4 leading-6 text-slate-400">
         Klik op de bedrijven en bekijk de opbouw van de veroorzaakte
         luchtvervuiling.
       </p>
