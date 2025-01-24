@@ -158,7 +158,7 @@
         onAdd: function (map) {
           var div = L.DomUtil.create("div", "second-info-box");
           div.innerHTML =
-            '<span style="flex: 1;">&lt;8</span><span style="flex: 1; text-align: center;">NO₂ conc. µg/m3</span><span style="flex: 1; text-align: right;">&ge;30</span>';
+            '<span style="flex: 1;">&lt;8</span><span style="flex: 1; text-align: center;">NO₂ conc. µg/m³</span><span style="flex: 1; text-align: right;">&ge;30</span>';
           div.style.display = "flex";
           div.style.background = "linear-gradient(to right, white, red)"; // Horizontale gradient
           div.style.padding = "5px 10px";
